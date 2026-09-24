@@ -14,12 +14,15 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
   const [recovering, setRecovering] = useState(false);
   const auth = getBrowserAuth();
 
+
   useEffect(() => {
     if (!auth) {
       setSession(null);
       return;
     }
-    void auth.auth.getSession().then(({ data }) => setSession(data.session));
+    void auth.auth.getSession()
+      .then(({ data }) => setSession(data.session))
+      .catch(() => setSession(null));
     const { data } = auth.auth.onAuthStateChange((event, next) => {
       setSession(next);
       if (event === "PASSWORD_RECOVERY") setRecovering(true);
@@ -33,6 +36,7 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
     }
   }, [pathname, router, session]);
 
+  if (pathname === "/privacy") return children;
   if (session === undefined) {
     return <div className="flex min-h-dvh items-center justify-center text-sm">Opening Padhle…</div>;
   }

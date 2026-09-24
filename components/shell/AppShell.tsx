@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import {
   BookOpen,
   CalendarDays,
-  GraduationCap,
   Menu,
   LogOut,
   MessageSquare,
@@ -15,6 +14,7 @@ import {
   X,
 } from "lucide-react";
 import { APP } from "@/lib/config";
+import { PadhleMark } from "@/components/brand/PadhleMark";
 
 const NAV = [
   { href: "/", label: "Chat", icon: MessageSquare },
@@ -42,12 +42,7 @@ export function AppShell({ children, email, onSignOut }: {
           className="flex min-w-0 items-center gap-2 rounded-lg px-2 py-2 text-[14px]"
           style={{ fontWeight: 600 }}
         >
-          <span
-            className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full"
-            style={{ background: "var(--assistant-avatar)", color: "var(--surface)" }}
-          >
-            <GraduationCap size={16} strokeWidth={2} />
-          </span>
+          <PadhleMark size={28} className="shrink-0" />
           <span className="truncate">{APP.name}</span>
         </Link>
         <Link
