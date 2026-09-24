@@ -27,7 +27,7 @@ export async function verifyAnswer(
     ...text.matchAll(/\[\[source:([^\]]+)\]\]|\[\[diagram:([^\]]+)\]\]/g),
   ].map((m) => m[1] ?? m[2]);
   const evidenceIds = new Set(sources.filter((source) => source.kind !== "syllabus").map((source) => source.id));
-  const isFallback = /^(?:The requested topic falls outside the retrieved CBSE context\.|This topic is in the active syllabus, but I don't have enough approved source material to answer it yet\.)$/i.test(text.trim());
+  const isFallback = /^(?:This topic is in the active syllabus, but I don't have enough approved source material to answer it yet\.|This topic is in the active syllabus, but I couldn't verify a grounded answer from the approved passages yet\.)$/i.test(text.trim());
   const citationOk = citedIds.every((id) => ids.has(id)) &&
     (isFallback || (evidenceIds.size > 0 && citedIds.some((id) => evidenceIds.has(id))));
 

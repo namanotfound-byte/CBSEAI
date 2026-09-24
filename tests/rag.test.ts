@@ -4,6 +4,7 @@ import { verifyAnswer } from "../lib/ai/verifier";
 import { validateChunks } from "../lib/rag/ingest";
 import { routeQuery } from "../lib/rag/router";
 import { hasApprovedCompetencyQuestion, retrieve } from "../lib/rag/retriever";
+import { sourceMatchesQuestion } from "../lib/rag/relevance";
 import { inferSyllabusScope } from "../lib/rag/syllabus-index";
 import type { Chunk, Source } from "../lib/types";
 
@@ -36,8 +37,25 @@ test("keeps formative-only Science and unlaunched subjects out of board answers"
 test("routes distinctive curriculum terms to the right chapter", () => {
   assert.deepEqual(inferSyllabusScope("tangent to a circle", "maths").chapters, [10]);
   assert.deepEqual(inferSyllabusScope("section formula", "maths").chapters, [7]);
+  assert.deepEqual(inferSyllabusScope("What is the common difference of the A.P. 2, 5, 8, 11, ...?").chapters, [5]);
   assert.deepEqual(inferSyllabusScope("Mendelian inheritance", "science").chapters, [8]);
   assert.deepEqual(inferSyllabusScope("What is the ability of the eye lens to adjust its focal length called?").chapters, [10]);
+  assert.deepEqual(inferSyllabusScope("What is a lens?").chapters, [9]);
+});
+
+test("rejects chapter-neighbour passages that do not answer the question", () => {
+  assert.equal(sourceMatchesQuestion(
+    "What is a lens?",
+    "Concave mirrors are commonly used in torches and vehicle headlights to get parallel beams of light.",
+  ), false);
+  assert.equal(sourceMatchesQuestion(
+    "What is a lens?",
+    "A lens is a transparent optical medium bounded by two surfaces.",
+  ), true);
+  assert.equal(sourceMatchesQuestion(
+    "What is the common difference of the A.P. 2, 5, 8, 11?",
+    "In an arithmetic progression, the fixed number obtained by subtracting one term from the succeeding term is called the common difference.",
+  ), true);
 });
 
 test("strips invented marks when no marking scheme is present", async () => {

@@ -21,7 +21,7 @@ export function buildSystemPrompt(
     `GROUNDING:`,
     `1. Answer only from CONTEXT.`,
     `2. For definitions and laws, prefer the NCERT wording in CONTEXT over paraphrases.`,
-    `3. If CONTEXT is insufficient, output exactly: The requested topic falls outside the retrieved CBSE context.`,
+    `3. If CONTEXT is insufficient, output exactly: This topic is in the active syllabus, but I don't have enough approved source material to answer it yet.`,
     ``,
     `FORMAT:`,
     `1. Multi-mark or long answers: numbered points.`,

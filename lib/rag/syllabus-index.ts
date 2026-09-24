@@ -20,7 +20,7 @@ const ALIASES: Partial<Record<SubjectId, Record<number, string[]>>> = {
     2: ["polynomial", "zeroes"],
     3: ["linear equation", "two variables"],
     4: ["quadratic", "discriminant", "roots"],
-    5: ["arithmetic progression", "ap"],
+    5: ["arithmetic progression", "a.p.", "common difference", "nth term"],
     6: ["similar triangles", "basic proportionality theorem"],
     7: ["coordinate geometry", "distance formula", "section formula"],
     8: ["trigonometry", "sine", "cosine", "tangent"],
@@ -48,13 +48,15 @@ export function inferSyllabusScope(query: string, preferredSubject?: SubjectId) 
     .filter((subject) => !preferredSubject || subject.id === preferredSubject)
     .flatMap((subject) =>
       subject.chapters.map((chapter) => {
-        const phrases = [
-          chapter.name,
-          ...(ALIASES[subject.id]?.[chapter.no] ?? []),
+        const aliases = ALIASES[subject.id]?.[chapter.no] ?? [];
+        const vocabulary = [
+          ...tokens(chapter.name),
+          ...aliases.filter((alias) => tokens(alias).length === 1).flatMap(tokens),
         ];
-        const vocabulary = phrases.flatMap(tokens);
-        const phraseScore = phrases.reduce((total, phrase) =>
-          phrase.includes(" ") && query.toLowerCase().includes(phrase.toLowerCase())
+        // A partial match on "eye lens" must not route a generic "lens"
+        // question to Human Eye. Multiword aliases count only as phrases.
+        const phraseScore = aliases.reduce((total, phrase) =>
+          tokens(phrase).length > 1 && query.toLowerCase().includes(phrase.toLowerCase())
             ? total + 8 : total, 0);
         const score = phraseScore + vocabulary.reduce(
           (total, token) => total + (queryTerms.has(token) ? Math.max(1, token.length / 5) : 0),

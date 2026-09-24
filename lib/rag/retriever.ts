@@ -2,6 +2,7 @@ import { env } from "../config";
 import type { Chunk, RetrievalFilters, Source, SourceKind } from "../types";
 import { signedDiagramUrl } from "./diagrams";
 import { rerank } from "./reranker";
+import { sourceMatchesQuestion } from "./relevance";
 import { inferSyllabusScope } from "./syllabus-index";
 import { getVectorStore } from "./vectorstore";
 
@@ -90,9 +91,11 @@ export async function retrieve(
     topK: Math.max(40, topK * 5),
   });
 
-  const relevantHits = store.name === "memory"
-    ? hits.filter((hit) => hit.score >= 0.18)
-    : hits;
+  const needsAnswerEvidence = !["competency", "marking", "pyq"].includes(filters.route ?? "theory");
+  const relevantHits = hits.filter((hit) =>
+    (store.name !== "memory" || hit.score >= 0.18) &&
+    (!needsAnswerEvidence || sourceMatchesQuestion(query, hit.text)),
+  );
   const reranked = await rerank(query, relevantHits, Math.max(8, topK * 2));
   const ordered = reranked
     .map((h) => ({ ...h, ranked: h.score * PRIORITY[h.meta.kind] }))

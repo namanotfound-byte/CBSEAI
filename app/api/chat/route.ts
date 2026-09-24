@@ -181,19 +181,39 @@ export async function POST(req: Request) {
           return text;
         };
 
-        let full = await generate(system);
-        let verified = await verifyAnswer(full, sources, route);
-        if (!verified.citationOk || !verified.nliOk) {
-          full = await generate(
-            `${system}\n\nRETRY: The previous draft failed grounding verification. Regenerate once using only claims supported by CONTEXT and only the exact ids shown in the evidence message.`,
-          );
+        const sourceOnlyFallback = (error: unknown) => {
+          if (!(error instanceof Error) || !error.message.includes("free answer models are busy")) return false;
+          const ncert = sources.find((source) => source.kind === "ncert");
+          if (!ncert) return false;
+          const firstSentence = ncert.snippet.split(/(?<=[.!?])\s/)[0];
+          const excerpt = firstSentence.split(/\s+/).slice(0, 25).join(" ");
+          send({
+            type: "token",
+            text: `The free answer model is busy. Closest reviewed NCERT line: “${excerpt}” [[source:${ncert.id}]]. Please retry for a tailored answer.`,
+          });
+          send({ type: "done" });
+          return true;
+        };
+
+        let verified: Awaited<ReturnType<typeof verifyAnswer>>;
+        try {
+          let full = await generate(system);
           verified = await verifyAnswer(full, sources, route);
+          if (!verified.citationOk || !verified.nliOk) {
+            full = await generate(
+              `${system}\n\nRETRY: The previous draft failed grounding verification. Regenerate once using only claims supported by CONTEXT and only the exact ids shown in the evidence message.`,
+            );
+            verified = await verifyAnswer(full, sources, route);
+          }
+        } catch (error) {
+          if (sourceOnlyFallback(error)) return;
+          throw error;
         }
 
         if (!verified.citationOk || !verified.nliOk) {
           verified = {
             ...verified,
-            text: "The requested topic falls outside the retrieved CBSE context.",
+            text: "This topic is in the active syllabus, but I couldn't verify a grounded answer from the approved passages yet.",
           };
         }
 
