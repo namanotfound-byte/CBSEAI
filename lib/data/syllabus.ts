@@ -5,7 +5,7 @@ import type { Subject, SubjectId } from "../types";
  *
  * NOTE — this is the one file that must be re-checked every April. NCERT drops
  * and renumbers chapters between editions and the model is pinned to a year
- * (see env.ncertYear). When you refresh this, bump NCERT_YEAR too so retrieval
+ * (see env.syllabusVersion). When you refresh this, bump SYLLABUS_VERSION too so retrieval
  * and the UI stay on the same edition.
  *
  * `marks` is approximate board weightage, used to order the study plan.
@@ -106,6 +106,11 @@ export const SUBJECTS: Subject[] = [
     ],
   },
 ];
+
+/** Only these subjects have a reviewed current-year RAG pipeline. */
+export const ACTIVE_SUBJECTS = SUBJECTS.filter((subject) =>
+  subject.id === "science" || subject.id === "maths"
+);
 
 export const SUBJECT_MAP: Record<SubjectId, Subject> = Object.fromEntries(
   SUBJECTS.map((s) => [s.id, s]),

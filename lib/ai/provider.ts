@@ -1,18 +1,7 @@
 import { env } from "../config";
 import type { ContentPart, Message } from "../types";
 
-/**
- * ─── THE SEAM ─────────────────────────────────────────────────────────────
- * Everything above this file is UI. Everything below it is your model.
- * When the fine-tune is ready you should only have to set three env vars:
- *
- *   MODEL_PROVIDER=openai
- *   MODEL_BASE_URL=https://<your vLLM / Nebius / Together endpoint>/v1
- *   MODEL_NAME=<your adapter or merged checkpoint>
- *
- * Nothing in components/ or app/ needs to change.
- * ──────────────────────────────────────────────────────────────────────────
- */
+/** Hosted model access. The default routes use free OpenRouter endpoints only. */
 
 export interface ChatProvider {
   name: string;
@@ -28,12 +17,7 @@ export interface ChatProvider {
 
 /* ───────────────────────── OpenAI-compatible ───────────────────────────── */
 
-/**
- * Works unchanged against vLLM, SGLang, Nebius AI Studio, Together, Fireworks
- * and Ollama — i.e. every realistic way you'll serve Qwen2.5-VL-7B.
- *
- * Multimodal parts are sent in the `image_url` shape Qwen2.5-VL expects.
- */
+/** Send text and image parts in the OpenAI-compatible chat shape. */
 function toOpenAIContent(parts: ContentPart[]) {
   // Text-only turns go as a plain string; some servers are stricter about this.
   if (parts.every((p) => p.type === "text")) {
@@ -51,39 +35,65 @@ const openAICompatible: ChatProvider = {
   async *stream({ system, messages, signal, hasImages }) {
     const model =
       hasImages && env.visionModelName ? env.visionModelName : env.modelName;
-
-    const res = await fetch(`${env.modelBaseUrl}/chat/completions`, {
-      method: "POST",
-      signal,
-      headers: {
-        "Content-Type": "application/json",
-        ...(env.modelApiKey
-          ? { Authorization: `Bearer ${env.modelApiKey}` }
-          : {}),
-      },
-      body: JSON.stringify({
-        model,
-        stream: true,
-        // Board answers are recall-heavy. Keep it tight; raise only for `explain`.
-        temperature: 0.2,
-        top_p: 0.9,
-        max_tokens: 1200,
-        messages: [
-          { role: "system", content: system },
-          ...messages.map((m) => ({
-            role: m.role,
-            content: toOpenAIContent(m.content),
-          })),
-        ],
-      }),
-    });
-
-    if (!res.ok || !res.body) {
-      const detail = await res.text().catch(() => "");
-      throw new Error(
-        `Model endpoint returned ${res.status}. ${detail.slice(0, 300)}`,
-      );
+    const openRouter = env.modelBaseUrl.startsWith("https://openrouter.ai/api/v1");
+    const openRouterModels = [
+      ...new Set((openRouter ? [model, env.fallbackModelName] : [model]).filter(Boolean)),
+    ];
+    if (openRouter && openRouterModels.some((candidate) => !candidate.endsWith(":free"))) {
+      throw new Error("Only free OpenRouter model routes are enabled.");
     }
+    const candidates = [
+      ...(openRouter && env.groqApiKey ? [{
+        baseUrl: "https://api.groq.com/openai/v1",
+        apiKey: env.groqApiKey,
+        model: "qwen/qwen3.8-27b",
+      }] : []),
+      ...openRouterModels.filter(() => !openRouter || Boolean(env.modelApiKey)).map((candidate) => ({
+        baseUrl: env.modelBaseUrl,
+        apiKey: env.modelApiKey,
+        model: candidate,
+      })),
+    ];
+    let res: Response | undefined;
+    for (const candidate of candidates) {
+      res = await fetch(`${candidate.baseUrl}/chat/completions`, {
+        method: "POST",
+        signal,
+        headers: {
+          "Content-Type": "application/json",
+          ...(candidate.apiKey
+            ? { Authorization: `Bearer ${candidate.apiKey}` }
+            : {}),
+        },
+        body: JSON.stringify({
+          model: candidate.model,
+          stream: true,
+          temperature: 0.2,
+          top_p: 0.9,
+          max_tokens: 1200,
+          messages: [
+            { role: "system", content: system },
+            ...messages.map((m) => ({
+              role: m.role,
+              content: toOpenAIContent(m.content),
+            })),
+          ],
+        }),
+      });
+      if (res.ok && res.body) break;
+      if (candidate !== candidates.at(-1) && [404, 429, 502, 503].includes(res.status)) {
+        continue;
+      }
+      if (openRouter && res.status === 429) {
+        throw new Error("The free answer models are busy right now. Please try again shortly.");
+      }
+      if (openRouter && res.status === 404) {
+        throw new Error("The selected free answer model is unavailable right now.");
+      }
+      throw new Error(`The answer model is unavailable (HTTP ${res.status}).`);
+    }
+
+    if (!res?.body) throw new Error("No free model response was available.");
 
     const reader = res.body.getReader();
     const decoder = new TextDecoder();
@@ -117,9 +127,7 @@ const openAICompatible: ChatProvider = {
 /* ──────────────────────────── Mock ─────────────────────────────────────── */
 
 /**
- * Streams a canned board answer so the whole UI — citations, margin marks,
- * typing rhythm — is buildable and demoable before the fine-tune lands.
- * Delete this once you're happy with the real endpoint.
+ * Canned answers used only when development tests explicitly select mock mode.
  */
 const mock: ChatProvider = {
   name: "mock",
@@ -185,7 +193,7 @@ function mockAnswer(q: string) {
     "Point two, with the reason — the reason is a separate mark from the statement.",
     "Point three, the conclusion, stated plainly.",
     "",
-    "Connect a real model endpoint to replace this. Set MODEL_PROVIDER=openai in .env.local and point MODEL_BASE_URL at your fine-tuned Qwen2.5-VL deployment.",
+    "This sample answer is for development tests only.",
     "",
     "MARKS: 3 | 1 — statement | 1 — reason | 1 — conclusion",
   ].join("\n");
@@ -196,14 +204,16 @@ function mockAnswer(q: string) {
 export function getChatProvider(): ChatProvider {
   switch (env.modelProvider) {
     case "openai":
-      if (!env.modelBaseUrl) {
+      if (!env.modelBaseUrl || (!env.modelApiKey &&
+          !(env.modelBaseUrl.startsWith("https://openrouter.ai/api/v1") && env.groqApiKey))) {
         throw new Error(
-          "MODEL_PROVIDER is 'openai' but MODEL_BASE_URL is empty. Set it in .env.local.",
+          "The hosted tutor model is not configured. Add a free provider API key in protected server settings.",
         );
       }
       return openAICompatible;
     case "mock":
-    default:
       return mock;
+    default:
+      throw new Error(`Unsupported MODEL_PROVIDER: ${env.modelProvider}`);
   }
 }

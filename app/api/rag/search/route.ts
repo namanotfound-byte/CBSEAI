@@ -1,5 +1,6 @@
 import { retrieve } from "@/lib/rag/retriever";
 import { routeQuery } from "@/lib/rag/router";
+import { authenticatedUser } from "@/lib/auth/supabase";
 import type { SourceKind, SubjectId } from "@/lib/types";
 
 export const runtime = "nodejs";
@@ -11,6 +12,11 @@ export const runtime = "nodejs";
  *   GET /api/rag/search?q=ohm's+law&subject=science&chapter=11
  */
 export async function GET(req: Request) {
+  const token = req.headers.get("authorization")?.replace(/^Bearer\s+/i, "");
+  if (!(await authenticatedUser(token))) {
+    return Response.json({ error: "Sign in to search sources." }, { status: 401 });
+  }
+
   const url = new URL(req.url);
   const q = url.searchParams.get("q");
   if (!q) {

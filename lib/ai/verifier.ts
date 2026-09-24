@@ -26,7 +26,10 @@ export async function verifyAnswer(
   const citedIds = [
     ...text.matchAll(/\[\[source:([^\]]+)\]\]|\[\[diagram:([^\]]+)\]\]/g),
   ].map((m) => m[1] ?? m[2]);
-  const citationOk = citedIds.every((id) => ids.has(id));
+  const evidenceIds = new Set(sources.filter((source) => source.kind !== "syllabus").map((source) => source.id));
+  const isFallback = /^(?:The requested topic falls outside the retrieved CBSE context\.|This topic is in the active syllabus, but I don't have enough approved source material to answer it yet\.)$/i.test(text.trim());
+  const citationOk = citedIds.every((id) => ids.has(id)) &&
+    (isFallback || (evidenceIds.size > 0 && citedIds.some((id) => evidenceIds.has(id))));
 
   let cleaned = text;
   let marksOk = true;
@@ -36,7 +39,7 @@ export async function verifyAnswer(
     marksOk = false;
     cleaned = stripMarks(cleaned);
     if (route === "marking" || route === "pyq") {
-      notice = "Verified NCERT theory. Mark allocation unavailable for this query.";
+      notice = "Mark allocation unavailable without an approved marking scheme.";
     }
   } else if (hasMarkingScheme) {
     const allowedMarks = new Set(
@@ -49,7 +52,7 @@ export async function verifyAnswer(
       marksOk = false;
       cleaned = stripMarks(cleaned);
       if (route === "marking" || route === "pyq") {
-        notice = "Verified NCERT theory. Mark allocation unavailable for this query.";
+        notice = "Mark allocation unavailable without an approved marking scheme.";
       }
     }
   }
@@ -57,6 +60,9 @@ export async function verifyAnswer(
   const nli = citationOk
     ? await verifyClaims(cleaned, sources)
     : { ok: false, checked: false, unsupportedClaims: [] };
+  if (!nli.checked && !notice) {
+    notice = "Citations were checked; independent claim verification is not configured.";
+  }
 
   return {
     text: cleaned.trim(),

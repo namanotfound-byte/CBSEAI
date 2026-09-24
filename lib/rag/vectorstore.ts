@@ -69,10 +69,11 @@ function createMemoryStore(): VectorStore {
       const [qv] = await embedder.embed([query]);
       const queryTerms = terms(query);
 
-      const year = filters.year ?? env.ncertYear;
+      const syllabusVersion = filters.syllabusVersion ?? env.syllabusVersion;
       return store
-        .filter((c) => c.meta.year === year)
-        .filter((c) => c.meta.inActiveSyllabus !== false)
+        .filter((c) => c.meta.syllabusVersion === syllabusVersion)
+        .filter((c) => c.meta.inActiveSyllabus === true)
+        .filter((c) => !filters.syllabusTopicId || c.meta.syllabusTopicId === filters.syllabusTopicId)
         .filter((c) => !filters.subject || c.meta.subject === filters.subject)
         .filter((c) => !filters.chapter || c.meta.chapter === filters.chapter)
         .filter((c) => !filters.chapters?.length || filters.chapters.includes(c.meta.chapter))
@@ -101,10 +102,11 @@ function createMemoryStore(): VectorStore {
       await warm();
       if (!prefixes.length) return [];
 
-      const year = filters.year ?? env.ncertYear;
+      const syllabusVersion = filters.syllabusVersion ?? env.syllabusVersion;
       return store
-        .filter((c) => c.meta.year === year)
-        .filter((c) => c.meta.inActiveSyllabus !== false)
+        .filter((c) => c.meta.syllabusVersion === syllabusVersion)
+        .filter((c) => c.meta.inActiveSyllabus === true)
+        .filter((c) => !filters.syllabusTopicId || c.meta.syllabusTopicId === filters.syllabusTopicId)
         .filter((c) => prefixes.includes(c.meta.joinPrefix ?? ""))
         .filter((c) => !filters.subject || c.meta.subject === filters.subject)
         .filter((c) => !filters.chapter || c.meta.chapter === filters.chapter)
@@ -117,11 +119,12 @@ function createMemoryStore(): VectorStore {
       await warm();
       if (!ids.length) return [];
 
-      const year = filters.year ?? env.ncertYear;
+      const syllabusVersion = filters.syllabusVersion ?? env.syllabusVersion;
       return store
         .filter((c) => ids.includes(c.id))
-        .filter((c) => c.meta.year === year)
-        .filter((c) => c.meta.inActiveSyllabus !== false)
+        .filter((c) => c.meta.syllabusVersion === syllabusVersion)
+        .filter((c) => c.meta.inActiveSyllabus === true)
+        .filter((c) => !filters.syllabusTopicId || c.meta.syllabusTopicId === filters.syllabusTopicId)
         .filter((c) => !filters.subject || c.meta.subject === filters.subject)
         .filter((c) => !filters.chapter || c.meta.chapter === filters.chapter)
         .filter((c) => !filters.chapters?.length || filters.chapters.includes(c.meta.chapter))
@@ -161,11 +164,12 @@ function overlap(query: Set<string>, document: Set<string>) {
 
 /**
  * Recommended production store. Create the collection with the embedder's
- * dimension and payload indexes on subject, chapter, kind and year, then fill
+ * dimension and payload indexes on subject, chapter, kind and syllabus topic,
+ * then fill
  * in the two fetches below — the interface above is all the app depends on.
  *
  *   PUT /collections/{c}   { vectors: { size, distance: "Cosine" } }
- *   PUT /collections/{c}/index   { field_name: "year", field_schema: "keyword" }
+ *   PUT /collections/{c}/index   { field_name: "syllabusVersion", field_schema: "keyword" }
  */
 function createQdrantStore(): VectorStore {
   const base = env.qdrantUrl.replace(/\/$/, "");
@@ -218,8 +222,12 @@ function createQdrantStore(): VectorStore {
             ["meta.subject", "keyword"],
             ["meta.chapter", "integer"],
             ["meta.kind", "keyword"],
-            ["meta.year", "keyword"],
+            ["meta.sourceYear", "keyword"],
+            ["meta.syllabusVersion", "keyword"],
+            ["meta.syllabusTopicId", "keyword"],
             ["meta.inActiveSyllabus", "bool"],
+            ["meta.reviewStatus", "keyword"],
+            ["meta.assessmentStatus", "keyword"],
             ["meta.joinPrefix", "keyword"],
           ];
           await Promise.all(indexes.map(async ([field_name, field_schema]) => {
@@ -240,9 +248,14 @@ function createQdrantStore(): VectorStore {
 
   function must(filters: RetrievalFilters, prefixes?: string[]) {
     const clauses: Record<string, unknown>[] = [
-      { key: "meta.year", match: { value: filters.year ?? env.ncertYear } },
+      { key: "meta.syllabusVersion", match: { value: filters.syllabusVersion ?? env.syllabusVersion } },
       { key: "meta.inActiveSyllabus", match: { value: true } },
+      { key: "meta.reviewStatus", match: { value: "approved" } },
+      { key: "meta.assessmentStatus", match: { value: "summative" } },
     ];
+    if (filters.syllabusTopicId) {
+      clauses.push({ key: "meta.syllabusTopicId", match: { value: filters.syllabusTopicId } });
+    }
     if (filters.subject) clauses.push({ key: "meta.subject", match: { value: filters.subject } });
     if (filters.chapter) clauses.push({ key: "meta.chapter", match: { value: filters.chapter } });
     if (filters.chapters?.length) clauses.push({ key: "meta.chapter", match: { any: filters.chapters } });
@@ -277,11 +290,15 @@ function createQdrantStore(): VectorStore {
 
   function allowed(chunk: Chunk & { score: number }, filters: RetrievalFilters) {
     return (
-      chunk.meta.year === (filters.year ?? env.ncertYear) &&
-      chunk.meta.inActiveSyllabus !== false &&
+      chunk.meta.syllabusVersion === (filters.syllabusVersion ?? env.syllabusVersion) &&
+      chunk.meta.inActiveSyllabus === true &&
+      chunk.meta.reviewStatus === "approved" &&
+      chunk.meta.assessmentStatus === "summative" &&
+      (!filters.syllabusTopicId || chunk.meta.syllabusTopicId === filters.syllabusTopicId) &&
       (!filters.subject || chunk.meta.subject === filters.subject) &&
       (!filters.chapter || chunk.meta.chapter === filters.chapter)
-      && (!filters.chapters?.length || filters.chapters.includes(chunk.meta.chapter))
+      && (!filters.chapters?.length || filters.chapters.includes(chunk.meta.chapter)) &&
+      (!filters.kinds?.length || filters.kinds.includes(chunk.meta.kind))
     );
   }
 
@@ -308,10 +325,7 @@ function createQdrantStore(): VectorStore {
             payload: {
               sourceId: chunk.id,
               text: chunk.text,
-              meta: {
-                inActiveSyllabus: true,
-                ...chunk.meta,
-              },
+              meta: chunk.meta,
             },
           })),
         }),
@@ -389,7 +403,10 @@ let singleton: VectorStore | null = null;
 
 export function getVectorStore(): VectorStore {
   if (singleton) return singleton;
-  singleton =
-    env.ragProvider === "qdrant" ? createQdrantStore() : createMemoryStore();
+  switch (env.ragProvider) {
+    case "qdrant": singleton = createQdrantStore(); break;
+    case "memory": singleton = createMemoryStore(); break;
+    default: throw new Error(`Unsupported RAG_PROVIDER: ${env.ragProvider}`);
+  }
   return singleton;
 }

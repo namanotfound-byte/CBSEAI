@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { MASTERY, daysUntilBoards } from "@/lib/data/mastery";
+import { MASTERY } from "@/lib/data/mastery";
 import { SUBJECT_MAP, chapterName } from "@/lib/data/syllabus";
 import { Icon } from "@/components/ui/Icon";
 import type { SourceKind } from "@/lib/types";
@@ -27,8 +27,6 @@ const LADDER: { kind: SourceKind; label: string; when: string }[] = [
 ];
 
 export default function PlanPage() {
-  const days = daysUntilBoards();
-
   const queue = [...MASTERY]
     .map((m) => {
       const chapter = SUBJECT_MAP[m.subject].chapters.find(
@@ -45,17 +43,15 @@ export default function PlanPage() {
         className="border-b px-4 py-4 md:px-6"
         style={{ borderColor: "var(--rule)", background: "var(--surface)" }}
       >
-        <div className="flex items-baseline gap-2.5">
-          <span
-            className="tabular-nums text-[30px] leading-none tracking-[-0.04em]"
-            style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}
-          >
-            {days}
-          </span>
-          <h1 className="text-[14px]" style={{ color: "var(--text-soft)" }}>
-            days until the first paper
-          </h1>
-        </div>
+        <h1
+          className="text-[22px] leading-tight tracking-[-0.03em]"
+          style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}
+        >
+          Study plan
+        </h1>
+        <p className="mt-1 text-[13px]" style={{ color: "var(--text-soft)" }}>
+          Exam date not set. A countdown will appear after an official date is added.
+        </p>
       </header>
 
       <div className="sheet scroll-quiet min-h-0 flex-1 overflow-y-auto">
@@ -63,62 +59,86 @@ export default function PlanPage() {
           className="mx-auto w-full max-w-[46rem] px-3 py-5 md:px-5"
           style={{ paddingLeft: "calc(var(--rail) + 18px)" }}
         >
-          <h2 className="text-[13px]" style={{ fontWeight: 650 }}>
-            This week, in this order
-          </h2>
-          <p
-            className="mb-4 mt-0.5 text-[12px]"
-            style={{ color: "var(--text-faint)" }}
-          >
-            Sorted by marks at stake, not by how the book is arranged.
-          </p>
-
-          <ol className="flex flex-col">
-            {queue.map((item, i) => (
-              <li
-                key={`${item.subject}-${item.topic}`}
-                className="relative border-t py-3 first:border-t-0"
-                style={{ borderColor: "var(--rule)" }}
+          {queue.length > 0 ? (
+            <>
+              <h2 className="text-[13px]" style={{ fontWeight: 650 }}>
+                This week, in this order
+              </h2>
+              <p
+                className="mb-4 mt-0.5 text-[12px]"
+                style={{ color: "var(--text-faint)" }}
               >
-                <span
-                  className="absolute -left-[calc(var(--rail)+18px)] top-3.5 text-right text-[12px] tabular-nums"
-                  style={{ width: "var(--rail)", paddingRight: "10px", color: "var(--text-faint)" }}
-                >
-                  {i + 1}
-                </span>
+                Sorted by marks at stake, not by how the book is arranged.
+              </p>
 
-                <div className="flex items-start gap-3">
-                  <div className="min-w-0 flex-1">
-                    <p className="text-[14.5px]" style={{ fontWeight: 600 }}>
-                      {item.topic}
-                    </p>
-                    <p
-                      className="mt-0.5 truncate text-[11.5px]"
-                      style={{ color: "var(--text-faint)" }}
-                    >
-                      {SUBJECT_MAP[item.subject].name} · Ch {item.chapter} ·{" "}
-                      {chapterName(item.subject, item.chapter)}
-                    </p>
-                  </div>
-                  <span
-                    className="shrink-0 whitespace-nowrap text-[11.5px] tabular-nums"
-                    style={{ color: "var(--red)", fontWeight: 600 }}
+              <ol className="flex flex-col">
+                {queue.map((item, i) => (
+                  <li
+                    key={`${item.subject}-${item.topic}`}
+                    className="relative border-t py-3 first:border-t-0"
+                    style={{ borderColor: "var(--rule)" }}
                   >
-                    ~{item.marks} marks at stake
-                  </span>
-                </div>
+                    <span
+                      className="absolute -left-[calc(var(--rail)+18px)] top-3.5 text-right text-[12px] tabular-nums"
+                      style={{ width: "var(--rail)", paddingRight: "10px", color: "var(--text-faint)" }}
+                    >
+                      {i + 1}
+                    </span>
 
-                <Link
-                  href={`/?subject=${item.subject}&chapter=${item.chapter}`}
-                  className="mt-2 inline-flex items-center gap-1 text-[12.5px]"
-                  style={{ color: "var(--accent)", fontWeight: 600 }}
-                >
-                  Start here
-                  <Icon.Chevron size={12} />
-                </Link>
-              </li>
-            ))}
-          </ol>
+                    <div className="flex items-start gap-3">
+                      <div className="min-w-0 flex-1">
+                        <p className="text-[14.5px]" style={{ fontWeight: 600 }}>
+                          {item.topic}
+                        </p>
+                        <p
+                          className="mt-0.5 truncate text-[11.5px]"
+                          style={{ color: "var(--text-faint)" }}
+                        >
+                          {SUBJECT_MAP[item.subject].name} · Ch {item.chapter} ·{" "}
+                          {chapterName(item.subject, item.chapter)}
+                        </p>
+                      </div>
+                      <span
+                        className="shrink-0 whitespace-nowrap text-[11.5px] tabular-nums"
+                        style={{ color: "var(--red)", fontWeight: 600 }}
+                      >
+                        ~{item.marks} marks at stake
+                      </span>
+                    </div>
+
+                    <Link
+                      href={`/?subject=${item.subject}&chapter=${item.chapter}`}
+                      className="mt-2 inline-flex items-center gap-1 text-[12.5px]"
+                      style={{ color: "var(--accent)", fontWeight: 600 }}
+                    >
+                      Start here
+                      <Icon.Chevron size={12} />
+                    </Link>
+                  </li>
+                ))}
+              </ol>
+            </>
+          ) : (
+            <section
+              className="rounded-2xl border p-5"
+              style={{ borderColor: "var(--rule)", background: "var(--input)" }}
+            >
+              <h2 className="text-[15px]" style={{ fontWeight: 650 }}>
+                No personalised plan yet
+              </h2>
+              <p className="mt-1 text-[12.5px]" style={{ color: "var(--text-soft)" }}>
+                Answer a few questions first. Your plan will appear when there is enough evidence to rank what needs attention.
+              </p>
+              <Link
+                href="/"
+                className="mt-4 inline-flex items-center gap-1 rounded-lg px-3 py-2 text-[12.5px]"
+                style={{ background: "var(--accent)", color: "var(--surface)", fontWeight: 650 }}
+              >
+                Start practising
+                <Icon.Chevron size={13} />
+              </Link>
+            </section>
+          )}
 
           <h2 className="mb-1 mt-9 text-[13px]" style={{ fontWeight: 650 }}>
             What to study from, in sequence

@@ -1,9 +1,23 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type DragEvent } from "react";
 import { ArrowUp, ImagePlus, Square, X } from "lucide-react";
 import { MARK_OPTIONS, MODES } from "@/lib/config";
 import type { ChatContext, ContentPart } from "@/lib/types";
+
+const MAX_IMAGES = 3;
+const MAX_IMAGE_BYTES = 10 * 1024 * 1024;
+
+type AttachedImage = { url: string; name: string };
+
+function readImage(file: File) {
+  return new Promise<AttachedImage>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve({ url: String(reader.result), name: file.name });
+    reader.onerror = () => reject(new Error(`Could not read ${file.name}`));
+    reader.readAsDataURL(file);
+  });
+}
 
 export function Composer({
   context,
@@ -19,9 +33,12 @@ export function Composer({
   onContextChange: (next: Partial<ChatContext>) => void;
 }) {
   const [value, setValue] = useState("");
-  const [image, setImage] = useState<{ url: string; name: string } | null>(null);
+  const [images, setImages] = useState<AttachedImage[]>([]);
+  const [dragging, setDragging] = useState(false);
+  const [attachmentError, setAttachmentError] = useState<string>();
   const textarea = useRef<HTMLTextAreaElement>(null);
   const fileInput = useRef<HTMLInputElement>(null);
+  const dragDepth = useRef(0);
 
   useEffect(() => {
     const el = textarea.current;
@@ -31,19 +48,77 @@ export function Composer({
   }, [value]);
 
   const submit = () => {
-    if (busy || (!value.trim() && !image)) return;
+    if (busy || (!value.trim() && images.length === 0)) return;
     const parts: ContentPart[] = [];
-    if (image) parts.push({ type: "image", url: image.url, alt: image.name });
+    for (const image of images) {
+      parts.push({ type: "image", url: image.url, alt: image.name });
+    }
     if (value.trim()) parts.push({ type: "text", text: value.trim() });
     onSend(parts);
     setValue("");
-    setImage(null);
+    setImages([]);
+    setAttachmentError(undefined);
   };
 
-  const attach = (file: File) => {
-    const reader = new FileReader();
-    reader.onload = () => setImage({ url: String(reader.result), name: file.name });
-    reader.readAsDataURL(file);
+  const attach = async (files: File[]) => {
+    const imageFiles = files.filter((file) => file.type.startsWith("image/"));
+    if (imageFiles.length === 0) {
+      setAttachmentError("Only image files can be attached right now.");
+      return;
+    }
+
+    const valid = imageFiles.filter((file) => file.size <= MAX_IMAGE_BYTES);
+    if (valid.length !== imageFiles.length) {
+      setAttachmentError("Each image must be smaller than 10 MB.");
+    } else {
+      setAttachmentError(undefined);
+    }
+
+    const remaining = Math.max(0, MAX_IMAGES - images.length);
+    if (remaining === 0) {
+      setAttachmentError(`You can attach up to ${MAX_IMAGES} images.`);
+      return;
+    }
+
+    try {
+      const next = await Promise.all(valid.slice(0, remaining).map(readImage));
+      setImages((current) => [...current, ...next].slice(0, MAX_IMAGES));
+      if (valid.length > remaining) {
+        setAttachmentError(`You can attach up to ${MAX_IMAGES} images.`);
+      }
+    } catch (error) {
+      setAttachmentError(error instanceof Error ? error.message : "Could not attach that image.");
+    }
+  };
+
+  const hasDraggedFiles = (event: DragEvent<HTMLDivElement>) =>
+    event.dataTransfer.types.includes("Files");
+
+  const onDragEnter = (event: DragEvent<HTMLDivElement>) => {
+    if (!hasDraggedFiles(event)) return;
+    event.preventDefault();
+    dragDepth.current += 1;
+    setDragging(true);
+  };
+
+  const onDragOver = (event: DragEvent<HTMLDivElement>) => {
+    if (!hasDraggedFiles(event)) return;
+    event.preventDefault();
+    event.dataTransfer.dropEffect = "copy";
+  };
+
+  const onDragLeave = (event: DragEvent<HTMLDivElement>) => {
+    if (!hasDraggedFiles(event)) return;
+    event.preventDefault();
+    dragDepth.current = Math.max(0, dragDepth.current - 1);
+    if (dragDepth.current === 0) setDragging(false);
+  };
+
+  const onDrop = (event: DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    dragDepth.current = 0;
+    setDragging(false);
+    void attach(Array.from(event.dataTransfer.files));
   };
 
   return (
@@ -56,25 +131,54 @@ export function Composer({
     >
       <div className="mx-auto w-full max-w-[48rem]">
         <div
-          className="rounded-[26px] border px-3 pb-2 pt-2 shadow-sm"
-          style={{ borderColor: "var(--rule)", background: "var(--input)" }}
+          className="chat-composer relative rounded-[26px] border px-3 pb-2 pt-2 shadow-sm"
+          style={{
+            borderColor: dragging ? "var(--accent)" : "var(--rule)",
+            background: "var(--input)",
+          }}
+          onDragEnter={onDragEnter}
+          onDragOver={onDragOver}
+          onDragLeave={onDragLeave}
+          onDrop={onDrop}
         >
-          {image && (
-            <div className="mb-1 flex items-center gap-2 px-1 pt-1">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={image.url} alt={image.name} className="h-14 w-14 rounded-lg object-cover" />
-              <span className="min-w-0 flex-1 truncate text-[12px]" style={{ color: "var(--text-soft)" }}>
-                {image.name}
-              </span>
-              <button
-                type="button"
-                onClick={() => setImage(null)}
-                className="flex h-8 w-8 items-center justify-center rounded-full"
-                aria-label="Remove image"
-              >
-                <X size={16} />
-              </button>
+          {dragging && (
+            <div
+              className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center rounded-[25px] border-2 border-dashed text-[13px]"
+              style={{
+                borderColor: "var(--accent)",
+                background: "color-mix(in srgb, var(--input) 92%, transparent)",
+                color: "var(--text)",
+                fontWeight: 650,
+              }}
+            >
+              Drop images to attach
             </div>
+          )}
+
+          {images.length > 0 && (
+            <div className="mb-1 flex flex-wrap gap-2 px-1 pt-1">
+              {images.map((image, index) => (
+                <div key={`${image.name}-${index}`} className="relative">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={image.url} alt={image.name} className="h-14 w-14 rounded-lg object-cover" />
+                  <button
+                    type="button"
+                    onClick={() => setImages((current) => current.filter((_, i) => i !== index))}
+                    className="absolute -right-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full border"
+                    style={{ background: "var(--surface)", borderColor: "var(--rule)" }}
+                    aria-label={`Remove ${image.name}`}
+                  >
+                    <X size={13} />
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {attachmentError && (
+            <p className="px-2 pb-1 text-[11.5px]" style={{ color: "var(--red)" }} role="alert">
+              {attachmentError}
+            </p>
           )}
 
           <textarea
@@ -89,7 +193,7 @@ export function Composer({
             }}
             rows={1}
             placeholder="Message Padhle"
-            className="block min-h-11 w-full resize-none bg-transparent px-2 py-2 text-[16px] leading-[1.5] outline-none placeholder:opacity-60"
+            className="chat-composer-textarea block min-h-11 w-full resize-none bg-transparent px-2 py-2 text-[16px] leading-[1.5] outline-none placeholder:opacity-60"
             style={{ color: "var(--text)" }}
           />
 
@@ -107,10 +211,11 @@ export function Composer({
               ref={fileInput}
               type="file"
               accept="image/*"
+              multiple
               className="hidden"
               onChange={(event) => {
-                const file = event.target.files?.[0];
-                if (file) attach(file);
+                const files = Array.from(event.target.files ?? []);
+                if (files.length > 0) void attach(files);
                 event.target.value = "";
               }}
             />
@@ -145,7 +250,7 @@ export function Composer({
             <button
               type="button"
               onClick={busy ? onStop : submit}
-              disabled={!busy && !value.trim() && !image}
+              disabled={!busy && !value.trim() && images.length === 0}
               className="ml-auto flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-opacity disabled:opacity-30"
               style={{ background: "var(--text)", color: "var(--surface)" }}
               aria-label={busy ? "Stop generating" : "Send message"}

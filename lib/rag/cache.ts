@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import { env } from "../config";
 import type { MarkStep, Source } from "../types";
+import { TUTOR_POLICY_VERSION } from "../ai/policy";
 
 export interface CachedAnswer {
   text: string;
@@ -22,7 +23,8 @@ export function answerCacheKey(input: {
   const normalized = input.query.toLowerCase().replace(/\s+/g, " ").trim();
   return createHash("sha256")
     .update([
-      env.ncertYear,
+      env.syllabusVersion,
+      TUTOR_POLICY_VERSION,
       input.subject ?? "all",
       input.chapter ?? "all",
       input.mode,

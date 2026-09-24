@@ -30,6 +30,7 @@ export interface Chapter {
 
 /** Where a retrieved chunk came from. Drives the citation chip styling. */
 export type SourceKind =
+  | "syllabus"
   | "ncert"
   | "exemplar"
   | "pyq"
@@ -60,8 +61,12 @@ export interface Source {
   page?: number;
   pageStart?: number;
   pageEnd?: number;
-  /** Academic year the source is pinned to, e.g. "2026-27". */
-  year?: string;
+  /** Original publication/exam year of this document, e.g. "2024". */
+  sourceYear?: string;
+  /** Syllabus release this source was reviewed against, e.g. "2026-27". */
+  syllabusVersion?: string;
+  /** Canonical active-syllabus node this content is allowed to support. */
+  syllabusTopicId?: string;
   score?: number;
 }
 
@@ -82,7 +87,7 @@ export type Role = "user" | "assistant";
 
 export interface ImagePart {
   type: "image";
-  /** data: URL or https URL. Qwen2.5-VL takes both. */
+  /** data: URL or https URL for the hosted vision model. */
   url: string;
   alt?: string;
 }
@@ -149,7 +154,12 @@ export interface Chunk {
     page?: number;
     pageStart?: number;
     pageEnd?: number;
-    year: string;
+    /** Original publication/exam year. Never overwritten during ingestion. */
+    sourceYear: string;
+    /** Syllabus version this chunk was reviewed and mapped against. */
+    syllabusVersion: string;
+    /** Canonical syllabus node. Required for every retrievable chunk. */
+    syllabusTopicId: string;
     heading?: string;
     chunkType?: string;
     parentId?: string;
@@ -163,7 +173,13 @@ export interface Chunk {
     officialUrl?: string;
     joinPrefix?: string;
     joinKey?: string;
-    inActiveSyllabus?: boolean;
+    inActiveSyllabus: boolean;
+    /** Explicit human/content QA gate before production indexing. */
+    reviewStatus?: "staging" | "approved";
+    assessmentStatus?: "summative" | "formative" | "excluded";
+    sourcePath?: string;
+    extractionVersion?: string;
+    mathsTrack?: "standard" | "basic";
   };
 }
 
@@ -172,12 +188,19 @@ export interface RetrievalFilters {
   chapter?: number;
   chapters?: number[];
   kinds?: SourceKind[];
-  year?: string;
+  syllabusVersion?: string;
+  syllabusTopicId?: string;
   topK?: number;
   route?: QueryRoute;
 }
 
-export type QueryRoute = "theory" | "numerical" | "diagram" | "marking" | "pyq";
+export type QueryRoute =
+  | "theory"
+  | "numerical"
+  | "diagram"
+  | "marking"
+  | "pyq"
+  | "competency";
 
 /** Per-topic mastery, from the student's own answers. Powers /graph. */
 export interface TopicMastery {

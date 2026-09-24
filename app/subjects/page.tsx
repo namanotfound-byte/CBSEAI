@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { SUBJECTS } from "@/lib/data/syllabus";
+import { ACTIVE_SUBJECTS } from "@/lib/data/syllabus";
 import { MASTERY } from "@/lib/data/mastery";
 import { Icon } from "@/components/ui/Icon";
 import type { SubjectId } from "@/lib/types";
@@ -14,7 +14,7 @@ import type { SubjectId } from "@/lib/types";
  */
 export default function SubjectsPage() {
   const [active, setActive] = useState<SubjectId>("science");
-  const subject = SUBJECTS.find((s) => s.id === active)!;
+  const subject = ACTIVE_SUBJECTS.find((s) => s.id === active)!;
   const maxMarks = Math.max(...subject.chapters.map((c) => c.marks));
 
   const weakByChapter = new Map<number, number>();
@@ -36,20 +36,27 @@ export default function SubjectsPage() {
         >
           Chapters
         </h1>
-        <div className="no-scrollbar -mx-4 mt-3 flex gap-1.5 overflow-x-auto px-4 md:-mx-6 md:px-6">
-          {SUBJECTS.map((s) => {
+        <div
+          className="no-scrollbar -mx-4 mt-3 flex gap-1.5 overflow-x-auto px-4 md:-mx-6 md:px-6"
+          role="tablist"
+          aria-label="Subjects"
+        >
+          {ACTIVE_SUBJECTS.map((s) => {
             const on = s.id === active;
             return (
               <button
                 key={s.id}
                 type="button"
                 onClick={() => setActive(s.id)}
-                className="shrink-0 rounded-full border px-3.5 py-1.5 text-[13px] transition-colors"
+                role="tab"
+                aria-selected={on}
+                className="shrink-0 rounded-lg border px-3.5 py-1.5 text-[13px] transition-colors"
                 style={{
-                  borderColor: on ? "var(--accent)" : "var(--rule)",
-                  background: on ? "var(--accent)" : "transparent",
-                  color: on ? "#fff" : "var(--text-soft)",
+                  borderColor: "var(--rule)",
+                  background: on ? "var(--accent-soft)" : "transparent",
+                  color: on ? "var(--text)" : "var(--text-soft)",
                   fontWeight: on ? 600 : 450,
+                  boxShadow: on ? "inset 0 -2px 0 var(--accent)" : "none",
                 }}
               >
                 {s.name}

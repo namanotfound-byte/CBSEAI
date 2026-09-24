@@ -1,0 +1,326 @@
+{
+  "version": "2026-27",
+  "authority": "CBSE Class X curriculum PDFs supplied in ../Data/Curriculum-2026",
+  "notes": [
+    "This is a reviewed retrieval map, not replacement educational source text.",
+    "Science Heredity is treated as examinable because the detailed curriculum lists it and the current sample paper assesses Mendelian inheritance; the broad final note remains ambiguous.",
+    "Formative material is mapped separately for future learning-only retrieval; it is not in the current approved year-end answer index.",
+    "Science curriculum page 6 excludes information in NCERT boxes from the year-end examination; boxed text requires separate exclusion during source review."
+  ],
+  "topics": [
+    {
+      "id": "science.ch01",
+      "subject": "science",
+      "chapter": 1,
+      "title": "Chemical Reactions and Equations",
+      "curriculumPage": 4,
+      "scope": "Chemical reactions, chemical equations, balanced chemical equations, combination, decomposition, displacement, double displacement, precipitation, endothermic and exothermic reactions, oxidation and reduction.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "science.ch02",
+      "subject": "science",
+      "chapter": 2,
+      "title": "Acids, Bases and Salts",
+      "curriculumPage": 4,
+      "scope": "Acids and bases, indicators, chemical properties, neutralisation, pH and its everyday importance, sodium hydroxide, bleaching powder, baking soda, washing soda and plaster of Paris.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "science.ch03",
+      "subject": "science",
+      "chapter": 3,
+      "title": "Metals and Non-metals",
+      "curriculumPage": 5,
+      "scope": "Properties of metals and non-metals, reactivity series, ionic compounds, basic metallurgical processes, corrosion and prevention.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "science.ch04",
+      "subject": "science",
+      "chapter": 4,
+      "title": "Carbon and its Compounds",
+      "curriculumPage": 5,
+      "scope": "Covalent compounds, hydrocarbons, homologous series, nomenclature, functional groups, combustion, oxidation, addition, substitution, ethanol, ethanoic acid, soaps and detergents.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "science.ch05",
+      "subject": "science",
+      "chapter": 5,
+      "title": "Life Processes",
+      "curriculumPage": 5,
+      "scope": "Nutrition, respiration, transport and excretion in plants and animals.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "science.ch06",
+      "subject": "science",
+      "chapter": 6,
+      "title": "Control and Coordination",
+      "curriculumPage": 5,
+      "scope": "Plant tropic movements and hormones; animal nervous system, voluntary, involuntary and reflex actions, and animal hormones.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "science.ch07",
+      "subject": "science",
+      "chapter": 7,
+      "title": "How do Organisms Reproduce?",
+      "curriculumPage": 5,
+      "scope": "Asexual and sexual reproduction in animals and plants, reproductive health, family planning, safe sex, HIV/AIDS, child bearing and women's health.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "science.ch08",
+      "subject": "science",
+      "chapter": 8,
+      "title": "Heredity",
+      "curriculumPage": 5,
+      "scope": "Heredity, Mendel's contribution and laws of inheritance, and brief sex determination. Evolution sections are formative only.",
+      "assessmentStatus": "summative",
+      "formativeTerms": [
+        "evolution",
+        "speciation",
+        "fossils",
+        "human evolution",
+        "evolutionary relationships",
+        "acquired traits"
+      ]
+    },
+    {
+      "id": "science.ch09",
+      "subject": "science",
+      "chapter": 9,
+      "title": "Light — Reflection and Refraction",
+      "curriculumPage": 5,
+      "scope": "Spherical mirrors and lenses, images, mirror and lens formulae without derivation, magnification, refraction, refractive index and power of a lens.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "science.ch10",
+      "subject": "science",
+      "chapter": 10,
+      "title": "The Human Eye and the Colourful World",
+      "curriculumPage": 6,
+      "scope": "Human eye lens and vision defects, prism, dispersion and scattering; colour of the sun at sunrise and sunset is excluded.",
+      "assessmentStatus": "summative",
+      "excludedTerms": [
+        "colour of the sun at sunrise",
+        "color of the sun at sunrise",
+        "colour of the sun at sunset",
+        "color of the sun at sunset"
+      ]
+    },
+    {
+      "id": "science.ch11",
+      "subject": "science",
+      "chapter": 11,
+      "title": "Electricity",
+      "curriculumPage": 6,
+      "scope": "Current, potential difference, Ohm's law, resistance and resistivity, series and parallel resistors, heating effect, power and relations between P, V, I and R.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "science.ch12",
+      "subject": "science",
+      "chapter": 12,
+      "title": "Magnetic Effects of Electric Current",
+      "curriculumPage": 6,
+      "scope": "Magnetic field and field lines, field from conductor, coil or solenoid, force on conductor, Fleming’s left-hand rule, AC/DC, AC frequency and advantage of AC over DC, and domestic circuits. Motor, electromagnetic induction and electric generator are formative only.",
+      "assessmentStatus": "summative",
+      "formativeTerms": [
+        "electric motor",
+        "electromagnetic induction",
+        "electric generator"
+      ]
+    },
+    {
+      "id": "science.ch13",
+      "subject": "science",
+      "chapter": 13,
+      "title": "Our Environment",
+      "curriculumPage": 6,
+      "scope": "Ecosystems, environmental problems, ozone depletion, waste and solutions, biodegradable and non-biodegradable substances.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "maths.ch01",
+      "subject": "maths",
+      "chapter": 1,
+      "title": "Real Numbers",
+      "curriculumPage": 3,
+      "scope": "Fundamental Theorem of Arithmetic and proofs of irrationality of square roots 2, 3 and 5 and related expressions such as 3 + 2√5.",
+      "assessmentStatus": "summative",
+      "excludedTerms": [
+        "euclid's division algorithm",
+        "euclid’s division algorithm",
+        "euclidean division algorithm"
+      ]
+    },
+    {
+      "id": "maths.ch02",
+      "subject": "maths",
+      "chapter": 2,
+      "title": "Polynomials",
+      "curriculumPage": 3,
+      "scope": "Zeroes of a polynomial and relationship between zeroes and coefficients of quadratic polynomials.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "maths.ch03",
+      "subject": "maths",
+      "chapter": 3,
+      "title": "Pair of Linear Equations in Two Variables",
+      "curriculumPage": 4,
+      "scope": "Graphical solution and consistency, number of solutions, substitution and elimination, and simple situational problems.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "maths.ch04",
+      "subject": "maths",
+      "chapter": 4,
+      "title": "Quadratic Equations",
+      "curriculumPage": 4,
+      "scope": "Standard form, real roots by factorisation or quadratic formula, discriminant and nature of roots, and situational problems.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "maths.ch05",
+      "subject": "maths",
+      "chapter": 5,
+      "title": "Arithmetic Progressions",
+      "curriculumPage": 4,
+      "scope": "Nth term and sum of first n terms of an arithmetic progression and daily life applications.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "maths.ch06",
+      "subject": "maths",
+      "chapter": 6,
+      "title": "Triangles",
+      "curriculumPage": 5,
+      "scope": "Similarity of triangles, proof of the Basic Proportionality Theorem, statement without proof of its converse and the similarity criteria, and applications.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "maths.ch07",
+      "subject": "maths",
+      "chapter": 7,
+      "title": "Coordinate Geometry",
+      "curriculumPage": 5,
+      "scope": "Distance formula and section formula for internal division.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "maths.ch08",
+      "subject": "maths",
+      "chapter": 8,
+      "title": "Introduction to Trigonometry",
+      "curriculumPage": 6,
+      "scope": "Trigonometric ratios at the standard angles 0, 30, 45, 60 and 90 degrees where defined, relationships and simple identities based on sin squared A plus cos squared A equals 1.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "maths.ch09",
+      "subject": "maths",
+      "chapter": 9,
+      "title": "Some Applications of Trigonometry",
+      "curriculumPage": 6,
+      "scope": "Simple heights and distances with at most two right triangles and elevation or depression angles limited to 30, 45 and 60 degrees.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "maths.ch10",
+      "subject": "maths",
+      "chapter": 10,
+      "title": "Circles",
+      "curriculumPage": 6,
+      "scope": "Tangent perpendicular to radius at point of contact and equal tangents from an external point, proofs and applications.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "maths.ch11",
+      "subject": "maths",
+      "chapter": 11,
+      "title": "Areas Related to Circles",
+      "curriculumPage": 7,
+      "scope": "Areas and perimeters of sectors and segments; segment central angles limited to 60, 90 and 120 degrees.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "maths.ch12",
+      "subject": "maths",
+      "chapter": 12,
+      "title": "Surface Areas and Volumes",
+      "curriculumPage": 7,
+      "scope": "Surface areas and volumes of combinations of any two cubes, cuboids, spheres, hemispheres, cylinders or cones.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "maths.ch13",
+      "subject": "maths",
+      "chapter": 13,
+      "title": "Statistics",
+      "curriculumPage": 7,
+      "scope": "Mean, median and mode of grouped data; avoid bimodal situations.",
+      "assessmentStatus": "summative"
+    },
+    {
+      "id": "maths.ch14",
+      "subject": "maths",
+      "chapter": 14,
+      "title": "Probability",
+      "curriculumPage": 7,
+      "scope": "Classical definition of probability and simple probability of an event.",
+      "assessmentStatus": "summative"
+    }
+  ],
+  "formativeTopics": [
+    {
+      "id": "science.formative.periodic_classification",
+      "subject": "science",
+      "curriculumPage": 4,
+      "title": "Periodic Classification of Elements",
+      "assessmentStatus": "formative"
+    },
+    {
+      "id": "science.formative.evolution",
+      "subject": "science",
+      "curriculumPage": 5,
+      "title": "Evolution",
+      "assessmentStatus": "formative"
+    },
+    {
+      "id": "science.formative.magnetic_devices",
+      "subject": "science",
+      "curriculumPage": 6,
+      "title": "Electric motor, electromagnetic induction and electric generator",
+      "assessmentStatus": "formative"
+    }
+  ],
+  "internalAssessmentTopics": [
+    {
+      "id": "science.internal.practicals",
+      "subject": "science",
+      "curriculumPages": [
+        7,
+        8
+      ],
+      "title": "Prescribed Science practical work",
+      "assessmentStatus": "internal_assessment",
+      "note": "The 14 listed experiments require their own reviewed source records before practical answers are enabled."
+    },
+    {
+      "id": "maths.internal.lab",
+      "subject": "maths",
+      "curriculumPages": [
+        8,
+        9
+      ],
+      "title": "Mathematics lab practical work",
+      "assessmentStatus": "internal_assessment",
+      "note": "Lab practical marks appear in the curriculum; no lab-manual source has been approved."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { APP } from "@/lib/config";
-import { AppShell } from "@/components/shell/AppShell";
+import { AuthGate } from "@/components/auth/AuthGate";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <AppShell>{children}</AppShell>
+        <AuthGate>{children}</AuthGate>
       </body>
     </html>
   );

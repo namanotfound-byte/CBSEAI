@@ -2,9 +2,10 @@ import { getChatProvider } from "@/lib/ai/provider";
 import { buildContextBlock, buildSystemPrompt, extractMarks } from "@/lib/ai/prompt";
 import { verifyAnswer } from "@/lib/ai/verifier";
 import { answerCacheKey, getCachedAnswer, setCachedAnswer } from "@/lib/rag/cache";
-import { retrieve } from "@/lib/rag/retriever";
+import { hasApprovedCompetencyQuestion, retrieve } from "@/lib/rag/retriever";
 import { isExamStyleRoute, routeQuery } from "@/lib/rag/router";
 import type { ChatEvent, ChatRequestBody } from "@/lib/types";
+import { authenticatedUser } from "@/lib/auth/supabase";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -15,6 +16,10 @@ export const dynamic = "force-dynamic";
  * variant there and one case in the reducer — not reshaping this route.
  */
 export async function POST(req: Request) {
+  const token = req.headers.get("authorization")?.match(/^Bearer\s+(.+)$/i)?.[1];
+  if (!await authenticatedUser(token)) {
+    return Response.json({ error: "Sign in to ask a question." }, { status: 401 });
+  }
   const body = (await req.json()) as ChatRequestBody;
   const { messages, context } = body;
 
@@ -27,16 +32,46 @@ export async function POST(req: Request) {
 
       try {
         const last = messages.at(-1);
-        const query =
+        const typedQuery =
           last?.content
             .filter((p) => p.type === "text")
             .map((p) => (p as { text: string }).text)
             .join(" ") ?? "";
         const hasImages = Boolean(last?.content.some((p) => p.type === "image"));
-        const route = routeQuery(query);
+        // Read an uploaded question before choosing a syllabus scope. The image
+        // itself is the student's question; typing a caption is optional.
+        let query = typedQuery;
+        let imageSubject: "maths" | "science" | undefined;
+        if (hasImages) {
+          const provider = getChatProvider();
+          let observation = "";
+          for await (const delta of provider.stream({
+            system: "Read the student's image as a Class 10 CBSE question. Transcribe the visible question and answer options, then describe any diagram, labels, values, and units needed to find the topic. Do not solve it. Start your response with exactly 'SUBJECT: Maths' or 'SUBJECT: Science', followed by a newline and 'QUESTION: ' with the transcription and diagram description. If unreadable, write 'QUESTION: UNREADABLE'. Physics and Chemistry are Science.",
+            messages: [{ role: "user", content: last?.content ?? [] }],
+            signal: req.signal,
+            hasImages: true,
+          })) observation += delta;
+          imageSubject = /^SUBJECT:\s*Maths\b/im.test(observation)
+            ? "maths"
+            : /^SUBJECT:\s*Science\b/im.test(observation)
+              ? "science"
+              : undefined;
+          const extracted = observation.match(/^QUESTION:\s*([\s\S]*)/im)?.[1]?.trim();
+          if (extracted && !/^UNREADABLE\b/i.test(extracted)) {
+            query = [typedQuery, extracted].filter(Boolean).join("\n");
+          }
+        }
+        if (!query.trim()) {
+          send({ type: "token", text: hasImages
+            ? "I couldn't read the question in that image. Please upload a clearer crop or type the question."
+            : "Ask a Maths or Science question to get a source-backed answer." });
+          send({ type: "done" });
+          return;
+        }
+        const route = context.mode === "drill" ? "competency" : routeQuery(query);
         const cacheKey = answerCacheKey({
           query,
-          subject: context.subject,
+          subject: imageSubject ?? context.subject,
           chapter: context.chapter,
           mode: context.mode,
           marks: context.marks,
@@ -60,11 +95,13 @@ export async function POST(req: Request) {
         if (query.trim()) {
           try {
             sources = await retrieve(query, {
-              subject: context.subject,
+              subject: imageSubject ?? context.subject,
               chapter: context.chapter,
               kinds:
                 route === "diagram"
                   ? ["ncert", "diagram", "ms"]
+                  : route === "competency"
+                    ? ["cfpq", "sqp", "pyq"]
                   : route === "marking" || route === "pyq"
                     ? ["ncert", "pyq", "sqp", "ms", "diagram"]
                     : undefined,
@@ -73,10 +110,36 @@ export async function POST(req: Request) {
             });
             if (sources.length) send({ type: "sources", sources });
           } catch (err) {
-            // A retrieval failure shouldn't kill the answer — the model still
-            // knows the syllabus. It just can't cite.
             console.error("retrieval failed", err);
           }
+        }
+
+        const hasSyllabusScope = sources.some(
+          (source) => source.kind === "syllabus" && source.chunkType === "syllabus_scope",
+        );
+        if (query.trim() && !hasSyllabusScope) {
+          send({
+            type: "token",
+            text: "I couldn't verify this topic against the active CBSE syllabus, so I won't answer it from memory.",
+          });
+          send({ type: "done" });
+          return;
+        }
+        if (query.trim() && !sources.some((source) => source.kind !== "syllabus")) {
+          send({
+            type: "token",
+            text: "This topic is in the active syllabus, but I don't have enough approved source material to answer it yet.",
+          });
+          send({ type: "done" });
+          return;
+        }
+        if (query.trim() && route === "competency" && !hasApprovedCompetencyQuestion(sources)) {
+          send({
+            type: "token",
+            text: "This topic is in the active syllabus, but no approved competency-based question from a mapped CBSE question bank is available yet.",
+          });
+          send({ type: "done" });
+          return;
         }
 
         // 2. Prompt.
@@ -85,9 +148,21 @@ export async function POST(req: Request) {
         );
         const examStyle = context.mode === "answer" && isExamStyleRoute(route);
 
-        const system = [buildSystemPrompt(context, sources), buildContextBlock(sources)]
-          .filter(Boolean)
-          .join("\n\n");
+        const system = buildSystemPrompt(context, sources, route);
+        const evidenceMessage = {
+          role: "user" as const,
+          content: [{ type: "text" as const, text: buildContextBlock(sources) }],
+        };
+        // Vision has already turned the uploaded image into a question. Reuse
+        // that transcription for answering so a second, costly vision request
+        // cannot reroute the question or exhaust a free image-model quota.
+        const answerMessages = [
+          ...messages.slice(0, -1).map((message) => ({
+            role: message.role,
+            content: message.content.filter((part) => part.type === "text"),
+          })).filter((message) => message.content.length),
+          { role: "user" as const, content: [{ type: "text" as const, text: query }] },
+        ];
 
         // 3. Generate into a short server-side buffer. Structural verification
         //    happens before anything reaches the answer sheet, so an invalid
@@ -97,9 +172,9 @@ export async function POST(req: Request) {
           let text = "";
           for await (const delta of provider.stream({
             system: prompt,
-            messages,
+            messages: [evidenceMessage, ...answerMessages],
             signal: req.signal,
-            hasImages,
+            hasImages: false,
           })) {
             text += delta;
           }
@@ -110,7 +185,7 @@ export async function POST(req: Request) {
         let verified = await verifyAnswer(full, sources, route);
         if (!verified.citationOk || !verified.nliOk) {
           full = await generate(
-            `${system}\n\nRETRY: The previous draft failed grounding verification. Regenerate once using only claims supported by CONTEXT and only the exact ids shown above.`,
+            `${system}\n\nRETRY: The previous draft failed grounding verification. Regenerate once using only claims supported by CONTEXT and only the exact ids shown in the evidence message.`,
           );
           verified = await verifyAnswer(full, sources, route);
         }
@@ -131,7 +206,7 @@ export async function POST(req: Request) {
             type: "notice",
             message:
               verified.notice ??
-              "Verified NCERT theory. Mark allocation unavailable for this query.",
+              "Mark allocation unavailable without an approved marking scheme.",
           });
         }
 
@@ -144,7 +219,7 @@ export async function POST(req: Request) {
             notice:
               verified.notice ??
               (!hasMarkingScheme && examStyle
-                ? "Verified NCERT theory. Mark allocation unavailable for this query."
+                ? "Mark allocation unavailable without an approved marking scheme."
                 : undefined),
           }).catch(() => undefined);
         }

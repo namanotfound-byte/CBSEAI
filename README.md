@@ -1,141 +1,59 @@
 # Padhle
 
-A CBSE Class 10 tutor that writes answers the way the marking scheme reads them.
-The application path is complete; production services and the extracted
-official corpus are configured through environment variables.
+A Class X CBSE tutor being built around cited Maths and Science source material. The interface and retrieval pipeline are implemented; the real corpus is **staged, not yet published to the live index**. The five production credentials passed isolated API checks. A small reviewed pilot is in a separate Qdrant staging collection. The production tutor must not answer from model memory while reviewed evidence is unavailable.
 
-```bash
-npm install
-cp .env.example .env.local
-npm run dev
-```
+## Current scope
 
-It runs out of the box on `MODEL_PROVIDER=mock`, which streams canned board
-answers so the interface, citations, sources, and mark controls can be tested
-before the production services are connected.
+- Maths and Science for the 2026–27 CBSE curriculum.
+- Sources: the parent folder `../Data` inside `CBSE_Style_Tutor`. The app's own `Data` directory is only a placeholder.
+- Current syllabus gates every query; only approved, summative, current-topic evidence can be retrieved.
+- Answers require citations to retrieved passages. Mark splits require an exact marking-scheme match.
+- Formative and excluded content is kept out of year-end board answers.
 
----
+See [CORPUS_WORKFLOW.md](CORPUS_WORKFLOW.md) for the inventory, extraction and review process.
 
-## Where things are
+## Accounts and image questions
 
-```
-app/
-  page.tsx              Ask — the chat
-  subjects/             Chapters, by subject
-  graph/                Weak spots
-  plan/                 This week, and what to study from
-  api/chat/             Retrieve → prompt → stream (SSE)
-  api/rag/search/       Retrieval on its own, for eyeballing
-  api/ingest/           Corpus in
-lib/
-  ai/provider.ts        ← the model seam
-  ai/prompt.ts          ← how it's told to answer
-  rag/retriever.ts      Hybrid retrieve, rerank, slot, parent expand
-  rag/vectorstore.ts    Qdrant named dense+sparse vectors and RRF
-  rag/cache.ts          FAQ cache (memory or Redis REST)
-  ai/verifier.ts        Citations, marks, and MNLI orchestration
-  data/syllabus.ts      Chapter lists (re-check every April)
-  data/mastery.ts       Placeholder mastery data
-components/chat/        The answer sheet
-```
+Supabase Auth gates the app and checks the access token again on `/api/chat` and `/api/rag/search`. Email/password signup, email confirmation, sign-in, password reset, and sign-out are implemented. The project uses a dedicated Brevo SMTP key stored in Supabase to deliver public confirmation and reset emails. Google and GitHub buttons enable automatically when those providers are enabled in Supabase. Set `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` on Vercel; never put a Supabase secret/service-role key in a `NEXT_PUBLIC_` variable. In Supabase Auth URL Configuration, allow the exact app return URLs. Each social provider also needs its own OAuth client ID and secret stored in Supabase Auth, with `https://<project-ref>.supabase.co/auth/v1/callback` registered at the provider.
 
-## Plugging in the fine-tuned model
+An image-only question is sent to the hosted vision model to transcribe its text and diagram details and infer Maths or Science (including Physics and Chemistry). That transcription is used to retrieve current-syllabus evidence before answering. If the image is unreadable or approved evidence is missing, the tutor says so rather than guessing. The current hosted vision routes accept up to three images per request.
 
-Three environment variables, nothing else:
+## Free hosted services
 
-```bash
-MODEL_PROVIDER=openai
-MODEL_BASE_URL=https://your-endpoint/v1
-MODEL_API_KEY=...
-MODEL_NAME=Qwen/Qwen2.5-VL-7B-Instruct-AWQ
-```
+The configuration is API-only; it does not require a local model or GPU:
 
-`lib/ai/provider.ts` speaks the OpenAI chat-completions protocol, which is what
-vLLM, SGLang, Nebius, Together, Fireworks and Ollama all serve. If you host
-Qwen2.5-VL-7B any of those ways, nothing in the app changes.
+| Service | Job | Required protected settings |
+| --- | --- | --- |
+| OpenRouter free Qwen3.8 27B | Text and image answer generation | `MODEL_API_KEY` |
+| OpenRouter free Gemma 4 31B | Answer fallback and sampled offline audit | Same OpenRouter key |
+| Groq Free Qwen3.8 27B | Optional first-choice text and image route for more daily capacity | `GROQ_API_KEY` |
+| Cloudflare Workers AI free BGE-M3 | Dense embeddings | `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_API_TOKEN` |
+| Cloudflare Workers AI BGE reranker base | Reranks candidate passages | Same Cloudflare settings |
+| Qdrant Cloud free cluster | Dense + sparse index | `QDRANT_URL`, `QDRANT_API_KEY` |
+| Vercel Hobby | Web app | Add the above as protected environment variables |
 
-Images are already wired end to end. A photographed question goes up as a data
-URL in the `image_url` part shape Qwen2.5-VL expects, and if `VISION_MODEL_NAME`
-is set, turns containing an image route to the Qwen VL checkpoint.
+These services have free quotas and can stop serving when a quota is exhausted. The previously selected Qwen2.5-VL-7B and Llama 3.2 11B Vision free routes are no longer in OpenRouter's live model catalog, despite their historical listing pages. The current Qwen and Gemma routes are open-weight, support images, and have zero listed token prices. The application rejects paid OpenRouter model routes. Both OpenRouter free endpoints returned temporary upstream rate limits in the pilot answer test. A Groq-only Qwen generation test succeeded with a correctly cited Science answer. BGE reranker base is the available free API substitute for BGE-reranker-v2-m3.
 
-### What the model has to emit
+With `GROQ_API_KEY` from the Groq Free plan, the app tries Groq's Qwen3.8 27B vision endpoint first, then the existing free OpenRouter routes when Groq reports temporary unavailability or a rate limit. The Groq key passed an isolated production-environment generation test with OpenRouter disabled. Published limits vary by account; the Groq console's Limits page is the authority for an actual key. A free OpenRouter account provides 50 requests per day, shared across free models; changing model names does not multiply that allowance.
 
-Two conventions, both parsed:
+`MODEL_PROVIDER=mock`, `RAG_PROVIDER=memory` and `EMBEDDINGS_PROVIDER=mock` are available only for explicit development tests. The in-memory corpus is synthetic and must not be presented as evidence of production coverage.
 
-| The model writes | The app renders |
-|---|---|
-| `**oxidising agent**` | a bold scoring keyword |
-| `[S1]` | a citation chip, tap to open the NCERT snippet |
-| `MARKS: 3 \| 1 — states the law \| 1 — balanced equation \| 1 — observation` | the verified marks panel |
+## How source instructions reach the model
 
-The `MARKS:` line is stripped before display, so it never flashes on screen as
-text. Put these in the training data and the prompt clauses that ask for them
-can be deleted — which is the point of fine-tuning them in.
+For each question, the server resolves a current syllabus topic, retrieves content from the same topic, reranks candidates, and gives the model a fixed CBSE answer policy plus quoted source passages and source IDs. The policy tells it to use NCERT wording for definitions, write in board-answer form, cite every academic claim, refuse when evidence is missing, and never invent a mark split. A structural verifier rejects invalid citations and unsupported marks before text is shown. This is implemented in `lib/ai/policy.ts`, `lib/ai/prompt.ts`, `lib/rag/retriever.ts`, and `lib/ai/verifier.ts`.
 
-## Plugging in RAG
+## Corpus status
 
-`POST /api/ingest` with the bearer key and preferably pre-chunked rows:
+The current inventory has 725 Maths/Science PDF or ZIP-member candidates. A first pass extracted 948 staged curriculum and NCERT records. Provenance checks verified all 29 source PDFs used for those rows; extraction triage flagged 791 rows for extra review, including mathematical notation, figures, questions and unresolved PDF glyphs. Separate layout-aware passes staged 103 Science and 68 Maths paragraphs. The current sample papers and marking schemes occupy a 45-page review queue because PDF extraction scrambles some formulae, questions and figures. No source row was approved wholesale. The second pilot batch has 27 reviewed syllabus scope records, 12 visually reviewed Science passages, and 8 visually reviewed Maths passages in its own versioned Qdrant collection, `cbse_10_pilot_20260924_v2`. It is not attached to the live alias. A separately reviewed NCERT Table 9.4 optics row now passes local retrieval for a convex-lens image on a screen; it has not yet been added to Qdrant. Broader Maths coverage, Science Heredity, formulas, and paper marking schemes still need review. The ingestion endpoint requires an ingestion secret and approved metadata.
 
-```bash
-curl -X POST localhost:3000/api/ingest \
-  -H 'authorization: Bearer YOUR_INGEST_API_KEY' \
-  -H 'content-type: application/json' -d '{
-  "text": "...page text...",
-  "meta": { "kind": "ncert", "subject": "science", "chapter": 5, "page": 95 }
-}'
-```
-
-`kind` is one of `ncert | exemplar | pyq | sqp | ms | diagram | cfpq | model | notes`, and it
-matters: `lib/rag/retriever.ts` reranks by source priority, so current-year
-NCERT outranks everything else regardless of embedding similarity. That
-ordering is the product's claim, so it lives in code rather than in the index.
-
-Every chunk is stamped with `NCERT_YEAR` and retrieval hard-filters on it. When
-NCERT changes, bump the year, re-ingest, and last year's text can't leak into an
-answer even if it's still sitting in the store.
-
-The default store is in-memory and resets on deploy. With `RAG_PROVIDER=qdrant`,
-the app creates the Qdrant collection, named dense and sparse vectors, and
-payload indexes automatically. Retrieval uses Qdrant's Query API with RRF,
-then the configured BGE reranker, source slotting, and parent/join expansion.
-
-Check what the model is being fed without generating anything:
-
-```
-GET /api/rag/search?q=ohm's+law&subject=science&chapter=11
-```
-
-## Production services
-
-- Qdrant 1.13+ for hybrid dense+sparse retrieval.
-- BGE-M3 dense embeddings and optional lexical-weight endpoint.
-- BGE reranker endpoint accepting `{ model, query, documents, top_n }`.
-- Qwen2.5-VL-7B AWQ through vLLM's OpenAI-compatible API.
-- Optional MNLI endpoint accepting `{ model, premise, hypotheses }`.
-- Optional Redis REST cache; local development uses an in-process TTL cache.
-
-Start Qwen on a GPU host:
-
-```bash
-vllm serve Qwen/Qwen2.5-VL-7B-Instruct-AWQ \
-  --served-model-name Qwen/Qwen2.5-VL-7B-Instruct-AWQ \
-  --enable-prefix-caching
-```
+`/api/rag/status` reports whether the five production credentials are present, whether the Qdrant collection can be reached, and whether any corpus points have been indexed. It never returns credential values or provider error bodies. An isolated production-environment deployment verified all five values without changing either live address. OpenRouter key authentication, Cloudflare token, BGE-M3 output shape, Cloudflare reranker, and Qdrant cluster access all passed. Pilot retrieval found the intended passages for three Science and two Maths test questions and returned scope only where reviewed content was missing.
 
 ## Verification
 
-```bash
+```sh
 npm run typecheck
 npm test
-npm run eval:rag
 npm run build
 ```
 
-`eval/gold.json` contains a 50-query starter gate and prints Recall@10 plus
-p50/p95 retrieval latency. Replace or extend it to at least 200 questions as
-the official corpus lands.
-
-## Design notes
-
-The interface follows a neutral ChatGPT-style workspace. CBSE-specific controls,
-source snippets, diagrams, and mark allocation remain inside the conversation.
+These checks cover application types, routing, scope and ingestion gates, and the production build. Live answer and retrieval checks require the protected API credentials and approved index.

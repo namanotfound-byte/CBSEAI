@@ -3,6 +3,7 @@ import test from "node:test";
 import { verifyAnswer } from "../lib/ai/verifier";
 import { validateChunks } from "../lib/rag/ingest";
 import { routeQuery } from "../lib/rag/router";
+import { hasApprovedCompetencyQuestion, retrieve } from "../lib/rag/retriever";
 import { inferSyllabusScope } from "../lib/rag/syllabus-index";
 import type { Chunk, Source } from "../lib/types";
 
@@ -11,6 +12,7 @@ test("routes canonical query types", () => {
   assert.equal(routeQuery("show the marking scheme"), "marking");
   assert.equal(routeQuery("solve this numerical"), "numerical");
   assert.equal(routeQuery("2025 PYQ question"), "pyq");
+  assert.equal(routeQuery("give me a competency-based question"), "competency");
   assert.equal(routeQuery("explain photosynthesis"), "theory");
 });
 
@@ -20,6 +22,22 @@ test("infers a narrow syllabus scope", () => {
     chapters: [11],
     outOfSyllabus: false,
   });
+});
+
+test("keeps formative-only Science and unlaunched subjects out of board answers", () => {
+  assert.equal(inferSyllabusScope("explain electric motor", "science").outOfSyllabus, true);
+  assert.equal(inferSyllabusScope("explain evolution", "science").outOfSyllabus, true);
+  assert.equal(inferSyllabusScope("explain photosynthesis", "social").outOfSyllabus, true);
+  assert.equal(inferSyllabusScope("evolution of a gas during a reaction", "science").outOfSyllabus, false);
+  assert.equal(inferSyllabusScope("Euclid's division algorithm", "maths").outOfSyllabus, true);
+  assert.equal(inferSyllabusScope("periodic classification", "science").outOfSyllabus, true);
+});
+
+test("routes distinctive curriculum terms to the right chapter", () => {
+  assert.deepEqual(inferSyllabusScope("tangent to a circle", "maths").chapters, [10]);
+  assert.deepEqual(inferSyllabusScope("section formula", "maths").chapters, [7]);
+  assert.deepEqual(inferSyllabusScope("Mendelian inheritance", "science").chapters, [8]);
+  assert.deepEqual(inferSyllabusScope("What is the ability of the eye lens to adjust its focal length called?").chapters, [10]);
 });
 
 test("strips invented marks when no marking scheme is present", async () => {
@@ -58,13 +76,74 @@ test("accepts canonical ingestion metadata", () => {
       kind: "ncert",
       subject: "science",
       chapter: 1,
-      year: "2026-27",
+      sourceYear: "2025",
+      syllabusVersion: "2026-27",
+      syllabusTopicId: "science.chemical-reactions.balancing-equations",
+      chunkType: "ncert_section",
+      officialUrl: "https://ncert.nic.in/textbook.php",
+      inActiveSyllabus: true,
+      reviewStatus: "approved",
+      assessmentStatus: "summative",
+      contentSha256: "a".repeat(64),
+      language: "en",
+    },
+  }];
+  assert.deepEqual(validateChunks(chunks), []);
+});
+
+test("rejects content without an explicit syllabus mapping", () => {
+  const chunk = {
+    id: "legacy",
+    text: "Old content.",
+    meta: {
+      kind: "ncert",
+      subject: "science",
+      chapter: 1,
+      sourceYear: "2019",
+      syllabusVersion: "2026-27",
       chunkType: "ncert_section",
       officialUrl: "https://ncert.nic.in/textbook.php",
       inActiveSyllabus: true,
       contentSha256: "a".repeat(64),
       language: "en",
     },
-  }];
-  assert.deepEqual(validateChunks(chunks), []);
+  } as unknown as Chunk;
+  assert.ok(validateChunks([chunk]).some((error) => error.includes("syllabusTopicId")));
+});
+
+test("prevents staged and formative chunks from being ingested", () => {
+  const chunk: Chunk = {
+    id: "staged",
+    text: "An unreviewed paragraph.",
+    meta: {
+      kind: "ncert", subject: "science", chapter: 8, sourceYear: "undated",
+      syllabusVersion: "2026-27", syllabusTopicId: "science.ch08",
+      chunkType: "ncert_section", officialUrl: "https://ncert.nic.in/textbook.php",
+      inActiveSyllabus: true, reviewStatus: "staging", assessmentStatus: "formative",
+      contentSha256: "a".repeat(64), language: "en",
+    },
+  };
+  const errors = validateChunks([chunk]);
+  assert.ok(errors.some((error) => error.includes("reviewStatus")));
+  assert.ok(errors.some((error) => error.includes("summative")));
+});
+
+test("retrieval resolves the active syllabus before returning evidence", async () => {
+  const sources = await retrieve("explain Ohm's law", {
+    subject: "science",
+    chapter: 11,
+  });
+  assert.equal(sources[0]?.kind, "syllabus");
+  assert.equal(sources[0]?.syllabusTopicId, "science.electricity.ohms-law");
+  assert.ok(sources.slice(1).every((source) => source.syllabusTopicId === sources[0].syllabusTopicId));
+});
+
+test("competency retrieval only accepts an approved mapped question block", async () => {
+  const sources = await retrieve("give me a competency question on quadratic word problems", {
+    subject: "maths",
+    chapter: 4,
+    route: "competency",
+  });
+  assert.equal(hasApprovedCompetencyQuestion(sources), true);
+  assert.ok(sources.filter((source) => source.kind !== "syllabus").every((source) => ["cfpq", "sqp", "pyq"].includes(source.kind)));
 });

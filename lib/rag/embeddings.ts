@@ -41,6 +41,36 @@ const remote: Embedder = {
   },
 };
 
+/** BGE-M3 through Cloudflare's free Workers AI allowance. No local model. */
+const cloudflare: Embedder = {
+  name: "cloudflare-bge-m3",
+  dimensions: 1024,
+  async embed(texts) {
+    if (!env.cloudflareAccountId || !env.cloudflareApiToken) {
+      throw new Error("BGE-M3 embeddings need CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN.");
+    }
+    const res = await fetch(
+      `https://api.cloudflare.com/client/v4/accounts/${encodeURIComponent(env.cloudflareAccountId)}/ai/run/@cf/baai/bge-m3`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${env.cloudflareApiToken}`,
+        },
+        body: JSON.stringify({ text: texts }),
+      },
+    );
+    if (!res.ok) throw new Error(`Cloudflare BGE-M3 returned ${res.status}`);
+    const json = await res.json();
+    const vectors: unknown = json.result?.data;
+    if (!Array.isArray(vectors) || vectors.length !== texts.length ||
+        !vectors.every((vector) => Array.isArray(vector) && vector.length === 1024)) {
+      throw new Error("Cloudflare BGE-M3 returned an unexpected embedding shape.");
+    }
+    return vectors as number[][];
+  },
+};
+
 /** Deterministic hashing embedder. Good enough to exercise the plumbing and
  *  to keep tests offline; useless for real semantic search. */
 const mock: Embedder = {
@@ -64,7 +94,12 @@ const mock: Embedder = {
 };
 
 export function getEmbedder(): Embedder {
-  return env.embeddingsProvider === "mock" ? mock : remote;
+  switch (env.embeddingsProvider) {
+    case "cloudflare": return cloudflare;
+    case "remote": return remote;
+    case "mock": return mock;
+    default: throw new Error(`Unsupported EMBEDDINGS_PROVIDER: ${env.embeddingsProvider}`);
+  }
 }
 
 const sparseRemote: SparseEmbedder = {

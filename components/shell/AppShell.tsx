@@ -8,6 +8,7 @@ import {
   CalendarDays,
   GraduationCap,
   Menu,
+  LogOut,
   MessageSquare,
   Network,
   SquarePen,
@@ -22,7 +23,11 @@ const NAV = [
   { href: "/plan", label: "Study plan", icon: CalendarDays },
 ];
 
-export function AppShell({ children }: { children: React.ReactNode }) {
+export function AppShell({ children, email, onSignOut }: {
+  children: React.ReactNode;
+  email: string;
+  onSignOut: () => void;
+}) {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const isActive = (href: string) =>
@@ -79,6 +84,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       </nav>
 
       <div className="mt-auto border-t px-1 pt-2" style={{ borderColor: "var(--rule)" }}>
+        <div className="truncate px-2 py-2 text-xs" title={email} style={{ color: "var(--text-faint)" }}>{email}</div>
+        <button type="button" onClick={onSignOut} className="flex w-full items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-black/5">
+          <LogOut size={16} /> Sign out
+        </button>
         <div className="flex items-center gap-2.5 rounded-lg px-2 py-2">
           <span
             className="flex h-8 w-8 items-center justify-center rounded-full text-[12px]"
@@ -100,9 +109,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   );
 
   return (
-    <div className="flex min-h-dvh" style={{ background: "var(--surface)" }}>
+    <div className="flex h-dvh overflow-hidden" style={{ background: "var(--surface)" }}>
       <aside
-        className="hidden h-dvh w-[260px] shrink-0 md:block"
+        className="hidden h-full w-[260px] shrink-0 md:block"
         style={{ background: "var(--sidebar)" }}
       >
         {sidebar}
@@ -157,7 +166,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </div>
       )}
 
-      <main className="flex min-h-dvh min-w-0 flex-1 flex-col pt-14 md:pt-0">
+      <main className="flex h-dvh min-h-0 min-w-0 flex-1 flex-col overflow-hidden pt-14 md:pt-0">
         {children}
       </main>
     </div>

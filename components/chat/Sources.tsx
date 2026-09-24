@@ -9,6 +9,7 @@ import { X } from "lucide-react";
  * book has to be one tap away, not a link out.
  */
 const KIND_STYLE: Record<SourceKind, { label: string; dot: string }> = {
+  syllabus: { label: "Current syllabus", dot: "var(--accent)" },
   ncert: { label: "NCERT", dot: "var(--accent)" },
   ms: { label: "Marking scheme", dot: "var(--red)" },
   diagram: { label: "Diagram", dot: "#00A676" },
@@ -95,7 +96,8 @@ export function Sources({
             style={{ color: "var(--text-faint)" }}
           >
             {open.label}
-            {open.year ? ` · ${open.year} edition` : ""}
+            {open.sourceYear ? ` · source ${open.sourceYear}` : ""}
+            {open.syllabusVersion ? ` · mapped to ${open.syllabusVersion} syllabus` : ""}
             {open.officialUrl ? (
               <>
                 {" · "}

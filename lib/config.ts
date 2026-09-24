@@ -9,21 +9,25 @@ export const APP = {
 };
 
 export const env = {
-  modelProvider: process.env.MODEL_PROVIDER ?? "mock",
-  modelBaseUrl: process.env.MODEL_BASE_URL ?? "",
+  modelProvider: process.env.MODEL_PROVIDER ?? "openai",
+  modelBaseUrl: process.env.MODEL_BASE_URL ?? "https://openrouter.ai/api/v1",
   modelApiKey: process.env.MODEL_API_KEY ?? "",
-  modelName: process.env.MODEL_NAME ?? "",
+  groqApiKey: process.env.GROQ_API_KEY ?? "",
+  modelName: process.env.MODEL_NAME ?? "qwen/qwen3.8-27b:free",
   visionModelName: process.env.VISION_MODEL_NAME ?? "",
+  fallbackModelName: process.env.MODEL_FALLBACK_NAME ?? "google/gemma-4-31b-it:free",
 
-  ragProvider: process.env.RAG_PROVIDER ?? "memory",
+  ragProvider: process.env.RAG_PROVIDER ?? "qdrant",
   qdrantUrl: process.env.QDRANT_URL ?? "",
   qdrantApiKey: process.env.QDRANT_API_KEY ?? "",
-  qdrantCollection: process.env.QDRANT_COLLECTION ?? "ncert",
-  qdrantAutoCreate: process.env.QDRANT_AUTO_CREATE !== "false",
+  qdrantCollection: process.env.QDRANT_COLLECTION ?? "cbse_10_live",
+  qdrantAutoCreate: process.env.QDRANT_AUTO_CREATE === "true",
   qdrantVectorSize: Number(process.env.QDRANT_VECTOR_SIZE ?? "1024"),
   hybridSearch: process.env.HYBRID_SEARCH !== "false",
 
-  embeddingsProvider: process.env.EMBEDDINGS_PROVIDER ?? "mock",
+  embeddingsProvider: process.env.EMBEDDINGS_PROVIDER ?? "cloudflare",
+  cloudflareAccountId: process.env.CLOUDFLARE_ACCOUNT_ID ?? "",
+  cloudflareApiToken: process.env.CLOUDFLARE_API_TOKEN ?? "",
   embeddingsBaseUrl: process.env.EMBEDDINGS_BASE_URL ?? "",
   embeddingsApiKey: process.env.EMBEDDINGS_API_KEY ?? "",
   embeddingsModel: process.env.EMBEDDINGS_MODEL ?? "",
@@ -33,11 +37,12 @@ export const env = {
     process.env.SPARSE_EMBEDDINGS_API_KEY ?? process.env.EMBEDDINGS_API_KEY ?? "",
   sparseEmbeddingsModel: process.env.SPARSE_EMBEDDINGS_MODEL ?? "BAAI/bge-m3",
 
+  rerankerProvider: process.env.RERANKER_PROVIDER ?? "cloudflare",
   rerankerBaseUrl: process.env.RERANKER_BASE_URL ?? "",
   rerankerApiKey: process.env.RERANKER_API_KEY ?? "",
   rerankerModel: process.env.RERANKER_MODEL ?? "BAAI/bge-reranker-v2-m3",
 
-  cacheProvider: process.env.CACHE_PROVIDER ?? "memory",
+  cacheProvider: process.env.CACHE_PROVIDER ?? "none",
   cacheTtlSeconds: Number(process.env.CACHE_TTL_SECONDS ?? "3600"),
   redisRestUrl: process.env.REDIS_REST_URL ?? "",
   redisRestToken: process.env.REDIS_REST_TOKEN ?? "",
@@ -52,8 +57,9 @@ export const env = {
   diagramSigningSecret: process.env.DIAGRAM_SIGNING_SECRET ?? "",
   diagramUrlTtlSeconds: Number(process.env.DIAGRAM_URL_TTL_SECONDS ?? "900"),
 
-  /** The corpus year. Retrieval hard-filters on this. */
-  ncertYear: process.env.NCERT_YEAR ?? "2026-27",
+  /** The authoritative syllabus release. Retrieval hard-filters on this. */
+  syllabusVersion:
+    process.env.SYLLABUS_VERSION ?? process.env.NCERT_YEAR ?? "2026-27",
 };
 
 export const MODES: { id: AnswerMode; label: string; hint: string }[] = [

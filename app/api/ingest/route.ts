@@ -1,3 +1,4 @@
+import { timingSafeEqual } from "node:crypto";
 import { chunkText } from "@/lib/rag/retriever";
 import { getVectorStore } from "@/lib/rag/vectorstore";
 import { env } from "@/lib/config";
@@ -21,7 +22,7 @@ export const maxDuration = 300;
  *   POST /api/ingest
  *   { "chunks": [ { "id": "...", "text": "...", "meta": { ... } } ] }
  *
- * Before launch: put an auth check at the top of this handler.
+ * Requests require the server-side ingest secret and approved metadata.
  */
 export async function POST(req: Request) {
   if (!env.ingestApiKey) {
@@ -44,12 +45,9 @@ export async function POST(req: Request) {
     let chunks: Chunk[];
 
     if (Array.isArray(body.chunks)) {
-      chunks = body.chunks.map((c: Chunk) => ({
-        ...c,
-        meta: { ...c.meta, year: env.ncertYear },
-      }));
+      chunks = body.chunks;
     } else if (typeof body.text === "string" && body.meta) {
-      chunks = chunkText(body.text, { ...body.meta, year: env.ncertYear });
+      chunks = chunkText(body.text, body.meta);
     } else {
       return Response.json(
         { error: "Send { text, meta } or { chunks }." },
@@ -67,7 +65,7 @@ export async function POST(req: Request) {
       ingested: chunks.length,
       total: await store.count(),
       store: store.name,
-      year: env.ncertYear,
+      syllabusVersion: env.syllabusVersion,
     });
   } catch (err) {
     return Response.json(
@@ -76,4 +74,3 @@ export async function POST(req: Request) {
     );
   }
 }
-import { timingSafeEqual } from "node:crypto";

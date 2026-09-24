@@ -11,6 +11,7 @@ import { getVectorStore } from "./vectorstore";
  * the embedding similarity.
  */
 const PRIORITY: Record<SourceKind, number> = {
+  syllabus: 1.1,
   ncert: 1.0,
   ms: 0.98,
   diagram: 0.94,
@@ -23,6 +24,7 @@ const PRIORITY: Record<SourceKind, number> = {
 };
 
 const KIND_LABEL: Record<SourceKind, string> = {
+  syllabus: "Current syllabus",
   ncert: "NCERT",
   ms: "Marking scheme",
   diagram: "Diagram",
@@ -33,6 +35,10 @@ const KIND_LABEL: Record<SourceKind, string> = {
   model: "Model paper",
   notes: "Notes",
 };
+
+const CONTENT_KINDS = (Object.keys(PRIORITY) as SourceKind[]).filter(
+  (kind) => kind !== "syllabus",
+);
 
 export async function retrieve(
   query: string,
@@ -49,13 +55,38 @@ export async function retrieve(
       filters.chapter || filters.chapters?.length
         ? filters.chapters
         : inferred.chapters,
+    syllabusVersion: filters.syllabusVersion ?? env.syllabusVersion,
+  };
+
+  // The syllabus is an admission gate, not another source competing for a
+  // retrieval slot. First resolve the query to a canonical active-syllabus
+  // node; if that cannot be done, fail closed instead of letting an older
+  // textbook or a semantically similar paper answer from model memory.
+  const syllabusHits = await store.search(query, {
+    ...scopedFilters,
+    kinds: ["syllabus"],
+    topK: 8,
+  });
+  const relevantSyllabusHits = store.name === "memory"
+    ? syllabusHits.filter((hit) => hit.score >= 0.18)
+    : syllabusHits;
+  const [syllabusHit] = await rerank(query, relevantSyllabusHits, 1);
+  if (!syllabusHit) return [];
+
+  const syllabusTopicId = filters.syllabusTopicId ?? syllabusHit.meta.syllabusTopicId;
+  const requestedKinds = filters.route === "competency"
+    ? (["cfpq", "sqp", "pyq"] satisfies SourceKind[])
+    : filters.kinds?.filter((kind) => kind !== "syllabus") ?? CONTENT_KINDS;
+  const contentFilters: RetrievalFilters = {
+    ...scopedFilters,
+    syllabusTopicId,
+    kinds: requestedKinds,
   };
 
   // Hybrid retrieval over-fetches to 40; the cross-encoder then produces the
   // canonical top-8 candidate set before source-priority slotting.
   const hits = await store.search(query, {
-    ...scopedFilters,
-    year: filters.year ?? env.ncertYear,
+    ...contentFilters,
     topK: Math.max(40, topK * 5),
   });
 
@@ -78,12 +109,10 @@ export async function retrieve(
   const prefixes = [...new Set(expandable.map((h) => h.meta.joinPrefix).filter(Boolean))] as string[];
   const parentIds = [...new Set(expandable.map((h) => h.meta.parentId).filter(Boolean))] as string[];
   const parents = await store.findByIds(parentIds, {
-    ...scopedFilters,
-    year: filters.year ?? env.ncertYear,
+    ...contentFilters,
   });
   const expanded = await store.findByJoinPrefixes(prefixes, {
-    ...scopedFilters,
-    year: filters.year ?? env.ncertYear,
+    ...contentFilters,
     topK: Math.max(24, topK * 4),
   });
 
@@ -94,7 +123,15 @@ export async function retrieve(
     .sort((a, b) => PRIORITY[b.meta.kind] - PRIORITY[a.meta.kind])
     .forEach((hit) => merged.set(hit.id, hit));
 
-  return [...merged.values()].map(toSource);
+  return [toSource(syllabusHit), ...[...merged.values()].map(toSource)];
+}
+
+export function hasApprovedCompetencyQuestion(sources: Source[]) {
+  return sources.some(
+    (source) =>
+      ["cfpq", "sqp", "pyq"].includes(source.kind) &&
+      ["question_block", "question_part"].includes(source.chunkType ?? ""),
+  );
 }
 
 function slot<T extends Chunk & { score: number }>(
@@ -113,6 +150,9 @@ function slot<T extends Chunk & { score: number }>(
   if (route === "diagram") add(ordered.find((chunk) => chunk.meta.kind === "diagram"));
   if (route === "marking" || route === "pyq") {
     add(ordered.find((chunk) => ["pyq", "sqp", "cfpq"].includes(chunk.meta.kind)));
+  }
+  if (route === "competency") {
+    add(ordered.find((chunk) => ["cfpq", "sqp", "pyq"].includes(chunk.meta.kind)));
   }
   ordered.forEach((chunk) => {
     if (selected.length < limit) add(chunk);
@@ -137,13 +177,15 @@ function toSource(chunk: Chunk & { score: number }): Source {
     diagramUrl: chunk.meta.kind === "diagram" ? signedDiagramUrl(chunk.id) : undefined,
     joinPrefix: chunk.meta.joinPrefix,
     joinKey: chunk.meta.joinKey,
-    inActiveSyllabus: chunk.meta.inActiveSyllabus ?? true,
+    inActiveSyllabus: chunk.meta.inActiveSyllabus,
     subject: chunk.meta.subject,
     chapter: chunk.meta.chapter,
     page: chunk.meta.page,
     pageStart: chunk.meta.pageStart,
     pageEnd: chunk.meta.pageEnd,
-    year: chunk.meta.year,
+    sourceYear: chunk.meta.sourceYear,
+    syllabusVersion: chunk.meta.syllabusVersion,
+    syllabusTopicId: chunk.meta.syllabusTopicId,
     score: chunk.score,
   };
 }

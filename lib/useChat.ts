@@ -7,6 +7,7 @@ import type {
   ContentPart,
   Message,
 } from "./types";
+import { getBrowserAuth } from "./auth/supabase";
 
 const uid = () => Math.random().toString(36).slice(2, 10);
 
@@ -56,9 +57,14 @@ export function useChat(initialContext: ChatContext) {
       abortRef.current = controller;
 
       try {
+        const { data: { session } } = await getBrowserAuth()!.auth.getSession();
+        if (!session) throw new Error("Please sign in to ask a question.");
         const res = await fetch("/api/chat", {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${session.access_token}`,
+          },
           signal: controller.signal,
           body: JSON.stringify({
             messages: history.map(({ role, content }) => ({ role, content })),

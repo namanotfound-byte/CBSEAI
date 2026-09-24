@@ -12,7 +12,7 @@ import { Icon } from "@/components/ui/Icon";
  * impressive and tells a student nothing. What they need is an ordered list of
  * what to fix and a one-tap way to fix it, so the ranking is the graph.
  *
- * Reads MASTERY, which is placeholder data today. See lib/data/mastery.ts.
+ * Reads MASTERY from the student's graded answer history.
  */
 export default function GraphPage() {
   const ranked = [...MASTERY].sort((a, b) => a.mastery - b.mastery);
@@ -41,16 +41,38 @@ export default function GraphPage() {
           className="mx-auto w-full max-w-[46rem] px-3 py-5 md:px-5"
           style={{ paddingLeft: "calc(var(--rail) + 18px)" }}
         >
-          <Band ranked={ranked} />
+          {ranked.length === 0 ? (
+            <section
+              className="rounded-2xl border p-5"
+              style={{ borderColor: "var(--rule)", background: "var(--input)" }}
+            >
+              <h2 className="text-[15px]" style={{ fontWeight: 650 }}>
+                Nothing to diagnose yet
+              </h2>
+              <p className="mt-1 text-[12.5px]" style={{ color: "var(--text-soft)" }}>
+                Once you answer a few questions, your weaker topics and recurring mistakes will appear here.
+              </p>
+              <Link
+                href="/"
+                className="mt-4 inline-flex items-center gap-1 rounded-lg px-3 py-2 text-[12.5px]"
+                style={{ background: "var(--accent)", color: "var(--surface)", fontWeight: 650 }}
+              >
+                Answer a question
+                <Icon.Chevron size={13} />
+              </Link>
+            </section>
+          ) : (
+            <>
+              <Band ranked={ranked} />
 
-          <h2
-            className="mb-3 mt-8 text-[13px]"
-            style={{ color: "var(--red)", fontWeight: 650 }}
-          >
-            Fix these first
-          </h2>
+              <h2
+                className="mb-3 mt-8 text-[13px]"
+                style={{ color: "var(--red)", fontWeight: 650 }}
+              >
+                Fix these first
+              </h2>
 
-          <ul className="flex flex-col gap-2.5">
+              <ul className="flex flex-col gap-2.5">
             {weak.map((m) => (
               <li
                 key={`${m.subject}-${m.chapter}-${m.topic}`}
@@ -113,15 +135,15 @@ export default function GraphPage() {
                 </Link>
               </li>
             ))}
-          </ul>
+              </ul>
 
-          <h2
-            className="mb-2.5 mt-8 text-[13px]"
-            style={{ color: "var(--text-soft)", fontWeight: 650 }}
-          >
-            Holding steady
-          </h2>
-          <ul className="flex flex-wrap gap-1.5">
+              <h2
+                className="mb-2.5 mt-8 text-[13px]"
+                style={{ color: "var(--text-soft)", fontWeight: 650 }}
+              >
+                Holding steady
+              </h2>
+              <ul className="flex flex-wrap gap-1.5">
             {solid.map((m) => (
               <li
                 key={m.topic}
@@ -132,7 +154,9 @@ export default function GraphPage() {
                 {m.topic}
               </li>
             ))}
-          </ul>
+              </ul>
+            </>
+          )}
         </div>
       </div>
     </div>
