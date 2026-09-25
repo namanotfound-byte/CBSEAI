@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Eye, EyeOff, LockKeyhole, Mail } from "lucide-react";
 import { getBrowserAuth } from "@/lib/auth/supabase";
 import { PadhleMark } from "@/components/brand/PadhleMark";
+import { GoogleSignIn } from "./GoogleSignIn";
 
 type Mode = "login" | "signup" | "recovery";
 
@@ -27,6 +28,7 @@ export function AuthScreen({ mode, onRecovered }: { mode: Mode; onRecovered?: ()
   const [showPassword, setShowPassword] = useState(false);
   const [reset, setReset] = useState(false);
   const [providers, setProviders] = useState({ google: false, github: false });
+  const [googleReady, setGoogleReady] = useState(false);
   const auth = getBrowserAuth();
 
   useEffect(() => {
@@ -109,7 +111,10 @@ export function AuthScreen({ mode, onRecovered }: { mode: Mode; onRecovered?: ()
 
             {!reset && mode !== "recovery" && <>
               <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                <button type="button" onClick={() => void social("google")} disabled={busy || !providers.google} className="flex h-12 items-center justify-center gap-2.5 rounded-xl border border-slate-300 bg-white px-3 text-sm font-semibold text-slate-900 transition hover:border-slate-500 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 disabled:cursor-not-allowed disabled:opacity-50"><GoogleIcon />Google</button>
+                <div className="flex min-h-12 items-center justify-center">
+                  {providers.google && <GoogleSignIn signup={mode === "signup"} onError={setErrorMessage} onBusy={setBusy} onReady={setGoogleReady} />}
+                  {!googleReady && <button type="button" onClick={() => void social("google")} disabled={busy || !providers.google} className="flex h-12 w-full items-center justify-center gap-2.5 rounded-xl border border-slate-300 bg-white px-3 text-sm font-semibold text-slate-900 transition hover:border-slate-500 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 disabled:cursor-not-allowed disabled:opacity-50"><GoogleIcon />Google</button>}
+                </div>
                 <button type="button" onClick={() => void social("github")} disabled={busy || !providers.github} className="flex h-12 items-center justify-center gap-2.5 rounded-xl border border-slate-300 bg-white px-3 text-sm font-semibold text-slate-900 transition hover:border-slate-500 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 disabled:cursor-not-allowed disabled:opacity-50"><GitHubIcon />GitHub</button>
               </div>
               <div className="my-7 flex items-center gap-3 text-xs font-medium text-slate-500"><span className="h-px flex-1 bg-slate-200" />or continue with email<span className="h-px flex-1 bg-slate-200" /></div>
