@@ -179,6 +179,10 @@ export interface Chunk {
     assessmentStatus?: "summative" | "formative" | "excluded";
     sourcePath?: string;
     extractionVersion?: string;
+    reviewBatch?: string;
+    reviewEvidence?: string;
+    printedPage?: number;
+    sourceTransform?: string;
     mathsTrack?: "standard" | "basic";
   };
 }
