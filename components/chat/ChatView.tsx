@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { ChevronDown, GraduationCap, RotateCcw } from "lucide-react";
+import { ChevronDown, RotateCcw } from "lucide-react";
+import { PadhleMark } from "@/components/brand/PadhleMark";
 import { APP } from "@/lib/config";
 import { SUBJECT_MAP, chapterName } from "@/lib/data/syllabus";
 import { useChat } from "@/lib/useChat";
@@ -15,7 +16,7 @@ const OPENERS = [
   ["Explain photosynthesis", "Write a 3-mark board answer"],
   ["Solve an electricity numerical", "Show every scoring step"],
   ["Balance a chemical equation", "Use the NCERT method"],
-  ["Revise a chapter", "Give me a 30-second recap"],
+  ["Help me make a study plan", "Start with my time and difficult chapters"],
 ] as const;
 
 export function ChatView() {
@@ -145,12 +146,7 @@ function Empty({ onPick }: { onPick: (question: string) => void }) {
     <div className="flex flex-1 flex-col justify-end pb-6 pt-10 md:justify-center md:pb-2">
       <div className="mx-auto w-full max-w-[42rem]">
         <div className="mb-7 flex flex-col items-center text-center">
-          <span
-            className="mb-5 flex h-12 w-12 items-center justify-center rounded-full"
-            style={{ background: "var(--assistant-avatar)", color: "var(--surface)" }}
-          >
-            <GraduationCap size={25} strokeWidth={1.8} />
-          </span>
+          <PadhleMark size={48} className="mb-5" />
           <h1 className="text-[28px] leading-tight md:text-[32px]" style={{ fontWeight: 600 }}>
             What can I help you study?
           </h1>

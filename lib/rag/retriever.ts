@@ -49,6 +49,9 @@ export async function retrieve(
   const topK = filters.topK ?? 5;
   const inferred = inferSyllabusScope(query, filters.subject);
   if (inferred.outOfSyllabus) return [];
+  const requestedKinds = filters.route === "competency"
+    ? (["cfpq", "sqp", "pyq"] satisfies SourceKind[])
+    : filters.kinds?.filter((kind) => kind !== "syllabus") ?? CONTENT_KINDS;
   const scopedFilters: RetrievalFilters = {
     ...filters,
     subject: filters.subject ?? inferred.subject,
@@ -59,27 +62,47 @@ export async function retrieve(
     syllabusVersion: filters.syllabusVersion ?? env.syllabusVersion,
   };
 
-  // The syllabus is an admission gate, not another source competing for a
-  // retrieval slot. First resolve the query to a canonical active-syllabus
-  // node; if that cannot be done, fail closed instead of letting an older
-  // textbook or a semantically similar paper answer from model memory.
-  const syllabusHits = await store.search(query, {
+  // A chapter-level syllabus paragraph can be semantically close to a question
+  // about a different chapter. Search reviewed content across the allowed
+  // subject first, then require the exact matching syllabus node. This keeps
+  // a relevant NCERT passage from being lost to an unrelated top syllabus hit.
+  const broadFilters: RetrievalFilters = {
     ...scopedFilters,
-    kinds: ["syllabus"],
-    topK: 8,
-  });
+    chapters: filters.chapters,
+    kinds: requestedKinds,
+    topK: 40,
+  };
+  const [syllabusHits, broadHits] = await Promise.all([
+    store.search(query, { ...scopedFilters, kinds: ["syllabus"], topK: 8 }),
+    store.search(query, broadFilters),
+  ]);
   const relevantSyllabusHits = store.name === "memory"
     ? syllabusHits.filter((hit) => hit.score >= 0.18)
     : syllabusHits;
-  const [syllabusHit] = await rerank(query, relevantSyllabusHits, 1);
+  const directHits = broadHits.filter((hit) =>
+    (store.name !== "memory" || hit.score >= 0.18) &&
+    (filters.route === "competency" || sourceMatchesQuestion(query, hit.text)),
+  );
+  const [bestDirectHit] = await rerank(query, directHits, 1);
+  let syllabusHit = bestDirectHit
+    ? relevantSyllabusHits.find((hit) => hit.meta.syllabusTopicId === bestDirectHit.meta.syllabusTopicId)
+    : undefined;
+  if (bestDirectHit && !syllabusHit) {
+    [syllabusHit] = await store.search(query, {
+      ...scopedFilters,
+      chapters: undefined,
+      syllabusTopicId: bestDirectHit.meta.syllabusTopicId,
+      kinds: ["syllabus"],
+      topK: 1,
+    });
+  }
+  if (!syllabusHit) [syllabusHit] = await rerank(query, relevantSyllabusHits, 1);
   if (!syllabusHit) return [];
 
   const syllabusTopicId = filters.syllabusTopicId ?? syllabusHit.meta.syllabusTopicId;
-  const requestedKinds = filters.route === "competency"
-    ? (["cfpq", "sqp", "pyq"] satisfies SourceKind[])
-    : filters.kinds?.filter((kind) => kind !== "syllabus") ?? CONTENT_KINDS;
   const contentFilters: RetrievalFilters = {
     ...scopedFilters,
+    chapters: undefined,
     syllabusTopicId,
     kinds: requestedKinds,
   };

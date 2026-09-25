@@ -36,7 +36,7 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
     }
   }, [pathname, router, session]);
 
-  if (pathname === "/privacy") return children;
+  if (pathname === "/privacy" || pathname === "/about") return children;
   if (session === undefined) {
     return <div className="flex min-h-dvh items-center justify-center text-sm">Opening Padhle…</div>;
   }

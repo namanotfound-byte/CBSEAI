@@ -6,6 +6,8 @@ import { hasApprovedCompetencyQuestion, retrieve } from "@/lib/rag/retriever";
 import { isExamStyleRoute, routeQuery } from "@/lib/rag/router";
 import type { ChatEvent, ChatRequestBody } from "@/lib/types";
 import { authenticatedUser } from "@/lib/auth/supabase";
+import { conversationIntent, conversationReply } from "@/lib/ai/conversation";
+import { getSyllabusRestriction } from "@/lib/rag/syllabus-index";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -68,6 +70,14 @@ export async function POST(req: Request) {
           send({ type: "done" });
           return;
         }
+        if (!hasImages) {
+          const intent = conversationIntent(query);
+          if (intent) {
+            send({ type: "token", text: conversationReply(intent, query) });
+            send({ type: "done" });
+            return;
+          }
+        }
         const route = context.mode === "drill" ? "competency" : routeQuery(query);
         const cacheKey = answerCacheKey({
           query,
@@ -92,6 +102,7 @@ export async function POST(req: Request) {
         // 1. Retrieve. Sources go out first so the UI can show what it's
         //    reading from while the model is still thinking.
         let sources: Awaited<ReturnType<typeof retrieve>> = [];
+        let retrievalFailed = false;
         if (query.trim()) {
           try {
             sources = await retrieve(query, {
@@ -111,6 +122,7 @@ export async function POST(req: Request) {
             if (sources.length) send({ type: "sources", sources });
           } catch (err) {
             console.error("retrieval failed", err);
+            retrievalFailed = true;
           }
         }
 
@@ -118,9 +130,18 @@ export async function POST(req: Request) {
           (source) => source.kind === "syllabus" && source.chunkType === "syllabus_scope",
         );
         if (query.trim() && !hasSyllabusScope) {
+          const restriction = getSyllabusRestriction(query, imageSubject ?? context.subject);
           send({
             type: "token",
-            text: "I couldn't verify this topic against the active CBSE syllabus, so I won't answer it from memory.",
+            text: retrievalFailed
+              ? "I can't reach the verified CBSE material right now. Please retry in a moment; I can't judge the syllabus from a connection failure."
+              : restriction === "formative"
+                ? "This is listed as a formative topic in the current CBSE curriculum. I don't have approved material for a grounded explanation yet, and I won't present it as a year-end board topic."
+                : restriction === "excluded"
+                  ? "This topic is outside the current year-end board-answer scope. I can help with a current Maths or Science topic instead."
+                  : restriction === "unlaunched"
+                    ? "Padhle currently covers Class 10 Maths and Science. That subject is not available yet."
+                    : "I couldn't find an approved source for this question yet. That does not mean the topic is out of syllabus; I won't guess an answer from memory.",
           });
           send({ type: "done" });
           return;

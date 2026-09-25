@@ -33,14 +33,7 @@ const ALIASES: Partial<Record<SubjectId, Record<number, string[]>>> = {
 };
 
 export function inferSyllabusScope(query: string, preferredSubject?: SubjectId) {
-  if (preferredSubject && preferredSubject !== "science" && preferredSubject !== "maths") {
-    return { subject: preferredSubject, chapters: undefined, outOfSyllabus: true };
-  }
-  if (/(?:\bevolution\b|\bspeciation\b|\bfossils?\b|\belectric motors?\b|\belectric generators?\b|\belectromagnetic induction\b)/i.test(query) &&
-      !/\bevolution of (?:a |the )?gas\b/i.test(query)) {
-    return { subject: preferredSubject, chapters: undefined, outOfSyllabus: true };
-  }
-  if (/\b(?:sources of energy|management of natural resources|construction of a triangle|periodic classification|euclid(?:['’]s|s)? division (?:algorithm|lemma))\b/i.test(query)) {
+  if (getSyllabusRestriction(query, preferredSubject)) {
     return { subject: preferredSubject, chapters: undefined, outOfSyllabus: true };
   }
   const queryTerms = new Set(tokens(query));
@@ -76,6 +69,16 @@ export function inferSyllabusScope(query: string, preferredSubject?: SubjectId) 
     .slice(0, 3)
     .map((candidate) => candidate.chapter);
   return { subject, chapters, outOfSyllabus: false };
+}
+
+/** A formative curriculum topic is still in the syllabus, just not in this
+ * year's board-answer index. Keep that distinct from genuinely excluded work. */
+export function getSyllabusRestriction(query: string, preferredSubject?: SubjectId) {
+  if (preferredSubject && preferredSubject !== "science" && preferredSubject !== "maths") return "unlaunched" as const;
+  if (/(?:\bevolution\b|\bspeciation\b|\bfossils?\b|\belectric motors?\b|\belectric generators?\b|\belectromagnetic induction\b|\bperiodic classification\b)/i.test(query) &&
+      !/\bevolution of (?:a |the )?gas\b/i.test(query)) return "formative" as const;
+  if (/\b(?:sources of energy|management of natural resources|construction of a triangle|euclid(?:['’]s|s)? division (?:algorithm|lemma))\b/i.test(query)) return "excluded" as const;
+  return null;
 }
 
 function tokens(text: string) {

@@ -6,6 +6,8 @@ import { routeQuery } from "../lib/rag/router";
 import { hasApprovedCompetencyQuestion, retrieve } from "../lib/rag/retriever";
 import { sourceMatchesQuestion } from "../lib/rag/relevance";
 import { inferSyllabusScope } from "../lib/rag/syllabus-index";
+import { getSyllabusRestriction } from "../lib/rag/syllabus-index";
+import { conversationIntent, conversationReply } from "../lib/ai/conversation";
 import type { Chunk, Source } from "../lib/types";
 
 test("routes canonical query types", () => {
@@ -15,6 +17,22 @@ test("routes canonical query types", () => {
   assert.equal(routeQuery("2025 PYQ question"), "pyq");
   assert.equal(routeQuery("give me a competency-based question"), "competency");
   assert.equal(routeQuery("explain photosynthesis"), "theory");
+});
+
+test("handles ordinary conversation without confusing it with academic retrieval", () => {
+  assert.equal(conversationIntent("Hi!"), "greeting");
+  assert.match(conversationReply("greeting", "Hi"), /Maths or Science/);
+  assert.equal(conversationIntent("What can you help me with?"), "capabilities");
+  assert.equal(conversationIntent("How should I prepare for my board exams?"), "study_advice");
+  assert.equal(conversationIntent("What is a lens?"), null);
+  assert.equal(conversationIntent("Explain photosynthesis"), null);
+});
+
+test("distinguishes formative curriculum from missing evidence", () => {
+  assert.equal(getSyllabusRestriction("What is evolution?", "science"), "formative");
+  assert.equal(getSyllabusRestriction("What is a lens?", "science"), null);
+  assert.equal(getSyllabusRestriction("What is a prism?", "science"), null);
+  assert.equal(getSyllabusRestriction("Euclid's division algorithm", "maths"), "excluded");
 });
 
 test("infers a narrow syllabus scope", () => {

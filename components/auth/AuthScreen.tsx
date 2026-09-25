@@ -127,7 +127,7 @@ export function AuthScreen({ mode, onRecovered }: { mode: Mode; onRecovered?: ()
               <p>{mode === "signup" || reset ? "Already have an account?" : "New to Padhle?"} <button type="button" onClick={() => { setReset(false); clearNotice(); router.push(mode === "signup" || reset ? "/login" : "/signup"); }} className="font-semibold text-slate-950 underline decoration-slate-400 underline-offset-4 hover:decoration-slate-950">{mode === "signup" || reset ? "Sign in" : "Create an account"}</button></p>
               {mode === "login" && !reset && <button type="button" onClick={() => { setReset(true); clearNotice(); }} className="font-semibold text-slate-700 underline decoration-slate-400 underline-offset-4 hover:text-slate-950">Forgot password?</button>}
             </div>}
-            <p className="mt-9 text-center text-xs leading-5 text-slate-600">Padhle uses your account to keep your learning space secure. <Link href="/privacy" className="font-medium text-slate-800 underline underline-offset-2">Privacy</Link></p>
+            <p className="mt-9 text-center text-xs leading-5 text-slate-600">Padhle uses your account to keep your learning space secure. <Link href="/about" className="font-medium text-slate-800 underline underline-offset-2">About</Link> · <Link href="/privacy" className="font-medium text-slate-800 underline underline-offset-2">Privacy</Link></p>
           </div>
         </div>
       </div>
