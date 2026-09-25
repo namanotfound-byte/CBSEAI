@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type {
   ChatContext,
   ChatEvent,
@@ -8,6 +8,7 @@ import type {
   Message,
 } from "./types";
 import { getBrowserAuth } from "./auth/supabase";
+import { loadChat, saveChat } from "./chat-history";
 
 const uid = () => Math.random().toString(36).slice(2, 10);
 
@@ -17,11 +18,27 @@ const uid = () => Math.random().toString(36).slice(2, 10);
  * Messages are appended optimistically and the assistant turn is mutated in
  * place as frames arrive, so the sheet fills top-down the way a person writes.
  */
-export function useChat(initialContext: ChatContext) {
+export function useChat(initialContext: ChatContext, savedId?: string | null) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [context, setContext] = useState<ChatContext>(initialContext);
   const [busy, setBusy] = useState(false);
+  const [loading, setLoading] = useState(Boolean(savedId));
+  const [historyError, setHistoryError] = useState("");
   const abortRef = useRef<AbortController | null>(null);
+  const threadId = useRef(savedId ?? null);
+
+  useEffect(() => {
+    if (!savedId) return;
+    let active = true;
+    void loadChat(savedId).then((saved) => {
+      if (!active) return;
+      setMessages(saved.messages);
+      setContext(saved.context);
+    }).catch((error: unknown) => {
+      if (active) setHistoryError(error instanceof Error ? error.message : "Conversation could not be loaded.");
+    }).finally(() => { if (active) setLoading(false); });
+    return () => { active = false; };
+  }, [savedId]);
 
   const patch = useCallback((id: string, updater: (m: Message) => Message) => {
     setMessages((prev) => prev.map((m) => (m.id === id ? updater(m) : m)));
@@ -29,7 +46,8 @@ export function useChat(initialContext: ChatContext) {
 
   const send = useCallback(
     async (parts: ContentPart[], overrides?: Partial<ChatContext>) => {
-      if (busy) return;
+      if (busy || loading) return;
+      setHistoryError("");
       const ctx = { ...context, ...overrides };
       if (overrides) setContext(ctx);
 
@@ -48,6 +66,7 @@ export function useChat(initialContext: ChatContext) {
         streaming: true,
         mode: ctx.mode,
       };
+      let replyState = replyMsg;
 
       const history = [...messages, userMsg];
       setMessages([...history, replyMsg]);
@@ -57,23 +76,35 @@ export function useChat(initialContext: ChatContext) {
       abortRef.current = controller;
 
       try {
-        const { data: { session } } = await getBrowserAuth()!.auth.getSession();
-        if (!session) throw new Error("Please sign in to ask a question.");
-        const res = await fetch("/api/chat", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${session.access_token}`,
-          },
-          signal: controller.signal,
-          body: JSON.stringify({
-            messages: history.map(({ role, content }) => ({ role, content })),
-            context: ctx,
-          }),
+        const auth = getBrowserAuth();
+        if (!auth) throw new Error("Sign-in is unavailable right now.");
+        const requestBody = JSON.stringify({
+          messages: history.map(({ role, content }) => ({ role, content })),
+          context: ctx,
         });
+        const request = async (refresh: boolean) => {
+          const { data, error } = refresh
+            ? await auth.auth.refreshSession()
+            : await auth.auth.getSession();
+          if (error || !data.session) throw new Error("Your sign-in has expired. Please sign in again.");
+          return fetch("/api/chat", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${data.session.access_token}`,
+            },
+            signal: controller.signal,
+            body: requestBody,
+          });
+        };
+        let res = await request(false);
+        if (res.status === 401) res = await request(true);
 
         if (!res.ok || !res.body) {
-          throw new Error(`Chat route returned ${res.status}`);
+          const detail = await res.json().catch(() => null) as { error?: string } | null;
+          throw new Error(res.status === 401
+            ? "Your sign-in has expired. Please sign out and sign in again."
+            : detail?.error ?? "Padhle couldn't answer right now. Please try again.");
         }
 
         const reader = res.body.getReader();
@@ -97,66 +128,63 @@ export function useChat(initialContext: ChatContext) {
             } catch {
               continue;
             }
-            applyEvent(replyId, event, patch);
+            replyState = applyEvent(replyState, event);
+            patch(replyId, () => replyState);
           }
         }
       } catch (err) {
         if ((err as Error).name !== "AbortError") {
-          patch(replyId, (m) => ({
-            ...m,
+          replyState = {
+            ...replyState,
             streaming: false,
             error:
               err instanceof Error
                 ? err.message
                 : "Couldn't reach the model.",
-          }));
+          };
+          patch(replyId, () => replyState);
         }
       } finally {
-        patch(replyId, (m) => ({ ...m, streaming: false }));
+        replyState = { ...replyState, streaming: false };
+        patch(replyId, () => replyState);
         setBusy(false);
         abortRef.current = null;
+        const id = threadId.current ?? crypto.randomUUID();
+        try {
+          await saveChat(id, [...history, replyState], ctx);
+          threadId.current = id;
+          if (!savedId) window.history.replaceState(null, "", `/?chat=${id}`);
+        } catch (error) {
+          setHistoryError(error instanceof Error ? `Conversation was not saved: ${error.message}` : "Conversation was not saved.");
+        }
       }
     },
-    [busy, context, messages, patch],
+    [busy, context, loading, messages, patch, savedId],
   );
 
   const stop = useCallback(() => abortRef.current?.abort(), []);
   const reset = useCallback(() => {
     abortRef.current?.abort();
-    setMessages([]);
+    window.location.assign(`/?new=${crypto.randomUUID()}`);
   }, []);
 
-  return { messages, context, setContext, send, stop, reset, busy };
+  return { messages, context, setContext, send, stop, reset, busy, loading, historyError };
 }
 
-function applyEvent(
-  id: string,
-  event: ChatEvent,
-  patch: (id: string, updater: (m: Message) => Message) => void,
-) {
+function applyEvent(message: Message, event: ChatEvent): Message {
   switch (event.type) {
     case "sources":
-      patch(id, (m) => ({ ...m, sources: event.sources }));
-      break;
+      return { ...message, sources: event.sources };
     case "token":
-      patch(id, (m) => {
-        const [first, ...rest] = m.content;
-        const text =
-          (first?.type === "text" ? first.text : "") + event.text;
-        return { ...m, content: [{ type: "text", text }, ...rest] };
-      });
-      break;
+      const [first, ...rest] = message.content;
+      return { ...message, content: [{ type: "text", text: (first?.type === "text" ? first.text : "") + event.text }, ...rest] };
     case "steps":
-      patch(id, (m) => ({ ...m, steps: event.steps, marks: event.marks }));
-      break;
+      return { ...message, steps: event.steps, marks: event.marks };
     case "notice":
-      patch(id, (m) => ({ ...m, notice: event.message }));
-      break;
+      return { ...message, notice: event.message };
     case "error":
-      patch(id, (m) => ({ ...m, error: event.message, streaming: false }));
-      break;
+      return { ...message, error: event.message, streaming: false };
     case "done":
-      patch(id, (m) => ({ ...m, streaming: false }));
-      break;
+      return { ...message, streaming: false };
   }
 }

@@ -21,6 +21,13 @@ const OPENERS = [
 
 export function ChatView() {
   const params = useSearchParams();
+  const savedId = params.get("chat");
+  const selectionKey = savedId ?? params.get("new") ?? "new";
+  return <ChatConversation key={selectionKey} savedId={savedId} />;
+}
+
+function ChatConversation({ savedId }: { savedId: string | null }) {
+  const params = useSearchParams();
   const initial: ChatContext = {
     grade: APP.grade,
     subject: (params.get("subject") as SubjectId) ?? undefined,
@@ -28,7 +35,7 @@ export function ChatView() {
     mode: (params.get("mode") as ChatContext["mode"]) ?? "answer",
   };
 
-  const { messages, context, setContext, send, stop, reset, busy } = useChat(initial);
+  const { messages, context, setContext, send, stop, reset, busy, loading, historyError } = useChat(initial, savedId);
   const bottom = useRef<HTMLDivElement>(null);
   const [pinned, setPinned] = useState(true);
 
@@ -58,7 +65,7 @@ export function ChatView() {
         }}
       >
         <div className="mx-auto flex min-h-full w-full max-w-[48rem] flex-col px-4 pb-8 md:px-6">
-          {messages.length === 0 ? (
+          {loading ? <p className="py-12 text-center text-sm" style={{ color: "var(--text-faint)" }}>Loading conversation…</p> : messages.length === 0 ? (
             <Empty onPick={(question) => send([{ type: "text", text: question }])} />
           ) : (
             <div className="pt-5 md:pt-8">
@@ -71,6 +78,7 @@ export function ChatView() {
               )}
             </div>
           )}
+          {historyError && <p role="alert" className="my-4 rounded-xl border border-red-300 px-4 py-3 text-sm text-red-600">{historyError}</p>}
           <div ref={bottom} />
         </div>
       </div>

@@ -42,9 +42,14 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
   }
   if (recovering && session) return <AuthScreen mode="recovery" onRecovered={() => { setRecovering(false); router.replace("/"); }} />;
   if (!session) return <AuthScreen mode={pathname === "/signup" ? "signup" : "login"} />;
+  const metadata = session.user.user_metadata;
+  const givenName = [metadata?.full_name, metadata?.name, metadata?.user_name, metadata?.preferred_username]
+    .find((value): value is string => typeof value === "string" && value.trim().length > 0);
+  const displayName = givenName?.trim() ?? (session.user.email?.split("@")[0].replace(/[._-]+/g, " ").replace(/\b\w/g, (letter) => letter.toUpperCase()) || "Student");
   return (
     <AppShell
-      email={session.user.email ?? "Student"}
+      displayName={displayName}
+      userId={session.user.id}
       onSignOut={() => { void auth?.auth.signOut(); }}
     >
       {children}

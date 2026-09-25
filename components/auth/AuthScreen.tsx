@@ -20,6 +20,7 @@ function GitHubIcon() {
 export function AuthScreen({ mode, onRecovered }: { mode: Mode; onRecovered?: () => void }) {
   const router = useRouter();
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -59,7 +60,7 @@ export function AuthScreen({ mode, onRecovered }: { mode: Mode; onRecovered?: ()
       } else if (mode === "signup") {
         const { data, error } = await auth.auth.signUp({
           email: email.trim(), password,
-          options: { emailRedirectTo: window.location.origin },
+          options: { emailRedirectTo: window.location.origin, data: { full_name: name.trim() } },
         });
         if (error) throw error;
         setMessage(data.session ? "Your account is ready. Opening Padhle…" : "Check your inbox for a confirmation link, then sign in.");
@@ -116,6 +117,7 @@ export function AuthScreen({ mode, onRecovered }: { mode: Mode; onRecovered?: ()
             </>}
 
             <form onSubmit={(event) => void submit(event)} className={reset || mode === "recovery" ? "mt-8 space-y-5" : "space-y-5"}>
+              {mode === "signup" && <label className="block text-sm font-semibold text-slate-800">Your name<input type="text" autoComplete="name" placeholder="How should we call you?" maxLength={60} required value={name} onChange={(event) => setName(event.target.value)} className={fieldClass} /></label>}
               {mode !== "recovery" && <label className="block text-sm font-semibold text-slate-800"><span className="flex items-center gap-2"><Mail size={16} aria-hidden="true" />Email address</span><input type="email" autoComplete="email" placeholder="you@example.com" required value={email} onChange={(event) => setEmail(event.target.value)} className={fieldClass} /></label>}
               {(!reset || mode === "recovery") && <label className="block text-sm font-semibold text-slate-800"><span className="flex items-center gap-2"><LockKeyhole size={16} aria-hidden="true" />{mode === "recovery" ? "New password" : "Password"}</span><span className="relative mt-2 block"><input type={showPassword ? "text" : "password"} minLength={6} autoComplete={mode === "signup" || mode === "recovery" ? "new-password" : "current-password"} required value={password} onChange={(event) => setPassword(event.target.value)} className="block h-12 w-full rounded-xl border border-slate-300 bg-white px-4 pr-12 text-[15px] text-slate-950 outline-none transition focus:border-slate-800 focus:ring-2 focus:ring-slate-200" /><button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute inset-y-0 right-1 flex w-10 items-center justify-center rounded-lg text-slate-600 hover:text-slate-950" aria-label={showPassword ? "Hide password" : "Show password"}>{showPassword ? <EyeOff size={19} /> : <Eye size={19} />}</button></span>{mode === "signup" && <span className="mt-2 block text-xs font-normal text-slate-600">Use at least 6 characters.</span>}</label>}
               {errorMessage && <p role="alert" className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm leading-5 text-red-800">{errorMessage}</p>}

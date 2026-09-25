@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -11,10 +11,12 @@ import {
   MessageSquare,
   Network,
   SquarePen,
+  Settings,
   X,
 } from "lucide-react";
 import { APP } from "@/lib/config";
 import { PadhleMark } from "@/components/brand/PadhleMark";
+import { CHATS_CHANGED, listChats, type ChatSummary } from "@/lib/chat-history";
 
 const NAV = [
   { href: "/", label: "Chat", icon: MessageSquare },
@@ -23,13 +25,30 @@ const NAV = [
   { href: "/plan", label: "Study plan", icon: CalendarDays },
 ];
 
-export function AppShell({ children, email, onSignOut }: {
+export function AppShell({ children, displayName, userId, onSignOut }: {
   children: React.ReactNode;
-  email: string;
+  displayName: string;
+  userId: string;
   onSignOut: () => void;
 }) {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
+  const [chats, setChats] = useState<ChatSummary[]>([]);
+  const [chatsError, setChatsError] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+    const refresh = () => { void listChats()
+      .then((rows) => { if (active) { setChats(rows); setChatsError(false); } })
+      .catch(() => { if (active) setChatsError(true); }); };
+    refresh();
+    window.addEventListener(CHATS_CHANGED, refresh);
+    return () => { active = false; window.removeEventListener(CHATS_CHANGED, refresh); };
+  }, [userId]);
+
+  const newChat = () => window.location.assign(`/?new=${crypto.randomUUID()}`);
+  const initials = displayName.split(/\s+/).slice(0, 2).map((part) => part[0]?.toUpperCase()).join("") || "S";
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
@@ -45,15 +64,15 @@ export function AppShell({ children, email, onSignOut }: {
           <PadhleMark size={28} className="shrink-0" />
           <span className="truncate">{APP.name}</span>
         </Link>
-        <Link
-          href="/"
-          onClick={() => setMobileOpen(false)}
+        <button
+          type="button"
+          onClick={newChat}
           className="flex h-9 w-9 items-center justify-center rounded-lg"
           aria-label="New chat"
           title="New chat"
         >
           <SquarePen size={19} />
-        </Link>
+        </button>
       </div>
 
       <nav className="flex flex-col gap-1">
@@ -78,27 +97,34 @@ export function AppShell({ children, email, onSignOut }: {
         })}
       </nav>
 
-      <div className="mt-auto border-t px-1 pt-2" style={{ borderColor: "var(--rule)" }}>
-        <div className="truncate px-2 py-2 text-xs" title={email} style={{ color: "var(--text-faint)" }}>{email}</div>
-        <button type="button" onClick={onSignOut} className="flex w-full items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-black/5">
-          <LogOut size={16} /> Sign out
-        </button>
-        <div className="flex items-center gap-2.5 rounded-lg px-2 py-2">
+      <div className="mt-7 min-h-0 flex-1 overflow-y-auto px-1">
+        <p className="px-2 pb-2 text-xs font-semibold" style={{ color: "var(--text-faint)" }}>Recent chats</p>
+        {chatsError && <p className="px-2 py-2 text-xs" style={{ color: "var(--text-faint)" }}>Couldn’t load chats. Refresh to retry.</p>}
+        {!chatsError && chats.length === 0 && <p className="px-2 py-2 text-xs" style={{ color: "var(--text-faint)" }}>Your saved chats will appear here.</p>}
+        {chats.map((chat) => <Link key={chat.id} href={`/?chat=${chat.id}`} onClick={() => setMobileOpen(false)} title={chat.title} className="block truncate rounded-lg px-2 py-2 text-[13px] hover:bg-black/5">{chat.title}</Link>)}
+      </div>
+
+      <div className="relative mt-auto border-t px-1 pt-2" style={{ borderColor: "var(--rule)" }}>
+        {profileOpen && <div className="absolute bottom-full left-1 right-1 mb-2 rounded-xl border p-1 shadow-lg" style={{ background: "var(--surface)", borderColor: "var(--rule)" }}>
+          <Link href="/settings" onClick={() => { setProfileOpen(false); setMobileOpen(false); }} className="flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm hover:bg-black/5"><Settings size={16} />Settings</Link>
+          <button type="button" onClick={onSignOut} className="flex w-full items-center gap-2 rounded-lg px-3 py-2.5 text-left text-sm hover:bg-black/5"><LogOut size={16} />Sign out</button>
+        </div>}
+        <button type="button" onClick={() => setProfileOpen(!profileOpen)} aria-expanded={profileOpen} aria-label="Account menu" className="flex w-full items-center gap-2.5 rounded-lg px-2 py-2 text-left hover:bg-black/5">
           <span
-            className="flex h-8 w-8 items-center justify-center rounded-full text-[12px]"
-            style={{ background: "var(--input)", fontWeight: 600 }}
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[12px] text-white"
+            style={{ background: "#8052a5", fontWeight: 600 }}
           >
-            10
+            {initials}
           </span>
           <span className="min-w-0">
             <span className="block truncate text-[13px]" style={{ fontWeight: 550 }}>
-              CBSE Class 10
+              {displayName}
             </span>
             <span className="block text-[11px]" style={{ color: "var(--text-faint)" }}>
-              NCERT grounded
+              Class 10
             </span>
           </span>
-        </div>
+        </button>
       </div>
     </div>
   );
@@ -127,13 +153,14 @@ export function AppShell({ children, email, onSignOut }: {
         <Link href="/" className="text-[15px]" style={{ fontWeight: 600 }}>
           {APP.name}
         </Link>
-        <Link
-          href="/"
+        <button
+          type="button"
+          onClick={newChat}
           className="flex h-10 w-10 items-center justify-center rounded-lg"
           aria-label="New chat"
         >
           <SquarePen size={20} />
-        </Link>
+        </button>
       </header>
 
       {mobileOpen && (
