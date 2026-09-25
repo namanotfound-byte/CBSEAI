@@ -20,14 +20,26 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
       setSession(null);
       return;
     }
-    void auth.auth.getSession()
-      .then(({ data }) => setSession(data.session))
-      .catch(() => setSession(null));
+    let active = true;
     const { data } = auth.auth.onAuthStateChange((event, next) => {
+      if (event === "INITIAL_SESSION") return;
       setSession(next);
       if (event === "PASSWORD_RECOVERY") setRecovering(true);
     });
-    return () => data.subscription.unsubscribe();
+    void auth.auth.getSession().then(async ({ data: stored }) => {
+      if (!stored.session) {
+        if (active) setSession(null);
+        return;
+      }
+      const { error } = await auth.auth.getUser(stored.session.access_token);
+      if (error && (error.status === 401 || error.status === 403 || error.code === "session_not_found")) {
+        await auth.auth.signOut({ scope: "local" });
+        if (active) setSession(null);
+        return;
+      }
+      if (active) setSession(stored.session);
+    }).catch(() => { if (active) setSession(null); });
+    return () => { active = false; data.subscription.unsubscribe(); };
   }, [auth]);
 
   useEffect(() => {
