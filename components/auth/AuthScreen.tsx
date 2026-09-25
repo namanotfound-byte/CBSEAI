@@ -117,6 +117,7 @@ export function AuthScreen({ mode, onRecovered }: { mode: Mode; onRecovered?: ()
                 </div>
                 <button type="button" onClick={() => void social("github")} disabled={busy || !providers.github} className="flex h-12 items-center justify-center gap-2.5 rounded-xl border border-slate-300 bg-white px-3 text-sm font-semibold text-slate-900 transition hover:border-slate-500 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 disabled:cursor-not-allowed disabled:opacity-50"><GitHubIcon />GitHub</button>
               </div>
+              {providers.google && googleReady && <button type="button" onClick={() => void social("google")} disabled={busy} className="mt-3 text-sm font-medium text-slate-700 underline underline-offset-2 hover:text-slate-950">Google window didn’t open? Use the alternate sign-in</button>}
               <div className="my-7 flex items-center gap-3 text-xs font-medium text-slate-500"><span className="h-px flex-1 bg-slate-200" />or continue with email<span className="h-px flex-1 bg-slate-200" /></div>
             </>}
 
