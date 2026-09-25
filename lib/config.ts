@@ -20,7 +20,9 @@ export const env = {
   ragProvider: process.env.RAG_PROVIDER ?? "qdrant",
   qdrantUrl: process.env.QDRANT_URL ?? "",
   qdrantApiKey: process.env.QDRANT_API_KEY ?? "",
-  qdrantCollection: process.env.QDRANT_COLLECTION ?? "cbse_10_live",
+  // The reviewed pilot is the only production-ready collection today. Use it
+  // until the live alias has been created and explicitly configured in Vercel.
+  qdrantCollection: process.env.QDRANT_COLLECTION ?? "cbse_10_pilot_20260925_v3",
   qdrantAutoCreate: process.env.QDRANT_AUTO_CREATE === "true",
   qdrantVectorSize: Number(process.env.QDRANT_VECTOR_SIZE ?? "1024"),
   hybridSearch: process.env.HYBRID_SEARCH !== "false",
