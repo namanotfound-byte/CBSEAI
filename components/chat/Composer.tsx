@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type DragEvent } from "react";
 import { ArrowUp, ImagePlus, Square, X } from "lucide-react";
 import { MARK_OPTIONS, MODES } from "@/lib/config";
 import type { ChatContext, ContentPart } from "@/lib/types";
+import { PENDING_DRAFT_KEY } from "@/lib/auth/session-recovery";
 
 const MAX_IMAGES = 3;
 const MAX_IMAGE_BYTES = 10 * 1024 * 1024;
@@ -39,6 +40,17 @@ export function Composer({
   const textarea = useRef<HTMLTextAreaElement>(null);
   const fileInput = useRef<HTMLInputElement>(null);
   const dragDepth = useRef(0);
+
+  useEffect(() => {
+    try {
+      const stored = window.sessionStorage.getItem(PENDING_DRAFT_KEY);
+      if (!stored) return;
+      const draft = JSON.parse(stored) as { text?: string; hadImage?: boolean };
+      if (draft.text) setValue(draft.text);
+      if (draft.hadImage) setAttachmentError("Attach your photo again before sending.");
+      window.sessionStorage.removeItem(PENDING_DRAFT_KEY);
+    } catch { /* Keep the composer usable if storage is unavailable. */ }
+  }, []);
 
   useEffect(() => {
     const el = textarea.current;

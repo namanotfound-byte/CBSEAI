@@ -8,9 +8,12 @@ import type {
   Message,
 } from "./types";
 import { getBrowserAuth } from "./auth/supabase";
+import { rememberExpiredSession } from "./auth/session-recovery";
 import { loadChat, saveChat } from "./chat-history";
 
 const uid = () => Math.random().toString(36).slice(2, 10);
+
+class SessionExpiredError extends Error {}
 
 /**
  * Owns the transcript and the SSE connection.
@@ -74,6 +77,7 @@ export function useChat(initialContext: ChatContext, savedId?: string | null) {
 
       const controller = new AbortController();
       abortRef.current = controller;
+      let sessionExpired = false;
 
       try {
         const auth = getBrowserAuth();
@@ -86,7 +90,7 @@ export function useChat(initialContext: ChatContext, savedId?: string | null) {
           const { data, error } = refresh
             ? await auth.auth.refreshSession()
             : await auth.auth.getSession();
-          if (error || !data.session) throw new Error("Your sign-in has expired. Please sign in again.");
+          if (error || !data.session) throw new SessionExpiredError("Your session ended.");
           return fetch("/api/chat", {
             method: "POST",
             headers: {
@@ -102,9 +106,8 @@ export function useChat(initialContext: ChatContext, savedId?: string | null) {
 
         if (!res.ok || !res.body) {
           const detail = await res.json().catch(() => null) as { error?: string } | null;
-          throw new Error(res.status === 401
-            ? "Your sign-in has expired. Please sign out and sign in again."
-            : detail?.error ?? "Padhle couldn't answer right now. Please try again.");
+          if (res.status === 401) throw new SessionExpiredError("Your session ended.");
+          throw new Error(detail?.error ?? "Padhle couldn't answer right now. Please try again.");
         }
 
         const reader = res.body.getReader();
@@ -133,7 +136,10 @@ export function useChat(initialContext: ChatContext, savedId?: string | null) {
           }
         }
       } catch (err) {
-        if ((err as Error).name !== "AbortError") {
+        if (err instanceof SessionExpiredError) {
+          sessionExpired = true;
+          rememberExpiredSession(parts);
+        } else if ((err as Error).name !== "AbortError") {
           replyState = {
             ...replyState,
             streaming: false,
@@ -145,10 +151,13 @@ export function useChat(initialContext: ChatContext, savedId?: string | null) {
           patch(replyId, () => replyState);
         }
       } finally {
-        replyState = { ...replyState, streaming: false };
-        patch(replyId, () => replyState);
+        if (!sessionExpired) {
+          replyState = { ...replyState, streaming: false };
+          patch(replyId, () => replyState);
+        }
         setBusy(false);
         abortRef.current = null;
+        if (sessionExpired) return;
         const id = threadId.current ?? crypto.randomUUID();
         try {
           await saveChat(id, [...history, replyState], ctx);

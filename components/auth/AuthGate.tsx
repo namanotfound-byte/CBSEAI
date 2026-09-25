@@ -6,6 +6,7 @@ import type { Session } from "@supabase/supabase-js";
 import { getBrowserAuth } from "@/lib/auth/supabase";
 import { AppShell } from "@/components/shell/AppShell";
 import { AuthScreen } from "./AuthScreen";
+import { INVALID_SESSION_EVENT, rememberExpiredSession } from "@/lib/auth/session-recovery";
 
 export function AuthGate({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -21,6 +22,11 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
       return;
     }
     let active = true;
+    const invalidate = () => {
+      setSession(null);
+      void auth.auth.signOut({ scope: "local" });
+    };
+    window.addEventListener(INVALID_SESSION_EVENT, invalidate);
     const { data } = auth.auth.onAuthStateChange((event, next) => {
       if (event === "INITIAL_SESSION") return;
       setSession(next);
@@ -33,13 +39,12 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
       }
       const { error } = await auth.auth.getUser(stored.session.access_token);
       if (error && (error.status === 401 || error.status === 403 || error.code === "session_not_found")) {
-        await auth.auth.signOut({ scope: "local" });
-        if (active) setSession(null);
+        if (active) rememberExpiredSession();
         return;
       }
       if (active) setSession(stored.session);
     }).catch(() => { if (active) setSession(null); });
-    return () => { active = false; data.subscription.unsubscribe(); };
+    return () => { active = false; data.subscription.unsubscribe(); window.removeEventListener(INVALID_SESSION_EVENT, invalidate); };
   }, [auth]);
 
   useEffect(() => {
@@ -62,7 +67,7 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
     <AppShell
       displayName={displayName}
       userId={session.user.id}
-      onSignOut={() => { void auth?.auth.signOut(); }}
+      onSignOut={() => { void auth?.auth.signOut({ scope: "local" }); }}
     >
       {children}
     </AppShell>

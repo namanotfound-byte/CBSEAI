@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Eye, EyeOff, LockKeyhole, Mail } from "lucide-react";
 import { getBrowserAuth } from "@/lib/auth/supabase";
 import { PadhleMark } from "@/components/brand/PadhleMark";
+import { SESSION_NOTICE_KEY } from "@/lib/auth/session-recovery";
 
 type Mode = "login" | "signup" | "recovery";
 
@@ -24,6 +25,7 @@ export function AuthScreen({ mode, onRecovered }: { mode: Mode; onRecovered?: ()
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [sessionNotice, setSessionNotice] = useState("");
   const [busy, setBusy] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [reset, setReset] = useState(false);
@@ -31,6 +33,10 @@ export function AuthScreen({ mode, onRecovered }: { mode: Mode; onRecovered?: ()
   const auth = getBrowserAuth();
 
   useEffect(() => {
+    try {
+      const notice = window.sessionStorage.getItem(SESSION_NOTICE_KEY);
+      if (notice) { setSessionNotice(notice); window.sessionStorage.removeItem(SESSION_NOTICE_KEY); }
+    } catch { /* Private browsing may disable session storage. */ }
     void fetch("/api/auth/providers")
       .then((res) => res.ok ? res.json() : null)
       .then((settings) => {
@@ -107,6 +113,7 @@ export function AuthScreen({ mode, onRecovered }: { mode: Mode; onRecovered?: ()
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.17em] text-indigo-700">Your study space</p>
             <h1 className="text-[30px] font-semibold leading-tight tracking-tight text-slate-950 sm:text-[34px]">{title}</h1>
             <p className="mt-2 text-[15px] leading-6 text-slate-600">{subtitle}</p>
+            {sessionNotice && <p role="status" className="mt-5 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-800">{sessionNotice}</p>}
 
             {!reset && mode !== "recovery" && <>
               <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
