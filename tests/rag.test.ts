@@ -18,6 +18,8 @@ test("routes canonical query types", () => {
   assert.equal(routeQuery("solve this numerical"), "numerical");
   assert.equal(routeQuery("2025 PYQ question"), "pyq");
   assert.equal(routeQuery("give me a competency-based question"), "competency");
+  assert.equal(routeQuery("Give me a Science sample-paper question about soap in hard water"), "competency");
+  assert.equal(routeQuery("Solve this sample-paper question about soap"), "pyq");
   assert.equal(routeQuery("explain photosynthesis"), "theory");
 });
 
@@ -61,6 +63,7 @@ test("routes distinctive curriculum terms to the right chapter", () => {
   assert.deepEqual(inferSyllabusScope("Mendelian inheritance", "science").chapters, [8]);
   assert.deepEqual(inferSyllabusScope("What is the ability of the eye lens to adjust its focal length called?").chapters, [10]);
   assert.deepEqual(inferSyllabusScope("What is a lens?").chapters, [9]);
+  assert.deepEqual(inferSyllabusScope("soap and detergent in hard water", "science").chapters, [4]);
 });
 
 test("rejects chapter-neighbour passages that do not answer the question", () => {
@@ -263,6 +266,33 @@ test("a reviewed sample-paper question brings its exact marking row", async () =
   assert.ok(sources.some((source) => source.id === "sqp.science.2026-27.q07"));
   assert.ok(sources.some((source) => source.id === "ms.science.2026-27.q07"));
   assert.equal(sources.filter((source) => source.kind === "ms").length, 1);
+});
+
+test("a soap practice request retrieves the correct Chapter 4 paper question", async () => {
+  const question = REVIEWED_ADDENDUM.find((chunk) => chunk.id === "sqp.science.2026-27.q19");
+  const answer = REVIEWED_ADDENDUM.find((chunk) => chunk.id === "ms.science.2026-27.q19");
+  assert.ok(question && answer);
+  assert.equal(question.meta.syllabusTopicId, "science.ch04");
+  assert.equal(answer.meta.syllabusTopicId, "science.ch04");
+  await getVectorStore().upsert([
+    {
+      id: "test-science-soap-scope",
+      text: "Carbon and Its Compounds: soaps and detergents, including their behaviour in hard water.",
+      meta: {
+        kind: "syllabus", subject: "science", chapter: 4, sourceYear: "2026",
+        syllabusVersion: "2026-27", syllabusTopicId: "science.ch04",
+        chunkType: "syllabus_scope", inActiveSyllabus: true,
+        reviewStatus: "approved", assessmentStatus: "summative",
+      },
+    },
+    question,
+    answer,
+  ] as Chunk[]);
+  const query = "Give me a Science sample-paper question about soap in hard water";
+  assert.equal(routeQuery(query), "competency");
+  const sources = await retrieve(query, { subject: "science", route: "competency" });
+  assert.ok(sources.some((source) => source.id === question.id));
+  assert.ok(sources.some((source) => source.id === answer.id));
 });
 
 test("Maths Standard practice keeps the paper track and exact answer join", async () => {

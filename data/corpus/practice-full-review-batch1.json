@@ -1395,10 +1395,10 @@
     "text": "Manjeet wants to wash clothes, but the water available is hard. He compares the action of soap and detergent in hard water, to decide which one to use for washing his clothes. He observes: soap forms scum in hard water and detergent produces lather easily in hard water. Which of the following inferences is correct?\n(A) Ca²⁺ and Mg²⁺ ions react with soap, forming insoluble compounds, whereas detergents do not form such insoluble salts.\n(B) Soap is acidic, and detergents are basic.\n(C) Soap reacts with Na⁺ ions in hard water to form scum, while detergents do not react with Na⁺ ions.\n(D) Detergents form lather easily because they are ionic compounds and react with Ca²⁺ and Mg²⁺ ions, while soaps do not react with hard water.",
     "meta": {
       "subject": "science",
-      "chapter": 2,
+      "chapter": 4,
       "sourceYear": "2026",
       "syllabusVersion": "2026-27",
-      "syllabusTopicId": "science.ch02",
+      "syllabusTopicId": "science.ch04",
       "inActiveSyllabus": true,
       "assessmentStatus": "summative",
       "reviewStatus": "approved",
@@ -1408,7 +1408,7 @@
       "sourceTransform": "visual-question-answer-split-v1",
       "joinPrefix": "2026-27|086|Science-SQP|Q19",
       "conceptTags": [
-        "Acids, Bases and Salts; soap and detergents in hard water"
+        "Carbon and Its Compounds; soap and detergents in hard water"
       ],
       "kind": "sqp",
       "chunkType": "question_block",
@@ -1426,10 +1426,10 @@
     "text": "A. Ca²⁺ and Mg²⁺ ions react with soap, forming insoluble compounds, whereas detergents do not form such insoluble salts.",
     "meta": {
       "subject": "science",
-      "chapter": 2,
+      "chapter": 4,
       "sourceYear": "2026",
       "syllabusVersion": "2026-27",
-      "syllabusTopicId": "science.ch02",
+      "syllabusTopicId": "science.ch04",
       "inActiveSyllabus": true,
       "assessmentStatus": "summative",
       "reviewStatus": "approved",
@@ -1439,7 +1439,7 @@
       "sourceTransform": "visual-question-answer-split-v1",
       "joinPrefix": "2026-27|086|Science-SQP|Q19",
       "conceptTags": [
-        "Acids, Bases and Salts; soap and detergents in hard water"
+        "Carbon and Its Compounds; soap and detergents in hard water"
       ],
       "kind": "ms",
       "chunkType": "marking_scheme",

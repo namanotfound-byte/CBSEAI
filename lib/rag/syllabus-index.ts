@@ -6,6 +6,7 @@ const ALIASES: Partial<Record<SubjectId, Record<number, string[]>>> = {
     1: ["chemical reaction", "equation", "oxidation", "reduction", "corrosion"],
     2: ["acid", "base", "salt", "ph", "indicator"],
     3: ["metals", "non-metals", "reactivity", "ionic compound"],
+    4: ["soap", "detergent", "hard water", "scum", "carbon compound", "hydrocarbon", "ethanol", "ethanoic acid"],
     5: ["life process", "nutrition", "photosynthesis", "respiration", "amoeba", "stomata", "leaf", "pores", "guard cells", "water loss"],
     6: ["control", "coordination", "neuron", "hormone", "reflex"],
     7: ["reproduction", "gamete", "fertilisation", "fertilization", "pollination"],

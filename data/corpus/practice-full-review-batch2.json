@@ -1,0 +1,248 @@
+[
+  {
+    "id": "sqp.science.2026-27.q22",
+    "text": "A food label for flavoured biscuits lists “Antioxidants (E304, E307b [from Soy])”. Which of the following is added to food packets for the same reason?\n(A) salt\n(B) vinegar\n(C) nitrogen\n(D) vanilla",
+    "meta": {
+      "subject": "science",
+      "chapter": 1,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch01",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v5",
+      "reviewEvidence": "reports/science-sqp-2026-27-reviewed-qa-batch5.md",
+      "sourceTransform": "visual-question-answer-split-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q22",
+      "conceptTags": [
+        "Chemical Reactions and Equations; antioxidants"
+      ],
+      "kind": "sqp",
+      "chunkType": "question_block",
+      "page": 7,
+      "sourcePath": "SQP/Science/Science_SQP_2026.pdf",
+      "contentSha256": "09bf85a26357d9b3c44976e722a4532c383a99ccbd97e8fc9a0fb06c8ac64eff",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-SQP.pdf",
+      "heading": "Science 086 Sample Question Paper 2026-27 · Q22",
+      "extractiveQuote": "A food label for flavoured biscuits lists “Antioxidants (E304, E307b [from Soy])”. Which of the following is added to food packets for the same reason?\n(A) salt\n(B) vinegar\n(C) nitrogen\n(D) vanilla"
+    }
+  },
+  {
+    "id": "ms.science.2026-27.q22",
+    "text": "C. Nitrogen. In the food label, E304 and E307b are antioxidants; nitrogen is used for the same antioxidant purpose.",
+    "meta": {
+      "subject": "science",
+      "chapter": 1,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch01",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v5",
+      "reviewEvidence": "reports/science-sqp-2026-27-reviewed-qa-batch5.md",
+      "sourceTransform": "visual-question-answer-split-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q22",
+      "conceptTags": [
+        "Chemical Reactions and Equations; antioxidants"
+      ],
+      "kind": "ms",
+      "chunkType": "marking_scheme",
+      "page": 4,
+      "sourcePath": "SQP/Science/Science_MS_2026.pdf",
+      "contentSha256": "195e5b399354e5334af15e8e42688923272d430876b18e5f1e609e1c6709ce5e",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-MS.pdf",
+      "heading": "Science 086 Marking Scheme 2026-27 · Q22",
+      "joinKey": "2026-27|086|Science-SQP|Q22|answer",
+      "extractiveQuote": "C. Nitrogen. In the food label, E304 and E307b are antioxidants; nitrogen is used for the same antioxidant purpose."
+    }
+  },
+  {
+    "id": "sqp.science.2026-27.q22vi",
+    "text": "In the food industry, nitrogen is used as a/an:\n(A) preservative\n(B) oxidising agent\n(C) antioxidant\n(D) colouring agent.",
+    "meta": {
+      "subject": "science",
+      "chapter": 1,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch01",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v5",
+      "reviewEvidence": "reports/science-sqp-2026-27-reviewed-qa-batch5.md",
+      "sourceTransform": "visual-question-answer-split-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q22-VI",
+      "conceptTags": [
+        "Chemical Reactions and Equations; antioxidants; visually impaired variant"
+      ],
+      "accessibilityVariant": "visually_impaired",
+      "kind": "sqp",
+      "chunkType": "question_block",
+      "page": 7,
+      "sourcePath": "SQP/Science/Science_SQP_2026.pdf",
+      "contentSha256": "09bf85a26357d9b3c44976e722a4532c383a99ccbd97e8fc9a0fb06c8ac64eff",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-SQP.pdf",
+      "heading": "Science 086 Sample Question Paper 2026-27 · Q22-VI visually impaired alternative",
+      "extractiveQuote": "In the food industry, nitrogen is used as a/an:\n(A) preservative\n(B) oxidising agent\n(C) antioxidant\n(D) colouring agent."
+    }
+  },
+  {
+    "id": "ms.science.2026-27.q22vi",
+    "text": "C. antioxidant. This is the visually impaired candidate alternative to the food-label question.",
+    "meta": {
+      "subject": "science",
+      "chapter": 1,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch01",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v5",
+      "reviewEvidence": "reports/science-sqp-2026-27-reviewed-qa-batch5.md",
+      "sourceTransform": "visual-question-answer-split-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q22-VI",
+      "conceptTags": [
+        "Chemical Reactions and Equations; antioxidants; visually impaired variant"
+      ],
+      "accessibilityVariant": "visually_impaired",
+      "kind": "ms",
+      "chunkType": "marking_scheme",
+      "page": 4,
+      "sourcePath": "SQP/Science/Science_MS_2026.pdf",
+      "contentSha256": "195e5b399354e5334af15e8e42688923272d430876b18e5f1e609e1c6709ce5e",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-MS.pdf",
+      "heading": "Science 086 Marking Scheme 2026-27 · Q22-VI",
+      "joinKey": "2026-27|086|Science-SQP|Q22-VI|answer",
+      "extractiveQuote": "C. antioxidant. This is the visually impaired candidate alternative to the food-label question."
+    }
+  },
+  {
+    "id": "sqp.science.2026-27.q23",
+    "text": "Electrical wires made of aluminum:\n(A) corrode easily as aluminium is a very reactive metal.\n(B) corrode easily because porous flaky aluminium oxide is formed.\n(C) do not corrode easily as aluminium oxide forms a protective layer.\n(D) do not corrode easily as aluminium is less reactive than sodium, magnesium and zinc.",
+    "meta": {
+      "subject": "science",
+      "chapter": 1,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch01",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v5",
+      "reviewEvidence": "reports/science-sqp-2026-27-reviewed-qa-batch5.md",
+      "sourceTransform": "visual-question-answer-split-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q23",
+      "conceptTags": [
+        "Chemical Reactions and Equations; corrosion protection"
+      ],
+      "kind": "sqp",
+      "chunkType": "question_block",
+      "page": 7,
+      "sourcePath": "SQP/Science/Science_SQP_2026.pdf",
+      "contentSha256": "09bf85a26357d9b3c44976e722a4532c383a99ccbd97e8fc9a0fb06c8ac64eff",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-SQP.pdf",
+      "heading": "Science 086 Sample Question Paper 2026-27 · Q23",
+      "extractiveQuote": "Electrical wires made of aluminum:\n(A) corrode easily as aluminium is a very reactive metal.\n(B) corrode easily because porous flaky aluminium oxide is formed.\n(C) do not corrode easily as aluminium oxide forms a protective layer.\n(D) do no"
+    }
+  },
+  {
+    "id": "ms.science.2026-27.q23",
+    "text": "C. They do not corrode easily because aluminium oxide forms a protective layer.",
+    "meta": {
+      "subject": "science",
+      "chapter": 1,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch01",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v5",
+      "reviewEvidence": "reports/science-sqp-2026-27-reviewed-qa-batch5.md",
+      "sourceTransform": "visual-question-answer-split-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q23",
+      "conceptTags": [
+        "Chemical Reactions and Equations; corrosion protection"
+      ],
+      "kind": "ms",
+      "chunkType": "marking_scheme",
+      "page": 4,
+      "sourcePath": "SQP/Science/Science_MS_2026.pdf",
+      "contentSha256": "195e5b399354e5334af15e8e42688923272d430876b18e5f1e609e1c6709ce5e",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-MS.pdf",
+      "heading": "Science 086 Marking Scheme 2026-27 · Q23",
+      "joinKey": "2026-27|086|Science-SQP|Q23|answer",
+      "extractiveQuote": "C. They do not corrode easily because aluminium oxide forms a protective layer."
+    }
+  },
+  {
+    "id": "sqp.science.2026-27.q24",
+    "text": "Assertion (A): Onion extract loses its smell when it is added to baking soda solution, whereas it retains its smell when added to lemon juice.\nReason (R): Onion acts as an olfactory indicator.\n(A) Both A and R are true, and R is the correct explanation of A.\n(B) Both A and R are true, but R is not the correct explanation of A.\n(C) A is true but R is false.\n(D) A is false but R is true.",
+    "meta": {
+      "subject": "science",
+      "chapter": 2,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch02",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v5",
+      "reviewEvidence": "reports/science-sqp-2026-27-reviewed-qa-batch5.md",
+      "sourceTransform": "visual-question-answer-split-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q24",
+      "conceptTags": [
+        "Acids, Bases and Salts; olfactory indicator"
+      ],
+      "kind": "sqp",
+      "chunkType": "question_block",
+      "page": 7,
+      "sourcePath": "SQP/Science/Science_SQP_2026.pdf",
+      "contentSha256": "09bf85a26357d9b3c44976e722a4532c383a99ccbd97e8fc9a0fb06c8ac64eff",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-SQP.pdf",
+      "heading": "Science 086 Sample Question Paper 2026-27 · Q24",
+      "extractiveQuote": "Assertion (A): Onion extract loses its smell when it is added to baking soda solution, whereas it retains its smell when added to lemon juice.\nReason (R): Onion acts as an olfactory indicator.\n(A) Both A and R are true, and R is the correct"
+    }
+  },
+  {
+    "id": "ms.science.2026-27.q24",
+    "text": "B. Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).",
+    "meta": {
+      "subject": "science",
+      "chapter": 2,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch02",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v5",
+      "reviewEvidence": "reports/science-sqp-2026-27-reviewed-qa-batch5.md",
+      "sourceTransform": "visual-question-answer-split-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q24",
+      "conceptTags": [
+        "Acids, Bases and Salts; olfactory indicator"
+      ],
+      "kind": "ms",
+      "chunkType": "marking_scheme",
+      "page": 4,
+      "sourcePath": "SQP/Science/Science_MS_2026.pdf",
+      "contentSha256": "195e5b399354e5334af15e8e42688923272d430876b18e5f1e609e1c6709ce5e",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-MS.pdf",
+      "heading": "Science 086 Marking Scheme 2026-27 · Q24",
+      "joinKey": "2026-27|086|Science-SQP|Q24|answer",
+      "extractiveQuote": "B. Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A)."
+    }
+  }
+]
