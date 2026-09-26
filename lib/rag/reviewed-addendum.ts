@@ -2,6 +2,9 @@ import type { Chunk } from "@/lib/types";
 import scienceConcepts from "@/data/corpus/science-concept-reviewed-addendum.json";
 import mathsConcepts from "@/data/corpus/maths-reviewed-addendum-2.json";
 import scienceSamplePaper from "@/data/corpus/science-sqp-reviewed-addendum.json";
+import scienceCore from "@/data/corpus/science-core-reviewed-addendum.json";
+import mathsMore from "@/data/corpus/maths-reviewed-addendum-3.json";
+import mathsStandardSamplePaper from "@/data/corpus/maths-standard-sqp-reviewed-addendum.json";
 
 // Page-checked against the authoritative ../Data source corpus.
 const FIRST_REVIEWED_ADDENDUM: Chunk[] = [
@@ -305,4 +308,7 @@ export const REVIEWED_ADDENDUM: Chunk[] = [
   ...(scienceConcepts as Chunk[]),
   ...(mathsConcepts as Chunk[]),
   ...(scienceSamplePaper as Chunk[]),
+  ...(scienceCore as Chunk[]),
+  ...(mathsMore as Chunk[]),
+  ...(mathsStandardSamplePaper as Chunk[]),
 ];

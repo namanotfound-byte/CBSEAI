@@ -193,7 +193,10 @@ function slot<T extends Chunk & { score: number }>(
 
 function toSource(chunk: Chunk & { score: number }): Source {
   const parts = [KIND_LABEL[chunk.meta.kind]];
-  if (chunk.meta.subject) parts.push(titleCase(chunk.meta.subject));
+  if (chunk.meta.subject) parts.push(
+    titleCase(chunk.meta.subject) +
+    (chunk.meta.mathsTrack ? ` ${titleCase(chunk.meta.mathsTrack)}` : ""),
+  );
   if (chunk.meta.chapter) parts.push(`Ch ${chunk.meta.chapter}`);
   if (chunk.meta.page) parts.push(`p. ${chunk.meta.page}`);
 
@@ -215,6 +218,7 @@ function toSource(chunk: Chunk & { score: number }): Source {
     pageStart: chunk.meta.pageStart,
     pageEnd: chunk.meta.pageEnd,
     sourceYear: chunk.meta.sourceYear,
+    mathsTrack: chunk.meta.mathsTrack,
     syllabusVersion: chunk.meta.syllabusVersion,
     syllabusTopicId: chunk.meta.syllabusTopicId,
     score: chunk.score,

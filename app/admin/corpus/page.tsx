@@ -38,7 +38,7 @@ export default function CorpusAdmin() {
   return <main className="mx-auto max-w-xl px-6 py-12 text-slate-900">
     <Link href="/" className="text-sm underline">← Padhle</Link>
     <h1 className="mt-8 text-3xl font-semibold">Reviewed sources</h1>
-    <p className="mt-3 text-slate-600">Publish 45 page-checked NCERT and CBSE Maths and Science passages, including five sample-paper questions with their marking-scheme answers. This can be run again safely.</p>
+    <p className="mt-3 text-slate-600">Publish page-checked NCERT and CBSE Maths and Science passages and exact sample-paper marking answers. Previously published passages are skipped to conserve the free embedding allowance.</p>
     {email.toLowerCase() === "naman070609@gmail.com" ? <button disabled={busy} onClick={() => void publish()} className="mt-6 rounded-xl bg-slate-950 px-5 py-3 font-semibold text-white disabled:opacity-50">{busy ? "Publishing…" : "Publish reviewed passages"}</button> : <p className="mt-6 text-slate-600">Sign in with the project owner account to publish.</p>}
     {message && <p role="status" className="mt-5 rounded-xl bg-slate-100 p-4">{message}</p>}
   </main>;

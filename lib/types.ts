@@ -63,6 +63,7 @@ export interface Source {
   pageEnd?: number;
   /** Original publication/exam year of this document, e.g. "2024". */
   sourceYear?: string;
+  mathsTrack?: "standard" | "basic";
   /** Syllabus release this source was reviewed against, e.g. "2026-27". */
   syllabusVersion?: string;
   /** Canonical active-syllabus node this content is allowed to support. */

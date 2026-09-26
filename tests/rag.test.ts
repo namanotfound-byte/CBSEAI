@@ -142,13 +142,13 @@ test("accepts canonical ingestion metadata", () => {
 });
 
 test("every deployable reviewed record is valid and uniquely identified", () => {
-  assert.equal(REVIEWED_ADDENDUM.length, 45);
+  assert.equal(REVIEWED_ADDENDUM.length, 91);
   assert.deepEqual(validateChunks(REVIEWED_ADDENDUM), []);
   assert.equal(new Set(REVIEWED_ADDENDUM.map((chunk) => chunk.id)).size, REVIEWED_ADDENDUM.length);
   const reviewedText = REVIEWED_ADDENDUM.map((chunk) => chunk.text.trim().toLowerCase());
   assert.equal(new Set(reviewedText).size, reviewedText.length);
   const sampleQuestions = REVIEWED_ADDENDUM.filter((chunk) => chunk.meta.kind === "sqp");
-  assert.equal(sampleQuestions.length, 5);
+  assert.equal(sampleQuestions.length, 13);
   for (const question of sampleQuestions) {
     assert.ok(REVIEWED_ADDENDUM.some((chunk) =>
       chunk.meta.kind === "ms" && chunk.meta.joinPrefix === question.meta.joinPrefix,
@@ -249,4 +249,29 @@ test("a reviewed sample-paper question brings its exact marking row", async () =
   assert.ok(sources.some((source) => source.id === "sqp.science.2026-27.q07"));
   assert.ok(sources.some((source) => source.id === "ms.science.2026-27.q07"));
   assert.equal(sources.filter((source) => source.kind === "ms").length, 1);
+});
+
+test("Maths Standard practice keeps the paper track and exact answer join", async () => {
+  await getVectorStore().upsert([
+    {
+      id: "test-maths-real-numbers-scope",
+      text: "Real Numbers: highest common factor and applications of prime factorisation.",
+      meta: {
+        kind: "syllabus", subject: "maths", chapter: 1, sourceYear: "2026",
+        syllabusVersion: "2026-27", syllabusTopicId: "maths.ch01",
+        chunkType: "syllabus_scope", inActiveSyllabus: true,
+        reviewStatus: "approved", assessmentStatus: "summative",
+      },
+    },
+    ...REVIEWED_ADDENDUM.filter((chunk) =>
+      chunk.id === "sqp.maths.standard.2026-27.q01" ||
+      chunk.id === "ms.maths.standard.2026-27.q01",
+    ),
+  ] as Chunk[]);
+  const sources = await retrieve("Give me a practice question about numbers dividing 134 and 188", {
+    subject: "maths", chapter: 1, route: "competency",
+  });
+  assert.ok(sources.some((source) => source.id === "sqp.maths.standard.2026-27.q01"));
+  assert.ok(sources.some((source) => source.id === "ms.maths.standard.2026-27.q01"));
+  assert.ok(sources.some((source) => source.label.includes("Maths Standard")));
 });
