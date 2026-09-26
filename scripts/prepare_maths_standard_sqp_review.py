@@ -16,7 +16,16 @@ from pathlib import Path
 
 APP = Path(__file__).resolve().parents[1]
 DATA = APP.parent / "Data"
-SOURCE = DATA / "processed/science-maths-2026-27/maths-standard-sqp-2026-27-reviewed-qa.jsonl"
+QA_SOURCES = [
+    (
+        DATA / "processed/science-maths-2026-27/maths-standard-sqp-2026-27-reviewed-qa.jsonl",
+        "reports/maths-standard-sqp-2026-27-reviewed-qa.md",
+    ),
+    (
+        DATA / "processed/science-maths-2026-27/maths-standard-sqp-2026-27-reviewed-qa-batch2.jsonl",
+        "reports/maths-standard-sqp-2026-27-reviewed-qa-batch2.md",
+    ),
+]
 QP_URL = "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/MathsStandard-SQP.pdf"
 MS_URL = "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/MathsStandard-MS.pdf"
 
@@ -26,11 +35,16 @@ def digest(path: Path) -> str:
 
 
 def build() -> list[dict]:
-    reviewed = [json.loads(line) for line in SOURCE.read_text().splitlines() if line.strip()]
-    if len(reviewed) != 8 or len({row["id"] for row in reviewed}) != 8:
-        raise ValueError("Expected the eight uniquely reviewed Mathematics Standard questions")
+    reviewed = [
+        (json.loads(line), report)
+        for path, report in QA_SOURCES
+        for line in path.read_text().splitlines()
+        if line.strip()
+    ]
+    if len(reviewed) != 16 or len({row["id"] for row, _ in reviewed}) != 16:
+        raise ValueError("Expected the 16 uniquely reviewed Mathematics Standard questions")
     rows = []
-    for row in reviewed:
+    for row, report in reviewed:
         meta = row["meta"]
         if meta["kind"] != "practice_question" or meta["mathsTrack"] != "standard":
             raise ValueError(f"Wrong paper track or kind: {row['id']}")
@@ -46,6 +60,8 @@ def build() -> list[dict]:
         chapter = int(meta["syllabusTopicId"].split("ch")[-1])
         prefix = f"2026-27|041|MathsStandard-SQP|Q{question_number}"
         question = re.sub(r"\s+(?=\([ABCD]\)\s)", "\n", row["questionText"].strip())
+        if question_number == 10:
+            question = "Use π = 22/7 where needed.\n" + question
         answer = row["markingSchemeText"].strip()
         if not question or not answer or not answer.startswith(f"({meta['correctOption']})"):
             raise ValueError(f"Missing question or wrong marking option: {row['id']}")
@@ -54,8 +70,8 @@ def build() -> list[dict]:
             "syllabusVersion": "2026-27", "syllabusTopicId": meta["syllabusTopicId"],
             "inActiveSyllabus": True, "assessmentStatus": "summative",
             "reviewStatus": "approved", "language": "en", "mathsTrack": "standard",
-            "reviewBatch": "maths-standard-sqp-20260926-v1",
-            "reviewEvidence": "reports/maths-standard-sqp-2026-27-reviewed-qa.md",
+            "reviewBatch": "maths-standard-sqp-20260926-v2" if "batch2" in report else "maths-standard-sqp-20260926-v1",
+            "reviewEvidence": report,
             "sourceTransform": "visual-question-answer-split-v1",
             "joinPrefix": prefix,
         }
