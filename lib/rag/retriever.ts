@@ -50,7 +50,7 @@ export async function retrieve(
   const inferred = inferSyllabusScope(query, filters.subject);
   if (inferred.outOfSyllabus) return [];
   const requestedKinds = filters.route === "competency"
-    ? (["cfpq", "sqp", "pyq"] satisfies SourceKind[])
+    ? (["cfpq", "sqp", "pyq", "ms"] satisfies SourceKind[])
     : filters.kinds?.filter((kind) => kind !== "syllabus") ?? CONTENT_KINDS;
   const scopedFilters: RetrievalFilters = {
     ...filters,

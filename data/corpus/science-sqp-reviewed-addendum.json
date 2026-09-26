@@ -1,0 +1,307 @@
+[
+  {
+    "id": "sqp.science.2026-27.q01",
+    "text": "During photosynthesis, what happens to carbon dioxide and water as glucose is formed?\nA. Carbon dioxide gains hydrogen, while water loses electrons.\nB. Carbon dioxide loses oxygen, while water gains oxygen.\nC. Carbon dioxide is oxidised, while water is reduced.\nD. Both carbon dioxide and water undergo reduction.",
+    "meta": {
+      "subject": "science",
+      "chapter": 5,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch05",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v1",
+      "reviewEvidence": "reports/science-sqp-2026-27-source-review.md",
+      "sourceTransform": "visual-table-transcription-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q1",
+      "conceptTags": [
+        "photosynthesis"
+      ],
+      "kind": "sqp",
+      "chunkType": "question_block",
+      "page": 1,
+      "sourcePath": "SQP/Science/Science_SQP_2026.pdf",
+      "contentSha256": "09bf85a26357d9b3c44976e722a4532c383a99ccbd97e8fc9a0fb06c8ac64eff",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-SQP.pdf",
+      "heading": "Science 086 Sample Question Paper 2026-27 · Q1",
+      "extractiveQuote": "During photosynthesis, what happens to carbon dioxide and water as glucose is formed?"
+    }
+  },
+  {
+    "id": "ms.science.2026-27.q01",
+    "text": "A. Carbon dioxide gains hydrogen, while water loses electrons. (1 mark)",
+    "meta": {
+      "subject": "science",
+      "chapter": 5,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch05",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v1",
+      "reviewEvidence": "reports/science-sqp-2026-27-source-review.md",
+      "sourceTransform": "visual-table-transcription-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q1",
+      "conceptTags": [
+        "photosynthesis"
+      ],
+      "kind": "ms",
+      "chunkType": "marking_scheme",
+      "page": 1,
+      "sourcePath": "SQP/Science/Science_MS_2026.pdf",
+      "contentSha256": "195e5b399354e5334af15e8e42688923272d430876b18e5f1e609e1c6709ce5e",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-MS.pdf",
+      "heading": "Science 086 Marking Scheme 2026-27 · Q1",
+      "joinKey": "2026-27|086|Science-SQP|Q1|answer",
+      "extractiveQuote": "A. Carbon dioxide gains hydrogen, while water loses electrons. (1 mark)"
+    }
+  },
+  {
+    "id": "sqp.science.2026-27.q03",
+    "text": "During urine formation, tubular reabsorption and secretion take place in the kidneys. Which of the following sets correctly indicates both the substances that are reabsorbed in the kidneys?\nA. Glucose and salts\nB. Glucose and starch\nC. Glycogen and salts\nD. Glycogen and starch",
+    "meta": {
+      "subject": "science",
+      "chapter": 5,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch05",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v1",
+      "reviewEvidence": "reports/science-sqp-2026-27-source-review.md",
+      "sourceTransform": "visual-table-transcription-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q3",
+      "conceptTags": [
+        "kidney reabsorption"
+      ],
+      "kind": "sqp",
+      "chunkType": "question_block",
+      "page": 2,
+      "sourcePath": "SQP/Science/Science_SQP_2026.pdf",
+      "contentSha256": "09bf85a26357d9b3c44976e722a4532c383a99ccbd97e8fc9a0fb06c8ac64eff",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-SQP.pdf",
+      "heading": "Science 086 Sample Question Paper 2026-27 · Q3",
+      "extractiveQuote": "During urine formation, tubular reabsorption and secretion take place in the kidneys. Which of the following sets correctly indicates both the substances that are reabsorbed in the kidneys?"
+    }
+  },
+  {
+    "id": "ms.science.2026-27.q03",
+    "text": "A. Glucose and salts. (1 mark)",
+    "meta": {
+      "subject": "science",
+      "chapter": 5,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch05",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v1",
+      "reviewEvidence": "reports/science-sqp-2026-27-source-review.md",
+      "sourceTransform": "visual-table-transcription-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q3",
+      "conceptTags": [
+        "kidney reabsorption"
+      ],
+      "kind": "ms",
+      "chunkType": "marking_scheme",
+      "page": 1,
+      "sourcePath": "SQP/Science/Science_MS_2026.pdf",
+      "contentSha256": "195e5b399354e5334af15e8e42688923272d430876b18e5f1e609e1c6709ce5e",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-MS.pdf",
+      "heading": "Science 086 Marking Scheme 2026-27 · Q3",
+      "joinKey": "2026-27|086|Science-SQP|Q3|answer",
+      "extractiveQuote": "A. Glucose and salts. (1 mark)"
+    }
+  },
+  {
+    "id": "sqp.science.2026-27.q04",
+    "text": "In a controlled experiment, the anthers of a mustard plant's flowers were carefully removed in the bud stage before they matured. The bud was covered with a paper bag. What will be the most likely result for these flowers?\nA. They will still produce seeds and fruit through self-pollination.\nB. They will attract more insects and produce larger flowers but no fruit.\nC. They will not produce any seeds or fruits.\nD. They will produce seeds and fruits that are genetically identical to the parent.",
+    "meta": {
+      "subject": "science",
+      "chapter": 7,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch07",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v1",
+      "reviewEvidence": "reports/science-sqp-2026-27-source-review.md",
+      "sourceTransform": "visual-table-transcription-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q4",
+      "conceptTags": [
+        "pollination"
+      ],
+      "kind": "sqp",
+      "chunkType": "question_block",
+      "page": 2,
+      "sourcePath": "SQP/Science/Science_SQP_2026.pdf",
+      "contentSha256": "09bf85a26357d9b3c44976e722a4532c383a99ccbd97e8fc9a0fb06c8ac64eff",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-SQP.pdf",
+      "heading": "Science 086 Sample Question Paper 2026-27 · Q4",
+      "extractiveQuote": "In a controlled experiment, the anthers of a mustard plant's flowers were carefully removed in the bud stage before they matured. The bud was covered with a paper bag. What will be the most likely result for these flowers?"
+    }
+  },
+  {
+    "id": "ms.science.2026-27.q04",
+    "text": "C. They will not produce any seeds or fruits. (1 mark)",
+    "meta": {
+      "subject": "science",
+      "chapter": 7,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch07",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v1",
+      "reviewEvidence": "reports/science-sqp-2026-27-source-review.md",
+      "sourceTransform": "visual-table-transcription-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q4",
+      "conceptTags": [
+        "pollination"
+      ],
+      "kind": "ms",
+      "chunkType": "marking_scheme",
+      "page": 1,
+      "sourcePath": "SQP/Science/Science_MS_2026.pdf",
+      "contentSha256": "195e5b399354e5334af15e8e42688923272d430876b18e5f1e609e1c6709ce5e",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-MS.pdf",
+      "heading": "Science 086 Marking Scheme 2026-27 · Q4",
+      "joinKey": "2026-27|086|Science-SQP|Q4|answer",
+      "extractiveQuote": "C. They will not produce any seeds or fruits. (1 mark)"
+    }
+  },
+  {
+    "id": "sqp.science.2026-27.q05",
+    "text": "The Vas deferens and the Oviduct are both targets for surgical contraception (Vasectomy and Tubectomy respectively). Analysing the process of reproduction, what common biological event is prevented by blocking both these structures?\nA. The production of gametes (sperm and egg).\nB. The implantation of the fertilized egg into the uterine wall.\nC. The successful meeting and fusion of the male and the female gametes.\nD. The release of hormones - testosterone and estrogen.",
+    "meta": {
+      "subject": "science",
+      "chapter": 7,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch07",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v1",
+      "reviewEvidence": "reports/science-sqp-2026-27-source-review.md",
+      "sourceTransform": "visual-table-transcription-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q5",
+      "conceptTags": [
+        "contraception"
+      ],
+      "kind": "sqp",
+      "chunkType": "question_block",
+      "page": 2,
+      "sourcePath": "SQP/Science/Science_SQP_2026.pdf",
+      "contentSha256": "09bf85a26357d9b3c44976e722a4532c383a99ccbd97e8fc9a0fb06c8ac64eff",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-SQP.pdf",
+      "heading": "Science 086 Sample Question Paper 2026-27 · Q5",
+      "extractiveQuote": "The Vas deferens and the Oviduct are both targets for surgical contraception (Vasectomy and Tubectomy respectively). Analysing the process of reproduction, what common biological event is prevented by blocking both these structures?"
+    }
+  },
+  {
+    "id": "ms.science.2026-27.q05",
+    "text": "C. The successful meeting and fusion of the male and female gametes. (1 mark)",
+    "meta": {
+      "subject": "science",
+      "chapter": 7,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch07",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v1",
+      "reviewEvidence": "reports/science-sqp-2026-27-source-review.md",
+      "sourceTransform": "visual-table-transcription-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q5",
+      "conceptTags": [
+        "contraception"
+      ],
+      "kind": "ms",
+      "chunkType": "marking_scheme",
+      "page": 1,
+      "sourcePath": "SQP/Science/Science_MS_2026.pdf",
+      "contentSha256": "195e5b399354e5334af15e8e42688923272d430876b18e5f1e609e1c6709ce5e",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-MS.pdf",
+      "heading": "Science 086 Marking Scheme 2026-27 · Q5",
+      "joinKey": "2026-27|086|Science-SQP|Q5|answer",
+      "extractiveQuote": "C. The successful meeting and fusion of the male and female gametes. (1 mark)"
+    }
+  },
+  {
+    "id": "sqp.science.2026-27.q07",
+    "text": "A fish living in a pond ecosystem feeds on small aquatic insects (larvae). These insect larvae, in turn, feed on green algae and small photosynthetic bacteria. In this specific food chain, what is the trophic level classification of fish?\nA. Producer\nB. Primary Consumer\nC. Secondary Consumer\nD. Tertiary Consumer",
+    "meta": {
+      "subject": "science",
+      "chapter": 13,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch13",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v1",
+      "reviewEvidence": "reports/science-sqp-2026-27-source-review.md",
+      "sourceTransform": "visual-table-transcription-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q7",
+      "conceptTags": [
+        "food chain trophic level"
+      ],
+      "kind": "sqp",
+      "chunkType": "question_block",
+      "page": 2,
+      "sourcePath": "SQP/Science/Science_SQP_2026.pdf",
+      "contentSha256": "09bf85a26357d9b3c44976e722a4532c383a99ccbd97e8fc9a0fb06c8ac64eff",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-SQP.pdf",
+      "heading": "Science 086 Sample Question Paper 2026-27 · Q7",
+      "extractiveQuote": "A fish living in a pond ecosystem feeds on small aquatic insects (larvae). These insect larvae, in turn, feed on green algae and small photosynthetic bacteria. In this specific food chain, what is the trophic level classification of fish?"
+    }
+  },
+  {
+    "id": "ms.science.2026-27.q07",
+    "text": "C. Secondary Consumer. (1 mark)",
+    "meta": {
+      "subject": "science",
+      "chapter": 13,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch13",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "reviewBatch": "science-sqp-20260926-v1",
+      "reviewEvidence": "reports/science-sqp-2026-27-source-review.md",
+      "sourceTransform": "visual-table-transcription-v1",
+      "joinPrefix": "2026-27|086|Science-SQP|Q7",
+      "conceptTags": [
+        "food chain trophic level"
+      ],
+      "kind": "ms",
+      "chunkType": "marking_scheme",
+      "page": 1,
+      "sourcePath": "SQP/Science/Science_MS_2026.pdf",
+      "contentSha256": "195e5b399354e5334af15e8e42688923272d430876b18e5f1e609e1c6709ce5e",
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2026_27/Science-MS.pdf",
+      "heading": "Science 086 Marking Scheme 2026-27 · Q7",
+      "joinKey": "2026-27|086|Science-SQP|Q7|answer",
+      "extractiveQuote": "C. Secondary Consumer. (1 mark)"
+    }
+  }
+]

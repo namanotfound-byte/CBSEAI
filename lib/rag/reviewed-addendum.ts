@@ -1,7 +1,10 @@
 import type { Chunk } from "@/lib/types";
+import scienceConcepts from "@/data/corpus/science-concept-reviewed-addendum.json";
+import mathsConcepts from "@/data/corpus/maths-reviewed-addendum-2.json";
+import scienceSamplePaper from "@/data/corpus/science-sqp-reviewed-addendum.json";
 
 // Page-checked against the authoritative ../Data source corpus.
-export const REVIEWED_ADDENDUM: Chunk[] = [
+const FIRST_REVIEWED_ADDENDUM: Chunk[] = [
   {
     "id": "ncert.maths.ch03.p012.elimination_method",
     "text": "To solve a pair of linear equations by elimination, first multiply the equations by suitable non-zero numbers so that one variable has coefficients of equal magnitude. Add or subtract the equations to eliminate that variable. If this gives a true statement with no variable, there are infinitely many solutions; if it gives a false statement, there is no solution. Otherwise, solve for the remaining variable and substitute its value into an original equation to find the other variable.",
@@ -292,4 +295,14 @@ export const REVIEWED_ADDENDUM: Chunk[] = [
       "extractiveQuote": "Most human chromosomes have a maternal and a paternal copy, and we have 22 such pairs. But one pair, called the sex chromosomes, is odd in not always being a perfect pair. Women have a perfect pair of sex chromosomes, both called X. But men"
     }
   }
+];
+
+// The JSON files mirror the page-reviewed, checksum-pinned records in ../Data.
+// Keep the corpus records in the deployment so the owner-only publishing route
+// cannot accept arbitrary client-provided source text.
+export const REVIEWED_ADDENDUM: Chunk[] = [
+  ...FIRST_REVIEWED_ADDENDUM,
+  ...(scienceConcepts as Chunk[]),
+  ...(mathsConcepts as Chunk[]),
+  ...(scienceSamplePaper as Chunk[]),
 ];

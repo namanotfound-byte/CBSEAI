@@ -9,6 +9,7 @@ import { getVectorStore } from "../lib/rag/vectorstore";
 import { inferSyllabusScope } from "../lib/rag/syllabus-index";
 import { getSyllabusRestriction } from "../lib/rag/syllabus-index";
 import { conversationIntent, conversationReply } from "../lib/ai/conversation";
+import { REVIEWED_ADDENDUM } from "../lib/rag/reviewed-addendum";
 import type { Chunk, Source } from "../lib/types";
 
 test("routes canonical query types", () => {
@@ -140,6 +141,19 @@ test("accepts canonical ingestion metadata", () => {
   assert.deepEqual(validateChunks(chunks), []);
 });
 
+test("every deployable reviewed record is valid and uniquely identified", () => {
+  assert.equal(REVIEWED_ADDENDUM.length, 45);
+  assert.deepEqual(validateChunks(REVIEWED_ADDENDUM), []);
+  assert.equal(new Set(REVIEWED_ADDENDUM.map((chunk) => chunk.id)).size, REVIEWED_ADDENDUM.length);
+  const sampleQuestions = REVIEWED_ADDENDUM.filter((chunk) => chunk.meta.kind === "sqp");
+  assert.equal(sampleQuestions.length, 5);
+  for (const question of sampleQuestions) {
+    assert.ok(REVIEWED_ADDENDUM.some((chunk) =>
+      chunk.meta.kind === "ms" && chunk.meta.joinPrefix === question.meta.joinPrefix,
+    ));
+  }
+});
+
 test("rejects content without an explicit syllabus mapping", () => {
   const chunk = {
     id: "legacy",
@@ -208,5 +222,29 @@ test("competency retrieval only accepts an approved mapped question block", asyn
     route: "competency",
   });
   assert.equal(hasApprovedCompetencyQuestion(sources), true);
-  assert.ok(sources.filter((source) => source.kind !== "syllabus").every((source) => ["cfpq", "sqp", "pyq"].includes(source.kind)));
+  assert.ok(sources.filter((source) => source.kind !== "syllabus").every((source) => ["cfpq", "sqp", "pyq", "ms"].includes(source.kind)));
+});
+
+test("a reviewed sample-paper question brings its exact marking row", async () => {
+  await getVectorStore().upsert([
+    {
+      id: "test-science-environment-scope",
+      text: "Our Environment: food chains and trophic levels, including primary and secondary consumers.",
+      meta: {
+        kind: "syllabus", subject: "science", chapter: 13, sourceYear: "2026",
+        syllabusVersion: "2026-27", syllabusTopicId: "science.ch13",
+        chunkType: "syllabus_scope", inActiveSyllabus: true,
+        reviewStatus: "approved", assessmentStatus: "summative",
+      },
+    },
+    ...REVIEWED_ADDENDUM.filter((chunk) =>
+      chunk.id === "sqp.science.2026-27.q07" || chunk.id === "ms.science.2026-27.q07",
+    ),
+  ] as Chunk[]);
+  const sources = await retrieve("Give me a competency question about a fish eating insect larvae in a pond", {
+    subject: "science", chapter: 13, route: "competency",
+  });
+  assert.ok(sources.some((source) => source.id === "sqp.science.2026-27.q07"));
+  assert.ok(sources.some((source) => source.id === "ms.science.2026-27.q07"));
+  assert.equal(sources.filter((source) => source.kind === "ms").length, 1);
 });
