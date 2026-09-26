@@ -20,14 +20,22 @@ export async function POST(request: Request) {
     return Response.json({ error: "Review validation failed", errors }, { status: 500 });
   }
 
+  const body = await request.json().catch(() => ({})) as { offset?: number };
+  const offset = body.offset ?? 0;
+  if (!Number.isInteger(offset) || offset < 0 || offset > REVIEWED_ADDENDUM.length) {
+    return Response.json({ error: "Invalid batch offset" }, { status: 400 });
+  }
+  const end = Math.min(offset + 48, REVIEWED_ADDENDUM.length);
+  const batch = REVIEWED_ADDENDUM.slice(offset, end);
+
   try {
     const store = getVectorStore();
     if (store.name !== "qdrant") {
       return Response.json({ error: "The live Qdrant store is required" }, { status: 503 });
     }
-    const existing = await store.findByIds(REVIEWED_ADDENDUM.map((chunk) => chunk.id), {});
+    const existing = await store.findByIds(batch.map((chunk) => chunk.id), {});
     const byId = new Map(existing.map((chunk) => [chunk.id, chunk]));
-    const pending = REVIEWED_ADDENDUM.filter((chunk) => {
+    const pending = batch.filter((chunk) => {
       const current = byId.get(chunk.id);
       return !current || current.text !== chunk.text ||
         canonical(current.meta) !== canonical(chunk.meta);
@@ -37,7 +45,13 @@ export async function POST(request: Request) {
     for (let i = 0; i < pending.length; i += 12) {
       await store.upsert(pending.slice(i, i + 12));
     }
-    return Response.json({ published: pending.length, total: await store.count() });
+    return Response.json({
+      published: pending.length,
+      total: await store.count(),
+      processed: end,
+      corpusCount: REVIEWED_ADDENDUM.length,
+      nextOffset: end < REVIEWED_ADDENDUM.length ? end : null,
+    });
   } catch (error) {
     return Response.json({ error: error instanceof Error ? error.message : "Publishing failed" }, { status: 500 });
   }

@@ -19,15 +19,26 @@ export default function CorpusAdmin() {
     setMessage("");
     try {
       const auth = getBrowserAuth();
-      const { data } = await auth!.auth.getSession();
-      if (!data.session) throw new Error("Sign in again, then return to this page.");
-      const response = await fetch("/api/admin/publish-reviewed", {
-        method: "POST",
-        headers: { Authorization: `Bearer ${data.session.access_token}` },
-      });
-      const result = await response.json();
-      if (!response.ok) throw new Error(result.error ?? "Publishing failed");
-      setMessage(`Published ${result.published} reviewed passages. Total live passages: ${result.total}.`);
+      let offset = 0;
+      let published = 0;
+      while (true) {
+        const { data } = await auth!.auth.getSession();
+        if (!data.session) throw new Error("Sign in again, then return to this page.");
+        const response = await fetch("/api/admin/publish-reviewed", {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${data.session.access_token}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ offset }),
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error ?? "Publishing failed");
+        published += result.published;
+        setMessage(`Checked ${result.processed} of ${result.corpusCount} reviewed passages; published ${published} new. Total live: ${result.total}.`);
+        if (result.nextOffset === null) break;
+        offset = result.nextOffset;
+      }
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "Publishing failed");
     } finally {
