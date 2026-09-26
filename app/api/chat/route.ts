@@ -119,14 +119,6 @@ export async function POST(req: Request) {
               route,
               topK: 4,
             });
-            if (sources.length) send({
-              type: "sources",
-              // Keep the paired examiner answer private while the student is
-              // being shown a practice question.
-              sources: route === "competency"
-                ? sources.filter((source) => source.kind !== "ms")
-                : sources,
-            });
           } catch (err) {
             console.error("retrieval failed", err);
             retrievalFailed = true;
@@ -179,18 +171,25 @@ export async function POST(req: Request) {
             ["question_block", "question_part"].includes(source.chunkType ?? ""),
           );
           if (question) {
+            const visibleSources = [
+              ...sources.filter((source) => source.kind === "syllabus").slice(0, 1),
+              question,
+            ];
+            send({ type: "sources", sources: visibleSources });
             const text = `Practice question:\n\n${question.content} [[source:${question.id}]]`;
             send({ type: "token", text });
             if (!hasImages) {
               await setCachedAnswer(cacheKey, {
                 text,
-                sources: sources.filter((source) => source.kind !== "ms"),
+                sources: visibleSources,
               }).catch(() => undefined);
             }
             send({ type: "done" });
             return;
           }
         }
+
+        send({ type: "sources", sources });
 
         // 2. Prompt.
         const hasMarkingScheme = sources.some(

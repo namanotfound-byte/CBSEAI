@@ -6,7 +6,7 @@ import type { ChatContext, QueryRoute, Source } from "../types";
  * key, so a new instruction can never reuse an answer generated under an old
  * policy.
  */
-export const TUTOR_POLICY_VERSION = "2026-09-26.1";
+export const TUTOR_POLICY_VERSION = "2026-09-26.2";
 
 /**
  * Versioned, composable tutor rules. Add future instructions here with a
