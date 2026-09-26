@@ -5,6 +5,7 @@ import { validateChunks } from "../lib/rag/ingest";
 import { routeQuery } from "../lib/rag/router";
 import { hasApprovedCompetencyQuestion, retrieve } from "../lib/rag/retriever";
 import { sourceMatchesQuestion } from "../lib/rag/relevance";
+import { getVectorStore } from "../lib/rag/vectorstore";
 import { inferSyllabusScope } from "../lib/rag/syllabus-index";
 import { getSyllabusRestriction } from "../lib/rag/syllabus-index";
 import { conversationIntent, conversationReply } from "../lib/ai/conversation";
@@ -73,6 +74,18 @@ test("rejects chapter-neighbour passages that do not answer the question", () =>
   assert.equal(sourceMatchesQuestion(
     "What is the common difference of the A.P. 2, 5, 8, 11?",
     "In an arithmetic progression, the fixed number obtained by subtracting one term from the succeeding term is called the common difference.",
+  ), true);
+  assert.equal(sourceMatchesQuestion(
+    "What is force?",
+    "A current-carrying conductor experiences a force when placed in a magnetic field.",
+  ), false);
+  assert.equal(sourceMatchesQuestion(
+    "What is force?",
+    "Force is a push or pull that can change the motion of an object.",
+  ), true);
+  assert.equal(sourceMatchesQuestion(
+    "What is photosynthesis?",
+    "Photosynthesis takes place in three events: absorption of light energy, splitting of water, and reduction of carbon dioxide to carbohydrates.",
   ), true);
 });
 
@@ -172,6 +185,20 @@ test("retrieval resolves the active syllabus before returning evidence", async (
   assert.equal(sources[0]?.kind, "syllabus");
   assert.equal(sources[0]?.syllabusTopicId, "science.electricity.ohms-law");
   assert.ok(sources.slice(1).every((source) => source.syllabusTopicId === sources[0].syllabusTopicId));
+});
+
+test("a nearby syllabus mention cannot become evidence for a general definition", async () => {
+  const meta = {
+    subject: "science" as const, chapter: 12, sourceYear: "2026",
+    syllabusVersion: "2026-27", syllabusTopicId: "science.ch12",
+    officialUrl: "https://ncert.nic.in/textbook.php", inActiveSyllabus: true,
+    reviewStatus: "approved" as const, assessmentStatus: "summative" as const,
+  };
+  await getVectorStore().upsert([
+    { id: "test-magnetism-scope", text: "Magnetic effects: force on a current-carrying conductor.", meta: { ...meta, kind: "syllabus", chunkType: "syllabus_scope" } },
+    { id: "test-magnetism-force", text: "A current-carrying conductor experiences a force in a magnetic field.", meta: { ...meta, kind: "ncert", chunkType: "ncert_section" } },
+  ]);
+  assert.deepEqual(await retrieve("What is force?", { subject: "science", chapter: 12 }), []);
 });
 
 test("competency retrieval only accepts an approved mapped question block", async () => {

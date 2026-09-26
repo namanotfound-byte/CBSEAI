@@ -125,6 +125,11 @@ export async function retrieve(
     .sort((a, b) => b.ranked - a.ranked);
   const ranked = slot(ordered, filters.route ?? "theory", topK);
 
+  // The syllabus proves scope, but it cannot answer a student's question by
+  // itself. Never surface a neighbouring syllabus paragraph as a citation
+  // when there is no directly relevant, approved teaching passage.
+  if (!ranked.length) return [];
+
   // A child question hit is never allowed to reach the reasoner alone. Expand
   // its question prefix to the full question block, all sub-parts, diagrams,
   // and every available marking-scheme row for that question.

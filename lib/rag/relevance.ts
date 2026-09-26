@@ -5,7 +5,15 @@ export function sourceMatchesQuestion(question: string, passage: string): boolea
   const evidence = terms(passage);
   const matches = [...anchors].filter((term) => evidence.has(term)).length;
   const required = anchors.size <= 2 ? anchors.size : Math.min(3, Math.ceil(anchors.size * 0.4));
-  return matches >= required;
+  if (matches < required) return false;
+
+  // A one-word definition request needs an actual definition. A paragraph
+  // mentioning a specialised form of the word (for example magnetic force)
+  // does not define the general concept the student asked about.
+  const target = question.trim().match(/^(?:what\s+is|define)\s+(?:(?:a|an|the)\s+)?([\p{L}]{3,})\s*[?.!]?$/iu)?.[1];
+  if (!target) return true;
+  const escaped = target.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`(?:^|[.!?]\\s+)(?:(?:a|an|the)\\s+)?${escaped}\\s+(?:is|are|means|refers\\s+to|takes\\s+place|involves|occurs|can\\s+be\\s+defined\\s+as)\\b|\\b(?:called|known\\s+as|forms)\\s+(?:(?:a|an|the)\\s+)?${escaped}\\b`, "iu").test(passage);
 }
 
 function terms(text: string): Set<string> {

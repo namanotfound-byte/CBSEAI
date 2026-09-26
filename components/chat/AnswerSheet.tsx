@@ -12,8 +12,14 @@ export function AnswerSheet({ message }: { message: Message }) {
     message.content.find((p) => p.type === "text")?.type === "text"
       ? (message.content.find((p) => p.type === "text") as { text: string }).text
       : "";
+  const sources = message.sources?.some((source) => source.kind !== "syllabus")
+    ? message.sources
+    : [];
+  const displayedText = sources.length === 0 && text === "This topic is in the active syllabus, but I don't have enough approved source material to answer it yet."
+    ? "I couldn't find an approved explanation for this question yet. That does not mean the topic is outside the syllabus."
+    : text;
 
-  const empty = !text.trim();
+  const empty = !displayedText.trim();
 
   return (
     <article className="flex gap-3 py-5 md:gap-4">
@@ -31,8 +37,8 @@ export function AnswerSheet({ message }: { message: Message }) {
         {!empty && (
           <div style={{ fontSize: "15px" }}>
             <AnswerText
-              text={text}
-              sources={message.sources}
+              text={displayedText}
+              sources={sources}
               onCite={setOpenSource}
             />
             {message.streaming && <span className="caret" />}
@@ -82,9 +88,9 @@ export function AnswerSheet({ message }: { message: Message }) {
           </div>
         ) : null}
 
-        {message.sources?.length ? (
+        {sources.length ? (
           <Sources
-            sources={message.sources}
+            sources={sources}
             open={openSource}
             onOpen={setOpenSource}
           />
