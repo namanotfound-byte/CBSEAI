@@ -32,18 +32,24 @@ SUBJECT_TOKENS = {
 def guess_subject(name: str, cover: str) -> tuple[str | None, str, list[str]]:
     lower = name.lower().replace("\\", "/")
     warnings: list[str] = []
+    # "Science" is a substring of "Social Science". Historical archives also
+    # use SST or subject code 087. Reject those before positive Science tests.
+    if re.search(r"(?:^|[/!])(?:social[ _-]*science|social|sst)(?:[/!._ -]|$)", lower) or \
+            re.search(r"(?:^|[/!])087[_ -]", lower):
+        return "social", "path", []
     path_subject = next(
         (subject for subject, tokens in SUBJECT_TOKENS.items() if any(t in lower for t in tokens)),
         None,
     )
     first = re.sub(r"\s+", " ", cover[:3500]).lower()
     cover_subject = None
-    if re.search(r"(?:subject\s*code|code\s*no\.?|code)\s*[:\-–]?\s*0?86\b", first):
+    if re.search(r"(?:subject\s*code|code\s*no\.?|code)\s*[:\-–]?\s*0?87\b", first) or \
+            "social science" in first[:450]:
+        cover_subject = "social"
+    elif re.search(r"(?:subject\s*code|code\s*no\.?|code)\s*[:\-–]?\s*0?86\b", first):
         cover_subject = "science"
     elif re.search(r"(?:subject\s*code|code\s*no\.?|code)\s*[:\-–]?\s*(?:0?41|241)\b", first):
         cover_subject = "maths"
-    elif "social science" in first[:450]:
-        cover_subject = "social"
     elif "mathematics" in first[:450]:
         cover_subject = "maths"
     elif "science" in first[:250] and "social" not in first[:250]:

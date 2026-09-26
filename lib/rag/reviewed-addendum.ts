@@ -7,6 +7,8 @@ import mathsMore from "@/data/corpus/maths-reviewed-addendum-3.json";
 import mathsStandardSamplePaper from "@/data/corpus/maths-standard-sqp-reviewed-addendum.json";
 import mathsFullReviewBatch1 from "@/data/corpus/maths-full-review-batch1.json";
 import practiceFullReviewBatch1 from "@/data/corpus/practice-full-review-batch1.json";
+import scienceFullReviewBatch1 from "@/data/corpus/science-full-review-batch1.json";
+import mathsFullReviewBatch2 from "@/data/corpus/maths-full-review-batch2.json";
 
 // Page-checked against the authoritative ../Data source corpus.
 const FIRST_REVIEWED_ADDENDUM: Chunk[] = [
@@ -315,4 +317,6 @@ export const REVIEWED_ADDENDUM: Chunk[] = [
   ...(mathsStandardSamplePaper as Chunk[]),
   ...(mathsFullReviewBatch1 as Chunk[]),
   ...(practiceFullReviewBatch1 as Chunk[]),
+  ...(scienceFullReviewBatch1 as Chunk[]),
+  ...(mathsFullReviewBatch2 as Chunk[]),
 ];

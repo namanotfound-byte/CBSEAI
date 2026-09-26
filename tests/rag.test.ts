@@ -153,6 +153,20 @@ test("every deployable reviewed record is valid and uniquely identified", () => 
     assert.ok(REVIEWED_ADDENDUM.some((chunk) =>
       chunk.meta.kind === "ms" && chunk.meta.joinPrefix === question.meta.joinPrefix,
     ));
+    assert.equal(/marking scheme:/i.test(question.text), false, `${question.id} includes its answer`);
+    if (/^Assertion \(A\):/.test(question.text)) {
+      for (const option of ["(A)", "(B)", "(C)", "(D)"]) {
+        assert.ok(question.text.includes(option), `${question.id} is missing ${option}`);
+      }
+    }
+  }
+  for (const [id, chapter] of [
+    ["sqp.maths.standard.2026-27.q17", 9],
+    ["sqp.maths.standard.2026-27.q20", 2],
+  ] as const) {
+    const question = REVIEWED_ADDENDUM.find((chunk) => chunk.id === id);
+    assert.equal(question?.meta.chapter, chapter);
+    assert.equal(question?.meta.syllabusTopicId, `maths.ch${String(chapter).padStart(2, "0")}`);
   }
 });
 
