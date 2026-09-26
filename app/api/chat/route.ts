@@ -119,7 +119,14 @@ export async function POST(req: Request) {
               route,
               topK: 4,
             });
-            if (sources.length) send({ type: "sources", sources });
+            if (sources.length) send({
+              type: "sources",
+              // Keep the paired examiner answer private while the student is
+              // being shown a practice question.
+              sources: route === "competency"
+                ? sources.filter((source) => source.kind !== "ms")
+                : sources,
+            });
           } catch (err) {
             console.error("retrieval failed", err);
             retrievalFailed = true;
@@ -161,6 +168,28 @@ export async function POST(req: Request) {
           });
           send({ type: "done" });
           return;
+        }
+
+        // An approved question block is already the finished practice prompt.
+        // Present it exactly as reviewed, without spending a free model call or
+        // leaking the matching marking-scheme answer into the source panel.
+        if (route === "competency") {
+          const question = sources.find((source) =>
+            ["cfpq", "sqp", "pyq"].includes(source.kind) &&
+            ["question_block", "question_part"].includes(source.chunkType ?? ""),
+          );
+          if (question) {
+            const text = `Practice question:\n\n${question.content} [[source:${question.id}]]`;
+            send({ type: "token", text });
+            if (!hasImages) {
+              await setCachedAnswer(cacheKey, {
+                text,
+                sources: sources.filter((source) => source.kind !== "ms"),
+              }).catch(() => undefined);
+            }
+            send({ type: "done" });
+            return;
+          }
         }
 
         // 2. Prompt.

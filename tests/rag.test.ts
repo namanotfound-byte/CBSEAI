@@ -145,6 +145,8 @@ test("every deployable reviewed record is valid and uniquely identified", () => 
   assert.equal(REVIEWED_ADDENDUM.length, 45);
   assert.deepEqual(validateChunks(REVIEWED_ADDENDUM), []);
   assert.equal(new Set(REVIEWED_ADDENDUM.map((chunk) => chunk.id)).size, REVIEWED_ADDENDUM.length);
+  const reviewedText = REVIEWED_ADDENDUM.map((chunk) => chunk.text.trim().toLowerCase());
+  assert.equal(new Set(reviewedText).size, reviewedText.length);
   const sampleQuestions = REVIEWED_ADDENDUM.filter((chunk) => chunk.meta.kind === "sqp");
   assert.equal(sampleQuestions.length, 5);
   for (const question of sampleQuestions) {
