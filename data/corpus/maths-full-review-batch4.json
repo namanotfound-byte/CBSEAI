@@ -1598,5 +1598,305 @@
       "extractiveQuote": "“Since, AB + BC = 3√2 + 2√2 = 5√2 = AC, we can say that the points A, B and C are collinear.”",
       "reviewNote": "Rendered p6: distance substitutions and sum equality checked. The adjacent equidistance/perpendicular-bisector equation is not included because it extends beyond the stated syllabus focus."
     }
+  },
+  {
+    "id": "ncert.maths.ch08.p017_pythagorean_trig_identities",
+    "text": "For an acute angle A, the identity sin²A+cos²A=1 gives two further identities: dividing by cos²A yields 1+tan²A=sec²A, and dividing by sin²A yields cot²A+1=cosec²A. The divisions require the relevant denominator to be non-zero.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 8,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch08",
+      "chunkType": "ncert_concept",
+      "heading": "Introduction to Trigonometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-35",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch35.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh108.pdf",
+      "contentSha256": "5a4033fd2ab3fbb245f783a3e2c24fb5c31a00ae7fa7b9a7212633d11e06d2ac",
+      "language": "en",
+      "page": 17,
+      "supportingPages": [
+        16,
+        17
+      ],
+      "conceptTags": [
+        "trigonometric identities",
+        "sin squared plus cos squared",
+        "secant",
+        "cosecant"
+      ],
+      "extractiveQuote": "“i.e., cot² A + 1 = cosec² A”",
+      "reviewNote": "Rendered pp16–17: both identities follow by dividing the Pythagorean identity by cos²A or sin²A; the textbook notes cot/cosec are undefined at 0° for the second identity."
+    }
+  },
+  {
+    "id": "ncert.maths.ch08.p017_p018_proof_sec_identity",
+    "text": "For acute A, sec A(1−sin A)(sec A+tan A)=1. Substitute sec A=1/cos A and tan A=sin A/cos A; the expression becomes [(1−sin A)(1+sin A)]/cos²A=(1−sin²A)/cos²A=1.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 8,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch08",
+      "chunkType": "ncert_concept",
+      "heading": "Introduction to Trigonometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-35",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch35.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh108.pdf",
+      "contentSha256": "5a4033fd2ab3fbb245f783a3e2c24fb5c31a00ae7fa7b9a7212633d11e06d2ac",
+      "language": "en",
+      "page": 17,
+      "supportingPages": [
+        17,
+        18
+      ],
+      "conceptTags": [
+        "trigonometric identity proof",
+        "secant",
+        "sine",
+        "Pythagorean identity"
+      ],
+      "extractiveQuote": "“= (1 − sin² A)/cos² A = 1 = RHS”",
+      "reviewNote": "Rendered p17–18 Example 10: conversion to sine/cosine and final cancellation use cos²A=1−sin²A; identity and signs checked. This is a concise identity proof in the current identities scope."
+    }
+  },
+  {
+    "id": "ncert.maths.ch05.p017_ap_total_contributions",
+    "text": "For an AP of yearly amounts with first term ₹100, common difference ₹50 and n=21 terms, the total is S₂₁=21/2[2(100)+(21−1)50]=₹12,600.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 5,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch05",
+      "chunkType": "ncert_concept",
+      "heading": "Arithmetic Progressions",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-36",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch36.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh105.pdf",
+      "contentSha256": "1367857e5cd3206b1862655d17bf31778e6af768821d8dfc8c71d3ea0e19274c",
+      "language": "en",
+      "page": 17,
+      "supportingPages": [
+        17
+      ],
+      "conceptTags": [
+        "arithmetic progression",
+        "sum of first n terms",
+        "application"
+      ],
+      "extractiveQuote": "“So, the amount of money collected on her 21st birthday is ₹12600.”",
+      "reviewNote": "Rendered p17: a=100,d=50,n=21 and sum substitution checked; multiplication gives 12,600."
+    }
+  },
+  {
+    "id": "ncert.maths.ch05.p018_ap_sum_two_valid_term_counts",
+    "text": "For the AP 24, 21, 18, …, the sum of n terms is Sₙ=n/2[48−3(n−1)]. Setting Sₙ=78 gives (n−4)(n−13)=0, so both n=4 and n=13 are valid. The sum of terms 5 through 13 is zero because the later terms cancel in this decreasing AP.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 5,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch05",
+      "chunkType": "ncert_concept",
+      "heading": "Arithmetic Progressions",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-36",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch36.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh105.pdf",
+      "contentSha256": "1367857e5cd3206b1862655d17bf31778e6af768821d8dfc8c71d3ea0e19274c",
+      "language": "en",
+      "page": 18,
+      "supportingPages": [
+        18
+      ],
+      "conceptTags": [
+        "arithmetic progression",
+        "sum of first n terms",
+        "quadratic equation",
+        "multiple solutions"
+      ],
+      "extractiveQuote": "“Both values of n are admissible. So, the number of terms is either 4 or 13.”",
+      "reviewNote": "Rendered p18: common difference −3, quadratic factorization, both positive solutions, and cancellation explanation checked."
+    }
+  },
+  {
+    "id": "ncert.maths.ch05.p019_tv_production_ap_application",
+    "text": "TV production forms an AP because it increases by a fixed amount each year. If the 3rd-year production is 600 sets and the 7th-year production is 700, then a+2d=600 and a+6d=700, giving d=25 and first-year production a=550. The 10th-year production is 775 sets, and the total in the first 7 years is 4,375 sets.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 5,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch05",
+      "chunkType": "ncert_concept",
+      "heading": "Arithmetic Progressions",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-36",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch36.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh105.pdf",
+      "contentSha256": "1367857e5cd3206b1862655d17bf31778e6af768821d8dfc8c71d3ea0e19274c",
+      "language": "en",
+      "page": 19,
+      "supportingPages": [
+        19,
+        20
+      ],
+      "conceptTags": [
+        "arithmetic progression",
+        "nth term",
+        "sum of first n terms",
+        "application"
+      ],
+      "extractiveQuote": "“Thus, the total production in first 7 years is 4375.”",
+      "reviewNote": "Rendered pp19–20: 3rd and 7th year indices, equations, common difference, 10th term, and 7-term sum verified."
+    }
+  },
+  {
+    "id": "ncert.maths.ch10.p007_angle_between_two_tangents",
+    "text": "If TP and TQ are tangents from an external point T to a circle with centre O, then TP=TQ. Let θ=∠PTQ. The isosceles triangle TPQ has base angles 90°−θ/2; since OP is perpendicular to TP, ∠OPQ=θ/2. Thus ∠PTQ=2∠OPQ.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 10,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch10",
+      "chunkType": "ncert_concept",
+      "heading": "Circles",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-37",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch37.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh110.pdf",
+      "contentSha256": "aef0ee7e58d4ec4dc043e943843da7981b4b782483b7b8b8bcdd08657bad1ae3",
+      "language": "en",
+      "page": 7,
+      "supportingPages": [
+        7
+      ],
+      "conceptTags": [
+        "circle",
+        "tangent",
+        "equal tangents",
+        "angle between tangents"
+      ],
+      "extractiveQuote": "“This gives ∠ PTQ = 2 ∠ OPQ”",
+      "reviewNote": "Rendered p7: equal tangent lengths and radius-tangent right angles establish the isosceles base-angle step; angle relation checked and stated in the active tangent application scope."
+    }
+  },
+  {
+    "id": "ncert.maths.ch10.p008_tangent_length_from_chord_and_radius",
+    "text": "A chord PQ of length 8 cm in a circle of radius 5 cm is bisected at R by the perpendicular from centre O, so PR=4 cm and OR=√(5²−4²)=3 cm. The example uses similar right triangles to obtain TP/PO=PR/RO, hence the tangent length TP=5×4/3=20/3 cm.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 10,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch10",
+      "chunkType": "ncert_concept",
+      "heading": "Circles",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-37",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch37.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh110.pdf",
+      "contentSha256": "aef0ee7e58d4ec4dc043e943843da7981b4b782483b7b8b8bcdd08657bad1ae3",
+      "language": "en",
+      "page": 8,
+      "supportingPages": [
+        7,
+        8
+      ],
+      "conceptTags": [
+        "circle",
+        "tangent length",
+        "radius",
+        "chord",
+        "similar triangles"
+      ],
+      "extractiveQuote": "“or TP = 20/3 cm.”",
+      "reviewNote": "Worked example begins p7 and concludes p8. Rendered figure and proof were checked; source gives PO=5, PR=4, RO=3 and the similarity proportion."
+    }
+  },
+  {
+    "id": "ncert.maths.ch08.p014_determine_right_triangle_angles",
+    "text": "In right triangle PQR with right angle Q, PQ=3 cm and hypotenuse PR=6 cm. Since sin R=PQ/PR=1/2, ∠PRQ=30°; the other acute angle is ∠QPR=60°.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 8,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch08",
+      "chunkType": "ncert_concept",
+      "heading": "Introduction to Trigonometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-38",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch38.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh108.pdf",
+      "contentSha256": "5a4033fd2ab3fbb245f783a3e2c24fb5c31a00ae7fa7b9a7212633d11e06d2ac",
+      "language": "en",
+      "page": 14,
+      "supportingPages": [
+        14
+      ],
+      "conceptTags": [
+        "right triangle",
+        "standard-angle ratios",
+        "sine",
+        "angle determination"
+      ],
+      "extractiveQuote": "“So, ∠ PRQ = 30° and therefore, ∠ QPR = 60°.”",
+      "reviewNote": "Rendered original p14: right triangle at Q has PQ=3 cm and PR=6 cm, so sin R=1/2 and R=30°; angle sum gives P=60°."
+    }
   }
 ]

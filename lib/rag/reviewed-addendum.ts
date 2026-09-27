@@ -14,6 +14,7 @@ import scienceFullReviewBatch2 from "@/data/corpus/science-full-review-batch2.js
 import practiceFullReviewBatch2 from "@/data/corpus/practice-full-review-batch2.json";
 import mathsNcertExercises from "@/data/corpus/maths-ncert-exercises-reviewed.json";
 import scienceNcertExercises from "@/data/corpus/science-ncert-exercises-reviewed.json";
+import scienceNcertQuestionOnly from "@/data/corpus/science-ncert-exercise-question-only-reviewed.json";
 import scienceFullReviewBatch3 from "@/data/corpus/science-full-review-batch3.json";
 import mathsFullReviewBatch4 from "@/data/corpus/maths-full-review-batch4.json";
 import practiceFullReviewBatch3 from "@/data/corpus/practice-full-review-batch3.json";
@@ -332,6 +333,7 @@ export const REVIEWED_ADDENDUM: Chunk[] = [
   ...(practiceFullReviewBatch2 as Chunk[]),
   ...(mathsNcertExercises as Chunk[]),
   ...(scienceNcertExercises as Chunk[]),
+  ...(scienceNcertQuestionOnly as Chunk[]),
   ...(scienceFullReviewBatch3 as Chunk[]),
   ...(mathsFullReviewBatch4 as Chunk[]),
   ...(practiceFullReviewBatch3 as Chunk[]),

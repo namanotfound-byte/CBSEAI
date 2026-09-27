@@ -101,6 +101,12 @@ export async function POST(req: Request) {
                 send({ type: "done" });
                 return;
               }
+              if (question.meta.kind === "ncert_exercise") {
+                send({ type: "sources", sources: [toSource({ ...question, score: 1 })] });
+                send({ type: "token", text: "This NCERT edition does not provide a printed answer for that exercise question. I can help work it out step by step if you send the question again." });
+                send({ type: "done" });
+                return;
+              }
             }
           }
         }
