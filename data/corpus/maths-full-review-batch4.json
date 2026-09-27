@@ -1898,5 +1898,743 @@
       "extractiveQuote": "“So, ∠ PRQ = 30° and therefore, ∠ QPR = 60°.”",
       "reviewNote": "Rendered original p14: right triangle at Q has PQ=3 cm and PR=6 cm, so sin R=1/2 and R=30°; angle sum gives P=60°."
     }
+  },
+  {
+    "id": "ncert.maths.ch06.p004_similarity_scale_factor",
+    "text": "For similar polygons, the common ratio of corresponding side lengths is called the scale factor (also called the representative fraction).",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 6,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch06",
+      "chunkType": "ncert_concept",
+      "heading": "Triangles",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-40",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch40.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh106.pdf",
+      "contentSha256": "028a1243ccd005e952fca0f9c498be86cd526b74deb0bc6cd5147e15eef12f58",
+      "language": "en",
+      "page": 4,
+      "supportingPages": [
+        4
+      ],
+      "conceptTags": [
+        "similar polygons",
+        "scale factor",
+        "representative fraction"
+      ],
+      "extractiveQuote": "“the same ratio of the corresponding sides is referred to as the scale factor (or the Representative Fraction) for the polygons.”",
+      "reviewNote": "Rendered p4 confirms the name and its use for corresponding polygon sides. Distinct from the similarity criterion on p3, which states the equal-angle/equal-ratio conditions."
+    }
+  },
+  {
+    "id": "ncert.maths.ch06.p019_parallel_lines_aa_similarity",
+    "text": "If PQ is parallel to RS and the segments PR and QS intersect at O, then ∠P=∠S and ∠Q=∠R by alternate interior angles; ∠POQ=∠SOR by vertical angles. Hence △POQ is similar to △SOR by AA (also called AAA in the example).",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 6,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch06",
+      "chunkType": "ncert_concept",
+      "heading": "Triangles",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-40",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch40.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh106.pdf",
+      "contentSha256": "028a1243ccd005e952fca0f9c498be86cd526b74deb0bc6cd5147e15eef12f58",
+      "language": "en",
+      "page": 19,
+      "supportingPages": [
+        19
+      ],
+      "conceptTags": [
+        "triangles",
+        "AA similarity",
+        "parallel lines",
+        "vertical angles"
+      ],
+      "extractiveQuote": "“Therefore, Δ POQ ~ Δ SOR (AAA similarity criterion)”",
+      "reviewNote": "Rendered p19: line arrangement and angle correspondences checked. Two equal angle pairs are sufficient under the live AA criterion; this is an in-scope similarity application."
+    }
+  },
+  {
+    "id": "ncert.maths.ch12.p005.painting_cone_cylinder_rocket",
+    "text": "For the rocket in Example 3, the cone has radius 2.5 cm, height 6 cm and slant height 6.5 cm; the cylinder has radius 1.5 cm and height 20 cm. Because the cone base is wider than the cylinder, the orange area is the cone’s curved area plus the exposed annulus, πrl + πr² − π(r′)² = 63.585 cm² (π=3.14). The yellow area is the cylinder’s curved area plus one exposed base, 2πr′h′ + π(r′)² = 195.465 cm².",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 12,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch12",
+      "chunkType": "ncert_worked_example",
+      "heading": "Surface Areas and Volumes",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-42",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch42.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh112.pdf",
+      "contentSha256": "5108400be07a99d6df322df607b90d51ba841f8a060276d05f9e75accc2b8be9",
+      "language": "en",
+      "page": 5,
+      "supportingPages": [
+        5
+      ],
+      "conceptTags": [
+        "composite solids",
+        "surface area",
+        "cone",
+        "cylinder",
+        "exposed annulus"
+      ],
+      "extractiveQuote": "“Here, the conical portion has its circular base resting on the base of the cylinder, but the base of the cone is larger than the base of the cylinder. So, a part of the base of the cone (a ring) is to be painted.”",
+      "reviewNote": "Original page 5 rendered. Checked radii, heights, slant height, annulus subtraction, exposed cylinder base, and both final areas directly against the printed worked example."
+    }
+  },
+  {
+    "id": "ncert.maths.ch01.p002-003.fundamental_theorem_arithmetic",
+    "text": "The Fundamental Theorem of Arithmetic states that every composite number can be expressed as a product of primes, and this factorisation is unique apart from the order of the prime factors. Equivalently, the prime factorisation of a natural number is unique up to reordering.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 1,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch01",
+      "chunkType": "ncert_concept",
+      "heading": "Real Numbers",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-43",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch43.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "source_faithful_statement",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh101.pdf",
+      "contentSha256": "bd6466e8e7d437af89d7e640ff8381e68b57f91bf56cd4ce345ca031091d748f",
+      "language": "en",
+      "page": 3,
+      "supportingPages": [
+        3
+      ],
+      "conceptTags": [
+        "Fundamental Theorem of Arithmetic",
+        "prime factorisation",
+        "uniqueness"
+      ],
+      "extractiveQuote": "“Every composite number can be expressed (factorised) as a product of primes, and this factorisation is unique, apart from the order in which the prime factors occur.”",
+      "reviewNote": "Rendered original page 3; statement and equivalent uniqueness wording checked. Active chapter scope explicitly includes the Fundamental Theorem of Arithmetic."
+    }
+  },
+  {
+    "id": "ncert.maths.ch01.p002-003.factor_tree_32760",
+    "text": "The NCERT factor tree for 32760 gives 32760 = 2×2×2×3×3×5×7×13 = 2³×3²×5×7×13. The tree repeatedly factors composite branches until all leaves are prime; multiplying the leaves reconstructs 32760.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 1,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch01",
+      "chunkType": "ncert_worked_example",
+      "heading": "Real Numbers",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-43",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch43.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh101.pdf",
+      "contentSha256": "bd6466e8e7d437af89d7e640ff8381e68b57f91bf56cd4ce345ca031091d748f",
+      "language": "en",
+      "page": 2,
+      "supportingPages": [
+        2,
+        3
+      ],
+      "conceptTags": [
+        "prime factorisation",
+        "factor tree",
+        "Fundamental Theorem of Arithmetic"
+      ],
+      "extractiveQuote": "“32760 = 2³ × 3² × 5 × 7 × 13”",
+      "reviewNote": "Rendered original pages 2–3. Factor tree leaves and exponent grouping checked visually; product verified as 32760."
+    }
+  },
+  {
+    "id": "ncert.maths.ch14.p007.complement_match_probability",
+    "text": "If the probability that Sangeeta wins a tennis match is 0.62 and the match has exactly one winner, Reshma’s probability of winning is the complement: 1−0.62=0.38.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 14,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch14",
+      "chunkType": "ncert_worked_example",
+      "heading": "Probability",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-44",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch44.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh114.pdf",
+      "contentSha256": "d5f516dc7109fe926ae7388aac3f4b87a776e41098fc517baec0eec000528d11",
+      "language": "en",
+      "page": 7,
+      "supportingPages": [
+        7
+      ],
+      "conceptTags": [
+        "complementary events",
+        "probability",
+        "worked example"
+      ],
+      "extractiveQuote": "“The probability of Reshma’s winning = P(R) = 1 − P(S) … = 1 − 0.62 = 0.38”",
+      "reviewNote": "Rendered original p7; complement relation, given probability and arithmetic checked."
+    }
+  },
+  {
+    "id": "ncert.maths.ch14.p007.two_birthdays",
+    "text": "Assuming each of 365 days is equally likely for Hamida’s birthday and ignoring leap years, the probability that two friends have different birthdays is 364/365: after Savita’s birthday is fixed, 364 days differ from it. The probability of the same birthday is the complement, 1−364/365=1/365.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 14,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch14",
+      "chunkType": "ncert_worked_example",
+      "heading": "Probability",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-44",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch44.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh114.pdf",
+      "contentSha256": "d5f516dc7109fe926ae7388aac3f4b87a776e41098fc517baec0eec000528d11",
+      "language": "en",
+      "page": 7,
+      "supportingPages": [
+        7
+      ],
+      "conceptTags": [
+        "complementary events",
+        "equally likely outcomes",
+        "worked example"
+      ],
+      "extractiveQuote": "“P(Savita and Hamida have the same birthday) = 1 − P (both have different birthdays) = 1 − 364/365 = 1/365”",
+      "reviewNote": "Rendered original p7; 365-day assumption and complement calculation checked."
+    }
+  },
+  {
+    "id": "ncert.maths.ch14.p011.shirt_acceptability_probabilities",
+    "text": "From a carton of 100 shirts, 88 are good, 8 have minor defects and 4 have major defects. If one shirt is selected uniformly at random, Jimmy (who accepts only good shirts) accepts with probability 88/100=0.88. Sujatha (who rejects only major-defect shirts) accepts 88+8=96 shirts, so her acceptance probability is 96/100=0.96.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 14,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch14",
+      "chunkType": "ncert_worked_example",
+      "heading": "Probability",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-45",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch45.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh114.pdf",
+      "contentSha256": "d5f516dc7109fe926ae7388aac3f4b87a776e41098fc517baec0eec000528d11",
+      "language": "en",
+      "page": 11,
+      "supportingPages": [
+        11
+      ],
+      "conceptTags": [
+        "probability",
+        "favourable outcomes",
+        "worked example"
+      ],
+      "extractiveQuote": "“The number of outcomes favourable to Sujatha = 88 + 8 = 96 … P(shirt is acceptable to Sujatha) = 96/100 = 0.96”",
+      "reviewNote": "Rendered original p11; counts, acceptance rules and fractions checked."
+    }
+  },
+  {
+    "id": "ncert.maths.ch14.p011-012.two_dice_sum_events",
+    "text": "When two fair dice (blue and grey) are thrown, the ordered outcome pairs are equally likely and there are 6×6=36. Exactly five pairs sum to 8, so P(sum=8)=5/36. No pair sums to 13, so P(sum=13)=0; every pair sums to at most 12, so P(sum≤12)=1.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 14,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch14",
+      "chunkType": "ncert_worked_example",
+      "heading": "Probability",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-45",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch45.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh114.pdf",
+      "contentSha256": "d5f516dc7109fe926ae7388aac3f4b87a776e41098fc517baec0eec000528d11",
+      "language": "en",
+      "page": 12,
+      "supportingPages": [
+        12
+      ],
+      "conceptTags": [
+        "probability",
+        "ordered pairs",
+        "two dice",
+        "worked example"
+      ],
+      "extractiveQuote": "“the number of possible outcomes = 6 × 6 = 36 … the number of outcomes favourable to E = 5”",
+      "reviewNote": "Rendered original p12; ordered-pair table, five sum-8 pairs, impossible 13 and certain ≤12 events checked."
+    }
+  },
+  {
+    "id": "ncert.maths.ch13.p008-009.rural_female_teacher_mean_example",
+    "text": "For the grouped distribution of female teachers across rural States/U.T.s, the class intervals 15–25, 25–35, 35–45, 45–55, 55–65, 65–75, 75–85 have frequencies 6, 11, 7, 4, 4, 2, 1. Their class marks give Σfᵢ=35 and Σfᵢxᵢ=1390, so the estimated mean percentage is 1390/35≈39.71%. The textbook’s direct, assumed-mean and step-deviation calculations all give the same mean.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 13,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch13",
+      "chunkType": "ncert_worked_example",
+      "heading": "Statistics",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-47",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch47.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh113.pdf",
+      "contentSha256": "18815e1f62dfd05048e7539a2444007409b3d20b6dc62a57f69702f236511929",
+      "language": "en",
+      "page": 8,
+      "supportingPages": [
+        8,
+        9
+      ],
+      "conceptTags": [
+        "grouped data",
+        "mean",
+        "direct method",
+        "assumed mean",
+        "step-deviation"
+      ],
+      "extractiveQuote": "“Therefore, the mean percentage of female teachers in the primary schools of rural areas is 39.71.”",
+      "reviewNote": "Rendered original pp8–9; frequencies, class marks, totals Σf=35 and Σfx=1390 and all three methods’ result checked against the printed table and calculations."
+    }
+  },
+  {
+    "id": "ncert.maths.ch13.p010.bowler_wicket_mean_unequal_classes",
+    "text": "For the grouped wicket distribution 20–60, 60–100, 100–150, 150–250, 250–350, 350–450 with frequencies 7, 5, 16, 12, 2, 3, the class marks are 40, 80, 125, 200, 300, 400 (Σf=45). Using the textbook’s step-deviation choice a=200, h=20 gives Σfᵢuᵢ=−106, so the estimated mean is 200+20(−106/45)≈152.89 wickets per bowler.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 13,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch13",
+      "chunkType": "ncert_worked_example",
+      "heading": "Statistics",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-48",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch48.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh113.pdf",
+      "contentSha256": "18815e1f62dfd05048e7539a2444007409b3d20b6dc62a57f69702f236511929",
+      "language": "en",
+      "page": 10,
+      "supportingPages": [
+        10
+      ],
+      "conceptTags": [
+        "grouped data",
+        "mean",
+        "step-deviation",
+        "unequal class widths"
+      ],
+      "extractiveQuote": "“Therefore, x̄ = 200 + 20(−106/45) = 200 − 47.11 = 152.89.”",
+      "reviewNote": "Rendered original p10; classes, frequencies, class marks, Σfu and final estimate visually checked and independently recalculated."
+    }
+  },
+  {
+    "id": "ncert.maths.ch13.p014-015.grouped_mode_examples",
+    "text": "For family-size classes 1–3, 3–5, 5–7, 7–9, 9–11 with frequencies 7, 8, 2, 2, 1, the modal class is 3–5; using l=3, h=2, f₁=8, f₀=7, f₂=2 gives mode 3+[(8−7)/(2·8−7−2)]·2=3.286. For the 30-student marks distribution, modal class 40–55 has l=40, h=15, f₁=7, f₀=3, f₂=6, giving mode 40+[(7−3)/(2·7−3−6)]·15=52 marks. The example contrasts the most common range/value with the mean of 62 marks.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 13,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch13",
+      "chunkType": "ncert_worked_example",
+      "heading": "Statistics",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-49",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch49.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh113.pdf",
+      "contentSha256": "18815e1f62dfd05048e7539a2444007409b3d20b6dc62a57f69702f236511929",
+      "language": "en",
+      "page": 14,
+      "supportingPages": [
+        14,
+        15
+      ],
+      "conceptTags": [
+        "grouped data",
+        "mode",
+        "modal class",
+        "worked examples"
+      ],
+      "extractiveQuote": "“Therefore, the mode of the data above is 3.286.”; “So, the mode marks is 52.”",
+      "reviewNote": "Rendered original p15; family frequency table and both grouped-mode substitutions checked, including the 52-mark result and mean comparison."
+    }
+  },
+  {
+    "id": "ncert.maths.ch13.p013.ungrouped_mode_example",
+    "text": "For a bowler’s wickets in 10 matches, the frequencies of 0, 1, 2, 3, 4, 5, 6 wickets are 1, 1, 3, 2, 1, 1, 1. The value 2 occurs most often (3 matches), so the mode is 2 wickets. More generally, when multiple values share the maximum frequency the data is multimodal; this chapter restricts its grouped-mode method to distributions with a single mode.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 13,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch13",
+      "chunkType": "ncert_worked_example",
+      "heading": "Statistics",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-50",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch50.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh113.pdf",
+      "contentSha256": "18815e1f62dfd05048e7539a2444007409b3d20b6dc62a57f69702f236511929",
+      "language": "en",
+      "page": 13,
+      "supportingPages": [
+        13
+      ],
+      "conceptTags": [
+        "mode",
+        "frequency",
+        "multimodal data",
+        "worked example"
+      ],
+      "extractiveQuote": "“2 is the number of wickets taken by the bowler in the maximum number (i.e., 3) of matches. So, the mode of this data is 2.”",
+      "reviewNote": "Rendered original p13; raw observations and frequency table checked. Counts sum to 10; frequency 3 for value 2 is uniquely maximal."
+    }
+  },
+  {
+    "id": "ncert.maths.ch04.p001_prayer_hall_quadratic_model",
+    "text": "Let the breadth of the prayer hall be x metres. Its length is 2x+1 metres, and area 300 m² gives x(2x+1)=300, or 2x²+x−300=0. Factoring gives (2x+25)(x−12)=0, so x=−25/2 or 12; a length must be positive, hence breadth=12 m and length=25 m.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 4,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch04",
+      "chunkType": "ncert_worked_example",
+      "heading": "Quadratic Equations",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-52",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch52.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "source_faithful_model_with_verified_solution",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh104.pdf",
+      "contentSha256": "9aca4b28ad57ae78a5e69ce67d19344c44b1390c5b8afd13db83b46ad54e8e9d",
+      "language": "en",
+      "page": 1,
+      "supportingPages": [
+        1,
+        6
+      ],
+      "conceptTags": [
+        "quadratic equations",
+        "word problem",
+        "area model",
+        "factorisation"
+      ],
+      "extractiveQuote": "“Therefore, 2x² + x − 300 = 0”",
+      "reviewNote": "Rendered p1 gives the dimensions relation and equation; p6 shows factorisation as a root-solving method. Factoring the equation gives roots −12.5 and 12; only the positive breadth is physically valid, and 12×25=300."
+    }
+  },
+  {
+    "id": "ncert.maths.ch04.p006_factorization_roots_6x2_minus_x_minus_2",
+    "text": "Factor 6x²−x−2 by splitting the middle term: 6x²+3x−4x−2=(3x−2)(2x+1). Thus (3x−2)(2x+1)=0 gives roots x=2/3 and x=−1/2.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 4,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch04",
+      "chunkType": "ncert_worked_example",
+      "heading": "Quadratic Equations",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-52",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch52.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh104.pdf",
+      "contentSha256": "9aca4b28ad57ae78a5e69ce67d19344c44b1390c5b8afd13db83b46ad54e8e9d",
+      "language": "en",
+      "page": 6,
+      "supportingPages": [
+        6
+      ],
+      "conceptTags": [
+        "quadratic equations",
+        "factorisation",
+        "roots"
+      ],
+      "extractiveQuote": "“Therefore, the roots of 6x² − x − 2 = 0 are 2/3 and −1/2.”",
+      "reviewNote": "Rendered original p6; splitting and factorization checked by expansion; both roots verified by substitution."
+    }
+  },
+  {
+    "id": "ncert.maths.ch04.p006_repeated_root_sqrt_two_thirds",
+    "text": "The equation 3x²−2√6x+2=0 factors as (√3x−√2)²=0. It has one repeated root, x=√(2/3), counted twice.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 4,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch04",
+      "chunkType": "ncert_worked_example",
+      "heading": "Quadratic Equations",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-52",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch52.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh104.pdf",
+      "contentSha256": "9aca4b28ad57ae78a5e69ce67d19344c44b1390c5b8afd13db83b46ad54e8e9d",
+      "language": "en",
+      "page": 6,
+      "supportingPages": [
+        6
+      ],
+      "conceptTags": [
+        "quadratic equations",
+        "repeated root",
+        "factorisation",
+        "surds"
+      ],
+      "extractiveQuote": "“Therefore, the roots of 3x² − 2√6x + 2 = 0 are √(2/3), √(2/3).”",
+      "reviewNote": "Rendered original p6; factor (√3x−√2) repeated, giving x=√2/√3=√(2/3), twice."
+    }
+  },
+  {
+    "id": "ncert.maths.ch03.p009_pencil_eraser_dependent_system",
+    "text": "If x and y are the costs (in rupees) of a pencil and an eraser, the two purchases give 2x+3y=9 and 4x+6y=18. The second equation is twice the first, so substitution reduces to the identity 18=18: there are infinitely many solutions, and these data do not determine a unique price for each item.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 3,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch03",
+      "chunkType": "ncert_worked_example",
+      "heading": "Pair of Linear Equations in Two Variables",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-53",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch53.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "source_faithful_model_with_verified_solution",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh103.pdf",
+      "contentSha256": "d04ef69d830a97243be9bd1cab0aa82399056f0f4a621bb71bbe97ecd1dfa147",
+      "language": "en",
+      "page": 9,
+      "supportingPages": [
+        9
+      ],
+      "conceptTags": [
+        "linear equations",
+        "dependent system",
+        "infinitely many solutions",
+        "situational problem"
+      ],
+      "extractiveQuote": "“This statement is true for all values of y. However, we do not get a specific value of y as a solution.”",
+      "reviewNote": "Rendered original p9; both equations and identity checked. The system is dependent and consistent, but does not identify individual prices uniquely."
+    }
+  },
+  {
+    "id": "ncert.maths.ch03.p009_rails_parallel_no_intersection",
+    "text": "The rail equations x+2y−4=0 and 2x+4y−12=0 reduce by substitution to 2(4−2y)+4y−12=0, or −4=0, a contradiction. Therefore the rails do not cross; the equations have no solution and represent distinct parallel lines.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 3,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch03",
+      "chunkType": "ncert_worked_example",
+      "heading": "Pair of Linear Equations in Two Variables",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-53",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch53.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "source_faithful_model_with_verified_solution",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh103.pdf",
+      "contentSha256": "d04ef69d830a97243be9bd1cab0aa82399056f0f4a621bb71bbe97ecd1dfa147",
+      "language": "en",
+      "page": 9,
+      "supportingPages": [
+        9
+      ],
+      "conceptTags": [
+        "linear equations",
+        "inconsistent system",
+        "parallel lines",
+        "situational problem"
+      ],
+      "extractiveQuote": "“This situation has arisen because of an incorrect statement, i.e., we have got a contradiction.”",
+      "reviewNote": "Rendered original p9; substitution arithmetic gives −4=0. Distinct coefficient ratios show parallel lines and no intersection."
+    }
+  },
+  {
+    "id": "ncert.maths.ch05.p008_reena_salary_fifth_year",
+    "text": "Reena’s starting monthly salary is ₹8000 and it increases by ₹500 each year, forming an AP with a=₹8000 and d=₹500. The fifth-year monthly salary is a₅=a+(5−1)d=8000+4(500)=₹10,000.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 5,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch05",
+      "chunkType": "ncert_worked_example",
+      "heading": "Arithmetic Progressions",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-54",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch54.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh105.pdf",
+      "contentSha256": "1367857e5cd3206b1862655d17bf31778e6af768821d8dfc8c71d3ea0e19274c",
+      "language": "en",
+      "page": 8,
+      "supportingPages": [
+        8,
+        9
+      ],
+      "conceptTags": [
+        "arithmetic progression",
+        "nth term",
+        "salary application"
+      ],
+      "extractiveQuote": "“The salary for the 5th year … = ₹ [8000 + (5−1) × 500] … = ₹10000”",
+      "reviewNote": "Rendered original p8; starting salary, annual increment, fourth increment at year five and result checked. General formula is separately covered by existing p9/p10 chunks."
+    }
+  },
+  {
+    "id": "ncert.maths.ch05.p011-012.eleventh_term_from_end",
+    "text": "For the AP 10, 7, 4, …, −62, the common difference is −3. Solving −62=10+(n−1)(−3) gives n=25 terms. The 11th term from the end is the (25−11+1)=15th term from the beginning, so a₁₅=10+14(−3)=−32. Equivalently, reverse the AP and use first term −62 and common difference 3 to get a₁₁=−32.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 5,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch05",
+      "chunkType": "ncert_worked_example",
+      "heading": "Arithmetic Progressions",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-55",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch55.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh105.pdf",
+      "contentSha256": "1367857e5cd3206b1862655d17bf31778e6af768821d8dfc8c71d3ea0e19274c",
+      "language": "en",
+      "page": 12,
+      "supportingPages": [
+        12
+      ],
+      "conceptTags": [
+        "arithmetic progression",
+        "nth term from end",
+        "worked example"
+      ],
+      "extractiveQuote": "“The 11th term from the last term is the 15th term. … a₁₅ = 10 + (15−1)(−3) = −32.”",
+      "reviewNote": "Rendered original p12; n=25, reverse-index conversion, and result −32 checked both by forward and reversed-AP methods."
+    }
   }
 ]

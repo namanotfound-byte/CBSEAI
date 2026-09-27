@@ -44,6 +44,7 @@ export async function POST(req: Request) {
         // Read an uploaded question before choosing a syllabus scope. The image
         // itself is the student's question; typing a caption is optional.
         let query = typedQuery;
+        let unkeyedExercise = false;
         let imageSubject: "maths" | "science" | undefined;
         if (hasImages) {
           const provider = getChatProvider();
@@ -102,10 +103,8 @@ export async function POST(req: Request) {
                 return;
               }
               if (question.meta.kind === "ncert_exercise") {
-                send({ type: "sources", sources: [toSource({ ...question, score: 1 })] });
-                send({ type: "token", text: "This NCERT edition does not provide a printed answer for that exercise question. I can help work it out step by step if you send the question again." });
-                send({ type: "done" });
-                return;
+                query = question.text;
+                unkeyedExercise = true;
               }
             }
           }
@@ -119,6 +118,9 @@ export async function POST(req: Request) {
           }
         }
         const route = context.mode === "drill" ? "competency" : routeQuery(query);
+        if (unkeyedExercise) {
+          send({ type: "notice", message: "NCERT does not print an answer for this exercise. This explanation uses the reviewed chapter material." });
+        }
         const cacheKey = answerCacheKey({
           query,
           subject: imageSubject ?? context.subject,
