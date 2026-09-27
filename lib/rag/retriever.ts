@@ -127,8 +127,14 @@ export async function retrieve(
     (!needsAnswerEvidence || sourceMatchesQuestion(query, hit.text)),
   );
   const reranked = await rerank(query, relevantHits, Math.max(8, topK * 2));
-  const ordered = reranked
-    .map((h) => ({ ...h, ranked: h.score * PRIORITY[h.meta.kind] }))
+  const exactPractice = filters.route === "competency"
+    ? relevantHits.filter((hit) => practicePhraseMatch(query, hit.text))
+    : [];
+  const candidates = [...new Map([...exactPractice, ...reranked]
+    .map((hit) => [hit.id, hit])).values()];
+  const ordered = candidates
+    .map((h) => ({ ...h, ranked: h.score * PRIORITY[h.meta.kind] +
+      (filters.route === "competency" && practicePhraseMatch(query, h.text) ? 2 : 0) }))
     .sort((a, b) => b.ranked - a.ranked);
   const ranked = slot(ordered, filters.route ?? "theory", topK);
 
@@ -162,6 +168,16 @@ export async function retrieve(
     .forEach((hit) => merged.set(hit.id, hit));
 
   return [toSource(syllabusHit), ...[...merged.values()].map(toSource)];
+}
+
+export function practicePhraseMatch(query: string, candidate: string): boolean {
+  const focus = query.match(/\bquestion\s*:\s*(.+)$/i)?.[1] ??
+    query.match(/\b(?:about|on|regarding)\s+(.+)$/i)?.[1];
+  if (!focus) return false;
+  const normalized = (value: string) => value.toLowerCase()
+    .replace(/[^\p{L}\p{N}\s]/gu, " ").replace(/\s+/g, " ").trim();
+  const phrase = normalized(focus).replace(/^(?:a|an|the)\s+/, "");
+  return phrase.length >= 12 && normalized(candidate).includes(phrase);
 }
 
 export function hasApprovedCompetencyQuestion(sources: Source[]) {

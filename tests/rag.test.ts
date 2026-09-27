@@ -3,7 +3,7 @@ import test from "node:test";
 import { verifyAnswer } from "../lib/ai/verifier";
 import { validateChunks } from "../lib/rag/ingest";
 import { routeQuery } from "../lib/rag/router";
-import { hasApprovedCompetencyQuestion, retrieve } from "../lib/rag/retriever";
+import { hasApprovedCompetencyQuestion, practicePhraseMatch, retrieve } from "../lib/rag/retriever";
 import { sourceMatchesQuestion } from "../lib/rag/relevance";
 import { getVectorStore } from "../lib/rag/vectorstore";
 import { inferSyllabusScope } from "../lib/rag/syllabus-index";
@@ -23,6 +23,14 @@ test("routes canonical query types", () => {
   assert.equal(routeQuery("Give me a Science sample-paper question about soap in hard water"), "competency");
   assert.equal(routeQuery("Solve this sample-paper question about soap"), "pyq");
   assert.equal(routeQuery("explain photosynthesis"), "theory");
+});
+
+test("an explicitly named exercise phrase outranks nearby questions", () => {
+  const query = "Give me the NCERT Science exercise question: Why should chemical equations be balanced?";
+  assert.equal(practicePhraseMatch(query,
+    "4. What is a balanced chemical equation? Why should chemical equations be balanced?"), true);
+  assert.equal(practicePhraseMatch(query,
+    "5. Translate the following statements into chemical equations and then balance them."), false);
 });
 
 test("handles ordinary conversation without confusing it with academic retrieval", () => {
