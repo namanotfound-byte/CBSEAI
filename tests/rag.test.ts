@@ -19,6 +19,7 @@ test("routes canonical query types", () => {
   assert.equal(routeQuery("2025 PYQ question"), "pyq");
   assert.equal(routeQuery("give me a competency-based question"), "competency");
   assert.equal(routeQuery("Give me an NCERT exercise question on prime factorisation"), "competency");
+  assert.equal(routeQuery("Give me an NCERT Science exercise question about corrective lens power."), "competency");
   assert.equal(routeQuery("Give me a Science sample-paper question about soap in hard water"), "competency");
   assert.equal(routeQuery("Solve this sample-paper question about soap"), "pyq");
   assert.equal(routeQuery("explain photosynthesis"), "theory");

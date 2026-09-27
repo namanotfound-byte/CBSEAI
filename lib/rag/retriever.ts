@@ -52,7 +52,7 @@ export async function retrieve(
   const inferred = inferSyllabusScope(query, filters.subject);
   if (inferred.outOfSyllabus) return [];
   const requestedKinds = filters.route === "competency"
-    ? (/\bncert\s+exercis/i.test(query)
+    ? (/\bncert\b.*\bexercis/i.test(query)
         ? (["ncert_exercise"] satisfies SourceKind[])
         : (["cfpq", "sqp", "pyq", "ms", "ncert_exercise"] satisfies SourceKind[]))
     : filters.kinds?.filter((kind) => kind !== "syllabus") ?? CONTENT_KINDS;
