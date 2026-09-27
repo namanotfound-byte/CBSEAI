@@ -1229,5 +1229,374 @@
       "extractiveQuote": "“So, one quadratic polynomial which fits the given conditions is x² + 3x + 2.”",
       "reviewNote": "Rendered p12 confirms the quadratic example and notes other valid polynomials have form k(x²+3x+2), with non-zero real k. The cubic discussion later on this page is excluded from the chunk."
     }
+  },
+  {
+    "id": "ncert.maths.ch04.p002_003_situation_to_quadratic_equation",
+    "text": "Translate the situation into an equation before solving. In the marble example, let John start with x of 45 marbles; after John and Jivanti each lose 5, their remaining counts are x−5 and 40−x. If their product is 124, x²−45x+324=0. In the toy example, x toys cost 55−x rupees each and total cost is ₹750, giving x²−55x+750=0.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 4,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch04",
+      "chunkType": "ncert_concept",
+      "heading": "Quadratic Equations",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-31",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch31.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh104.pdf",
+      "contentSha256": "9aca4b28ad57ae78a5e69ce67d19344c44b1390c5b8afd13db83b46ad54e8e9d",
+      "language": "en",
+      "page": 2,
+      "supportingPages": [
+        2,
+        3
+      ],
+      "conceptTags": [
+        "quadratic equations",
+        "situational problems",
+        "modelling"
+      ],
+      "extractiveQuote": "“Therefore, the number of marbles John had, satisfies the quadratic equation x² − 45x + 324 = 0”",
+      "reviewNote": "Rendered pp2–3: original conditions, variable definitions, and both product equations checked; algebra expanded and signs verified."
+    }
+  },
+  {
+    "id": "ncert.maths.ch04.p004_simplify_before_degree_classification",
+    "text": "First simplify both sides of an equation and collect terms; the highest remaining power determines its degree. For example, (x+2)³=x³−4 simplifies to 6x²+12x+12=0, or x²+2x+2=0, so it is quadratic even though the original expression contains cubic terms.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 4,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch04",
+      "chunkType": "ncert_concept",
+      "heading": "Quadratic Equations",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-31",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch31.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh104.pdf",
+      "contentSha256": "9aca4b28ad57ae78a5e69ce67d19344c44b1390c5b8afd13db83b46ad54e8e9d",
+      "language": "en",
+      "page": 4,
+      "supportingPages": [
+        4
+      ],
+      "conceptTags": [
+        "quadratic equations",
+        "standard form",
+        "degree",
+        "simplification"
+      ],
+      "extractiveQuote": "“In (iv) above, the given equation appears to be a cubic equation ... But it turns out to be a quadratic equation.”",
+      "reviewNote": "Rendered p4 confirms cancellation of x³ terms and division by 6; this classification supports the chapter standard-form focus."
+    }
+  },
+  {
+    "id": "ncert.maths.ch04.p009_reject_nonphysical_quadratic_root",
+    "text": "A 13 m ladder is placed with its foot x metres from a gate and its top x+7 metres above the ground. Pythagoras gives (x+7)²+x²=13², hence x²+7x−60=0, with roots 5 and −12. Since x is a distance, reject −12; the pole is 5 m from the gate.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 4,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch04",
+      "chunkType": "ncert_concept",
+      "heading": "Quadratic Equations",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-31",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch31.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh104.pdf",
+      "contentSha256": "9aca4b28ad57ae78a5e69ce67d19344c44b1390c5b8afd13db83b46ad54e8e9d",
+      "language": "en",
+      "page": 9,
+      "supportingPages": [
+        9
+      ],
+      "conceptTags": [
+        "quadratic formula",
+        "discriminant",
+        "situational problems",
+        "extraneous root"
+      ],
+      "extractiveQuote": "“Since x is the distance between the pole and the gate B, it must be positive. Therefore, x = −12 will have to be ignored. So, x = 5.”",
+      "reviewNote": "Rendered p9: geometry, equation, discriminant 289, roots 5 and −12, and physical domain check verified."
+    }
+  },
+  {
+    "id": "ncert.maths.ch14.p008_equal_card_marble_selection",
+    "text": "When one of 40 identical-name cards is selected uniformly from a class with 25 girls and 15 boys, P(girl)=25/40=5/8 and P(boy)=15/40=3/8. Likewise, a uniformly selected marble from a box with 3 blue, 2 white and 4 red marbles has probabilities 1/3, 2/9 and 4/9 for blue, white and red.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 14,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch14",
+      "chunkType": "ncert_concept",
+      "heading": "Probability",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-32",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch32.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh114.pdf",
+      "contentSha256": "d5f516dc7109fe926ae7388aac3f4b87a776e41098fc517baec0eec000528d11",
+      "language": "en",
+      "page": 8,
+      "supportingPages": [
+        8
+      ],
+      "conceptTags": [
+        "classical probability",
+        "equally likely outcomes",
+        "selection",
+        "complement"
+      ],
+      "extractiveQuote": "“Therefore, P (card with name of a girl) = P(Girl) = 25/40 = 5/8”",
+      "reviewNote": "Rendered p8: card counts and marble counts are explicit; all fractions reduce correctly and sum to 1 within each example."
+    }
+  },
+  {
+    "id": "ncert.maths.ch14.p009_two_coins_at_least_one_head",
+    "text": "When two different fair coins are tossed, the equally likely ordered outcomes are (H,H), (H,T), (T,H), and (T,T). Three outcomes contain at least one head, so the probability is 3/4.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 14,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch14",
+      "chunkType": "ncert_concept",
+      "heading": "Probability",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-32",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch32.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh114.pdf",
+      "contentSha256": "d5f516dc7109fe926ae7388aac3f4b87a776e41098fc517baec0eec000528d11",
+      "language": "en",
+      "page": 9,
+      "supportingPages": [
+        9
+      ],
+      "conceptTags": [
+        "classical probability",
+        "equally likely outcomes",
+        "sample space",
+        "coins"
+      ],
+      "extractiveQuote": "“So, the number of outcomes favourable to E is 3. Therefore, P(E) = 3/4.”",
+      "reviewNote": "Rendered p9 confirms the distinguishable coin outcomes, fair/equally-likely assumption, and three favorable outcomes. The later starred geometric probability example on this page is excluded as not examination-point-of-view."
+    }
+  },
+  {
+    "id": "ncert.maths.ch06.p011_trapezium_parallel_segment_ratio",
+    "text": "In trapezium ABCD with AB ∥ DC, let E lie on AD and F on BC with EF ∥ AB. If diagonal AC meets EF at G, applying the Basic Proportionality Theorem in triangles ADC and CAB gives AE/ED = AG/GC and CG/AG = CF/BF. Hence AE/ED = BF/FC.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 6,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch06",
+      "chunkType": "ncert_concept",
+      "heading": "Triangles",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-33",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch33.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh106.pdf",
+      "contentSha256": "028a1243ccd005e952fca0f9c498be86cd526b74deb0bc6cd5147e15eef12f58",
+      "language": "en",
+      "page": 11,
+      "supportingPages": [
+        11
+      ],
+      "conceptTags": [
+        "triangles",
+        "basic proportionality theorem",
+        "parallel lines",
+        "trapezium"
+      ],
+      "extractiveQuote": "“Therefore, from (1) and (2), we have AE/ED = BF/FC.”",
+      "reviewNote": "Rendered p11: trapezium/diagonal diagram and both parallel-line applications of BPT checked; ratio inversion and substitution verified."
+    }
+  },
+  {
+    "id": "ncert.maths.ch06.p020_sss_similarity_example_angle",
+    "text": "For triangles ABC and RQP with AB=3.8, RQ=7.6; BC=6, QP=12; and CA=3√3, PR=6√3, all three corresponding side ratios equal 1/2. Thus △ABC ∼ △RQP by SSS, and ∠P=∠C=40° when ∠A=80° and ∠B=60°.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 6,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch06",
+      "chunkType": "ncert_concept",
+      "heading": "Triangles",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-33",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch33.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh106.pdf",
+      "contentSha256": "028a1243ccd005e952fca0f9c498be86cd526b74deb0bc6cd5147e15eef12f58",
+      "language": "en",
+      "page": 20,
+      "supportingPages": [
+        20
+      ],
+      "conceptTags": [
+        "triangles",
+        "SSS similarity",
+        "corresponding angles"
+      ],
+      "extractiveQuote": "“So, Δ ABC ~ Δ RQP (SSS similarity)”",
+      "reviewNote": "Rendered p20: correspondence order and all three side ratios visually verified; angle sum gives 40° and angle correspondence P↔C."
+    }
+  },
+  {
+    "id": "ncert.maths.ch06.p021_lamp_post_shadow_similarity",
+    "text": "A 0.9 m girl walks 4 seconds at 1.2 m/s away from a 3.6 m lamp post, so she walks 4.8 m. If her shadow length is x, the similar right triangles give (4.8+x)/x = 3.6/0.9 = 4, hence x=1.6 m.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 6,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch06",
+      "chunkType": "ncert_concept",
+      "heading": "Triangles",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-33",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch33.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh106.pdf",
+      "contentSha256": "028a1243ccd005e952fca0f9c498be86cd526b74deb0bc6cd5147e15eef12f58",
+      "language": "en",
+      "page": 21,
+      "supportingPages": [
+        20,
+        21
+      ],
+      "conceptTags": [
+        "triangles",
+        "AA similarity",
+        "height and shadow",
+        "application"
+      ],
+      "extractiveQuote": "“So, the shadow of the girl after walking for 4 seconds is 1.6 m long.”",
+      "reviewNote": "Example begins on p20 and resolves on p21. Rendered diagram and p21 algebra checked; convert 90 cm to 0.9 m before forming the similar-triangle ratio."
+    }
+  },
+  {
+    "id": "ncert.maths.ch07.p005_square_from_vertex_coordinates",
+    "text": "For A(1,7), B(4,2), C(−1,−1) and D(−4,4), the distance formula gives AB=BC=CD=DA=√34 and AC=BD=√68. All sides are equal and the diagonals are equal, so ABCD is a square.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 7,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch07",
+      "chunkType": "ncert_concept",
+      "heading": "Coordinate Geometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-34",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch34.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh107.pdf",
+      "contentSha256": "ca7a4c2071221ddad13eca8c3bf2deba6be2f21b2a47b07f10443131bad53f04",
+      "language": "en",
+      "page": 5,
+      "supportingPages": [
+        5
+      ],
+      "conceptTags": [
+        "coordinate geometry",
+        "distance formula",
+        "quadrilateral",
+        "square"
+      ],
+      "extractiveQuote": "“Since, AB = BC = CD = DA and AC = BD, all the four sides of the quadrilateral ABCD are equal and its diagonals are also equal.”",
+      "reviewNote": "Rendered p5: all four side calculations equal √34 and both diagonals equal √68; this is the page’s stated criterion and conclusion."
+    }
+  },
+  {
+    "id": "ncert.maths.ch07.p006_collinearity_by_distance_sum",
+    "text": "For A(3,1), B(6,4), C(8,6), the distances are AB=3√2, BC=2√2 and AC=5√2. Since AB+BC=AC, B lies between A and C and the three points are collinear.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 7,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch07",
+      "chunkType": "ncert_concept",
+      "heading": "Coordinate Geometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-34",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch34.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh107.pdf",
+      "contentSha256": "ca7a4c2071221ddad13eca8c3bf2deba6be2f21b2a47b07f10443131bad53f04",
+      "language": "en",
+      "page": 6,
+      "supportingPages": [
+        6
+      ],
+      "conceptTags": [
+        "coordinate geometry",
+        "distance formula",
+        "collinearity"
+      ],
+      "extractiveQuote": "“Since, AB + BC = 3√2 + 2√2 = 5√2 = AC, we can say that the points A, B and C are collinear.”",
+      "reviewNote": "Rendered p6: distance substitutions and sum equality checked. The adjacent equidistance/perpendicular-bisector equation is not included because it extends beyond the stated syllabus focus."
+    }
   }
 ]
