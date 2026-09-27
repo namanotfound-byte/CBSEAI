@@ -751,5 +751,483 @@
       "extractiveQuote": "“HCF (a, b) × LCM (a, b) = a × b.”",
       "reviewNote": "The page states this relationship for two positive integers after a two-number example, then explicitly warns that the product of three numbers need not equal HCF × LCM. Formula and scope visually checked on original p4."
     }
+  },
+  {
+    "id": "ncert.maths.ch09.p004_ladder_reach_point",
+    "text": "A 5 m pole has a repair point 1.3 m below its top, so the required vertical reach is 3.7 m. With a ladder inclined at 60° to the horizontal, its length is 3.7/sin 60° ≈ 4.28 m, and its foot should be placed 3.7/tan 60° ≈ 2.14 m from the pole.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 9,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch09",
+      "chunkType": "ncert_concept",
+      "heading": "Some Applications of Trigonometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-26",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch26.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh109.pdf",
+      "contentSha256": "89c6c125039bfb8c7708b6bc5a27321021de629d4a1608f7f94812a96698f63f",
+      "language": "en",
+      "page": 4,
+      "supportingPages": [
+        4
+      ],
+      "conceptTags": [
+        "applications of trigonometry",
+        "angle of elevation",
+        "right triangle",
+        "ladder"
+      ],
+      "extractiveQuote": "“Therefore, the length of the ladder should be 4.28 m.”",
+      "reviewNote": "Rendered original p4: 5−1.3=3.7 m; sin60 gives ladder length and cot60 gives horizontal placement. Both values and units visually checked."
+    }
+  },
+  {
+    "id": "ncert.maths.ch09.p005_chimney_height_with_eye_level",
+    "text": "An observer 1.5 m tall stands 28.5 m from a chimney and sees its top at an elevation angle of 45°. The rise from eye level is 28.5 tan45° = 28.5 m; adding the observer’s 1.5 m eye height gives a chimney height of 30 m.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 9,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch09",
+      "chunkType": "ncert_concept",
+      "heading": "Some Applications of Trigonometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-26",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch26.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh109.pdf",
+      "contentSha256": "89c6c125039bfb8c7708b6bc5a27321021de629d4a1608f7f94812a96698f63f",
+      "language": "en",
+      "page": 5,
+      "supportingPages": [
+        5
+      ],
+      "conceptTags": [
+        "applications of trigonometry",
+        "height",
+        "angle of elevation",
+        "eye level"
+      ],
+      "extractiveQuote": "“So the height of the chimney (AB) = (28.5 + 1.5) m = 30 m.”",
+      "reviewNote": "Rendered original p5 confirms the horizontal distance, 45° tangent relation, and addition of eye height."
+    }
+  },
+  {
+    "id": "ncert.maths.ch09.p006_flagstaff_two_angles",
+    "text": "For a 10 m building, if the elevation angles from one ground point are 30° to the roof and 45° to the top of the flagstaff, the horizontal distance is 10√3 m (using tan30°). The total height at 45° is also 10√3 m, so the flagstaff is 10(√3−1) m ≈ 7.32 m long.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 9,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch09",
+      "chunkType": "ncert_concept",
+      "heading": "Some Applications of Trigonometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-26",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch26.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh109.pdf",
+      "contentSha256": "89c6c125039bfb8c7708b6bc5a27321021de629d4a1608f7f94812a96698f63f",
+      "language": "en",
+      "page": 6,
+      "supportingPages": [
+        6
+      ],
+      "conceptTags": [
+        "applications of trigonometry",
+        "two angles of elevation",
+        "flagstaff",
+        "tan"
+      ],
+      "extractiveQuote": "“So, the length of the flagstaff is 7.32 m.”",
+      "reviewNote": "Rendered original p6 confirms the two right triangles use the same horizontal distance, with total height 10+x for the 45° line."
+    }
+  },
+  {
+    "id": "ncert.maths.ch11.p004_segment_area_worked_example",
+    "text": "For a circle of radius 21 cm and central angle 120°, using π=22/7, the sector area is 462 cm². The chord triangle has area 441√3/4 cm², so the minor segment area is 462−441√3/4 = 21/4(88−21√3) cm².",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 11,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch11",
+      "chunkType": "ncert_concept",
+      "heading": "Areas Related to Circles",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-26",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch26.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh111.pdf",
+      "contentSha256": "1c73d7750139b63e98acf3682a7cae1a9bd163ed40d8e90e2199ab72e99c73b1",
+      "language": "en",
+      "page": 4,
+      "supportingPages": [
+        4,
+        5
+      ],
+      "conceptTags": [
+        "areas related to circles",
+        "sector",
+        "minor segment",
+        "triangle area"
+      ],
+      "extractiveQuote": "“Therefore, area of the segment AYB = (462 − 441/4 √3) cm²”",
+      "reviewNote": "Rendered original pp4–5 confirm the sector calculation, isosceles-triangle split, and final exact expression. The exercise beginning on p5 is excluded; this row uses only the worked example."
+    }
+  },
+  {
+    "id": "ncert.maths.ch07.p010_section_formula_example_ratio",
+    "text": "For A(−6,10) and B(3,−8), the point P(−4,6) lies internally on AB in the ratio AP:PB = 2:7. The section formula gives x = [2(3)+7(−6)]/9 = −4 and y = [2(−8)+7(10)]/9 = 6, confirming P and the ratio.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 7,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch07",
+      "chunkType": "ncert_concept",
+      "heading": "Coordinate Geometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-27",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch27.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh107.pdf",
+      "language": "en",
+      "contentSha256": "ca7a4c2071221ddad13eca8c3bf2deba6be2f21b2a47b07f10443131bad53f04",
+      "page": 10,
+      "supportingPages": [
+        10
+      ],
+      "conceptTags": [
+        "coordinate geometry",
+        "section formula",
+        "internal division",
+        "ratio"
+      ],
+      "extractiveQuote": "“Therefore, the point (– 4, 6) divides the line segment joining the points A(– 6, 10) and B(3, – 8) in the ratio 2 : 7.”",
+      "reviewNote": "Rendered original p10: substitution and both coordinates checked independently."
+    }
+  },
+  {
+    "id": "ncert.maths.ch07.p011_trisection_coordinates",
+    "text": "The points that trisect the segment from A(2,−2) to B(−7,4) divide it internally in ratios 1:2 and 2:1. Applying the section formula gives the trisection points (−1,0) and (−4,2), respectively.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 7,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch07",
+      "chunkType": "ncert_concept",
+      "heading": "Coordinate Geometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-27",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch27.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh107.pdf",
+      "language": "en",
+      "contentSha256": "ca7a4c2071221ddad13eca8c3bf2deba6be2f21b2a47b07f10443131bad53f04",
+      "page": 11,
+      "supportingPages": [
+        11,
+        12
+      ],
+      "conceptTags": [
+        "coordinate geometry",
+        "section formula",
+        "trisection",
+        "internal division"
+      ],
+      "extractiveQuote": "“Therefore, the coordinates of the points of trisection of the line segment joining A and B are (–1, 0) and (– 4, 2).”",
+      "reviewNote": "Rendered p11 shows the two ratio substitutions; p12 confirms the final ordered points. Coordinates independently recalculated."
+    }
+  },
+  {
+    "id": "ncert.maths.ch09.p007_tower_height_two_sun_angles",
+    "text": "A tower’s shadow is 40 m longer when the Sun’s altitude is 30° than when it is 60°. If x is the 60° shadow length and h the tower height, tan60°=h/x and tan30°=h/(x+40). Solving gives x=20 m and h=20√3 m.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 9,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch09",
+      "chunkType": "ncert_concept",
+      "heading": "Some Applications of Trigonometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-28",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch28.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh109.pdf",
+      "contentSha256": "89c6c125039bfb8c7708b6bc5a27321021de629d4a1608f7f94812a96698f63f",
+      "language": "en",
+      "page": 7,
+      "supportingPages": [
+        7
+      ],
+      "conceptTags": [
+        "applications of trigonometry",
+        "angles of elevation and depression",
+        "right triangle"
+      ],
+      "extractiveQuote": "“Therefore, the height of the tower is 20√3 m.”",
+      "reviewNote": "Rendered p7: equations from both right triangles, 40 m shadow difference, and final height checked; 20√3 ≈ 34.6 m."
+    }
+  },
+  {
+    "id": "ncert.maths.ch09.p008_multistorey_building_height_distance",
+    "text": "From the top of a multi-storeyed building, the angles of depression to the top and bottom of a nearby 8 m building are 30° and 45°. The worked construction gives both the height of the multi-storeyed building and the horizontal distance between buildings as 4(3+√3) m.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 9,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch09",
+      "chunkType": "ncert_concept",
+      "heading": "Some Applications of Trigonometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-28",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch28.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh109.pdf",
+      "contentSha256": "89c6c125039bfb8c7708b6bc5a27321021de629d4a1608f7f94812a96698f63f",
+      "language": "en",
+      "page": 8,
+      "supportingPages": [
+        7,
+        8
+      ],
+      "conceptTags": [
+        "applications of trigonometry",
+        "angles of elevation and depression",
+        "right triangle"
+      ],
+      "extractiveQuote": "“So, the height of the multi-storeyed building is 4(√3 + 3)m and the distance between the two buildings is also 4(√3 + 3)m.”",
+      "reviewNote": "The example begins on p7 and concludes on p8. Rendered geometry confirms the 8 m height difference; algebra and final equivalent form checked."
+    }
+  },
+  {
+    "id": "ncert.maths.ch09.p008_river_width_from_bridge",
+    "text": "A point on a bridge is 3 m above the banks. The angles of depression to opposite banks are 30° and 45°, so the horizontal distances are 3√3 m and 3 m. The river width is their sum, 3(1+√3) m.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 9,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch09",
+      "chunkType": "ncert_concept",
+      "heading": "Some Applications of Trigonometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-28",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch28.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh109.pdf",
+      "contentSha256": "89c6c125039bfb8c7708b6bc5a27321021de629d4a1608f7f94812a96698f63f",
+      "language": "en",
+      "page": 8,
+      "supportingPages": [
+        8,
+        9
+      ],
+      "conceptTags": [
+        "applications of trigonometry",
+        "angles of elevation and depression",
+        "right triangle"
+      ],
+      "extractiveQuote": "“Therefore, the width of the river is 3(1 + √3)m.”",
+      "reviewNote": "The worked example starts on p8 and finishes on p9; the two bank distances are recovered using tan30° and tan45° and summed."
+    }
+  },
+  {
+    "id": "ncert.maths.ch03.p007.substitution_noninteger_solution",
+    "text": "Solve 7x−15y=2 and x+2y=3 by substitution: from the second equation x=3−2y. Substitution into the first gives y=19/29, then x=49/29; the pair’s solution is (49/29,19/29).",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 3,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch03",
+      "chunkType": "ncert_concept",
+      "heading": "Pair of Linear Equations in Two Variables",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-29",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch29.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh103.pdf",
+      "language": "en",
+      "contentSha256": "d04ef69d830a97243be9bd1cab0aa82399056f0f4a621bb71bbe97ecd1dfa147",
+      "page": 7,
+      "supportingPages": [
+        7
+      ],
+      "conceptTags": [
+        "linear equations",
+        "substitution method",
+        "non-integer solution"
+      ],
+      "extractiveQuote": "“Therefore, the solution is x = 49/29, y = 19/29.”",
+      "reviewNote": "Rendered original p7: equation signs and both fractional coordinates checked by substitution into both equations."
+    }
+  },
+  {
+    "id": "ncert.maths.ch03.p011_elimination_income_example",
+    "text": "Let the two incomes be 9x and 7x and their expenditures be 4y and 3y. Saving ₹2000 each gives 9x−4y=2000 and 7x−3y=2000. Eliminating y gives x=2000; substitution gives y=4000, so the monthly incomes are ₹18,000 and ₹14,000.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 3,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch03",
+      "chunkType": "ncert_concept",
+      "heading": "Pair of Linear Equations in Two Variables",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-29",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch29.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh103.pdf",
+      "language": "en",
+      "contentSha256": "d04ef69d830a97243be9bd1cab0aa82399056f0f4a621bb71bbe97ecd1dfa147",
+      "page": 11,
+      "supportingPages": [
+        11
+      ],
+      "conceptTags": [
+        "linear equations",
+        "elimination method",
+        "word problem"
+      ],
+      "extractiveQuote": "“Therefore, the monthly incomes of the persons are ₹18,000 and ₹14,000, respectively.”",
+      "reviewNote": "Rendered original p11: ratio modelling, equal savings, elimination multipliers, and final income amounts checked; substitution confirms both equations."
+    }
+  },
+  {
+    "id": "ncert.maths.ch02.p011_quadratic_roots_example",
+    "text": "The quadratic x²−3 factors as (x−√3)(x+√3), so its zeroes are √3 and −√3. Their sum is 0 = −b/a and their product is −3 = c/a, verifying the quadratic zero-coefficient relationships.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 2,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch02",
+      "chunkType": "ncert_concept",
+      "heading": "Polynomials",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-30",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch30.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh102.pdf",
+      "contentSha256": "f040ca888111fc005d6c1ed4153bbaddaeb3d001272b7a952e2421bb3190250d",
+      "language": "en",
+      "page": 11,
+      "supportingPages": [
+        11
+      ],
+      "conceptTags": [
+        "quadratic polynomial",
+        "zeroes",
+        "sum and product of zeroes"
+      ],
+      "extractiveQuote": "“Therefore, the zeroes of x² − 3 are √3 and −√3.”",
+      "reviewNote": "Rendered original p11: factorization, roots, sum and product were checked; this supports only quadratic coefficient relations in the active scope."
+    }
+  },
+  {
+    "id": "ncert.maths.ch02.p012_construct_quadratic_from_zero_relations",
+    "text": "If the required sum of zeroes is S and product is P, a monic quadratic with those zeroes is x²−Sx+P. For S=−3 and P=2, this gives x²+3x+2; any non-zero scalar multiple has the same zeroes.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 2,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch02",
+      "chunkType": "ncert_concept",
+      "heading": "Polynomials",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-30",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch30.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh102.pdf",
+      "contentSha256": "f040ca888111fc005d6c1ed4153bbaddaeb3d001272b7a952e2421bb3190250d",
+      "language": "en",
+      "page": 12,
+      "supportingPages": [
+        12
+      ],
+      "conceptTags": [
+        "quadratic polynomial",
+        "construct polynomial",
+        "sum and product of zeroes"
+      ],
+      "extractiveQuote": "“So, one quadratic polynomial which fits the given conditions is x² + 3x + 2.”",
+      "reviewNote": "Rendered p12 confirms the quadratic example and notes other valid polynomials have form k(x²+3x+2), with non-zero real k. The cubic discussion later on this page is excluded from the chunk."
+    }
   }
 ]

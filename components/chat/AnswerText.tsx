@@ -69,7 +69,7 @@ export function AnswerText({
                 fontWeight: 500,
               }}
             >
-              {trimmed}
+              {renderInline(trimmed, sources, onCite)}
             </div>
           );
         }

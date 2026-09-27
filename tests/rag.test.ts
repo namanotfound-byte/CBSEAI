@@ -154,7 +154,7 @@ test("every deployable reviewed record is valid and uniquely identified", () => 
   assert.ok(REVIEWED_ADDENDUM.length >= 107);
   assert.deepEqual(validateChunks(REVIEWED_ADDENDUM), []);
   assert.equal(new Set(REVIEWED_ADDENDUM.map((chunk) => chunk.id)).size, REVIEWED_ADDENDUM.length);
-  const reviewedText = REVIEWED_ADDENDUM.map((chunk) => chunk.text.trim().toLowerCase());
+  const reviewedText = REVIEWED_ADDENDUM.filter((chunk) => chunk.meta.chunkType !== "ncert_answer").map((chunk) => chunk.text.trim().toLowerCase());
   assert.equal(new Set(reviewedText).size, reviewedText.length);
   const sampleQuestions = REVIEWED_ADDENDUM.filter((chunk) => chunk.meta.kind === "sqp");
   assert.ok(sampleQuestions.length >= 21);

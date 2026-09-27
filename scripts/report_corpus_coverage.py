@@ -25,6 +25,8 @@ def jsonl(path):
 
 
 def key(path, member=None):
+    if "!/" in path:
+        return path
     return f"{path}!/{member}" if member else path
 
 
