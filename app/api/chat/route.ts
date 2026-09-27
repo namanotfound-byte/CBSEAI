@@ -2,7 +2,8 @@ import { getChatProvider } from "@/lib/ai/provider";
 import { buildContextBlock, buildSystemPrompt, extractMarks } from "@/lib/ai/prompt";
 import { verifyAnswer } from "@/lib/ai/verifier";
 import { answerCacheKey, getCachedAnswer, setCachedAnswer } from "@/lib/rag/cache";
-import { hasApprovedCompetencyQuestion, retrieve } from "@/lib/rag/retriever";
+import { hasApprovedCompetencyQuestion, retrieve, toSource } from "@/lib/rag/retriever";
+import { getVectorStore } from "@/lib/rag/vectorstore";
 import { isExamStyleRoute, routeQuery } from "@/lib/rag/router";
 import type { ChatEvent, ChatRequestBody } from "@/lib/types";
 import { authenticatedUser } from "@/lib/auth/supabase";
@@ -69,6 +70,39 @@ export async function POST(req: Request) {
             : "Ask a Maths or Science question to get a source-backed answer." });
           send({ type: "done" });
           return;
+        }
+        if (!hasImages && /^(?:show|give|tell)(?:\s+me)?\s+(?:the\s+)?(?:answer|solution)\b|^what(?:'s| is)\s+the\s+answer\b/i.test(query.trim())) {
+          const previous = [...messages.slice(0, -1)].reverse().find((message) =>
+            message.role === "assistant" && message.content.some((part) =>
+              part.type === "text" && /\[\[source:[^\]]+\]\]/.test(part.text)));
+          const previousText = previous?.content.filter((part) => part.type === "text")
+            .map((part) => part.text).join(" ") ?? "";
+          const questionId = previousText.match(/\[\[source:([^\]]+)\]\]/)?.[1];
+          if (questionId) {
+            const store = getVectorStore();
+            const [question] = await store.findByIds([questionId], {});
+            const practiceQuestion = question &&
+              ((question.meta.kind === "ncert_exercise" && question.meta.chunkType === "ncert_question") ||
+                (["sqp", "pyq", "cfpq"].includes(question.meta.kind) &&
+                  ["question_block", "question_part"].includes(question.meta.chunkType ?? "")));
+            if (practiceQuestion && question.meta.joinPrefix) {
+              const paired = await store.findByJoinPrefixes([question.meta.joinPrefix], {
+                subject: question.meta.subject,
+                syllabusTopicId: question.meta.syllabusTopicId,
+                kinds: question.meta.kind === "ncert_exercise" ? ["ncert_exercise"] : ["ms"],
+                topK: 24,
+              });
+              const answer = paired.find((row) =>
+                row.id !== question.id &&
+                (row.meta.chunkType === "ncert_answer" || row.meta.kind === "ms"));
+              if (answer) {
+                send({ type: "sources", sources: [toSource({ ...question, score: 1 }), toSource({ ...answer, score: 1 })] });
+                send({ type: "token", text: `${question.meta.kind === "ncert_exercise" ? "NCERT answer" : "Official marking answer"}: ${answer.text} [[source:${answer.id}]]` });
+                send({ type: "done" });
+                return;
+              }
+            }
+          }
         }
         if (!hasImages) {
           const intent = conversationIntent(query);

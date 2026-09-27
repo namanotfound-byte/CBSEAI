@@ -335,5 +335,421 @@
       ],
       "reviewNote": "Both similarity conditions and the equal-side-ratio statement for equiangular triangles were visually checked on the rendered original NCERT PDF p7."
     }
+  },
+  {
+    "id": "ncert.maths.ch07.p001.coordinate_axes_and_coordinates",
+    "text": "A point is written using its signed coordinates (x, y): x is the horizontal coordinate (abscissa), and y is the vertical coordinate (ordinate). A point on the x-axis has coordinates (x, 0); a point on the y-axis has coordinates (0, y).",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 7,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch07",
+      "chunkType": "ncert_concept",
+      "heading": "Coordinate Geometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-21",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch21.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh107.pdf",
+      "contentSha256": "ca7a4c2071221ddad13eca8c3bf2deba6be2f21b2a47b07f10443131bad53f04",
+      "language": "en",
+      "page": 1,
+      "conceptTags": [
+        "coordinates",
+        "abscissa",
+        "ordinate",
+        "coordinate axes"
+      ],
+      "extractiveQuote": "“The coordinates of a point on the x-axis are of the form (x, 0), and of a point on the y-axis are of the form (0, y).”",
+      "reviewNote": "The source calls the coordinates abscissa and ordinate and gives axis forms (x,0) and (0,y). The paraphrase uses signed coordinate values so negative coordinates are represented correctly; terminology and axis forms were checked on the rendered original PDF p1."
+    }
+  },
+  {
+    "id": "ncert.maths.ch09.p003.height_from_elevation",
+    "text": "To find the height of an object above an observer’s eye level, form a right triangle with vertical height h, horizontal distance d, and angle of elevation θ. Then tan θ = h/d, so h = d tan θ. If the observer’s eye is e units above the ground, add e to obtain the object’s height above the ground.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 9,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch09",
+      "chunkType": "ncert_concept",
+      "heading": "Some Applications of Trigonometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-21",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch21.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh109.pdf",
+      "contentSha256": "89c6c125039bfb8c7708b6bc5a27321021de629d4a1608f7f94812a96698f63f",
+      "language": "en",
+      "page": 3,
+      "conceptTags": [
+        "angle of elevation",
+        "height and distance",
+        "tangent ratio"
+      ],
+      "extractiveQuote": "“By adding AE to BC, you will get the height of the minar.”",
+      "reviewNote": "The page identifies BC as opposite and AB as adjacent to the known angle, uses tan A=BC/AB to find the height above eye level, then adds the student’s eye height AE. Visually checked on rendered p3."
+    }
+  },
+  {
+    "id": "ncert.maths.ch13.p009.selecting_grouped_mean_method",
+    "text": "For grouped-data means, choose the direct method when class marks xᵢ and frequencies fᵢ are small. When these values are large, use the assumed-mean or step-deviation method. With unequal class sizes, step deviation can still be used if h is chosen as a common divisor of the deviations dᵢ.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 13,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch13",
+      "chunkType": "ncert_concept",
+      "heading": "Statistics",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-21",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch21.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh113.pdf",
+      "contentSha256": "18815e1f62dfd05048e7539a2444007409b3d20b6dc62a57f69702f236511929",
+      "language": "en",
+      "page": 9,
+      "conceptTags": [
+        "grouped mean",
+        "direct method",
+        "assumed mean",
+        "step deviation"
+      ],
+      "extractiveQuote": "“If xᵢ and fᵢ are sufficiently small, then the direct method is an appropriate choice.”",
+      "reviewNote": "The method-selection remark at the foot of the original page was visually checked; the unequal-class-size condition specifies choosing h as a suitable divisor of the dᵢ values."
+    }
+  },
+  {
+    "id": "ncert.maths.ch03.p004.graphical_solution_workflow",
+    "text": "To solve a pair of linear equations graphically, find at least two points on each line, plot the points, and draw the two lines. Their intersection gives the common solution (the x- and y-coordinates of the intersection).",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 3,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch03",
+      "chunkType": "ncert_concept",
+      "heading": "Pair of Linear Equations in Two Variables",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-22",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch22.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh103.pdf",
+      "contentSha256": "d04ef69d830a97243be9bd1cab0aa82399056f0f4a621bb71bbe97ecd1dfa147",
+      "language": "en",
+      "page": 4,
+      "conceptTags": [
+        "linear equations",
+        "graphical method",
+        "intersection"
+      ],
+      "extractiveQuote": "“Plot the points A(0, 2), B(6, 0), P(0, –4) and Q(3, –2) on graph paper, and join the points to form the lines AB and PQ”",
+      "reviewNote": "The worked example tabulates two points per equation, plots and joins them, then reads their common intersection (6,0) as the solution. Verified on rendered original PDF p4."
+    }
+  },
+  {
+    "id": "ncert.maths.ch05.p011.ap_term_membership",
+    "text": "For an AP with first term a and non-zero common difference d, test whether a proposed value t is a term by solving t = a + (n − 1)d. It belongs to the AP exactly when the resulting n is a positive integer.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 5,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch05",
+      "chunkType": "ncert_concept",
+      "heading": "Arithmetic Progressions",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-22",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch22.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh105.pdf",
+      "contentSha256": "1367857e5cd3206b1862655d17bf31778e6af768821d8dfc8c71d3ea0e19274c",
+      "language": "en",
+      "page": 11,
+      "conceptTags": [
+        "arithmetic progression",
+        "nth term",
+        "term membership"
+      ],
+      "extractiveQuote": "“But n should be a positive integer. So, 301 is not a term of the given list of numbers.”",
+      "reviewNote": "The example substitutes a proposed term in aₙ=a+(n−1)d and rejects it because the resulting index n=151/3 is not a positive integer. Verified on rendered original PDF p11."
+    }
+  },
+  {
+    "id": "ncert.maths.ch06.p003.polygon_similarity_criteria",
+    "text": "Two polygons with the same number of sides are similar when both conditions hold: corresponding angles are equal and corresponding sides are in the same ratio.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 6,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch06",
+      "chunkType": "ncert_concept",
+      "heading": "Triangles",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-22",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch22.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh106.pdf",
+      "contentSha256": "028a1243ccd005e952fca0f9c498be86cd526b74deb0bc6cd5147e15eef12f58",
+      "language": "en",
+      "page": 3,
+      "conceptTags": [
+        "similar polygons",
+        "corresponding angles",
+        "scale factor"
+      ],
+      "extractiveQuote": "“Two polygons of the same number of sides are similar, if (i) their corresponding angles are equal and (ii) their corresponding sides are in the same ratio”",
+      "reviewNote": "The polygon similarity definition at the bottom of the page, following the scaled-photo examples, was visually checked on the rendered original PDF p3."
+    }
+  },
+  {
+    "id": "ncert.maths.ch12.p001.tanker_as_composite_solid",
+    "text": "A rounded tanker container can be modelled as a cylinder with one hemisphere at each end, rather than as a single basic solid.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 12,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch12",
+      "chunkType": "ncert_concept",
+      "heading": "Surface Areas and Volumes",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-22",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch22.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh112.pdf",
+      "contentSha256": "5108400be07a99d6df322df607b90d51ba841f8a060276d05f9e75accc2b8be9",
+      "language": "en",
+      "page": 1,
+      "conceptTags": [
+        "composite solids",
+        "cylinder",
+        "hemisphere",
+        "geometric modelling"
+      ],
+      "extractiveQuote": "“it is made of a cylinder with two hemispheres as its ends.”",
+      "reviewNote": "The original NCERT introduction explicitly describes the truck container as a cylinder with two hemispheres at its ends; verified on rendered p1."
+    }
+  },
+  {
+    "id": "ncert.maths.ch13.p014.grouped_mode_formula",
+    "text": "For grouped data with equal class sizes, first identify the modal class (the class with the highest frequency). Estimate the mode by Mode = l + [(f₁ − f₀)/(2f₁ − f₀ − f₂)] × h, where l is the modal class lower limit, h is class width, f₁ is modal-class frequency, f₀ is the preceding-class frequency, and f₂ is the succeeding-class frequency.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 13,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch13",
+      "heading": "Statistics",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-23",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch23.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh113.pdf",
+      "contentSha256": "18815e1f62dfd05048e7539a2444007409b3d20b6dc62a57f69702f236511929",
+      "language": "en",
+      "chunkType": "ncert_concept",
+      "page": 14,
+      "supportingPages": [
+        14
+      ],
+      "conceptTags": [
+        "grouped data",
+        "mode",
+        "modal class"
+      ],
+      "extractiveQuote": "“In a grouped frequency distribution, it is not possible to determine the mode by looking at the frequencies. Here, we can only locate a class with the maximum frequency, called the modal class.”",
+      "reviewNote": "Formula and symbol definitions are printed on rendered original PDF p14; checked denominator and class-frequency order visually."
+    }
+  },
+  {
+    "id": "ncert.maths.ch13.p018.ungrouped_median_by_cumulative_frequency",
+    "text": "To find the median from a frequency table of distinct observations, arrange the observations in ascending order and form cumulative frequencies. For odd n, the median is the (n+1)/2-th observation; for even n, it is the average of the n/2-th and (n/2+1)-th observations. Use cumulative frequency to locate those positions.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 13,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch13",
+      "heading": "Statistics",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-23",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch23.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh113.pdf",
+      "contentSha256": "18815e1f62dfd05048e7539a2444007409b3d20b6dc62a57f69702f236511929",
+      "language": "en",
+      "chunkType": "ncert_concept",
+      "page": 18,
+      "supportingPages": [
+        18,
+        19
+      ],
+      "conceptTags": [
+        "median",
+        "frequency table",
+        "cumulative frequency"
+      ],
+      "extractiveQuote": "“Then, if n is odd, the median is the ((n + 1)/2)th observation. And, if n is even, then the median will be the average of the n/2 and (n/2 + 1)th observations.”",
+      "reviewNote": "Page18 states the odd/even rule; p19 constructs cumulative totals and locates the 50th and 51st values in the example. Both pages rendered and checked."
+    }
+  },
+  {
+    "id": "ncert.maths.ch13.p020_median_interpretation",
+    "text": "A median of 28.5 marks means that about 50% of the students scored below 28.5 and another 50% scored above 28.5 in the example.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 13,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch13",
+      "heading": "Statistics",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-23",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch23.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh113.pdf",
+      "contentSha256": "18815e1f62dfd05048e7539a2444007409b3d20b6dc62a57f69702f236511929",
+      "language": "en",
+      "chunkType": "ncert_concept",
+      "page": 20,
+      "supportingPages": [
+        20
+      ],
+      "conceptTags": [
+        "median",
+        "interpretation",
+        "grouped data"
+      ],
+      "extractiveQuote": "“The median marks 28.5 conveys the information that about 50% students obtained marks less than 28.5 and another 50% students obtained marks more than 28.5.”",
+      "reviewNote": "Rendered original PDF p20 confirms the statement; this is a contextual interpretation of the example, not a universal exact split when observations tie."
+    }
+  },
+  {
+    "id": "ncert.maths.ch13.p021_cumulative_frequency_table_construction",
+    "text": "For grouped data, a less-than cumulative frequency is the total frequency up to the stated upper class limit: add the current class frequency to the cumulative total for earlier classes. A more-than-or-equal cumulative frequency is found from the overall total by subtracting the frequencies of all classes below the stated lower limit.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 13,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch13",
+      "chunkType": "ncert_concept",
+      "heading": "Statistics",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-24",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch24.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh113.pdf",
+      "contentSha256": "18815e1f62dfd05048e7539a2444007409b3d20b6dc62a57f69702f236511929",
+      "language": "en",
+      "page": 21,
+      "supportingPages": [
+        21,
+        22
+      ],
+      "conceptTags": [
+        "grouped data",
+        "cumulative frequency",
+        "frequency table"
+      ],
+      "extractiveQuote": "“Similarly, we can compute the cumulative frequencies of the other classes, i.e., the number of students with marks less than 30, less than 40, . . ., less than 100.”",
+      "reviewNote": "Rendered pp21–22: less-than cumulative frequency sums frequencies through each class; the complementary more-than-or-equal table is formed by subtracting preceding class counts from the total. These are the two forms combined before median-class selection."
+    }
+  },
+  {
+    "id": "ncert.maths.ch01.p004_hcf_lcm_product_relation_two_integers",
+    "text": "For two positive integers a and b, HCF(a,b) × LCM(a,b) = a × b. This identity is for a pair of integers; it does not extend as a product identity for three integers.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 1,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch01",
+      "chunkType": "ncert_concept",
+      "heading": "Real Numbers",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-25",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch25.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh101.pdf",
+      "contentSha256": "bd6466e8e7d437af89d7e640ff8381e68b57f91bf56cd4ce345ca031091d748f",
+      "language": "en",
+      "page": 4,
+      "supportingPages": [
+        4
+      ],
+      "conceptTags": [
+        "HCF",
+        "LCM",
+        "prime factorisation"
+      ],
+      "extractiveQuote": "“HCF (a, b) × LCM (a, b) = a × b.”",
+      "reviewNote": "The page states this relationship for two positive integers after a two-number example, then explicitly warns that the product of three numbers need not equal HCF × LCM. Formula and scope visually checked on original p4."
+    }
   }
 ]

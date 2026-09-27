@@ -205,7 +205,7 @@ function slot<T extends Chunk & { score: number }>(
   return selected.slice(0, limit);
 }
 
-function toSource(chunk: Chunk & { score: number }): Source {
+export function toSource(chunk: Chunk & { score: number }): Source {
   const parts = [KIND_LABEL[chunk.meta.kind]];
   if (chunk.meta.subject) parts.push(
     titleCase(chunk.meta.subject) +

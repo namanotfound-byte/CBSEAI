@@ -344,3 +344,17 @@ test("NCERT exercise practice keeps its answer separate from theory retrieval", 
   });
   assert.ok(theory.every((source) => source.kind !== "ncert_exercise"));
 });
+
+test("excluded Euclid division material cannot enter the live corpus", () => {
+  const source = REVIEWED_ADDENDUM.find((chunk) => chunk.meta.subject === "maths" && chunk.meta.chapter === 1);
+  assert.ok(source);
+  const row = { ...source, id: "test-excluded-euclid", text: "Euclid's division algorithm finds the HCF." };
+  assert.ok(validateChunks([row]).some((error) => error.includes("outside the current board-answer scope")));
+});
+
+test("page citations require numeric PDF page numbers", () => {
+  const source = REVIEWED_ADDENDUM.find((chunk) => chunk.meta.page);
+  assert.ok(source);
+  const row = { ...source, id: "test-string-page", meta: { ...source.meta, page: "18" as unknown as number } };
+  assert.ok(validateChunks([row]).some((error) => error.includes("meta.page must be a positive integer")));
+});

@@ -26,6 +26,9 @@ export function validateChunks(chunks: Chunk[]) {
     if (chunk.meta && !KINDS.has(chunk.meta.kind)) errors.push(`${at}: meta.kind is invalid`);
     if (chunk.meta && !SUBJECTS.has(chunk.meta.subject)) errors.push(`${at}: meta.subject is invalid`);
     if (chunk.meta && !Number.isFinite(chunk.meta.chapter)) errors.push(`${at}: meta.chapter is required`);
+    if (chunk.meta?.page !== undefined && (!Number.isInteger(chunk.meta.page) || chunk.meta.page < 1)) {
+      errors.push(`${at}: meta.page must be a positive integer`);
+    }
     if (chunk.meta && !chunk.meta.chunkType) errors.push(`${at}: meta.chunkType is required`);
     if (chunk.meta && "year" in chunk.meta) {
       errors.push(`${at}: legacy meta.year is not allowed; use sourceYear and syllabusVersion`);
@@ -41,6 +44,10 @@ export function validateChunks(chunks: Chunk[]) {
     if (chunk.meta?.assessmentStatus !== "summative") errors.push(`${at}: only summative material can be indexed`);
     if (chunk.meta && chunk.meta.syllabusVersion !== "2026-27") {
       errors.push(`${at}: only the 2026-27 syllabus is enabled`);
+    }
+    if (chunk.meta?.subject === "maths" && chunk.meta.chapter === 1 &&
+        /euclid(?:['’]s|s)?\s+division\s+(?:algorithm|lemma)/i.test(chunk.text)) {
+      errors.push(`${at}: Euclid's division algorithm is outside the current board-answer scope`);
     }
     if (chunk.meta && !/^[a-f0-9]{64}$/i.test(chunk.meta.contentSha256 ?? "")) {
       errors.push(`${at}: meta.contentSha256 must be a SHA-256 hex digest`);
