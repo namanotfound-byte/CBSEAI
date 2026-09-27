@@ -60,6 +60,10 @@ export function validateChunks(chunks: Chunk[]) {
         (!chunk.meta.joinPrefix || !["ncert_question", "ncert_answer"].includes(chunk.meta.chunkType ?? ""))) {
       errors.push(`${at}: NCERT exercise chunks need a joinPrefix and question/answer chunkType`);
     }
+    if (chunk.meta?.kind === "exemplar" &&
+        (!chunk.meta.joinPrefix || !["exemplar_question", "exemplar_answer"].includes(chunk.meta.chunkType ?? ""))) {
+      errors.push(`${at}: NCERT Exemplar chunks need a joinPrefix and question/answer chunkType`);
+    }
     if (["pyq", "sqp", "cfpq"].includes(chunk.meta?.kind ?? "") && !chunk.meta?.joinPrefix) {
       errors.push(`${at}: question chunks need meta.joinPrefix`);
     }

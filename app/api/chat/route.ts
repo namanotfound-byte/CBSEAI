@@ -84,21 +84,23 @@ export async function POST(req: Request) {
             const [question] = await store.findByIds([questionId], {});
             const practiceQuestion = question &&
               ((question.meta.kind === "ncert_exercise" && question.meta.chunkType === "ncert_question") ||
+                (question.meta.kind === "exemplar" && question.meta.chunkType === "exemplar_question") ||
                 (["sqp", "pyq", "cfpq"].includes(question.meta.kind) &&
                   ["question_block", "question_part"].includes(question.meta.chunkType ?? "")));
             if (practiceQuestion && question.meta.joinPrefix) {
               const paired = await store.findByJoinPrefixes([question.meta.joinPrefix], {
                 subject: question.meta.subject,
                 syllabusTopicId: question.meta.syllabusTopicId,
-                kinds: question.meta.kind === "ncert_exercise" ? ["ncert_exercise"] : ["ms"],
+                kinds: question.meta.kind === "ncert_exercise" ? ["ncert_exercise"]
+                  : question.meta.kind === "exemplar" ? ["exemplar"] : ["ms"],
                 topK: 24,
               });
               const answer = paired.find((row) =>
                 row.id !== question.id &&
-                (row.meta.chunkType === "ncert_answer" || row.meta.kind === "ms"));
+                (["ncert_answer", "exemplar_answer"].includes(row.meta.chunkType ?? "") || row.meta.kind === "ms"));
               if (answer) {
                 send({ type: "sources", sources: [toSource({ ...question, score: 1 }), toSource({ ...answer, score: 1 })] });
-                send({ type: "token", text: `${question.meta.kind === "ncert_exercise" ? "NCERT answer" : "Official marking answer"}: ${answer.text} [[source:${answer.id}]]` });
+                send({ type: "token", text: `${question.meta.kind === "ncert_exercise" ? "NCERT answer" : question.meta.kind === "exemplar" ? "NCERT Exemplar answer" : "Official marking answer"}: ${answer.text} [[source:${answer.id}]]` });
                 send({ type: "done" });
                 return;
               }
@@ -118,9 +120,6 @@ export async function POST(req: Request) {
           }
         }
         const route = context.mode === "drill" ? "competency" : routeQuery(query);
-        if (unkeyedExercise) {
-          send({ type: "notice", message: "NCERT does not print an answer for this exercise. This explanation uses the reviewed chapter material." });
-        }
         const cacheKey = answerCacheKey({
           query,
           subject: imageSubject ?? context.subject,
@@ -154,7 +153,7 @@ export async function POST(req: Request) {
                 route === "diagram"
                   ? ["ncert", "diagram", "ms"]
                   : route === "competency"
-                    ? ["cfpq", "sqp", "pyq", "ncert_exercise"]
+                    ? ["cfpq", "sqp", "pyq", "ncert_exercise", "exemplar"]
                   : route === "marking" || route === "pyq"
                     ? ["ncert", "pyq", "sqp", "ms", "diagram"]
                     : undefined,
@@ -211,7 +210,8 @@ export async function POST(req: Request) {
           const question = sources.find((source) =>
             (["cfpq", "sqp", "pyq"].includes(source.kind) &&
               ["question_block", "question_part"].includes(source.chunkType ?? "")) ||
-            (source.kind === "ncert_exercise" && source.chunkType === "ncert_question"),
+            (source.kind === "ncert_exercise" && source.chunkType === "ncert_question") ||
+            (source.kind === "exemplar" && source.chunkType === "exemplar_question"),
           );
           if (question) {
             const visibleSources = [
@@ -310,7 +310,10 @@ export async function POST(req: Request) {
         }
 
         const { text: answerText, steps, marks } = extractMarks(verified.text);
-        if (answerText) send({ type: "token", text: answerText });
+        const displayedText = unkeyedExercise
+          ? `NCERT does not print an official answer for this exercise. Based on the reviewed chapter material:\n\n${answerText}`
+          : answerText;
+        if (displayedText) send({ type: "token", text: displayedText });
         if (hasMarkingScheme && steps?.length) {
           send({ type: "steps", steps, marks });
         } else if (verified.notice || (!hasMarkingScheme && examStyle)) {
@@ -324,7 +327,7 @@ export async function POST(req: Request) {
 
         if (query.trim() && !hasImages) {
           await setCachedAnswer(cacheKey, {
-            text: answerText,
+            text: displayedText,
             sources,
             steps,
             marks,

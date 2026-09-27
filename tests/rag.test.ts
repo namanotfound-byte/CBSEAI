@@ -20,6 +20,7 @@ test("routes canonical query types", () => {
   assert.equal(routeQuery("give me a competency-based question"), "competency");
   assert.equal(routeQuery("Give me an NCERT exercise question on prime factorisation"), "competency");
   assert.equal(routeQuery("Give me an NCERT Science exercise question about corrective lens power."), "competency");
+  assert.equal(routeQuery("Give me an NCERT Exemplar Science question about solder"), "competency");
   assert.equal(routeQuery("Give me a Science sample-paper question about soap in hard water"), "competency");
   assert.equal(routeQuery("Solve this sample-paper question about soap"), "pyq");
   assert.equal(routeQuery("explain photosynthesis"), "theory");
@@ -164,7 +165,7 @@ test("every deployable reviewed record is valid and uniquely identified", () => 
   assert.deepEqual(validateChunks(REVIEWED_ADDENDUM), []);
   assert.equal(new Set(REVIEWED_ADDENDUM.map((chunk) => chunk.id)).size, REVIEWED_ADDENDUM.length);
   const reviewedText = REVIEWED_ADDENDUM.filter((chunk) =>
-    chunk.meta.chunkType !== "ncert_answer" && chunk.meta.kind !== "ms",
+    !["ncert_answer", "exemplar_answer"].includes(chunk.meta.chunkType ?? "") && chunk.meta.kind !== "ms",
   ).map((chunk) => chunk.text.trim().toLowerCase());
   assert.equal(new Set(reviewedText).size, reviewedText.length);
   const sampleQuestions = REVIEWED_ADDENDUM.filter((chunk) => chunk.meta.kind === "sqp");

@@ -1,0 +1,410 @@
+[
+  {
+    "id": "ncert.maths.ch06.p001.similar_figures_definition",
+    "text": "Two figures are similar when they have the same shape, though they need not have the same size. Congruent figures have both the same shape and the same size, so congruent figures are similar; the converse need not hold.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 6,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch06",
+      "chunkType": "ncert_concept",
+      "heading": "Triangles",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-57",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch57.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "source_faithful_statement",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh106.pdf",
+      "contentSha256": "028a1243ccd005e952fca0f9c498be86cd526b74deb0bc6cd5147e15eef12f58",
+      "language": "en",
+      "page": 1,
+      "supportingPages": [
+        1
+      ],
+      "conceptTags": [
+        "similarity",
+        "similar figures",
+        "congruence"
+      ],
+      "extractiveQuote": "“Two figures having the same shape (and not necessarily the same size) are called similar figures.”",
+      "reviewNote": "Rendered original p1; exact definition and congruent/similar distinction checked. No existing live chunk for this definition found."
+    }
+  },
+  {
+    "id": "ncert.maths.ch06.p015.aaa_similarity_criterion",
+    "text": "AAA similarity criterion: If the corresponding angles of two triangles are equal, then their corresponding sides are in the same ratio and the triangles are similar. It is enough to know two pairs of corresponding angles are equal, because the third pair must then be equal by the angle-sum property of triangles.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 6,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch06",
+      "chunkType": "ncert_concept",
+      "heading": "Triangles — Criteria for Similarity of Triangles",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-59",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch59.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "source_faithful_statement",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh106.pdf",
+      "contentSha256": "028a1243ccd005e952fca0f9c498be86cd526b74deb0bc6cd5147e15eef12f58",
+      "language": "en",
+      "page": 15,
+      "supportingPages": [
+        15
+      ],
+      "conceptTags": [
+        "triangles",
+        "similarity criteria",
+        "AAA similarity",
+        "AA similarity"
+      ],
+      "extractiveQuote": "“If in two triangles, corresponding angles are equal, then their corresponding sides are in the same ratio (or proportion) and hence the two triangles are similar.”",
+      "reviewNote": "Rendered p15. Criterion statement and two-angle corollary via angle sum checked; proof steps intentionally omitted because only the criterion statement is needed."
+    }
+  },
+  {
+    "id": "ncert.maths.ch08.p008_right_triangle_ratios_7_24_25",
+    "text": "In right triangle OPQ, right-angled at P, OP=7 cm and OQ−PQ=1 cm. Set PQ=x and OQ=x+1. By Pythagoras, (x+1)²=7²+x², so 1+2x=49 and x=24; hence OQ=25. Therefore sin Q=OP/OQ=7/25 and cos Q=PQ/OQ=24/25.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 8,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch08",
+      "chunkType": "ncert_worked_example",
+      "heading": "Introduction to Trigonometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-60",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch60.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh108.pdf",
+      "contentSha256": "5a4033fd2ab3fbb245f783a3e2c24fb5c31a00ae7fa7b9a7212633d11e06d2ac",
+      "language": "en",
+      "page": 8,
+      "supportingPages": [
+        8
+      ],
+      "conceptTags": [
+        "right triangle",
+        "trigonometric ratios",
+        "Pythagorean theorem",
+        "worked example"
+      ],
+      "extractiveQuote": "“So, sin Q = 7/25 and cos Q = 24/25.”",
+      "reviewNote": "Rendered original p8; diagram, right angle, OP=7, OQ−PQ=1, solution PQ=24/OQ=25, and sine/cosine ratios verified."
+    }
+  },
+  {
+    "id": "ncert.maths.ch07.p002_town_distance_pythagoras",
+    "text": "Town B is 36 km east and 15 km north of town A, so the displacement forms the legs of a right triangle. The distance is √(36²+15²)=√(1296+225)=√1521=39 km.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 7,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch07",
+      "chunkType": "ncert_worked_example",
+      "heading": "Coordinate Geometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-61",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch61.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "source_faithful_model_with_verified_solution",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh107.pdf",
+      "contentSha256": "ca7a4c2071221ddad13eca8c3bf2deba6be2f21b2a47b07f10443131bad53f04",
+      "language": "en",
+      "page": 2,
+      "supportingPages": [
+        2
+      ],
+      "conceptTags": [
+        "distance formula",
+        "Pythagorean theorem",
+        "coordinate geometry",
+        "application"
+      ],
+      "extractiveQuote": "“A town B is located 36 km east and 15 km north of the town A.”",
+      "reviewNote": "Rendered p2 diagram confirms perpendicular east/north displacements 36 km and 15 km. Derived distance 39 km; 36²+15²=1521."
+    }
+  },
+  {
+    "id": "ncert.maths.ch07.p003_distance_across_quadrants",
+    "text": "For P(6,4) and Q(−5,−3), the horizontal separation is 6−(−5)=11 and the vertical separation is 4−(−3)=7. By Pythagoras, PQ=√(11²+7²)=√170 units.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 7,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch07",
+      "chunkType": "ncert_worked_example",
+      "heading": "Coordinate Geometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-61",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch61.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh107.pdf",
+      "contentSha256": "ca7a4c2071221ddad13eca8c3bf2deba6be2f21b2a47b07f10443131bad53f04",
+      "language": "en",
+      "page": 3,
+      "supportingPages": [
+        3
+      ],
+      "conceptTags": [
+        "distance formula",
+        "coordinates in different quadrants",
+        "Pythagorean theorem"
+      ],
+      "extractiveQuote": "“Using the Pythagoras Theorem to the right triangle PTQ, we get PQ = √(11² + 7²) = √170 units.”",
+      "reviewNote": "Rendered p3 coordinate diagram and calculation checked. Signed coordinate differences produce separations 11 and 7; sum of squares is 170."
+    }
+  },
+  {
+    "id": "ncert.maths.ch07.p008_relay_tower_section_ratio",
+    "text": "With A at the origin and B=(36,15), a relay tower P between A and B is placed so BP is twice AP, so AP:PB=1:2. The section formula gives P=((1·36+2·0)/3,(1·15+2·0)/3)=(12,5); indeed AP:PB=1:2.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 7,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch07",
+      "chunkType": "ncert_worked_example",
+      "heading": "Coordinate Geometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-61",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch61.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "source_faithful_model_with_verified_solution",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh107.pdf",
+      "contentSha256": "ca7a4c2071221ddad13eca8c3bf2deba6be2f21b2a47b07f10443131bad53f04",
+      "language": "en",
+      "page": 8,
+      "supportingPages": [
+        8,
+        9
+      ],
+      "conceptTags": [
+        "section formula",
+        "internal division",
+        "coordinate geometry",
+        "ratio"
+      ],
+      "extractiveQuote": "“These equations give x = 12 and y = 5.”",
+      "reviewNote": "Rendered p8; A=(0,0), B=(36,15), internal ratio AP:PB=1:2 and coordinates (12,5) checked by section formula and distance ratio."
+    }
+  },
+  {
+    "id": "ncert.maths.ch07.p012_y_axis_section_ratio",
+    "text": "For A(5,−6) and B(−1,−4), let the y-axis intersection divide AB internally in ratio k:1. Its x-coordinate is (−k+5)/(k+1); setting this to 0 gives k=5. Substitution into the y-coordinate gives the intersection point (0,−13/3). Thus the ratio is 5:1 and the point is (0,−13/3).",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 7,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch07",
+      "chunkType": "ncert_worked_example",
+      "heading": "Coordinate Geometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-62",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch62.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh107.pdf",
+      "contentSha256": "ca7a4c2071221ddad13eca8c3bf2deba6be2f21b2a47b07f10443131bad53f04",
+      "language": "en",
+      "page": 12,
+      "supportingPages": [
+        12
+      ],
+      "conceptTags": [
+        "section formula",
+        "internal division",
+        "coordinate axes"
+      ],
+      "extractiveQuote": "“That is, the ratio is 5 : 1. Putting the value of k = 5, we get the point of intersection as (0, −13/3).”",
+      "reviewNote": "Rendered p12; signed coordinates, internal ratio setup, x=0 condition and y coordinate −13/3 checked."
+    }
+  },
+  {
+    "id": "ncert.maths.ch07.p012_parallelogram_vertex_coordinate",
+    "text": "If A(6,1), B(8,2), C(9,4), D(p,3) are consecutive vertices of a parallelogram, its diagonals AC and BD bisect each other. Equating their midpoints gives (15/2,5/2)=((8+p)/2,5/2), so p=7.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 7,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch07",
+      "chunkType": "ncert_worked_example",
+      "heading": "Coordinate Geometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-62",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch62.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh107.pdf",
+      "contentSha256": "ca7a4c2071221ddad13eca8c3bf2deba6be2f21b2a47b07f10443131bad53f04",
+      "language": "en",
+      "page": 12,
+      "supportingPages": [
+        12
+      ],
+      "conceptTags": [
+        "midpoint formula",
+        "parallelogram",
+        "coordinate geometry"
+      ],
+      "extractiveQuote": "“so, p = 7.”",
+      "reviewNote": "Rendered p12; diagonal midpoint coordinates and solving for p checked. Both y-coordinates are 5/2 and x-coordinate equality gives p=7."
+    }
+  },
+  {
+    "id": "ncert.maths.ch07.p001.signed_coordinates_axes",
+    "text": "For a point P(x,y), x (the abscissa) records the signed horizontal displacement from the y-axis and y (the ordinate) records the signed vertical displacement from the x-axis: right/up are positive and left/down are negative. Thus points on the x-axis have form (x,0), while points on the y-axis have form (0,y). The coordinates are directed values, not unsigned distances.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 7,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch07",
+      "chunkType": "ncert_concept",
+      "heading": "Coordinate Geometry",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-63",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch63.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "source_faithful_definition_with_sign_convention_clarification",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh107.pdf",
+      "contentSha256": "ca7a4c2071221ddad13eca8c3bf2deba6be2f21b2a47b07f10443131bad53f04",
+      "language": "en",
+      "page": 1,
+      "supportingPages": [
+        1,
+        3
+      ],
+      "conceptTags": [
+        "coordinate geometry",
+        "abscissa",
+        "ordinate",
+        "signed coordinates",
+        "axes"
+      ],
+      "extractiveQuote": "“The distance of a point from the y-axis is called its x-coordinate, or abscissa. The distance of a point from the x-axis is called its y-coordinate, or ordinate.”",
+      "reviewNote": "Rendered p1 confirms axis coordinate definitions and axis forms. Rendered p3 shows negative coordinates; wording clarifies that x/y are signed coordinate values, not unsigned magnitudes, repairing the earlier unsafe paraphrase."
+    }
+  },
+  {
+    "id": "ncert.maths.ch13.p005-006.assumed_mean_marks_example",
+    "text": "For the 30-student grouped marks table with class marks 17.5, 32.5, 47.5, 62.5, 77.5, 92.5 and frequencies 2, 3, 7, 6, 6, 6, choose assumed mean a=47.5. The deviations have Σfᵢdᵢ=435 and Σfᵢ=30, so x̄=a+Σfᵢdᵢ/Σfᵢ=47.5+435/30=62 marks.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 13,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch13",
+      "chunkType": "ncert_worked_example",
+      "heading": "Statistics",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-64",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch64.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh113.pdf",
+      "contentSha256": "18815e1f62dfd05048e7539a2444007409b3d20b6dc62a57f69702f236511929",
+      "language": "en",
+      "page": 6,
+      "supportingPages": [
+        5,
+        6
+      ],
+      "conceptTags": [
+        "grouped data",
+        "mean",
+        "assumed mean method",
+        "worked example"
+      ],
+      "extractiveQuote": "“x̄ = 47.5 + 435/30 = 47.5 + 14.5 = 62.”",
+      "reviewNote": "Rendered original p6 and accompanying p5 table; assumed mean, weighted deviations, total frequency and result checked."
+    }
+  },
+  {
+    "id": "ncert.maths.ch13.p018-019.frequency_table_median",
+    "text": "For the marks frequency table of 100 students, cumulative frequency reaches 50 at 28 marks and 78 at 29 marks. Thus the 50th observation is 28 and the 51st is 29; because n=100 is even, the median is (28+29)/2=28.5 marks.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 13,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch13",
+      "chunkType": "ncert_worked_example",
+      "heading": "Statistics",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-65",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch65.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh113.pdf",
+      "contentSha256": "18815e1f62dfd05048e7539a2444007409b3d20b6dc62a57f69702f236511929",
+      "language": "en",
+      "page": 19,
+      "supportingPages": [
+        18,
+        19
+      ],
+      "conceptTags": [
+        "median",
+        "frequency table",
+        "cumulative frequency",
+        "worked example"
+      ],
+      "extractiveQuote": "“50th observation is 28 … 51st observation is 29 … So, Median = 28.5.”",
+      "reviewNote": "Rendered p19; original mark frequencies/cumulative totals and even-n median averaging checked."
+    }
+  }
+]

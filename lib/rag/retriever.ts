@@ -54,7 +54,9 @@ export async function retrieve(
   const requestedKinds = filters.route === "competency"
     ? (/\bncert\b.*\bexercis/i.test(query)
         ? (["ncert_exercise"] satisfies SourceKind[])
-        : (["cfpq", "sqp", "pyq", "ms", "ncert_exercise"] satisfies SourceKind[]))
+        : /\bexemplar\b/i.test(query)
+          ? (["exemplar"] satisfies SourceKind[])
+          : (["cfpq", "sqp", "pyq", "ms", "ncert_exercise", "exemplar"] satisfies SourceKind[]))
     : filters.kinds?.filter((kind) => kind !== "syllabus") ?? CONTENT_KINDS;
   const scopedFilters: RetrievalFilters = {
     ...filters,
@@ -185,14 +187,16 @@ export function hasApprovedCompetencyQuestion(sources: Source[]) {
     (source) =>
       (["cfpq", "sqp", "pyq"].includes(source.kind) &&
         ["question_block", "question_part"].includes(source.chunkType ?? "")) ||
-      (source.kind === "ncert_exercise" && source.chunkType === "ncert_question"),
+      (source.kind === "ncert_exercise" && source.chunkType === "ncert_question") ||
+      (source.kind === "exemplar" && source.chunkType === "exemplar_question"),
   );
 }
 
 function isPracticeQuestionChunk(chunk: Chunk) {
   return (["cfpq", "sqp", "pyq"].includes(chunk.meta.kind) &&
     ["question_block", "question_part"].includes(chunk.meta.chunkType ?? "")) ||
-    (chunk.meta.kind === "ncert_exercise" && chunk.meta.chunkType === "ncert_question");
+    (chunk.meta.kind === "ncert_exercise" && chunk.meta.chunkType === "ncert_question") ||
+    (chunk.meta.kind === "exemplar" && chunk.meta.chunkType === "exemplar_question");
 }
 
 function slot<T extends Chunk & { score: number }>(
