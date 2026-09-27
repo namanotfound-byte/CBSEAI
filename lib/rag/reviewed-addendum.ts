@@ -29,6 +29,12 @@ import scienceExemplar2 from "@/data/corpus/science-exemplar-reviewed-2.json";
 import practiceFullReviewBatch7 from "@/data/corpus/practice-full-review-batch7.json";
 import mathsNcertExercises3 from "@/data/corpus/maths-ncert-exercises-reviewed-3.json";
 
+import mathsNcertExercises4 from "@/data/corpus/maths-ncert-exercises-reviewed-4.json";
+
+import scienceExemplar3 from "@/data/corpus/science-exemplar-reviewed-3.json";
+
+import practiceFullReviewBatch8 from "@/data/corpus/practice-full-review-batch8.json";
+
 // Page-checked against the authoritative ../Data source corpus.
 const FIRST_REVIEWED_ADDENDUM: Chunk[] = [
   {
@@ -357,4 +363,7 @@ export const REVIEWED_ADDENDUM: Chunk[] = [
   ...(scienceExemplar2 as Chunk[]),
   ...(practiceFullReviewBatch7 as Chunk[]),
   ...(mathsNcertExercises3 as Chunk[]),
+  ...(practiceFullReviewBatch8 as Chunk[]),
+  ...(scienceExemplar3 as Chunk[]),
+  ...(mathsNcertExercises4 as Chunk[]),
 ];
