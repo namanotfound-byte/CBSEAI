@@ -27,6 +27,7 @@ import practiceFullReviewBatch6 from "@/data/corpus/practice-full-review-batch6.
 import mathsNcertExercises2 from "@/data/corpus/maths-ncert-exercises-reviewed-2.json";
 import scienceExemplar2 from "@/data/corpus/science-exemplar-reviewed-2.json";
 import practiceFullReviewBatch7 from "@/data/corpus/practice-full-review-batch7.json";
+import mathsNcertExercises3 from "@/data/corpus/maths-ncert-exercises-reviewed-3.json";
 
 // Page-checked against the authoritative ../Data source corpus.
 const FIRST_REVIEWED_ADDENDUM: Chunk[] = [
@@ -355,4 +356,5 @@ export const REVIEWED_ADDENDUM: Chunk[] = [
   ...(mathsNcertExercises2 as Chunk[]),
   ...(scienceExemplar2 as Chunk[]),
   ...(practiceFullReviewBatch7 as Chunk[]),
+  ...(mathsNcertExercises3 as Chunk[]),
 ];
