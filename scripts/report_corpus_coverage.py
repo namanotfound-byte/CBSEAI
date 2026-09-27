@@ -27,7 +27,7 @@ def jsonl(path):
 def key(path, member=None):
     if "!/" in path:
         return path
-    return f"{path}!/{member}" if member else path
+    return f"{path}!/{member}" if member and path.lower().endswith(".zip") else path
 
 
 manifest = list(jsonl(DATA / "manifests" / "science-maths-inventory.jsonl"))
@@ -54,8 +54,13 @@ for row in jsonl(STAGED / "practice-page-extraction.jsonl"):
 
 reviewed_pages = defaultdict(set)
 reviewed_ids = set()
-for path in (APP / "data" / "corpus").glob("*reviewed*.json"):
-    for row in json.loads(path.read_text()):
+for path in (APP / "data" / "corpus").glob("*.json"):
+    records = json.loads(path.read_text())
+    if not isinstance(records, list):
+        continue
+    for row in records:
+        if not isinstance(row, dict) or "id" not in row or "meta" not in row:
+            continue
         if row["id"] in reviewed_ids:
             continue
         reviewed_ids.add(row["id"])

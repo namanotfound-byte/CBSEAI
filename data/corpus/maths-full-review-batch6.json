@@ -1,0 +1,75 @@
+[
+  {
+    "id": "ncert.maths.ch06.p005_similarity_transitivity",
+    "text": "Similarity is transitive: if one polygon is similar to a second polygon and the second is similar to a third, then the first polygon is similar to the third.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 6,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch06",
+      "chunkType": "ncert_concept",
+      "heading": "Triangles",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-58",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch58.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "source_faithful_statement",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh106.pdf",
+      "contentSha256": "028a1243ccd005e952fca0f9c498be86cd526b74deb0bc6cd5147e15eef12f58",
+      "language": "en",
+      "page": 5,
+      "supportingPages": [
+        5
+      ],
+      "conceptTags": [
+        "similarity",
+        "polygons",
+        "transitivity"
+      ],
+      "extractiveQuote": "“if one polygon is similar to another polygon and this second polygon is similar to a third polygon, then the first polygon is similar to the third polygon.”",
+      "reviewNote": "Rendered original p5; remark verified. No existing live chunk states this transitivity property."
+    }
+  },
+  {
+    "id": "ncert.maths.ch13.p026_unknown_frequencies_from_median",
+    "text": "For the grouped distribution with total frequency 100, the frequencies sum to 76+x+y=100, so x+y=24. Since the median is 525, the median class is 500–600, with l=500, f=20, cf=36+x and h=100. Applying the grouped median formula gives 525=500+[(50−36−x)/20]·100, hence x=9; then y=24−9=15.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 13,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch13",
+      "chunkType": "ncert_worked_example",
+      "heading": "Statistics",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-66",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch66.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh113.pdf",
+      "contentSha256": "18815e1f62dfd05048e7539a2444007409b3d20b6dc62a57f69702f236511929",
+      "language": "en",
+      "page": 26,
+      "supportingPages": [
+        26
+      ],
+      "conceptTags": [
+        "grouped median",
+        "cumulative frequency",
+        "unknown frequencies",
+        "worked example"
+      ],
+      "extractiveQuote": "“x = 9. Therefore, from (1), we get 9 + y = 24, i.e., y = 15.”",
+      "reviewNote": "Rendered p26; frequency sum, cumulative total before median class, grouped median substitution and solution x=9,y=15 checked."
+    }
+  }
+]
