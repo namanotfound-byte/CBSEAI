@@ -14,6 +14,7 @@ import { getVectorStore } from "./vectorstore";
 const PRIORITY: Record<SourceKind, number> = {
   syllabus: 1.1,
   ncert: 1.0,
+  ncert_exercise: 0.91,
   ms: 0.98,
   diagram: 0.94,
   exemplar: 0.92,
@@ -27,6 +28,7 @@ const PRIORITY: Record<SourceKind, number> = {
 const KIND_LABEL: Record<SourceKind, string> = {
   syllabus: "Current syllabus",
   ncert: "NCERT",
+  ncert_exercise: "NCERT exercise",
   ms: "Marking scheme",
   diagram: "Diagram",
   exemplar: "Exemplar",
@@ -38,7 +40,7 @@ const KIND_LABEL: Record<SourceKind, string> = {
 };
 
 const CONTENT_KINDS = (Object.keys(PRIORITY) as SourceKind[]).filter(
-  (kind) => kind !== "syllabus",
+  (kind) => kind !== "syllabus" && kind !== "ncert_exercise",
 );
 
 export async function retrieve(
@@ -50,7 +52,9 @@ export async function retrieve(
   const inferred = inferSyllabusScope(query, filters.subject);
   if (inferred.outOfSyllabus) return [];
   const requestedKinds = filters.route === "competency"
-    ? (["cfpq", "sqp", "pyq", "ms"] satisfies SourceKind[])
+    ? (/\bncert\s+exercis/i.test(query)
+        ? (["ncert_exercise"] satisfies SourceKind[])
+        : (["cfpq", "sqp", "pyq", "ms", "ncert_exercise"] satisfies SourceKind[]))
     : filters.kinds?.filter((kind) => kind !== "syllabus") ?? CONTENT_KINDS;
   const scopedFilters: RetrievalFilters = {
     ...filters,
@@ -81,7 +85,9 @@ export async function retrieve(
     : syllabusHits;
   const directHits = broadHits.filter((hit) =>
     (store.name !== "memory" || hit.score >= 0.18) &&
-    (filters.route === "competency" || sourceMatchesQuestion(query, hit.text)),
+    (filters.route === "competency"
+      ? isPracticeQuestionChunk(hit)
+      : sourceMatchesQuestion(query, hit.text)),
   );
   const [bestDirectHit] = await rerank(query, directHits, 1);
   let syllabusHit = bestDirectHit
@@ -117,6 +123,7 @@ export async function retrieve(
   const needsAnswerEvidence = !["competency", "marking", "pyq"].includes(filters.route ?? "theory");
   const relevantHits = hits.filter((hit) =>
     (store.name !== "memory" || hit.score >= 0.18) &&
+    (filters.route !== "competency" || isPracticeQuestionChunk(hit)) &&
     (!needsAnswerEvidence || sourceMatchesQuestion(query, hit.text)),
   );
   const reranked = await rerank(query, relevantHits, Math.max(8, topK * 2));
@@ -160,9 +167,16 @@ export async function retrieve(
 export function hasApprovedCompetencyQuestion(sources: Source[]) {
   return sources.some(
     (source) =>
-      ["cfpq", "sqp", "pyq"].includes(source.kind) &&
-      ["question_block", "question_part"].includes(source.chunkType ?? ""),
+      (["cfpq", "sqp", "pyq"].includes(source.kind) &&
+        ["question_block", "question_part"].includes(source.chunkType ?? "")) ||
+      (source.kind === "ncert_exercise" && source.chunkType === "ncert_question"),
   );
+}
+
+function isPracticeQuestionChunk(chunk: Chunk) {
+  return (["cfpq", "sqp", "pyq"].includes(chunk.meta.kind) &&
+    ["question_block", "question_part"].includes(chunk.meta.chunkType ?? "")) ||
+    (chunk.meta.kind === "ncert_exercise" && chunk.meta.chunkType === "ncert_question");
 }
 
 function slot<T extends Chunk & { score: number }>(
@@ -183,7 +197,7 @@ function slot<T extends Chunk & { score: number }>(
     add(ordered.find((chunk) => ["pyq", "sqp", "cfpq"].includes(chunk.meta.kind)));
   }
   if (route === "competency") {
-    add(ordered.find((chunk) => ["cfpq", "sqp", "pyq"].includes(chunk.meta.kind)));
+    add(ordered.find(isPracticeQuestionChunk));
   }
   ordered.forEach((chunk) => {
     if (selected.length < limit) add(chunk);

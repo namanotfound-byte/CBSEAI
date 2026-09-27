@@ -3,6 +3,7 @@ import type { Chunk, SourceKind, SubjectId } from "../types";
 const KINDS = new Set<SourceKind>([
   "syllabus",
   "ncert",
+  "ncert_exercise",
   "exemplar",
   "pyq",
   "sqp",
@@ -47,6 +48,10 @@ export function validateChunks(chunks: Chunk[]) {
     if (chunk.meta && !chunk.meta.language) errors.push(`${at}: meta.language is required`);
     if (chunk.meta?.kind === "ms" && !chunk.meta.joinPrefix) {
       errors.push(`${at}: marking_scheme chunks need meta.joinPrefix`);
+    }
+    if (chunk.meta?.kind === "ncert_exercise" &&
+        (!chunk.meta.joinPrefix || !["ncert_question", "ncert_answer"].includes(chunk.meta.chunkType ?? ""))) {
+      errors.push(`${at}: NCERT exercise chunks need a joinPrefix and question/answer chunkType`);
     }
     if (["pyq", "sqp", "cfpq"].includes(chunk.meta?.kind ?? "") && !chunk.meta?.joinPrefix) {
       errors.push(`${at}: question chunks need meta.joinPrefix`);

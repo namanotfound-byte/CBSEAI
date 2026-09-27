@@ -18,6 +18,7 @@ test("routes canonical query types", () => {
   assert.equal(routeQuery("solve this numerical"), "numerical");
   assert.equal(routeQuery("2025 PYQ question"), "pyq");
   assert.equal(routeQuery("give me a competency-based question"), "competency");
+  assert.equal(routeQuery("Give me an NCERT exercise question on prime factorisation"), "competency");
   assert.equal(routeQuery("Give me a Science sample-paper question about soap in hard water"), "competency");
   assert.equal(routeQuery("Solve this sample-paper question about soap"), "pyq");
   assert.equal(routeQuery("explain photosynthesis"), "theory");
@@ -323,4 +324,23 @@ test("Maths Standard practice keeps the paper track and exact answer join", asyn
   assert.ok(sources.some((source) => source.id === "sqp.maths.standard.2026-27.q01"));
   assert.ok(sources.some((source) => source.id === "ms.maths.standard.2026-27.q01"));
   assert.ok(sources.some((source) => source.label.includes("Maths Standard")));
+});
+
+test("NCERT exercise practice keeps its answer separate from theory retrieval", async () => {
+  const question = REVIEWED_ADDENDUM.find((chunk) => chunk.id === "ncert.maths.ch01.ex1_1.q1_i");
+  const answer = REVIEWED_ADDENDUM.find((chunk) => chunk.id === "ncert.maths.ch01.ex1_1.q1_i.answer");
+  assert.ok(question && answer);
+  assert.equal(question.meta.kind, "ncert_exercise");
+  assert.equal(answer.meta.chunkType, "ncert_answer");
+  await getVectorStore().upsert([question, answer]);
+  const sources = await retrieve("Give me an NCERT exercise question about expressing 140 as prime factors", {
+    subject: "maths", chapter: 1, route: "competency",
+  });
+  assert.ok(sources.some((source) => source.id === question.id));
+  assert.ok(sources.some((source) => source.id === answer.id));
+  assert.equal(hasApprovedCompetencyQuestion(sources), true);
+  const theory = await retrieve("What is prime factorisation?", {
+    subject: "maths", chapter: 1, route: "theory",
+  });
+  assert.ok(theory.every((source) => source.kind !== "ncert_exercise"));
 });

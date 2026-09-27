@@ -32,6 +32,7 @@ export interface Chapter {
 export type SourceKind =
   | "syllabus"
   | "ncert"
+  | "ncert_exercise"
   | "exemplar"
   | "pyq"
   | "sqp"

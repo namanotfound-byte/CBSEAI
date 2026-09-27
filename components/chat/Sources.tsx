@@ -11,6 +11,7 @@ import { X } from "lucide-react";
 const KIND_STYLE: Record<SourceKind, { label: string; dot: string }> = {
   syllabus: { label: "Current syllabus", dot: "var(--accent)" },
   ncert: { label: "NCERT", dot: "var(--accent)" },
+  ncert_exercise: { label: "NCERT exercise", dot: "var(--accent)" },
   ms: { label: "Marking scheme", dot: "var(--red)" },
   diagram: { label: "Diagram", dot: "#00A676" },
   exemplar: { label: "Exemplar", dot: "#00A676" },

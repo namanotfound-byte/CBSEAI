@@ -59,14 +59,14 @@ for path in (APP / "data" / "corpus").glob("*reviewed*.json"):
         reviewed_ids.add(row["id"])
         meta = row["meta"]
         if meta.get("sourcePath") and meta.get("page"):
-            reviewed_pages[meta["sourcePath"]].add(meta["page"])
+            reviewed_pages[key(meta["sourcePath"], meta.get("sourceMember"))].add(meta["page"])
 for row in jsonl(STAGED / "pilot-reviewed-batch.jsonl"):
     if row["id"] in reviewed_ids:
         continue
     reviewed_ids.add(row["id"])
     meta = row["meta"]
     if meta.get("sourcePath") and meta.get("page"):
-        reviewed_pages[meta["sourcePath"]].add(meta["page"])
+        reviewed_pages[key(meta["sourcePath"], meta.get("sourceMember"))].add(meta["page"])
 
 rows = []
 for name, item in source.items():

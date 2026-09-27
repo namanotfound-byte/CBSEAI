@@ -112,7 +112,7 @@ export async function POST(req: Request) {
                 route === "diagram"
                   ? ["ncert", "diagram", "ms"]
                   : route === "competency"
-                    ? ["cfpq", "sqp", "pyq"]
+                    ? ["cfpq", "sqp", "pyq", "ncert_exercise"]
                   : route === "marking" || route === "pyq"
                     ? ["ncert", "pyq", "sqp", "ms", "diagram"]
                     : undefined,
@@ -156,7 +156,7 @@ export async function POST(req: Request) {
         if (query.trim() && route === "competency" && !hasApprovedCompetencyQuestion(sources)) {
           send({
             type: "token",
-            text: "This topic is in the active syllabus, but no approved competency-based question from a mapped CBSE question bank is available yet.",
+            text: "This topic is in the active syllabus, but no approved practice question is available for it yet.",
           });
           send({ type: "done" });
           return;
@@ -167,8 +167,9 @@ export async function POST(req: Request) {
         // leaking the matching marking-scheme answer into the source panel.
         if (route === "competency") {
           const question = sources.find((source) =>
-            ["cfpq", "sqp", "pyq"].includes(source.kind) &&
-            ["question_block", "question_part"].includes(source.chunkType ?? ""),
+            (["cfpq", "sqp", "pyq"].includes(source.kind) &&
+              ["question_block", "question_part"].includes(source.chunkType ?? "")) ||
+            (source.kind === "ncert_exercise" && source.chunkType === "ncert_question"),
           );
           if (question) {
             const visibleSources = [
