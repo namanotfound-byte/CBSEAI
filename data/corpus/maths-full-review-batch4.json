@@ -1,0 +1,236 @@
+[
+  {
+    "id": "ncert.maths.ch02.p005.quadratic_graph_zero_cases",
+    "text": "For a quadratic polynomial ax²+bx+c, its graph can cross the x-axis at two distinct points, touch it at one point (a repeated zero), or not meet it. The x-coordinates of the intersections are exactly the real zeroes of the polynomial.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 2,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch02",
+      "chunkType": "ncert_concept",
+      "heading": "Polynomials",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-07",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch7.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh102.pdf",
+      "contentSha256": "f040ca888111fc005d6c1ed4153bbaddaeb3d001272b7a952e2421bb3190250d",
+      "language": "en",
+      "page": 5,
+      "conceptTags": [
+        "polynomial",
+        "quadratic",
+        "zeroes"
+      ],
+      "reviewNote": "Cases visually checked against the rendered PDF pages 5–6 and Figs. 2.3–2.5: two distinct crossings give two real zeroes, tangency gives one repeated zero, and no intersection gives no real zero.",
+      "pageEnd": 6,
+      "supportingPages": [
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "id": "ncert.maths.ch13.p014.modal_class",
+    "text": "In a grouped frequency distribution, the class interval with the greatest frequency is the modal class. The exact mode is estimated within that interval using the neighboring class frequencies; it cannot be read directly from the frequency list alone.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 13,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch13",
+      "chunkType": "ncert_concept",
+      "heading": "Statistics",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-07",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch7.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh113.pdf",
+      "contentSha256": "18815e1f62dfd05048e7539a2444007409b3d20b6dc62a57f69702f236511929",
+      "language": "en",
+      "page": 14,
+      "conceptTags": [
+        "statistics",
+        "mode",
+        "modal class"
+      ],
+      "reviewNote": "The grouped-mode explanation on PDF p14 distinguishes locating the modal class from estimating the mode."
+    }
+  },
+  {
+    "id": "ncert.maths.ch13.p021_022.cumulative_frequency_types",
+    "text": "A less-than cumulative frequency table adds frequencies from the first class onward and labels each total by the class upper limit. A more-than cumulative frequency table starts with the total and subtracts class frequencies successively, labeling each total by the class lower limit.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 13,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch13",
+      "chunkType": "ncert_concept",
+      "heading": "Statistics",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-07",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch7.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh113.pdf",
+      "contentSha256": "18815e1f62dfd05048e7539a2444007409b3d20b6dc62a57f69702f236511929",
+      "language": "en",
+      "page": 21,
+      "conceptTags": [
+        "statistics",
+        "cumulative frequency",
+        "grouped data"
+      ],
+      "reviewNote": "Pages 21–22 show both tables: less-than totals 5, 8, 12… and more-than totals 53, 48, 45…; upper- versus lower-limit labels checked.",
+      "pageEnd": 22,
+      "supportingPages": [
+        21,
+        22
+      ]
+    }
+  },
+  {
+    "id": "ncert.maths.ch14.p006.certain_impossible_events",
+    "text": "An impossible event has probability 0. A sure (certain) event has probability 1.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 14,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch14",
+      "chunkType": "ncert_concept",
+      "heading": "Probability",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-07",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch7.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh114.pdf",
+      "contentSha256": "d5f516dc7109fe926ae7388aac3f4b87a776e41098fc517baec0eec000528d11",
+      "language": "en",
+      "page": 6,
+      "conceptTags": [
+        "probability",
+        "certain event",
+        "impossible event"
+      ],
+      "reviewNote": "Definitions and examples appear on PDF p6; claims are limited to the stated event types."
+    }
+  },
+  {
+    "id": "ncert.maths.ch01.p003.fundamental_arithmetic_theorem",
+    "text": "Every composite number can be written as a product of primes, and this factorisation is unique apart from the order of the prime factors.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 1,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch01",
+      "chunkType": "ncert_concept",
+      "heading": "Real Numbers",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-11",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch11.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh101.pdf",
+      "contentSha256": "bd6466e8e7d437af89d7e640ff8381e68b57f91bf56cd4ce345ca031091d748f",
+      "language": "en",
+      "page": 3,
+      "conceptTags": [
+        "real numbers",
+        "prime factorisation",
+        "fundamental theorem of arithmetic"
+      ],
+      "reviewNote": "Theorem 1.1 is stated on PDF p3; wording follows the source statement."
+    }
+  },
+  {
+    "id": "ncert.maths.ch02.p004.quadratic_graph_orientation",
+    "text": "For y=ax²+bx+c with a≠0, the graph is a parabola that opens upward when a>0 and downward when a<0.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 2,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch02",
+      "chunkType": "ncert_concept",
+      "heading": "Polynomials",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-11",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch11.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh102.pdf",
+      "contentSha256": "f040ca888111fc005d6c1ed4153bbaddaeb3d001272b7a952e2421bb3190250d",
+      "language": "en",
+      "page": 4,
+      "conceptTags": [
+        "polynomials",
+        "quadratic graph",
+        "parabola"
+      ],
+      "reviewNote": "The statement, coefficient sign, and both parabola shapes were visually checked on rendered PDF p4."
+    }
+  },
+  {
+    "id": "ncert.maths.ch13.p023.median_class_selection",
+    "text": "For grouped data, locate the class whose cumulative frequency is greater than and nearest to n/2; this is the median class. The grouped median is then estimated within that interval using the median formula.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 13,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch13",
+      "chunkType": "ncert_concept",
+      "heading": "Statistics",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-11",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch11.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh113.pdf",
+      "contentSha256": "18815e1f62dfd05048e7539a2444007409b3d20b6dc62a57f69702f236511929",
+      "language": "en",
+      "page": 23,
+      "conceptTags": [
+        "statistics",
+        "grouped median",
+        "median class"
+      ],
+      "reviewNote": "The method on PDF p23 identifies the cumulative frequency greater than and nearest to n/2 as the median class; formula variables and example values are visible on the same page."
+    }
+  }
+]

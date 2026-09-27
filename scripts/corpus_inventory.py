@@ -109,6 +109,28 @@ def maths_track(cover: str) -> str | None:
     return None
 
 
+def maths_track_from_path(path: str) -> str | None:
+    """Use explicit archive labels only; older untracked Maths remains unknown."""
+    lower = path.lower()
+    if re.search(r"(?:math(?:s|ematics)?[_ -]*(?:basic|std\.?|standard)|(?:^|[/!_ -])241(?:[_ -]|$))", lower):
+        return "basic" if re.search(r"math(?:s|ematics)?[_ -]*basic", lower) else "standard"
+    if re.search(r"(?:^|[/!_ -])041(?:[_ -]|$)|math_s(?:[/.!_ -]|$)", lower):
+        return "standard"
+    return None
+
+
+def language_from_path(path: str) -> str | None:
+    lower = path.lower()
+    for label, code in (("hindi", "hi"), ("punjabi", "pa"), ("urdu", "ur")):
+        if re.search(rf"\b{label}\b", lower):
+            return code
+    return None
+
+
+def accessible_variant(path: str) -> bool:
+    return bool(re.search(r"\b(?:visually[ _-]*impaired|blind)\b", path, re.I))
+
+
 def document_role(path: str, cover: str) -> str | None:
     first = re.sub(r"\s+", " ", cover[:3000]).lower()
     name = path.lower()
@@ -147,6 +169,10 @@ def row_for(payload: bytes, path: str, member: str | None) -> dict:
     if named_year and published_year and named_year != published_year:
         warnings.append("filename_year_differs_from_internal_publication_year")
     kind = source_type(path)
+    cover_track = maths_track(cover) if subject == "maths" else None
+    path_track = maths_track_from_path(display) if subject == "maths" else None
+    if cover_track and path_track and cover_track != path_track:
+        warnings.append("maths_track_cover_path_conflict")
     if kind == "unknown":
         warnings.append("unknown_source_type")
     if not subject:
@@ -168,7 +194,10 @@ def row_for(payload: bytes, path: str, member: str | None) -> dict:
         "sourceYearCandidate": named_year,
         "internalSessionCandidate": cover_year(cover),
         "internalPublicationYearCandidate": published_year,
-        "mathsTrackCandidate": maths_track(cover) if subject == "maths" else None,
+        "mathsTrackCandidate": cover_track or path_track,
+        "mathsTrackEvidence": "cover" if cover_track else "path" if path_track else None,
+        "languageCandidate": language_from_path(display),
+        "accessibleVariantCandidate": accessible_variant(display),
         "documentRoleCandidate": document_role(display, cover),
         "coverExcerpt": re.sub(r"\s+", " ", cover[:500]).strip(),
         "syllabusVersion": None,

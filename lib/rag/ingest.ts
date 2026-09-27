@@ -68,7 +68,7 @@ export function validateChunks(chunks: Chunk[]) {
       errors.push(`${at}: child chunks need meta.parentId`);
     }
     if (chunk.meta?.officialUrl && !isOfficialUrl(chunk.meta.officialUrl)) {
-      errors.push(`${at}: officialUrl must be from NCERT, ePathshala, or CBSE Academic`);
+      errors.push(`${at}: officialUrl must be from NCERT, ePathshala, or CBSE`);
     }
   });
 
@@ -79,7 +79,7 @@ function isOfficialUrl(value: string) {
   try {
     const url = new URL(value);
     if (url.protocol !== "https:") return false;
-    return ["ncert.nic.in", "epathshala.nic.in", "cbseacademic.nic.in"]
+    return ["ncert.nic.in", "epathshala.nic.in", "cbseacademic.nic.in", "cbse.gov.in"]
       .some((host) => url.hostname === host || url.hostname.endsWith(`.${host}`));
   } catch {
     return false;

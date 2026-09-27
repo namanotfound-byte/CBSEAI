@@ -33,15 +33,20 @@ assert manifest, "Maths/Science source inventory is missing"
 source = {key(row["relativePath"], row.get("archiveMember")): row for row in manifest}
 
 staged_pages = defaultdict(set)
+pages_with_text = defaultdict(set)
 staging_errors = defaultdict(list)
 for filename in ("science-textbook-page-staging.jsonl", "maths-source-pages-staging.jsonl"):
     for row in jsonl(STAGED / filename):
         meta = row["meta"]
         staged_pages[meta["sourcePath"]].add(meta["page"])
+        if len(row.get("text", "").strip()) >= 40:
+            pages_with_text[meta["sourcePath"]].add(meta["page"])
 for row in jsonl(STAGED / "practice-page-extraction.jsonl"):
     name = key(row["relativePath"], row.get("archiveMember"))
     if row.get("pdfPage"):
         staged_pages[name].add(row["pdfPage"])
+        if row.get("extractedChars", 0) >= 40:
+            pages_with_text[name].add(row["pdfPage"])
     elif row.get("status") == "extraction_error":
         staging_errors[name].append(row.get("error", "unknown extraction error"))
 
@@ -67,6 +72,7 @@ rows = []
 for name, item in source.items():
     expected = item["pages"]
     staged = staged_pages[name]
+    text_pages = pages_with_text[name]
     reviewed = reviewed_pages[name]
     rows.append({
         "source": name,
@@ -76,6 +82,8 @@ for name, item in source.items():
         "sourceSha256": item["contentSha256"],
         "expectedPages": expected,
         "stagedPages": len(staged),
+        "pagesWithExtractedText": len(text_pages),
+        "pagesWithoutExtractedText": sorted(staged - text_pages),
         "reviewedPages": len(reviewed),
         "missingPageNumbers": sorted(set(range(1, expected + 1)) - staged),
         "status": (
@@ -90,14 +98,24 @@ for name, item in source.items():
 
 rows.sort(key=lambda row: row["source"])
 status = Counter(row["status"] for row in rows)
+families = defaultdict(lambda: {"sources": 0, "expectedPages": 0, "stagedPages": 0, "pagesWithExtractedText": 0, "reviewedSources": 0})
+for row in rows:
+    bucket = families[row["family"]]
+    bucket["sources"] += 1
+    bucket["expectedPages"] += row["expectedPages"]
+    bucket["stagedPages"] += row["stagedPages"]
+    bucket["pagesWithExtractedText"] += row["pagesWithExtractedText"]
+    bucket["reviewedSources"] += bool(row["reviewedPages"])
 report = {
     "generatedAt": datetime.now(timezone.utc).isoformat(),
     "meaning": "Staged means extracted for audit. Reviewed means at least one page has a reviewed passage. Neither implies that all questions/answers in a source are live.",
     "sourceCount": len(rows),
     "expectedPages": sum(row["expectedPages"] for row in rows),
     "stagedPages": sum(row["stagedPages"] for row in rows),
+    "pagesWithExtractedText": sum(row["pagesWithExtractedText"] for row in rows),
     "reviewedSourceCount": sum(bool(row["reviewedPages"]) for row in rows),
     "statusCounts": dict(status),
+    "families": dict(sorted(families.items())),
     "sources": rows,
 }
 output = DATA / "reports" / "all-maths-science-source-coverage.json"

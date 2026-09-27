@@ -142,6 +142,11 @@ test("accepts canonical ingestion metadata", () => {
     },
   }];
   assert.deepEqual(validateChunks(chunks), []);
+  const officialHistorical = structuredClone(chunks);
+  officialHistorical[0].meta.officialUrl = "https://www.cbse.gov.in/cbsenew/question-paper/2025/X/041_Mathematics_Standard.zip";
+  assert.deepEqual(validateChunks(officialHistorical), []);
+  officialHistorical[0].meta.officialUrl = "https://cbse.gov.in.attacker.example/paper.pdf";
+  assert.ok(validateChunks(officialHistorical).some((error) => error.includes("officialUrl")));
 });
 
 test("every deployable reviewed record is valid and uniquely identified", () => {
