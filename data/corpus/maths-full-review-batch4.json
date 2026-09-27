@@ -232,5 +232,108 @@
       ],
       "reviewNote": "The method on PDF p23 identifies the cumulative frequency greater than and nearest to n/2 as the median class; formula variables and example values are visible on the same page."
     }
+  },
+  {
+    "id": "ncert.maths.ch05.p003.arithmetic_progression_definition",
+    "text": "An arithmetic progression (AP) is a list of numbers in which every term after the first is obtained by adding the same fixed number to the preceding term. This fixed number is the common difference; it may be positive, negative, or zero.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 5,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch05",
+      "chunkType": "ncert_concept",
+      "heading": "Arithmetic Progressions",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-19",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch19.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh105.pdf",
+      "contentSha256": "1367857e5cd3206b1862655d17bf31778e6af768821d8dfc8c71d3ea0e19274c",
+      "language": "en",
+      "page": 3,
+      "supportingPages": [
+        3
+      ],
+      "conceptTags": [
+        "arithmetic progression",
+        "common difference",
+        "sequence"
+      ],
+      "reviewNote": "Definition and the allowed signs of the common difference are stated and visually checked on the rendered NCERT chapter PDF p3."
+    }
+  },
+  {
+    "id": "ncert.maths.ch05.p013.simple_interest_as_ap",
+    "text": "For a fixed principal P and annual simple-interest rate R percent, the interest accrued by the end of year t is Iₜ = PRt/100. At successive integer years these amounts form an AP with first term and common difference both equal to PR/100. For example, P=₹1000 and R=8 give ₹80, ₹160, ₹240, …; the interest after 30 years is the 30th term, ₹2400.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 5,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch05",
+      "chunkType": "ncert_concept",
+      "heading": "Arithmetic Progressions",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-19",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch19.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh105.pdf",
+      "contentSha256": "1367857e5cd3206b1862655d17bf31778e6af768821d8dfc8c71d3ea0e19274c",
+      "language": "en",
+      "page": 13,
+      "supportingPages": [
+        12,
+        13
+      ],
+      "conceptTags": [
+        "arithmetic progression",
+        "simple interest",
+        "nth term"
+      ],
+      "reviewNote": "The simple-interest formula and yearly values are shown on p12; p13 identifies the list as an AP with a=d=80 and computes the 30th term as 2400. Both pages visually checked on the original PDF."
+    }
+  },
+  {
+    "id": "ncert.maths.ch06.p007.triangle_similarity_conditions",
+    "text": "Two triangles are similar when both conditions hold: their corresponding angles are equal, and their corresponding sides are in the same ratio. Triangles with equal corresponding angles are equiangular; their corresponding sides have the same ratio.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 6,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch06",
+      "chunkType": "ncert_concept",
+      "heading": "Triangles",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-lower-cost-reviewed-batch-20260927-20",
+      "reviewEvidence": "reports/maths-lower-cost-source-review-batch20.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "page_verified_paraphrase_or_derivation",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh106.pdf",
+      "contentSha256": "028a1243ccd005e952fca0f9c498be86cd526b74deb0bc6cd5147e15eef12f58",
+      "language": "en",
+      "page": 7,
+      "conceptTags": [
+        "similarity",
+        "triangles",
+        "equiangular"
+      ],
+      "reviewNote": "Both similarity conditions and the equal-side-ratio statement for equiangular triangles were visually checked on the rendered original NCERT PDF p7."
+    }
   }
 ]
