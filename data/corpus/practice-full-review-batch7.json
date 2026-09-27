@@ -1,0 +1,203 @@
+[
+  {
+    "id": "pyq.science.2024.31-3-1.q01",
+    "text": "Identify the product ‘X’ obtained in the following chemical reaction :\nCaCO₃  —Δ→  ‘X’ + CO₂\n(A) Quick lime\n(B) Gypsum\n(C) Lime Stone\n(D) Plaster of Paris",
+    "meta": {
+      "subject": "science",
+      "chapter": 1,
+      "sourceYear": "2024",
+      "sourceSession": "2023-24",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch01",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "paperCode": "31/3/1",
+      "reviewBatch": "science-pyq-2024-31-3-1-v1",
+      "reviewEvidence": "reports/science-pyq-2024-31-3-1-reviewed-qa-batch1.md",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "joinPrefix": "2023-24|086|Science-PYQ|31/3/1|Q1",
+      "conceptTags": [
+        "Thermal decomposition"
+      ],
+      "kind": "pyq",
+      "chunkType": "question_block",
+      "page": 5,
+      "sourcePath": "PYQs/2024/QP/SCIENCE.zip",
+      "sourceMember": "SCIENCE/31_3_1_Science.pdf",
+      "contentSha256": "9bb300a6f323c6558e2feeff82b335cb7adcb33910390486d72d3af676c1e5f2",
+      "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
+      "heading": "Science 2024 Paper 31/3/1 · Q1",
+      "extractiveQuote": "Identify the product ‘X’ obtained in the following chemical reaction :\nCaCO₃  —Δ→  ‘X’ + CO₂\n(A) Quick lime\n(B) Gypsum\n(C) Lime Stone\n(D) Plaster of Paris"
+    }
+  },
+  {
+    "id": "ms.science.2024.31-3-1.q01",
+    "text": "(A) Quick lime",
+    "meta": {
+      "subject": "science",
+      "chapter": 1,
+      "sourceYear": "2024",
+      "sourceSession": "2023-24",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch01",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "paperCode": "31/3/1",
+      "reviewBatch": "science-pyq-2024-31-3-1-v1",
+      "reviewEvidence": "reports/science-pyq-2024-31-3-1-reviewed-qa-batch1.md",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "joinPrefix": "2023-24|086|Science-PYQ|31/3/1|Q1",
+      "conceptTags": [
+        "Thermal decomposition"
+      ],
+      "kind": "ms",
+      "chunkType": "marking_scheme",
+      "page": 3,
+      "sourcePath": "PYQs/2024/MS/Science.zip",
+      "sourceMember": "Science/Science_English)/science(eng.)set 3.pdf",
+      "contentSha256": "5bacdda5feb4b8f0278100c4c6eeb38fca0711a30340dcc5e2fa58413e9fddf3",
+      "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
+      "heading": "Science Marking Scheme 2024 Paper 31/3/1 · Q1",
+      "extractiveQuote": "(A) Quick lime",
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q1|answer"
+    }
+  },
+  {
+    "id": "pyq.science.2024.31-3-1.q02",
+    "text": "Select a pair of natural indicator from the following :\n(A) Litmus and methyl orange\n(B) Turmeric and Litmus\n(C) Phenolphthalein and methyl orange\n(D) Methyl orange and Turmeric",
+    "meta": {
+      "subject": "science",
+      "chapter": 2,
+      "sourceYear": "2024",
+      "sourceSession": "2023-24",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch02",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "paperCode": "31/3/1",
+      "reviewBatch": "science-pyq-2024-31-3-1-v1",
+      "reviewEvidence": "reports/science-pyq-2024-31-3-1-reviewed-qa-batch1.md",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "joinPrefix": "2023-24|086|Science-PYQ|31/3/1|Q2",
+      "conceptTags": [
+        "Natural indicators"
+      ],
+      "kind": "pyq",
+      "chunkType": "question_block",
+      "page": 5,
+      "sourcePath": "PYQs/2024/QP/SCIENCE.zip",
+      "sourceMember": "SCIENCE/31_3_1_Science.pdf",
+      "contentSha256": "9bb300a6f323c6558e2feeff82b335cb7adcb33910390486d72d3af676c1e5f2",
+      "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
+      "heading": "Science 2024 Paper 31/3/1 · Q2",
+      "extractiveQuote": "Select a pair of natural indicator from the following :\n(A) Litmus and methyl orange\n(B) Turmeric and Litmus\n(C) Phenolphthalein and methyl orange\n(D) Methyl orange and Turmeric"
+    }
+  },
+  {
+    "id": "ms.science.2024.31-3-1.q02",
+    "text": "(B) Turmeric and Litmus",
+    "meta": {
+      "subject": "science",
+      "chapter": 2,
+      "sourceYear": "2024",
+      "sourceSession": "2023-24",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch02",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "paperCode": "31/3/1",
+      "reviewBatch": "science-pyq-2024-31-3-1-v1",
+      "reviewEvidence": "reports/science-pyq-2024-31-3-1-reviewed-qa-batch1.md",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "joinPrefix": "2023-24|086|Science-PYQ|31/3/1|Q2",
+      "conceptTags": [
+        "Natural indicators"
+      ],
+      "kind": "ms",
+      "chunkType": "marking_scheme",
+      "page": 3,
+      "sourcePath": "PYQs/2024/MS/Science.zip",
+      "sourceMember": "Science/Science_English)/science(eng.)set 3.pdf",
+      "contentSha256": "5bacdda5feb4b8f0278100c4c6eeb38fca0711a30340dcc5e2fa58413e9fddf3",
+      "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
+      "heading": "Science Marking Scheme 2024 Paper 31/3/1 · Q2",
+      "extractiveQuote": "(B) Turmeric and Litmus",
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q2|answer"
+    }
+  },
+  {
+    "id": "pyq.science.2024.31-3-1.q03",
+    "text": "A chemical compound used in glass, soap and paper industries is\n(A) Washing Soda\n(B) Baking Soda\n(C) Bleaching Powder\n(D) Common Salt",
+    "meta": {
+      "subject": "science",
+      "chapter": 2,
+      "sourceYear": "2024",
+      "sourceSession": "2023-24",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch02",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "paperCode": "31/3/1",
+      "reviewBatch": "science-pyq-2024-31-3-1-v1",
+      "reviewEvidence": "reports/science-pyq-2024-31-3-1-reviewed-qa-batch1.md",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "joinPrefix": "2023-24|086|Science-PYQ|31/3/1|Q3",
+      "conceptTags": [
+        "Uses of washing soda"
+      ],
+      "kind": "pyq",
+      "chunkType": "question_block",
+      "page": 5,
+      "sourcePath": "PYQs/2024/QP/SCIENCE.zip",
+      "sourceMember": "SCIENCE/31_3_1_Science.pdf",
+      "contentSha256": "9bb300a6f323c6558e2feeff82b335cb7adcb33910390486d72d3af676c1e5f2",
+      "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
+      "heading": "Science 2024 Paper 31/3/1 · Q3",
+      "extractiveQuote": "A chemical compound used in glass, soap and paper industries is\n(A) Washing Soda\n(B) Baking Soda\n(C) Bleaching Powder\n(D) Common Salt"
+    }
+  },
+  {
+    "id": "ms.science.2024.31-3-1.q03",
+    "text": "(A) Washing Soda",
+    "meta": {
+      "subject": "science",
+      "chapter": 2,
+      "sourceYear": "2024",
+      "sourceSession": "2023-24",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch02",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "paperCode": "31/3/1",
+      "reviewBatch": "science-pyq-2024-31-3-1-v1",
+      "reviewEvidence": "reports/science-pyq-2024-31-3-1-reviewed-qa-batch1.md",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "joinPrefix": "2023-24|086|Science-PYQ|31/3/1|Q3",
+      "conceptTags": [
+        "Uses of washing soda"
+      ],
+      "kind": "ms",
+      "chunkType": "marking_scheme",
+      "page": 3,
+      "sourcePath": "PYQs/2024/MS/Science.zip",
+      "sourceMember": "Science/Science_English)/science(eng.)set 3.pdf",
+      "contentSha256": "5bacdda5feb4b8f0278100c4c6eeb38fca0711a30340dcc5e2fa58413e9fddf3",
+      "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
+      "heading": "Science Marking Scheme 2024 Paper 31/3/1 · Q3",
+      "extractiveQuote": "(A) Washing Soda",
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q3|answer"
+    }
+  }
+]

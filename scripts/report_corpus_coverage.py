@@ -37,7 +37,7 @@ source = {key(row["relativePath"], row.get("archiveMember")): row for row in man
 staged_pages = defaultdict(set)
 pages_with_text = defaultdict(set)
 staging_errors = defaultdict(list)
-for filename in ("science-textbook-page-staging.jsonl", "maths-source-pages-staging.jsonl"):
+for filename in ("science-textbook-page-staging.jsonl", "maths-source-pages-staging.jsonl", "model-paper-ocr-page-staging.jsonl"):
     for row in jsonl(STAGED / filename):
         meta = row["meta"]
         staged_pages[meta["sourcePath"]].add(meta["page"])
