@@ -10,6 +10,7 @@ import { authenticatedUser } from "@/lib/auth/supabase";
 import { conversationIntent, conversationReply } from "@/lib/ai/conversation";
 import { getSyllabusRestriction } from "@/lib/rag/syllabus-index";
 import { isOfficialAnswerFollowup, referencedPracticeQuestionId, resolvePracticeAnswer } from "@/lib/rag/practice-answer";
+import { preparePracticeQuestion } from "@/lib/rag/practice-question";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -190,24 +191,14 @@ export async function POST(req: Request) {
         // Present it exactly as reviewed, without spending a free model call or
         // leaking the matching marking-scheme answer into the source panel.
         if (route === "competency") {
-          const question = sources.find((source) =>
-            (["cfpq", "sqp", "pyq"].includes(source.kind) &&
-              ["question_block", "question_part"].includes(source.chunkType ?? "")) ||
-            (source.kind === "ncert_exercise" && source.chunkType === "ncert_question") ||
-            (source.kind === "exemplar" && source.chunkType === "exemplar_question"),
-          );
-          if (question) {
-            const visibleSources = [
-              ...sources.filter((source) => source.kind === "syllabus").slice(0, 1),
-              question,
-            ];
-            send({ type: "sources", sources: visibleSources });
-            const text = `Practice question:\n\n${question.content} [[source:${question.id}]]`;
-            send({ type: "token", text });
+          const practice = preparePracticeQuestion(sources);
+          if (practice) {
+            send({ type: "sources", sources: practice.visibleSources });
+            send({ type: "token", text: practice.text });
             if (!hasImages) {
               await setCachedAnswer(cacheKey, {
-                text,
-                sources: visibleSources,
+                text: practice.text,
+                sources: practice.visibleSources,
               }).catch(() => undefined);
             }
             send({ type: "done" });

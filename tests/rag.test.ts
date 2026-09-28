@@ -10,6 +10,7 @@ import { inferSyllabusScope } from "../lib/rag/syllabus-index";
 import { getSyllabusRestriction } from "../lib/rag/syllabus-index";
 import { findAlreadyPublishedReviewedChunks } from "../lib/rag/reviewed-publication";
 import { findPracticeAnswer, isOfficialAnswerFollowup, isPracticeQuestion, practiceAnswerKinds, referencedPracticeQuestionId, resolvePracticeAnswer } from "../lib/rag/practice-answer";
+import { preparePracticeQuestion } from "../lib/rag/practice-question";
 import { conversationIntent, conversationReply } from "../lib/ai/conversation";
 import { REVIEWED_ADDENDUM } from "../lib/rag/reviewed-addendum";
 import type { Chunk, Source } from "../lib/types";
@@ -28,6 +29,36 @@ test("routes canonical query types", () => {
   assert.equal(routeQuery("Give me a CBSE Science question-bank question about photosynthesis"), "competency");
   assert.equal(routeQuery("Solve this sample-paper question about soap"), "pyq");
   assert.equal(routeQuery("explain photosynthesis"), "theory");
+});
+
+test("direct practice rendering preserves source text, hides the answer, and cites the question", () => {
+  const prompt = "Which process is described?\na. photolysis\nd. sphotolysis";
+  const question: Source = {
+    id: "cfpq-science-q1", kind: "cfpq", chunkType: "question_block",
+    label: "CFPQ · Science · Ch 5 · p. 12", snippet: prompt, content: prompt,
+  };
+  const answer: Source = {
+    id: "ms-science-q1", kind: "ms", chunkType: "marking_scheme",
+    label: "Marking scheme", snippet: "Correct answer: d", content: "Correct answer: d",
+  };
+  const result = preparePracticeQuestion([
+    { id: "scope", kind: "syllabus", chunkType: "syllabus_scope", label: "Scope", snippet: "In syllabus" },
+    question,
+    answer,
+  ]);
+  assert.ok(result);
+  assert.equal(result.text, `Practice question:\n\n${prompt} [[source:${question.id}]]`);
+  assert.ok(result.visibleSources.some((source) => source.id === question.id));
+  assert.equal(result.visibleSources.some((source) => source.id === answer.id), false);
+  assert.match(result.text, new RegExp(`\\[\\[source:${question.id}\\]\\]$`));
+  assert.equal(preparePracticeQuestion([{
+    id: "item-bank-q1", kind: "item_bank", chunkType: "item_bank_question",
+    label: "Item bank", snippet: "Exact prompt", content: "Exact prompt",
+  }])?.question.id, "item-bank-q1");
+  assert.equal(preparePracticeQuestion([{
+    id: "question-bank-q1", kind: "question_bank", chunkType: "question_bank_question",
+    label: "Question bank", snippet: "Exact prompt", content: "Exact prompt",
+  }])?.question.id, "question-bank-q1");
 });
 
 test("an explicitly named exercise phrase outranks nearby questions", () => {
