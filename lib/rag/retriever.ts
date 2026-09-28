@@ -55,10 +55,14 @@ export async function retrieve(
 ): Promise<Source[]> {
   const store = getVectorStore();
   const topK = filters.topK ?? 5;
-  const inferred = inferSyllabusScope(query, filters.subject);
+  const namedItemIdentity = query.match(/\bmaths10[a-z0-9]+\b/i)?.[0].toLowerCase();
+  const itemBankQuery = Boolean(namedItemIdentity) && /\bitem[\s-]*bank\b/i.test(query);
+  const inferred = itemBankQuery
+    ? { subject: "maths" as const, chapters: undefined, outOfSyllabus: false }
+    : inferSyllabusScope(query, filters.subject);
   if (inferred.outOfSyllabus) return [];
   const requestedKinds = filters.route === "competency"
-    ? (/\bitem[\s-]*bank\b/i.test(query)
+    ? (itemBankQuery
         ? (["item_bank"] satisfies SourceKind[])
         : /\bncert\b.*\bexercis/i.test(query)
         ? (["ncert_exercise"] satisfies SourceKind[])
@@ -68,8 +72,9 @@ export async function retrieve(
     : filters.kinds?.filter((kind) => kind !== "syllabus") ?? CONTENT_KINDS;
   const scopedFilters: RetrievalFilters = {
     ...filters,
-    subject: filters.subject ?? inferred.subject,
-    chapters:
+    subject: itemBankQuery ? "maths" : filters.subject ?? inferred.subject,
+    chapter: itemBankQuery ? undefined : filters.chapter,
+    chapters: itemBankQuery ? undefined :
       filters.chapter || filters.chapters?.length
         ? filters.chapters
         : inferred.chapters,
@@ -84,6 +89,7 @@ export async function retrieve(
     ...scopedFilters,
     chapters: filters.chapters,
     kinds: requestedKinds,
+    itemIdentitySearch: itemBankQuery ? namedItemIdentity : undefined,
     topK: 40,
   };
   const [syllabusHits, broadHits] = await Promise.all([
@@ -121,6 +127,7 @@ export async function retrieve(
     chapters: undefined,
     syllabusTopicId,
     kinds: requestedKinds,
+    itemIdentitySearch: itemBankQuery ? namedItemIdentity : undefined,
   };
 
   // Hybrid retrieval over-fetches to 40; the cross-encoder then produces the

@@ -78,6 +78,7 @@ function createMemoryStore(): VectorStore {
         .filter((c) => !filters.subject || c.meta.subject === filters.subject)
         .filter((c) => !filters.chapter || c.meta.chapter === filters.chapter)
         .filter((c) => !filters.chapters?.length || filters.chapters.includes(c.meta.chapter))
+        .filter((c) => !filters.itemIdentitySearch || c.meta.itemIdentitySearch === filters.itemIdentitySearch)
         .filter((c) => !filters.kinds?.length || filters.kinds.includes(c.meta.kind))
         .map((c) => {
           const lexical = overlap(
@@ -113,6 +114,7 @@ function createMemoryStore(): VectorStore {
         .filter((c) => !filters.subject || c.meta.subject === filters.subject)
         .filter((c) => !filters.chapter || c.meta.chapter === filters.chapter)
         .filter((c) => !filters.chapters?.length || filters.chapters.includes(c.meta.chapter))
+        .filter((c) => !filters.itemIdentitySearch || c.meta.itemIdentitySearch === filters.itemIdentitySearch)
         .filter((c) => !filters.kinds?.length || filters.kinds.includes(c.meta.kind))
         .slice(0, filters.topK ?? 24)
         .map((c) => ({ ...c, score: 1 }));
@@ -131,6 +133,7 @@ function createMemoryStore(): VectorStore {
         .filter((c) => !filters.subject || c.meta.subject === filters.subject)
         .filter((c) => !filters.chapter || c.meta.chapter === filters.chapter)
         .filter((c) => !filters.chapters?.length || filters.chapters.includes(c.meta.chapter))
+        .filter((c) => !filters.itemIdentitySearch || c.meta.itemIdentitySearch === filters.itemIdentitySearch)
         .map((c) => ({ ...c, score: 1 }));
     },
     async count() {
@@ -243,6 +246,7 @@ export function createQdrantStore(
             ["meta.reviewStatus", "keyword"],
             ["meta.assessmentStatus", "keyword"],
             ["meta.joinPrefix", "keyword"],
+            ["meta.itemIdentitySearch", "keyword"],
           ];
           await Promise.all(indexes.map(async ([field_name, field_schema]) => {
             const response = await fetch(`${base}/collections/${collection}/index?wait=true`, {
@@ -275,6 +279,9 @@ export function createQdrantStore(
     if (filters.chapters?.length) clauses.push({ key: "meta.chapter", match: { any: filters.chapters } });
     if (filters.kinds?.length) {
       clauses.push({ key: "meta.kind", match: { any: filters.kinds } });
+    }
+    if (filters.itemIdentitySearch) {
+      clauses.push({ key: "meta.itemIdentitySearch", match: { value: filters.itemIdentitySearch } });
     }
     if (prefixes?.length) clauses.push({ key: "meta.joinPrefix", match: { any: prefixes } });
     return clauses;
@@ -312,6 +319,7 @@ export function createQdrantStore(
       (!filters.subject || chunk.meta.subject === filters.subject) &&
       (!filters.chapter || chunk.meta.chapter === filters.chapter)
       && (!filters.chapters?.length || filters.chapters.includes(chunk.meta.chapter)) &&
+      (!filters.itemIdentitySearch || chunk.meta.itemIdentitySearch === filters.itemIdentitySearch) &&
       (!filters.kinds?.length || filters.kinds.includes(chunk.meta.kind))
     );
   }

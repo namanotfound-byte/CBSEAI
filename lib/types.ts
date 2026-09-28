@@ -187,6 +187,8 @@ export interface Chunk {
     pairedQuestionId?: string;
     pairedAnswerId?: string;
     answerVisibility?: "question_only" | "solution_only" | "both";
+    itemIdentity?: string;
+    itemIdentitySearch?: string;
     sourcePath?: string;
     extractionVersion?: string;
     reviewBatch?: string;
@@ -206,6 +208,8 @@ export interface RetrievalFilters {
   syllabusTopicId?: string;
   topK?: number;
   route?: QueryRoute;
+  /** Exact normalized identity for a named CBSE competency item. */
+  itemIdentitySearch?: string;
 }
 
 export type QueryRoute =

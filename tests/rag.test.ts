@@ -346,12 +346,13 @@ test("approved formative item-bank pairs are valid only as practice material", a
   const officialPair = await resolvePracticeAnswer(question.id, getVectorStore());
   assert.equal(officialPair?.answer.id, answer.id);
 
-  const practice = await retrieve("Give me a CBSE Maths item-bank question about the value of alpha plus beta minus alpha beta", {
-    subject: "maths", chapter: 2, route: "competency",
+  const practice = await retrieve("Give me CBSE Maths item bank question Maths10SS8 without the answer.", {
+    subject: "maths", chapter: 3, route: "competency",
   });
   assert.ok(practice.some((source) => source.id === question.id));
   assert.ok(practice.some((source) => source.id === answer.id));
   assert.ok(practice.some((source) => source.label.startsWith("CBSE item bank")));
+  assert.ok(practice.some((source) => source.kind === "syllabus" && source.syllabusTopicId === question.meta.syllabusTopicId));
 
   const theory = await retrieve("What is the sum and product of polynomial zeroes?", {
     subject: "maths", chapter: 2, route: "theory",

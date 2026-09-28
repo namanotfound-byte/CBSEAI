@@ -45,7 +45,8 @@
       "answerSourcePage": 13,
       "reviewNote": "Question, all four options, answer, and one-mark guidance visually checked together on rendered source page 13 at 180 DPI.",
       "pairedAnswerId": "itembank.maths.class10.polynomials.maths10ss8.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SS8|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SS8|question",
+      "itemIdentitySearch": "maths10ss8"
     }
   },
   {
@@ -94,7 +95,8 @@
       "answerSourcePage": 13,
       "reviewNote": "Question, all four options, answer, and one-mark guidance visually checked together on rendered source page 13 at 180 DPI.",
       "pairedQuestionId": "itembank.maths.class10.polynomials.maths10ss8.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SS8|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SS8|answer",
+      "itemIdentitySearch": "maths10ss8"
     }
   },
   {
@@ -143,7 +145,8 @@
       "answerSourcePage": 15,
       "reviewNote": "Question/options and rubric heading visually checked on rendered source page 14 at 180 DPI; continuation with answer C and guidance visually checked on rendered source page 15 at 180 DPI.",
       "pairedAnswerId": "itembank.maths.class10.polynomials.maths10ar1.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AR1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AR1|question",
+      "itemIdentitySearch": "maths10ar1"
     }
   },
   {
@@ -192,7 +195,8 @@
       "answerSourcePage": 15,
       "reviewNote": "Question/options and rubric heading visually checked on rendered source page 14 at 180 DPI; continuation with answer C and guidance visually checked on rendered source page 15 at 180 DPI.",
       "pairedQuestionId": "itembank.maths.class10.polynomials.maths10ar1.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AR1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AR1|answer",
+      "itemIdentitySearch": "maths10ar1"
     }
   },
   {
@@ -241,7 +245,8 @@
       "answerSourcePage": 16,
       "reviewNote": "Question and complete worked mark-scheme answer visually checked together on rendered source page 16 at 180 DPI.",
       "pairedAnswerId": "itembank.maths.class10.polynomials.maths10akp10.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AKP10|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AKP10|question",
+      "itemIdentitySearch": "maths10akp10"
     }
   },
   {
@@ -290,7 +295,8 @@
       "answerSourcePage": 16,
       "reviewNote": "Question and complete worked mark-scheme answer visually checked together on rendered source page 16 at 180 DPI.",
       "pairedQuestionId": "itembank.maths.class10.polynomials.maths10akp10.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AKP10|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AKP10|answer",
+      "itemIdentitySearch": "maths10akp10"
     }
   },
   {
@@ -339,7 +345,8 @@
       "answerSourcePage": 18,
       "reviewNote": "Question/options and start of marking-scheme block visually checked on rendered source page 17 at 180 DPI; the keyed answer and guidance continuation visually checked on rendered source page 18 at 180 DPI. The duplicate C/D distractor is retained exactly as printed.",
       "pairedAnswerId": "itembank.maths.class10.polynomials.maths10rk1.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RK1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RK1|question",
+      "itemIdentitySearch": "maths10rk1"
     }
   },
   {
@@ -388,7 +395,8 @@
       "answerSourcePage": 18,
       "reviewNote": "Question/options and start of marking-scheme block visually checked on rendered source page 17 at 180 DPI; the keyed answer and guidance continuation visually checked on rendered source page 18 at 180 DPI. The duplicate C/D distractor is retained exactly as printed.",
       "pairedQuestionId": "itembank.maths.class10.polynomials.maths10rk1.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RK1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RK1|answer",
+      "itemIdentitySearch": "maths10rk1"
     }
   },
   {
@@ -452,7 +460,8 @@
       "chunkTextSha256": "f6c1cf286043c6ee620f587f14225c3449557a29dccb60af309dbf8792cc048b",
       "extractiveQuote": "If the lines 3x + 2ky − 2 = 0 and 2x + 5y + 1 = 0 are parallel, then the value of k is\n(A) 4/15\n(B) 15/4\n(C) 4/5\n(D) 5/4",
       "pairedAnswerId": "itembank.maths.class10.pair_linear_equations.maths10rk2.q1.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RK2|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RK2|Q1|question",
+      "itemIdentitySearch": "maths10rk2"
     }
   },
   {
@@ -516,7 +525,8 @@
       "sourcePageTextSha256": "01547d115846266ec4722594ee8e784c4dca276d2f82d8f94f5346c4f5bc6f39",
       "extractiveQuote": "Answer: B. 15/4. The condition for parallel lines is a₁/a₂ = b₁/b₂ ≠ c₁/c₂. Hence, 3/2 = 2k/5; k = 15/4.",
       "pairedQuestionId": "itembank.maths.class10.pair_linear_equations.maths10rk2.q1.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RK2|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RK2|Q1|answer",
+      "itemIdentitySearch": "maths10rk2"
     }
   },
   {
@@ -579,7 +589,8 @@
       "chunkTextSha256": "e8e499630e51d6785e0788e6ef5432f9fc3802c5c130f7ee30eeea8220f35b80",
       "extractiveQuote": "Solve 2x − y − 3 = 0, 4x − y − 5 = 0 using the substitution method. Show your working. (2 marks)",
       "pairedAnswerId": "itembank.maths.class10.pair_linear_equations.maths10sk8.q1.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK8|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK8|Q1|question",
+      "itemIdentitySearch": "maths10sk8"
     }
   },
   {
@@ -642,7 +653,8 @@
       "sourcePageTextSha256": "8f3621244b510d21f3a4764c25c5b94572c7e63217fde7584478095dd5fed118",
       "extractiveQuote": "Answer Guidance: y = 2x−3; 4x − (2x − 3) − 5 = 0; x = 1; y = 2(1 − 3) = −1; x = 1, y = −1. M1 for obtaining substitution; A1 correct answer.",
       "pairedQuestionId": "itembank.maths.class10.pair_linear_equations.maths10sk8.q1.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK8|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK8|Q1|answer",
+      "itemIdentitySearch": "maths10sk8"
     }
   },
   {
@@ -706,7 +718,8 @@
       "chunkTextSha256": "ba734c51223b9d5b17a1935de078849eb3e9517ef20577167b3a746e7713f224",
       "extractiveQuote": "There are two classrooms, A and B. If 5 students are shifted from Room A to Room B, the resulting number of students in the two rooms becomes equal. If 5 students are shifted from Room B to Room A, the resulting number of students in Room A becomes double the number of students left in Room B. Find the original number of students in the two rooms separately. (4 marks)",
       "pairedAnswerId": "itembank.maths.class10.pair_linear_equations.maths10gs6.q1.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10GS6|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10GS6|Q1|question",
+      "itemIdentitySearch": "maths10gs6"
     }
   },
   {
@@ -770,7 +783,8 @@
       "sourcePageTextSha256": "25c119e9b67650af15f7ac68dc9b483478cb7cc93c4fe5dd86492f41ac84df5b",
       "extractiveQuote": "Answer Guidance: Let x and y be the number of students in Room A and Room B. Then x−5=y+5 and x+5=2(y−5). Simplify: x−y=10; x−2y=−15. Solve equations (3) and (4): x=35 and y=25. No. of students in Room A = 35; No. of students in Room B = 25. M1 forming equations; M2 simplifying; M3 determining x,y; A1 correct answer.",
       "pairedQuestionId": "itembank.maths.class10.pair_linear_equations.maths10gs6.q1.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10GS6|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10GS6|Q1|answer",
+      "itemIdentitySearch": "maths10gs6"
     }
   },
   {
@@ -834,7 +848,8 @@
       "chunkTextSha256": "ef575340ae00687065a3340f56af87622736750a8b0edf1c23b92a8767cbee37",
       "extractiveQuote": "The taxi chares in a city consist of a fixed charge together with the charge for the distance covered. For a distance of 10km, the charge paid is Rs105, and for a journey of 15km, the charge paid is Rs 155.\n(a) What are the fixed charges and charges per kilometre? (1 mark)\n(b) How much does a person have to pay for travelling a distance of 25Km? (3 marks)",
       "pairedAnswerId": "itembank.maths.class10.pair_linear_equations.maths10sk7.q1.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK7|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK7|Q1|question",
+      "itemIdentitySearch": "maths10sk7"
     }
   },
   {
@@ -898,7 +913,8 @@
       "sourcePageTextSha256": "9ee00f163cf2a8e020cad3fca6bf421b14cd4458d80622ab9a53de69cba40610",
       "extractiveQuote": "(a) Answer: Fixed charge Rs 5; charge per Km Rs 10. Guidance: let fixed charge be x and charge per Km be y; x+10y=105; x+15y=155; solve and get y=10, substitute to get x=5. (b) Answer: Rs 255. A1 for the correct answer.",
       "pairedQuestionId": "itembank.maths.class10.pair_linear_equations.maths10sk7.q1.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK7|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK7|Q1|answer",
+      "itemIdentitySearch": "maths10sk7"
     }
   },
   {
@@ -961,7 +977,8 @@
       "chunkTextSha256": "7864de6c143aa7daae5e1d557a6227f7dd756de64c358e606461ab031bd9f2da",
       "extractiveQuote": "The product of the zeroes of a quadratic polynomial, 2x² − 5x + m is 4. Find the value of m. (1 mark)",
       "pairedAnswerId": "itembank.maths.class10.polynomials.maths10ps2.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10PS2|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10PS2|Q1|question",
+      "itemIdentitySearch": "maths10ps2"
     }
   },
   {
@@ -1024,7 +1041,8 @@
       "chunkTextSha256": "18e879f2dfcc5f894af420cd277c5c9741d4a7c72bec385d8e8bb957a4950dd2",
       "extractiveQuote": "Answer: 8. αβ = c/a; 4 = m/2; m = 8. A1 for the correct answer.",
       "pairedQuestionId": "itembank.maths.class10.polynomials.maths10ps2.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10PS2|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10PS2|Q1|answer",
+      "itemIdentitySearch": "maths10ps2"
     }
   },
   {
@@ -1087,7 +1105,8 @@
       "chunkTextSha256": "177e7a8243ca94090850410bb21af6ff34ea230b81f0681a24395901b32c61f5",
       "extractiveQuote": "If the sum of the zeroes of the quadratic polynomial 5x² − kx + 7 is 4, ten find the value of “k”.\n(A) 20\n(B) 21\n(C) 18\n(D) 19 (1 mark)",
       "pairedAnswerId": "itembank.maths.class10.polynomials.maths10as2.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AS2|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AS2|Q1|question",
+      "itemIdentitySearch": "maths10as2"
     }
   },
   {
@@ -1150,7 +1169,8 @@
       "chunkTextSha256": "49540157179e11a135d73bb563a9d14b1ccaea9bd518b5733e3eca2c5b8e8c49",
       "extractiveQuote": "Answer Guidance: A. 20. Sum of Zeroes = −b/a. 4 = −(−k)/5, therefore k = 20. A1, 1 mark for the correct answer.",
       "pairedQuestionId": "itembank.maths.class10.polynomials.maths10as2.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AS2|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AS2|Q1|answer",
+      "itemIdentitySearch": "maths10as2"
     }
   },
   {
@@ -1215,7 +1235,8 @@
       "chunkTextSha256": "fa12815ca203932a409f5b302b51f7e5895ad7a35051806b7d10150bf588a0b6",
       "extractiveQuote": "Jodhpur is the second-largest city in the Indian state of Rajasthan and officially the second metropolitan city of the state. Jodhpur is a popular tourist destination, featuring many palaces, forts, and temples set in the stark landscape of the Thar Desert. It is popularly known as the “Blue City” among the people of Rajasthan and all over India. Last year Rahul visited Jodhpur with a group of 25 friends. At Mehrangarh Fort the fares per person were: Horse—Rs 50 during normal hours and Rs 150 during peak hours; Elephant—Rs 100 during normal hours and Rs 200 during peak hours.\n(a) On their first day, they rode in normal hours and paid Rs 1950 for the ride. Let x be the number of horses hired and y the number of elephants hired. Find the number of horses and elephants hired. (4 marks)\n(b) They revisited the next day during peak hours. Calculate the increase in charges. (2 marks)",
       "pairedAnswerId": "itembank.maths.class10.pair_linear_equations.maths10ss5.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SS5|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SS5|Q1|question",
+      "itemIdentitySearch": "maths10ss5"
     }
   },
   {
@@ -1281,7 +1302,8 @@
       "chunkTextSha256": "0287032151a356b4b72978d46779cc865de03caceed7434d3513385fe227b37f",
       "extractiveQuote": "Answer: Number of horses hired = 11; number of elephants hired = 14. Equations: x+y=25; 50x+100y=1950, or x+2y=39. For peak hours: horse fare Rs 1650, elephant fare Rs 2800, total Rs 4450; extra fare = 4450−1950 = Rs 2500.",
       "pairedQuestionId": "itembank.maths.class10.pair_linear_equations.maths10ss5.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SS5|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SS5|Q1|answer",
+      "itemIdentitySearch": "maths10ss5"
     }
   },
   {
@@ -1345,7 +1367,8 @@
       "chunkTextSha256": "e8d1bf92afcabc4bffc79a9ec2df656d0f5a12c19544097e833b7c909aa2c433",
       "extractiveQuote": "Mrs. Renu Sharma owns an amusement park in Delhi. Tickets cost Rs 150 for children and Rs 400 for adults. One day 750 tickets were sold and Rs 212,500 was collected.\n(a) Find the number of children and adults who visited the park that day. (4 marks)\n(b) Compute the total amount collected if 415 children and 150 adults visited the park. (1 mark)",
       "pairedAnswerId": "itembank.maths.class10.pair_linear_equations.maths10ss6.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SS6|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SS6|Q1|question",
+      "itemIdentitySearch": "maths10ss6"
     }
   },
   {
@@ -1409,7 +1432,8 @@
       "chunkTextSha256": "805358bf436647e6d89e8deb9f53a7be6a0b11abccee0724c40569b032b4c1b5",
       "extractiveQuote": "Answer: Number of children = 350; number of adults = 400. Since 750 people visited, x+y=750; collected amount Rs 212500 gives 150x+400y=212500, hence 3x+8y=4250. For (b): Rs 122250 = 415×150 + 150×400.",
       "pairedQuestionId": "itembank.maths.class10.pair_linear_equations.maths10ss6.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SS6|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SS6|Q1|answer",
+      "itemIdentitySearch": "maths10ss6"
     }
   },
   {
@@ -1473,7 +1497,8 @@
       "chunkTextSha256": "282b7d242d180bd1c8cc91073dbe5f73b37671433b648cc6c2a2b50fc6709a6a",
       "extractiveQuote": "Mr. Singh owns an amusement park in Delhi. Children’s tickets cost Rs 150 and adults’ tickets cost Rs 400. On one day 480 tickets were sold and Rs 134500 was collected. Let x be the number of children and y the number of adults.\n(a) How many children visited the park that day? (4 marks)\n(b) How much would be collected if 300 children and 350 adults visited the park? (2 marks)",
       "pairedAnswerId": "itembank.maths.class10.pair_linear_equations.maths10rm8.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RM8|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RM8|Q1|question",
+      "itemIdentitySearch": "maths10rm8"
     }
   },
   {
@@ -1537,7 +1562,8 @@
       "chunkTextSha256": "effffc0990ee9c1a709b1e04fa95a0ae2935a2ec23a234e043c0d7f4352bed79",
       "extractiveQuote": "Answer: Since 480 people visited, x+y=480. Collected amount Rs 134500 gives 150x+400y=134500 and 3x+8y=2690. Solving gives x=230; number of children attended = 230. For (b): 150×300 + 400×350 = 185000.",
       "pairedQuestionId": "itembank.maths.class10.pair_linear_equations.maths10rm8.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RM8|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RM8|Q1|answer",
+      "itemIdentitySearch": "maths10rm8"
     }
   },
   {
@@ -1602,7 +1628,8 @@
       "chunkTextSha256": "265fecc6aab43f4b79c5d4b177aa762b52b45fafb6454d3441f86f2f882fdeeb",
       "extractiveQuote": "If 1/2 is a root of the quadratic equation x² − mx − 5/4 = 0, then the value of m is:\n(A) 2\n(B) −2\n(C) −3\n(D) 3 (1 mark)",
       "pairedAnswerId": "itembank.maths.class10.quadratic_equations.maths10rk3.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RK3|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RK3|Q1|question",
+      "itemIdentitySearch": "maths10rk3"
     }
   },
   {
@@ -1668,7 +1695,8 @@
       "chunkTextSha256": "ca106d23a537d657efbaef9207f9919bb4e418fdc25c90e16f0452bc0cd1adee",
       "extractiveQuote": "Answer: B. −2. Given x=1/2 as a root of x²−mx−5/4=0. (1/2)²−m(1/2)−5/4=0; 1/4−m/2−5/4=0; m=−2.",
       "pairedQuestionId": "itembank.maths.class10.quadratic_equations.maths10rk3.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RK3|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RK3|Q1|answer",
+      "itemIdentitySearch": "maths10rk3"
     }
   },
   {
@@ -1732,7 +1760,8 @@
       "chunkTextSha256": "7a4424d1a4bebb86bdccaf4c19126362e076928ef5e88d0538e7f7ae538be3b3",
       "extractiveQuote": "The values of k for which the quadratic equation 2x² − kx + k = 0 has equal roots are:\n(A) 8 and 2\n(B) 0 and 2\n(C) −8 and 0\n(D) 0 and 8 (1 mark)",
       "pairedAnswerId": "itembank.maths.class10.quadratic_equations.maths10ss9.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SS9|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SS9|Q1|question",
+      "itemIdentitySearch": "maths10ss9"
     }
   },
   {
@@ -1796,7 +1825,8 @@
       "chunkTextSha256": "e355f2f6b1b6e4a45a6bef9091309a721cc8c9fbbe6bb0a9478bfbc907552f03",
       "extractiveQuote": "Answer: D. 0 and 8. For equal roots the discriminant must be zero. Thus b²−4ac=0; k²−8k=0; k(k−8)=0 and k=0,8.",
       "pairedQuestionId": "itembank.maths.class10.quadratic_equations.maths10ss9.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SS9|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SS9|Q1|answer",
+      "itemIdentitySearch": "maths10ss9"
     }
   },
   {
@@ -1860,7 +1890,8 @@
       "chunkTextSha256": "4946623592b3b00ac4cc041721f731f35b4cfd304eecdfbe3664f435dd196f7d",
       "extractiveQuote": "Write the nature of roots of the quadratic equation 4x² + 4√3x + 3 = 0. (3 marks)",
       "pairedAnswerId": "itembank.maths.class10.quadratic_equations.maths10ar10.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AR10|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AR10|Q1|question",
+      "itemIdentitySearch": "maths10ar10"
     }
   },
   {
@@ -1924,7 +1955,8 @@
       "chunkTextSha256": "2f63ca496b7da46165d4420a04ac7bc3209a48029477fed266a6b3d79600d33f",
       "extractiveQuote": "Answer: real and equal. b=4√3, a=4, c=3. b²−4ac=(4√3)²−4×4×3=0. Hence the roots are real and equal.",
       "pairedQuestionId": "itembank.maths.class10.quadratic_equations.maths10ar10.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AR10|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AR10|Q1|answer",
+      "itemIdentitySearch": "maths10ar10"
     }
   },
   {
@@ -1988,7 +2020,8 @@
       "chunkTextSha256": "833494feb379c7fd989c47e1c97400a5b7dbb8095ebfa9096c45743b9b0d570e",
       "extractiveQuote": "Find the nature of the roots of the quadratic equation 3x² + 5x − 7 = 0. (2 marks)",
       "pairedAnswerId": "itembank.maths.class10.quadratic_equations.maths10sk9.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK9|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK9|Q1|question",
+      "itemIdentitySearch": "maths10sk9"
     }
   },
   {
@@ -2052,7 +2085,8 @@
       "chunkTextSha256": "7a0018b97aed77f29776a9d41a745ac886d2bb3c547a9479a91593e7c14fdea4",
       "extractiveQuote": "Answer: Real and unequal. Discriminant = b²−4ac = (5)²−4*3(−7)=109>0. Real and unequal.",
       "pairedQuestionId": "itembank.maths.class10.quadratic_equations.maths10sk9.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK9|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK9|Q1|answer",
+      "itemIdentitySearch": "maths10sk9"
     }
   },
   {
@@ -2117,7 +2151,8 @@
       "chunkTextSha256": "d38fbd9af823a057523a1bf23552adbcc50541b0a697641e3aec4f3e4f9f523b",
       "extractiveQuote": "Amrya’s school organised a tree fest in the month of August. The authorities got 5 feet of area cleared up all along the school boundary. It was decided that every section of each class would plant twice as many as the class standard. There were 3 sections of each standard from 1 to 12. So, if there are three sections in class 1, say 1A, 1B, and 1C, then each section would plant 2 trees. Similarly, each section of class 2 would plant 4 trees and so on.\n(a) How many trees were planted by the students of all sections of class 8? (1 mark)\n(b) Find the total number of trees planted by students. (3 marks)",
       "pairedAnswerId": "itembank.maths.class10.arithmetic_progressions.maths10as6.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AS6|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AS6|Q1|question",
+      "itemIdentitySearch": "maths10as6"
     }
   },
   {
@@ -2182,7 +2217,8 @@
       "chunkTextSha256": "4f0e4ba6d5d234b53ac33c1388b5da3d49088562384a83e96878c02ecaab96f9",
       "extractiveQuote": "1(a) Answer: 48 trees. One section of Class 8 will plant 16 trees; 3 sections will plant 16×3=48 trees. A1 correct answer – 1 mark. 1(b) Answer: 468. Number of trees planted by different classes: 6, 12, 18, 24, …; the terms are in A.P. Total trees planted = 6+12+18+24+…; n=12; d=6; a=6; Sₙ = n/2[2a+(n−1)d] = 468. The key assigns M1 for forming the AP, M1 for the correct sum formula, and A1 for the total.",
       "pairedQuestionId": "itembank.maths.class10.arithmetic_progressions.maths10as6.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AS6|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AS6|Q1|answer",
+      "itemIdentitySearch": "maths10as6"
     }
   },
   {
@@ -2246,7 +2282,8 @@
       "chunkTextSha256": "763f83fdf3adc16974bbf78a5db88ac1271089722f4c6ac0ecd9358f5a0e18a5",
       "extractiveQuote": "The 6th term from the of the A.P. −11, −8, −5, … is:\n(A) −7\n(B) 4\n(C) 7\n(D) 16 (1 mark)",
       "pairedAnswerId": "itembank.maths.class10.arithmetic_progressions.maths10sk1.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK1|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK1|Q1|question",
+      "itemIdentitySearch": "maths10sk1"
     }
   },
   {
@@ -2310,7 +2347,8 @@
       "chunkTextSha256": "d28022da11a0cec9a144408505ff80845e0c5bb3f2a371d37592dad97b9c4430",
       "extractiveQuote": "Answer: B. 4. A₆ = a+5d = −11+15 = 4.",
       "pairedQuestionId": "itembank.maths.class10.arithmetic_progressions.maths10sk1.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK1|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK1|Q1|answer",
+      "itemIdentitySearch": "maths10sk1"
     }
   },
   {
@@ -2374,7 +2412,8 @@
       "chunkTextSha256": "58047b462a0e23757b698fee112ba525956b10e5f8bae9a91d1f0b335db83576",
       "extractiveQuote": "Which term of the AP 3, 12, 21, 30, … will be 90 more than its 50th term? (2 marks)",
       "pairedAnswerId": "itembank.maths.class10.arithmetic_progressions.maths10sk11.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK11|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK11|Q1|question",
+      "itemIdentitySearch": "maths10sk11"
     }
   },
   {
@@ -2438,7 +2477,8 @@
       "chunkTextSha256": "1c5881137820c3ab9bc91652f3b265da7f065082ab48f3967b287a1dee9c17b5",
       "extractiveQuote": "Answer: 60th term. The difference is 9, so it will take 10 further terms to increase by 90. So, the 60th term. M1 for using the common difference to calculate how many more terms are needed; A1 correct answer.",
       "pairedQuestionId": "itembank.maths.class10.arithmetic_progressions.maths10sk11.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK11|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10SK11|Q1|answer",
+      "itemIdentitySearch": "maths10sk11"
     }
   },
   {
@@ -2502,7 +2542,8 @@
       "chunkTextSha256": "1a48a9aff02653f82d2243ba4903cb9c207913fe63a01008573c82b29f5801c8",
       "extractiveQuote": "If the common difference of an AP is 7, then find the value of a₇ − a₄.\n(A) 7\n(B) 14\n(C) 21\n(D) 24 (1 mark)",
       "pairedAnswerId": "itembank.maths.class10.arithmetic_progressions.maths10rm2.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RM2|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RM2|Q1|question",
+      "itemIdentitySearch": "maths10rm2"
     }
   },
   {
@@ -2566,7 +2607,8 @@
       "chunkTextSha256": "ac4f00b3a5c82158e7ebe2e16d3041855d1c5072fa7326768f6710dc9da2b307",
       "extractiveQuote": "Answer: C. 21. A1 for the correct answer.",
       "pairedQuestionId": "itembank.maths.class10.arithmetic_progressions.maths10rm2.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RM2|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RM2|Q1|answer",
+      "itemIdentitySearch": "maths10rm2"
     }
   },
   {
@@ -2631,7 +2673,8 @@
       "chunkTextSha256": "4862ad122c2b80611ec7d796ea8c27a848ebe238314c4843da9d789e61042c59",
       "extractiveQuote": "My friend wants to buy a car and plans to take a loan from a bank for his car. He repays his loan starting with the first installment of Rs. 1000. If he increases his installment by Rs. 200 every month, answer the following.\n(a) What is the amount paid by him in the 30th installment? (1 mark)\n(b) Find the total amount paid by him in the 30 installments. (2 marks)\n(c) If there are 40 installments in total, what is the amount paid in the last installment? (1 mark)",
       "pairedAnswerId": "itembank.maths.class10.arithmetic_progressions.maths10gs5.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10GS5|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10GS5|Q1|question",
+      "itemIdentitySearch": "maths10gs5"
     }
   },
   {
@@ -2696,7 +2739,8 @@
       "chunkTextSha256": "9c821e0fea5fb571aac664ccd34d37fda1d6eb00747c72629a0780448b751390",
       "extractiveQuote": "1(a) aₙ=a+(n−1)d; a₃₀=1000+(30−1)200=6800. A1 correct answer = 6800. 1(b) Sₙ=n/2[2a+(n−1)d]; S₃₀=30/2[2×1000+(30−1)200]=15(2000+5800)=15×7800=117,000. M1 correct formula and substitution; A1 correct answer = 117,000. 1(c) a₄₀=1000+(40−1)200=8800. A1 correct answer = 8800.",
       "pairedQuestionId": "itembank.maths.class10.arithmetic_progressions.maths10gs5.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10GS5|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10GS5|Q1|answer",
+      "itemIdentitySearch": "maths10gs5"
     }
   },
   {
@@ -2760,7 +2804,8 @@
       "chunkTextSha256": "4344f03dfe76efb1714813f787812de171990221a45689ef32a9b51b128f2a8f",
       "extractiveQuote": "If the first three terms of an A.P. are 15, 13.5, 12, find the sum of the first 10 terms. (2 marks)",
       "pairedAnswerId": "itembank.maths.class10.arithmetic_progressions.maths10ar9.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AR9|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AR9|Q1|question",
+      "itemIdentitySearch": "maths10ar9"
     }
   },
   {
@@ -2824,7 +2869,8 @@
       "chunkTextSha256": "4e9406230ee271d3d29da8b273c4abbf42a024296f9b9be13f23deba3e926d2c",
       "extractiveQuote": "Answer: a=15, d=−1.5. A₁₀=a+(10−1)d=15+9(−1.5)=1.5. Sum to 10 terms = 15+13.5+12+…+1.5 = 82.5. The key assigns one mark for finding the 10th term and one mark for finding the sum.",
       "pairedQuestionId": "itembank.maths.class10.arithmetic_progressions.maths10ar9.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AR9|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10AR9|Q1|answer",
+      "itemIdentitySearch": "maths10ar9"
     }
   },
   {
@@ -2889,7 +2935,8 @@
       "chunkTextSha256": "b56564e0febc3394cfe2d3f664140ca3840e2c9426509760ada9bf8f6460f357",
       "extractiveQuote": "If m−2, 2m−3 and m+3 are three consecutive terms of an A.P., then the value of m is:\n(A) 2.5\n(B) 3\n(C) 1.5\n(D) 3.5 (1 mark)",
       "pairedAnswerId": "itembank.maths.class10.arithmetic_progressions.maths10rk4.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RK4|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RK4|Q1|question",
+      "itemIdentitySearch": "maths10rk4"
     }
   },
   {
@@ -2955,7 +3002,8 @@
       "chunkTextSha256": "801d7671eeb0deb666006c5ba28e3645ce9c32f36d26ca6420a1de1f274a210f",
       "extractiveQuote": "Answer: D. 3.5. As the terms are consecutive in an AP, the common difference is the same: (2m−3)−(m−2)=(m+3)−(2m−3); m−1=−m+6; 2m=7; m=3.5.",
       "pairedQuestionId": "itembank.maths.class10.arithmetic_progressions.maths10rk4.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RK4|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RK4|Q1|answer",
+      "itemIdentitySearch": "maths10rk4"
     }
   },
   {
@@ -3019,7 +3067,8 @@
       "chunkTextSha256": "c95af32f3bc9c88e76f190e0a0762fb131c72bc77aedcf3e17f3b756ba122002",
       "extractiveQuote": "The nth term of an AP is 18. Its first term and common difference are 50 and −4, respectively. Find the sum of the first n terms of the AP. (3 marks)",
       "pairedAnswerId": "itembank.maths.class10.arithmetic_progressions.maths10rm9.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RM9|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RM9|Q1|question",
+      "itemIdentitySearch": "maths10rm9"
     }
   },
   {
@@ -3083,7 +3132,8 @@
       "chunkTextSha256": "5c9f37513f48a7e50ca5e6b7e0af73b9a09e846e671e65f4d8a7ce4abe590833",
       "extractiveQuote": "Solution: a=50, d=−4, aₙ=18. aₙ=a+(n−1)d; 18=50+(n−1)(−4); 18=50−4n+4=54−4n; 4n=54−18=36; n=36/4=9. Sₙ=n/2(2a+(n−1)d)=9/2(100+(8×−4))=9/2(100−32)=9/2×68=9×34=306; Sₙ=306. Marking guidance: M1 for a,d,aₙ and substitution; M1 for finding n; A1 for Sₙ.",
       "pairedQuestionId": "itembank.maths.class10.arithmetic_progressions.maths10rm9.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RM9|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RM9|Q1|answer",
+      "itemIdentitySearch": "maths10rm9"
     }
   },
   {
@@ -3147,7 +3197,8 @@
       "chunkTextSha256": "0f06a5d165fc042e1cccc3fca90d5240296b5b4394f1328a438ce30926fdec29",
       "extractiveQuote": "The next term of the AP √3, √12, √27, … is:\n(A) √9\n(B) √15\n(C) √48\n(D) √12 (1 mark)",
       "pairedAnswerId": "itembank.maths.class10.arithmetic_progressions.maths10rm1.answer",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RM1|Q1|question"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RM1|Q1|question",
+      "itemIdentitySearch": "maths10rm1"
     }
   },
   {
@@ -3211,7 +3262,8 @@
       "chunkTextSha256": "933e3d9221355716659aa79cfdf05c13b250d05a329885b9b76c083f26686dfb",
       "extractiveQuote": "Answer: C. √48. AP is: √3, 2√3, 3√3, 4√3, …; 4√3=√48. A1 for the correct answer.",
       "pairedQuestionId": "itembank.maths.class10.arithmetic_progressions.maths10rm1.question",
-      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RM1|Q1|answer"
+      "joinKey": "2026|CBSE-CBE-ItemBank|Maths10|Maths10RM1|Q1|answer",
+      "itemIdentitySearch": "maths10rm1"
     }
   },
   {
