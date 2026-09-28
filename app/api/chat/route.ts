@@ -9,7 +9,7 @@ import type { ChatEvent, ChatRequestBody } from "@/lib/types";
 import { authenticatedUser } from "@/lib/auth/supabase";
 import { conversationIntent, conversationReply } from "@/lib/ai/conversation";
 import { getSyllabusRestriction } from "@/lib/rag/syllabus-index";
-import { findPracticeAnswer, isPracticeQuestion, practiceAnswerKinds } from "@/lib/rag/practice-answer";
+import { isOfficialAnswerFollowup, referencedPracticeQuestionId, resolvePracticeAnswer } from "@/lib/rag/practice-answer";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -73,32 +73,21 @@ export async function POST(req: Request) {
           send({ type: "done" });
           return;
         }
-        if (!hasImages && /^(?:show|give|tell)(?:\s+me)?\s+(?:the\s+)?(?:answer|solution)\b|^what(?:'s| is)\s+the\s+answer\b/i.test(query.trim())) {
-          const previous = [...messages.slice(0, -1)].reverse().find((message) =>
-            message.role === "assistant" && message.content.some((part) =>
-              part.type === "text" && /\[\[source:[^\]]+\]\]/.test(part.text)));
-          const previousText = previous?.content.filter((part) => part.type === "text")
-            .map((part) => part.text).join(" ") ?? "";
-          const questionId = previousText.match(/\[\[source:([^\]]+)\]\]/)?.[1];
+        if (!hasImages && isOfficialAnswerFollowup(query)) {
+          const questionId = referencedPracticeQuestionId(messages.slice(0, -1));
           if (questionId) {
             const store = getVectorStore();
-            const [question] = await store.findByIds([questionId], {});
-            const practiceQuestion = question && isPracticeQuestion(question);
-            if (practiceQuestion && question.meta.joinPrefix) {
-              const paired = await store.findByJoinPrefixes([question.meta.joinPrefix], {
-                subject: question.meta.subject,
-                syllabusTopicId: question.meta.syllabusTopicId,
-                kinds: practiceAnswerKinds(question.meta.kind),
-                topK: 24,
-              });
-              const answer = findPracticeAnswer(question, paired);
-              if (answer) {
-                send({ type: "sources", sources: [toSource({ ...question, score: 1 }), toSource({ ...answer, score: 1 })] });
-                send({ type: "token", text: `${question.meta.kind === "ncert_exercise" ? "NCERT answer" : question.meta.kind === "exemplar" ? "NCERT Exemplar answer" : "Official marking answer"}: ${answer.text} [[source:${answer.id}]]` });
+            const pair = await resolvePracticeAnswer(questionId, store);
+            if (pair) {
+              const { question, answer } = pair;
+              send({ type: "sources", sources: [toSource({ ...question, score: 1 }), toSource({ ...answer, score: 1 })] });
+              send({ type: "token", text: `${question.meta.kind === "ncert_exercise" ? "NCERT answer" : question.meta.kind === "exemplar" ? "NCERT Exemplar answer" : "Official marking answer"}: ${answer.text} [[source:${answer.id}]]` });
                 send({ type: "done" });
                 return;
-              }
-              if (question.meta.kind === "ncert_exercise") {
+            }
+            if (!pair) {
+              const [question] = await store.findByIds([questionId], {});
+              if (question?.meta.kind === "ncert_exercise") {
                 query = question.text;
                 unkeyedExercise = true;
               }

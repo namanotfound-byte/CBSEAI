@@ -171,12 +171,14 @@ function overlap(query: Set<string>, document: Set<string>) {
  *   PUT /collections/{c}   { vectors: { size, distance: "Cosine" } }
  *   PUT /collections/{c}/index   { field_name: "syllabusVersion", field_schema: "keyword" }
  */
-function createQdrantStore(): VectorStore {
-  const base = env.qdrantUrl.replace(/\/$/, "");
-  const collection = encodeURIComponent(env.qdrantCollection);
+export function createQdrantStore(
+  settings: Pick<typeof env, "qdrantUrl" | "qdrantCollection" | "qdrantApiKey" | "qdrantAutoCreate" | "qdrantVectorSize" | "syllabusVersion" | "hybridSearch"> = env,
+): VectorStore {
+  const base = settings.qdrantUrl.replace(/\/$/, "");
+  const collection = encodeURIComponent(settings.qdrantCollection);
   const headers = {
     "Content-Type": "application/json",
-    ...(env.qdrantApiKey ? { "api-key": env.qdrantApiKey } : {}),
+    ...(settings.qdrantApiKey ? { "api-key": settings.qdrantApiKey } : {}),
   };
   let ready: Promise<void> | null = null;
 
@@ -196,15 +198,15 @@ function createQdrantStore(): VectorStore {
         if (!base) throw new Error("RAG_PROVIDER=qdrant requires QDRANT_URL.");
         const check = await fetch(`${base}/collections/${collection}`, { headers });
         if (check.status === 404) {
-          if (!env.qdrantAutoCreate) {
-            throw new Error(`Qdrant collection ${env.qdrantCollection} does not exist.`);
+          if (!settings.qdrantAutoCreate) {
+            throw new Error(`Qdrant collection ${settings.qdrantCollection} does not exist.`);
           }
           const created = await fetch(`${base}/collections/${collection}`, {
             method: "PUT",
             headers,
             body: JSON.stringify({
               vectors: {
-                dense: { size: env.qdrantVectorSize, distance: "Cosine" },
+                dense: { size: settings.qdrantVectorSize, distance: "Cosine" },
               },
               sparse_vectors: {
                 sparse: { index: { on_disk: false } },
@@ -216,7 +218,7 @@ function createQdrantStore(): VectorStore {
           throw new Error(`Qdrant collection check returned ${check.status}`);
         }
 
-        if (env.qdrantAutoCreate) {
+        if (settings.qdrantAutoCreate) {
           const indexes: [string, string][] = [
             ["sourceId", "keyword"],
             ["meta.subject", "keyword"],
@@ -248,7 +250,7 @@ function createQdrantStore(): VectorStore {
 
   function must(filters: RetrievalFilters, prefixes?: string[]) {
     const clauses: Record<string, unknown>[] = [
-      { key: "meta.syllabusVersion", match: { value: filters.syllabusVersion ?? env.syllabusVersion } },
+      { key: "meta.syllabusVersion", match: { value: filters.syllabusVersion ?? settings.syllabusVersion } },
       { key: "meta.inActiveSyllabus", match: { value: true } },
       { key: "meta.reviewStatus", match: { value: "approved" } },
       { key: "meta.assessmentStatus", match: { value: "summative" } },
@@ -290,7 +292,7 @@ function createQdrantStore(): VectorStore {
 
   function allowed(chunk: Chunk & { score: number }, filters: RetrievalFilters) {
     return (
-      chunk.meta.syllabusVersion === (filters.syllabusVersion ?? env.syllabusVersion) &&
+      chunk.meta.syllabusVersion === (filters.syllabusVersion ?? settings.syllabusVersion) &&
       chunk.meta.inActiveSyllabus === true &&
       chunk.meta.reviewStatus === "approved" &&
       chunk.meta.assessmentStatus === "summative" &&
@@ -342,7 +344,7 @@ function createQdrantStore(): VectorStore {
       const filter = { must: must(filters) };
       const prefetch = [
         { query: vector, using: "dense", limit: Math.max(40, filters.topK ?? 8), filter },
-        ...(env.hybridSearch
+        ...(settings.hybridSearch
           ? [{ query: sparseVector, using: "sparse", limit: Math.max(40, filters.topK ?? 8), filter }]
           : []),
       ];
@@ -350,8 +352,8 @@ function createQdrantStore(): VectorStore {
         method: "POST",
         body: JSON.stringify({
           prefetch,
-          query: env.hybridSearch ? { fusion: "rrf" } : vector,
-          ...(env.hybridSearch ? {} : { using: "dense" }),
+          query: settings.hybridSearch ? { fusion: "rrf" } : vector,
+          ...(settings.hybridSearch ? {} : { using: "dense" }),
           limit: filters.topK ?? 5,
           with_payload: true,
         }),

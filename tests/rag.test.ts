@@ -5,10 +5,10 @@ import { validateChunks } from "../lib/rag/ingest";
 import { routeQuery } from "../lib/rag/router";
 import { hasApprovedCompetencyQuestion, practicePhraseMatch, retrieve } from "../lib/rag/retriever";
 import { sourceMatchesQuestion } from "../lib/rag/relevance";
-import { getVectorStore } from "../lib/rag/vectorstore";
+import { createQdrantStore, getVectorStore } from "../lib/rag/vectorstore";
 import { inferSyllabusScope } from "../lib/rag/syllabus-index";
 import { getSyllabusRestriction } from "../lib/rag/syllabus-index";
-import { findPracticeAnswer, isPracticeQuestion, practiceAnswerKinds } from "../lib/rag/practice-answer";
+import { findPracticeAnswer, isOfficialAnswerFollowup, isPracticeQuestion, practiceAnswerKinds, referencedPracticeQuestionId, resolvePracticeAnswer } from "../lib/rag/practice-answer";
 import { conversationIntent, conversationReply } from "../lib/ai/conversation";
 import { REVIEWED_ADDENDUM } from "../lib/rag/reviewed-addendum";
 import type { Chunk, Source } from "../lib/types";
@@ -69,6 +69,61 @@ test("APQ follow-up resolves Q1 to its exact official answer block", () => {
   assert.deepEqual(practiceAnswerKinds(question.meta.kind), ["apq_answer"]);
   assert.equal(findPracticeAnswer(question, [answer])?.id, answer.id);
   assert.match(answer.text, /A — above the arrow/);
+});
+
+test("official-answer phrasing resolves a persisted APQ citation through Qdrant point and join lookups", async () => {
+  const question = REVIEWED_ADDENDUM.find((chunk) => chunk.id === "apq.science.2021.term1.q01");
+  const answer = REVIEWED_ADDENDUM.find((chunk) => chunk.id === "apq.science.2021.term1.q01.answer");
+  assert.ok(question && answer);
+  assert.equal(isOfficialAnswerFollowup("Show the official answer."), true);
+  assert.equal(isOfficialAnswerFollowup("Give me the marking scheme answer"), true);
+  assert.equal(isOfficialAnswerFollowup("Explain why this is correct"), false);
+
+  // The browser persists the exact assistant text (including its source marker)
+  // and sends it back with the follow-up. Exercise that history shape here.
+  const questionId = referencedPracticeQuestionId([
+    { role: "user", content: [{ type: "text", text: "Give me an APQ Science question" }] },
+    { role: "assistant", content: [{ type: "text", text: `Practice question: ${question.text} [[source:${question.id}]]` }] },
+  ]);
+  assert.equal(questionId, question.id);
+
+  const originalFetch = globalThis.fetch;
+  const calls: { path: string; body?: Record<string, unknown> }[] = [];
+  globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
+    const url = new URL(String(input));
+    const body = init?.body ? JSON.parse(String(init.body)) as Record<string, unknown> : undefined;
+    calls.push({ path: url.pathname, body });
+    if (url.pathname === "/collections/test-apq") return Response.json({ result: { status: "green" } });
+    if (url.pathname.endsWith("/points") && init?.method === "POST") {
+      assert.equal((body?.ids as string[]).length, 1);
+      assert.match((body?.ids as string[])[0], /^[0-9a-f-]{36}$/i);
+      return Response.json({ result: [{ id: (body?.ids as string[])[0], payload: { sourceId: question.id, text: question.text, meta: question.meta } }] });
+    }
+    if (url.pathname.endsWith("/points/scroll")) {
+      const must = ((body?.filter as { must: { key: string; match: Record<string, unknown> }[] }).must);
+      assert.ok(must.some((clause) => clause.key === "meta.joinPrefix" &&
+        JSON.stringify(clause.match).includes(question.meta.joinPrefix!)));
+      assert.ok(must.some((clause) => clause.key === "meta.kind" &&
+        JSON.stringify(clause.match).includes("apq_answer")));
+      return Response.json({ result: { points: [{ id: "answer-point", payload: { sourceId: answer.id, text: answer.text, meta: answer.meta } }] } });
+    }
+    throw new Error(`Unexpected Qdrant request: ${url.pathname}`);
+  }) as typeof fetch;
+  try {
+    const store = createQdrantStore({
+      qdrantUrl: "http://qdrant.test", qdrantCollection: "test-apq", qdrantApiKey: "",
+      qdrantAutoCreate: false, qdrantVectorSize: 1024, syllabusVersion: "2026-27", hybridSearch: false,
+    });
+    assert.equal(isOfficialAnswerFollowup("Show the official answer."), true);
+    const pair = await resolvePracticeAnswer(questionId!, store);
+    assert.equal(pair?.question.id, question.id);
+    assert.equal(pair?.answer.id, answer.id);
+    assert.match(pair?.answer.text ?? "", /A — above the arrow/);
+    assert.equal(calls.filter((call) => call.path.endsWith("/points")).length, 1);
+    assert.equal(calls.filter((call) => call.path.endsWith("/points/scroll")).length, 1);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
 });
 
 test("handles ordinary conversation without confusing it with academic retrieval", () => {

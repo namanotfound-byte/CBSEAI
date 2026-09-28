@@ -1,4 +1,5 @@
 import type { Chunk, SourceKind } from "../types";
+import type { VectorStore } from "./vectorstore";
 
 type PairedChunk = Pick<Chunk, "id" | "text"> & {
   meta: Chunk["meta"] & { pairedQuestionId?: string };
@@ -20,10 +21,43 @@ export function practiceAnswerKinds(kind: SourceKind): SourceKind[] {
   return ["ms"];
 }
 
-export function findPracticeAnswer(
+/** Recognize short follow-ups that ask for the answer to the displayed item. */
+export function isOfficialAnswerFollowup(query: string): boolean {
+  return /^(?:show|give|tell)(?:\s+me)?\s+(?:(?:the\s+)?(?:official|marking[- ]scheme)\s+)?(?:the\s+)?(?:answer|solution)\b|^what(?:'s| is)\s+(?:(?:the\s+)?(?:official|marking[- ]scheme)\s+)?(?:the\s+)?answer\b/i.test(query.trim());
+}
+
+export function referencedPracticeQuestionId(
+  messages: { role: string; content: { type: string; text?: string }[] }[],
+): string | undefined {
+  const previous = [...messages].reverse().find((message) =>
+    message.role === "assistant" && message.content.some((part) =>
+      part.type === "text" && /\[\[source:[^\]]+\]\]/.test(part.text ?? "")));
+  const text = previous?.content.filter((part) => part.type === "text")
+    .map((part) => part.text ?? "").join(" ") ?? "";
+  return text.match(/\[\[source:([^\]]+)\]\]/)?.[1];
+}
+
+/** Fetch the referenced prompt and its reciprocal answer through the store API. */
+export async function resolvePracticeAnswer(
+  questionId: string,
+  store: VectorStore,
+): Promise<{ question: Chunk & { score: number }; answer: (Chunk & { score: number }) } | undefined> {
+  const [question] = await store.findByIds([questionId], {});
+  if (!question || !isPracticeQuestion(question) || !question.meta.joinPrefix) return undefined;
+  const paired = await store.findByJoinPrefixes([question.meta.joinPrefix], {
+    subject: question.meta.subject,
+    syllabusTopicId: question.meta.syllabusTopicId,
+    kinds: practiceAnswerKinds(question.meta.kind),
+    topK: 24,
+  });
+  const answer = findPracticeAnswer(question, paired);
+  return answer ? { question, answer } : undefined;
+}
+
+export function findPracticeAnswer<T extends PairedChunk>(
   question: PairedChunk,
-  paired: PairedChunk[],
-): PairedChunk | undefined {
+  paired: T[],
+): T | undefined {
   return paired.find((row) =>
     row.id !== question.id && (
       (question.meta.kind === "ncert_exercise" && row.meta.chunkType === "ncert_answer") ||
