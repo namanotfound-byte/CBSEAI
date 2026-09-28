@@ -23,6 +23,7 @@ test("routes canonical query types", () => {
   assert.equal(routeQuery("Give me an NCERT Science exercise question about corrective lens power."), "competency");
   assert.equal(routeQuery("Give me an NCERT Exemplar Science question about solder"), "competency");
   assert.equal(routeQuery("Give me a Science sample-paper question about soap in hard water"), "competency");
+  assert.equal(routeQuery("Give me a CBSE Maths item-bank question about quadratic roots"), "competency");
   assert.equal(routeQuery("Solve this sample-paper question about soap"), "pyq");
   assert.equal(routeQuery("explain photosynthesis"), "theory");
 });
@@ -320,6 +321,44 @@ test("prevents staged and formative chunks from being ingested", () => {
   assert.ok(errors.some((error) => error.includes("summative")));
 });
 
+test("approved formative item-bank pairs are valid only as practice material", async () => {
+  const question = REVIEWED_ADDENDUM.find((chunk) => chunk.id === "itembank.maths.class10.polynomials.maths10ss8.question");
+  const answer = REVIEWED_ADDENDUM.find((chunk) => chunk.id === "itembank.maths.class10.polynomials.maths10ss8.answer");
+  assert.ok(question && answer);
+  assert.deepEqual(validateChunks([question, answer]), []);
+  assert.equal(hasApprovedCompetencyQuestion([{
+    id: question.id, kind: "item_bank", chunkType: "item_bank_question",
+    label: "CBSE item bank", snippet: question.text,
+  }]), true);
+
+  const malformed = { ...question, id: "bad-formative-item", meta: { ...question.meta, pairedAnswerId: undefined } } as Chunk;
+  assert.ok(validateChunks([malformed]).some((error) => error.includes("item-bank chunks")));
+
+  const scope: Chunk = {
+    id: "test-maths-item-bank-scope", text: "Polynomials: zeros and coefficients of a quadratic polynomial.",
+    meta: {
+      kind: "syllabus", subject: "maths", chapter: 2, sourceYear: "2026", syllabusVersion: "2026-27",
+      syllabusTopicId: "maths.ch02", chunkType: "syllabus_scope", inActiveSyllabus: true,
+      reviewStatus: "approved", assessmentStatus: "summative",
+    },
+  };
+  await getVectorStore().upsert([scope, question, answer] as Chunk[]);
+  const officialPair = await resolvePracticeAnswer(question.id, getVectorStore());
+  assert.equal(officialPair?.answer.id, answer.id);
+
+  const practice = await retrieve("Give me a CBSE Maths item-bank question about the value of alpha plus beta minus alpha beta", {
+    subject: "maths", chapter: 2, route: "competency",
+  });
+  assert.ok(practice.some((source) => source.id === question.id));
+  assert.ok(practice.some((source) => source.id === answer.id));
+  assert.ok(practice.some((source) => source.label.startsWith("CBSE item bank")));
+
+  const theory = await retrieve("What is the sum and product of polynomial zeroes?", {
+    subject: "maths", chapter: 2, route: "theory",
+  });
+  assert.equal(theory.some((source) => source.id === question.id || source.id === answer.id), false);
+});
+
 test("retrieval resolves the active syllabus before returning evidence", async () => {
   const sources = await retrieve("explain Ohm's law", {
     subject: "science",
@@ -351,7 +390,7 @@ test("competency retrieval only accepts an approved mapped question block", asyn
     route: "competency",
   });
   assert.equal(hasApprovedCompetencyQuestion(sources), true);
-  assert.ok(sources.filter((source) => source.kind !== "syllabus").every((source) => ["cfpq", "sqp", "pyq", "ms"].includes(source.kind)));
+  assert.ok(sources.filter((source) => source.kind !== "syllabus").every((source) => ["cfpq", "sqp", "pyq", "ms", "apq_answer", "item_bank"].includes(source.kind)));
 });
 
 test("a reviewed sample-paper question brings its exact marking row", async () => {

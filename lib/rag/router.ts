@@ -2,7 +2,7 @@ import type { QueryRoute } from "../types";
 
 const PYQ_RE = /\b(pyq|past[\s-]+paper|previous[\s-]+year|board[\s-]+question|sample[\s-]+paper|sqp)\b/i;
 const COMPETENCY_RE = /\b(competency(?:-based)?|cbq|case stud(?:y|ies)|assertion(?:\s+and)?\s+reason)\b/i;
-const ASK_PRACTICE_RE = /\b(?:give|show|ask|quiz|suggest|find)\s+(?:me\s+)?(?:an?\s+|some\s+)?(?:official\s+|cbse\s+|maths\s+|science\s+|sample[\s-]+paper\s+|past[\s-]+paper\s+|previous[\s-]+year\s+|board\s+|practice\s+|competency(?:-based)?\s+)*(?:questions?|problems?)\b/i;
+const ASK_PRACTICE_RE = /\b(?:give|show|ask|quiz|suggest|find)\s+(?:me\s+)?(?:an?\s+|some\s+)?(?:official\s+|cbse\s+|maths\s+|science\s+|sample[\s-]+paper\s+|past[\s-]+paper\s+|previous[\s-]+year\s+|board\s+|practice\s+|competency(?:-based)?\s+|item[\s-]*bank\s+)*(?:questions?|problems?)\b/i;
 const NCERT_EXERCISE_RE = /\bncert\b.*\bexercis(?:e|es)\b.*\b(?:questions?|problems?|quiz|practice)\b|\b(?:questions?|problems?|quiz|practice)\b.*\bncert\b.*\bexercis(?:e|es)\b/i;
 const EXEMPLAR_QUESTION_RE = /\bexemplar\b.*\b(?:questions?|problems?|quiz|practice)\b|\b(?:questions?|problems?|quiz|practice)\b.*\bexemplar\b/i;
 const MARKING_RE = /\b(marking scheme|marks?|mark allocation|how many marks|examiner|answer key)\b/i;

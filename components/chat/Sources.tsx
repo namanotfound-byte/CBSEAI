@@ -20,6 +20,7 @@ const KIND_STYLE: Record<SourceKind, { label: string; dot: string }> = {
   cfpq: { label: "CFPQ", dot: "#FF9500" },
   apq: { label: "Additional practice question", dot: "#FF9500" },
   apq_answer: { label: "Additional practice key", dot: "var(--red)" },
+  item_bank: { label: "CBSE item bank", dot: "#FF9500" },
   model: { label: "Model paper", dot: "var(--text-faint)" },
   notes: { label: "Notes", dot: "var(--text-faint)" },
 };

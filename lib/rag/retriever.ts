@@ -23,6 +23,7 @@ const PRIORITY: Record<SourceKind, number> = {
   cfpq: 0.86,
   apq: 0.87,
   apq_answer: 0.98,
+  item_bank: 0.89,
   model: 0.8,
   notes: 0.75,
 };
@@ -39,12 +40,13 @@ const KIND_LABEL: Record<SourceKind, string> = {
   cfpq: "CFPQ",
   apq: "Additional practice question",
   apq_answer: "Additional practice marking scheme",
+  item_bank: "CBSE item bank",
   model: "Model paper",
   notes: "Notes",
 };
 
 const CONTENT_KINDS = (Object.keys(PRIORITY) as SourceKind[]).filter(
-  (kind) => kind !== "syllabus" && kind !== "ncert_exercise",
+  (kind) => kind !== "syllabus" && kind !== "ncert_exercise" && kind !== "item_bank",
 );
 
 export async function retrieve(
@@ -56,11 +58,13 @@ export async function retrieve(
   const inferred = inferSyllabusScope(query, filters.subject);
   if (inferred.outOfSyllabus) return [];
   const requestedKinds = filters.route === "competency"
-    ? (/\bncert\b.*\bexercis/i.test(query)
+    ? (/\bitem[\s-]*bank\b/i.test(query)
+        ? (["item_bank"] satisfies SourceKind[])
+        : /\bncert\b.*\bexercis/i.test(query)
         ? (["ncert_exercise"] satisfies SourceKind[])
         : /\bexemplar\b/i.test(query)
           ? (["exemplar"] satisfies SourceKind[])
-          : (["cfpq", "sqp", "pyq", "apq", "apq_answer", "ms", "ncert_exercise", "exemplar"] satisfies SourceKind[]))
+          : (["cfpq", "sqp", "pyq", "apq", "apq_answer", "ms", "ncert_exercise", "exemplar", "item_bank"] satisfies SourceKind[]))
     : filters.kinds?.filter((kind) => kind !== "syllabus") ?? CONTENT_KINDS;
   const scopedFilters: RetrievalFilters = {
     ...filters,
@@ -222,7 +226,8 @@ export function hasApprovedCompetencyQuestion(sources: Source[]) {
       (["cfpq", "sqp", "pyq", "apq"].includes(source.kind) &&
         ["question_block", "question_part"].includes(source.chunkType ?? "")) ||
       (source.kind === "ncert_exercise" && source.chunkType === "ncert_question") ||
-      (source.kind === "exemplar" && source.chunkType === "exemplar_question"),
+      (source.kind === "exemplar" && source.chunkType === "exemplar_question") ||
+      (source.kind === "item_bank" && source.chunkType === "item_bank_question"),
   );
 }
 
@@ -230,7 +235,8 @@ function isPracticeQuestionChunk(chunk: Chunk) {
   return (["cfpq", "sqp", "pyq", "apq"].includes(chunk.meta.kind) &&
     ["question_block", "question_part"].includes(chunk.meta.chunkType ?? "")) ||
     (chunk.meta.kind === "ncert_exercise" && chunk.meta.chunkType === "ncert_question") ||
-    (chunk.meta.kind === "exemplar" && chunk.meta.chunkType === "exemplar_question");
+    (chunk.meta.kind === "exemplar" && chunk.meta.chunkType === "exemplar_question") ||
+    (chunk.meta.kind === "item_bank" && chunk.meta.chunkType === "item_bank_question" && chunk.meta.practiceModeEligible === true);
 }
 
 function slot<T extends Chunk & { score: number }>(

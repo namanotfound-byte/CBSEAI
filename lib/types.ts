@@ -42,6 +42,7 @@ export type SourceKind =
   | "cfpq"
   | "apq"
   | "apq_answer"
+  | "item_bank"
   | "notes";
 
 export interface Source {
@@ -181,6 +182,11 @@ export interface Chunk {
     /** Explicit human/content QA gate before production indexing. */
     reviewStatus?: "staging" | "approved";
     assessmentStatus?: "summative" | "formative" | "excluded";
+    /** Formative assessment item explicitly approved for practice retrieval. */
+    practiceModeEligible?: boolean;
+    pairedQuestionId?: string;
+    pairedAnswerId?: string;
+    answerVisibility?: "question_only" | "solution_only" | "both";
     sourcePath?: string;
     extractionVersion?: string;
     reviewBatch?: string;

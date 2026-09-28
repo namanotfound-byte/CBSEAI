@@ -13,6 +13,7 @@ const KINDS = new Set<SourceKind>([
   "cfpq",
   "apq",
   "apq_answer",
+  "item_bank",
   "notes",
 ]);
 const SUBJECTS = new Set<SubjectId>(["science", "maths"]);
@@ -43,7 +44,9 @@ export function validateChunks(chunks: Chunk[]) {
       errors.push(`${at}: meta.inActiveSyllabus must be true or false`);
     }
     if (chunk.meta?.reviewStatus !== "approved") errors.push(`${at}: meta.reviewStatus must be approved`);
-    if (chunk.meta?.assessmentStatus !== "summative") errors.push(`${at}: only summative material can be indexed`);
+    if (chunk.meta?.assessmentStatus !== "summative" && !isEligibleFormativeItemBank(chunk)) {
+      errors.push(`${at}: only summative material or approved formative item-bank practice can be indexed`);
+    }
     if (chunk.meta && chunk.meta.syllabusVersion !== "2026-27") {
       errors.push(`${at}: only the 2026-27 syllabus is enabled`);
     }
@@ -64,6 +67,9 @@ export function validateChunks(chunks: Chunk[]) {
     }
     if (chunk.meta?.kind === "apq_answer" && chunk.meta.chunkType !== "answer_block") {
       errors.push(`${at}: APQ answer chunks must use answer_block chunkType`);
+    }
+    if (chunk.meta?.kind === "item_bank" && !isValidItemBankChunk(chunk)) {
+      errors.push(`${at}: item-bank chunks need a reciprocal question/marking record and practice eligibility metadata`);
     }
     if (chunk.meta?.kind === "ncert_exercise" &&
         (!chunk.meta.joinPrefix || !["ncert_question", "ncert_answer"].includes(chunk.meta.chunkType ?? ""))) {
@@ -98,6 +104,24 @@ export function validateChunks(chunks: Chunk[]) {
   });
 
   return errors;
+}
+
+function isEligibleFormativeItemBank(chunk: Chunk) {
+  return chunk.meta.kind === "item_bank" &&
+    chunk.meta.assessmentStatus === "formative" &&
+    chunk.meta.reviewStatus === "approved" &&
+    chunk.meta.inActiveSyllabus === true &&
+    chunk.meta.syllabusVersion === "2026-27" &&
+    isValidItemBankChunk(chunk);
+}
+
+function isValidItemBankChunk(chunk: Chunk) {
+  const m = chunk.meta;
+  const question = m.chunkType === "item_bank_question";
+  const answer = m.chunkType === "item_bank_marking_scheme";
+  return m.assessmentStatus === "formative" && Boolean(m.joinPrefix) &&
+    (question && m.practiceModeEligible === true && Boolean(m.pairedAnswerId) && m.answerVisibility === "question_only" ||
+      answer && m.practiceModeEligible === false && Boolean(m.pairedQuestionId) && m.answerVisibility === "solution_only");
 }
 
 function isOfficialUrl(value: string) {

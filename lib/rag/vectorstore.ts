@@ -73,6 +73,7 @@ function createMemoryStore(): VectorStore {
       return store
         .filter((c) => c.meta.syllabusVersion === syllabusVersion)
         .filter((c) => c.meta.inActiveSyllabus === true)
+        .filter((c) => assessmentAllowed(c.meta, filters))
         .filter((c) => !filters.syllabusTopicId || c.meta.syllabusTopicId === filters.syllabusTopicId)
         .filter((c) => !filters.subject || c.meta.subject === filters.subject)
         .filter((c) => !filters.chapter || c.meta.chapter === filters.chapter)
@@ -106,6 +107,7 @@ function createMemoryStore(): VectorStore {
       return store
         .filter((c) => c.meta.syllabusVersion === syllabusVersion)
         .filter((c) => c.meta.inActiveSyllabus === true)
+        .filter((c) => assessmentAllowed(c.meta, filters))
         .filter((c) => !filters.syllabusTopicId || c.meta.syllabusTopicId === filters.syllabusTopicId)
         .filter((c) => prefixes.includes(c.meta.joinPrefix ?? ""))
         .filter((c) => !filters.subject || c.meta.subject === filters.subject)
@@ -124,6 +126,7 @@ function createMemoryStore(): VectorStore {
         .filter((c) => ids.includes(c.id))
         .filter((c) => c.meta.syllabusVersion === syllabusVersion)
         .filter((c) => c.meta.inActiveSyllabus === true)
+        .filter((c) => assessmentAllowed(c.meta, filters))
         .filter((c) => !filters.syllabusTopicId || c.meta.syllabusTopicId === filters.syllabusTopicId)
         .filter((c) => !filters.subject || c.meta.subject === filters.subject)
         .filter((c) => !filters.chapter || c.meta.chapter === filters.chapter)
@@ -135,6 +138,15 @@ function createMemoryStore(): VectorStore {
       return store.length;
     },
   };
+}
+
+function assessmentAllowed(meta: Chunk["meta"], filters: RetrievalFilters) {
+  // Development seed fixtures predate assessmentStatus; deployable corpus rows
+  // are required to declare it by validateChunks.
+  if (meta.assessmentStatus === undefined || meta.assessmentStatus === "summative") return true;
+  if (filters.route !== "competency" || meta.assessmentStatus !== "formative" || meta.kind !== "item_bank") return false;
+  return (meta.chunkType === "item_bank_question" && meta.practiceModeEligible === true && meta.answerVisibility === "question_only") ||
+    (meta.chunkType === "item_bank_marking_scheme" && meta.practiceModeEligible === false && Boolean(meta.pairedQuestionId) && meta.answerVisibility === "solution_only");
 }
 
 const STOP_WORDS = new Set([
@@ -253,7 +265,7 @@ export function createQdrantStore(
       { key: "meta.syllabusVersion", match: { value: filters.syllabusVersion ?? settings.syllabusVersion } },
       { key: "meta.inActiveSyllabus", match: { value: true } },
       { key: "meta.reviewStatus", match: { value: "approved" } },
-      { key: "meta.assessmentStatus", match: { value: "summative" } },
+      { key: "meta.assessmentStatus", match: { any: filters.route === "competency" ? ["summative", "formative"] : ["summative"] } },
     ];
     if (filters.syllabusTopicId) {
       clauses.push({ key: "meta.syllabusTopicId", match: { value: filters.syllabusTopicId } });
@@ -295,7 +307,7 @@ export function createQdrantStore(
       chunk.meta.syllabusVersion === (filters.syllabusVersion ?? settings.syllabusVersion) &&
       chunk.meta.inActiveSyllabus === true &&
       chunk.meta.reviewStatus === "approved" &&
-      chunk.meta.assessmentStatus === "summative" &&
+      assessmentAllowed(chunk.meta, filters) &&
       (!filters.syllabusTopicId || chunk.meta.syllabusTopicId === filters.syllabusTopicId) &&
       (!filters.subject || chunk.meta.subject === filters.subject) &&
       (!filters.chapter || chunk.meta.chapter === filters.chapter)
@@ -358,7 +370,8 @@ export function createQdrantStore(
           with_payload: true,
         }),
       });
-      return (json.result?.points ?? json.result ?? []).map(fromQdrant).filter(Boolean) as (Chunk & { score: number })[];
+      return ((json.result?.points ?? json.result ?? []).map(fromQdrant).filter(Boolean) as (Chunk & { score: number })[])
+        .filter((chunk) => assessmentAllowed(chunk.meta, filters));
     },
     async findByJoinPrefixes(prefixes, filters) {
       if (!prefixes.length) return [];
@@ -372,7 +385,8 @@ export function createQdrantStore(
           filter: { must: must(filters, prefixes) },
         }),
       });
-      return (json.result?.points ?? []).map(fromQdrant).filter(Boolean) as (Chunk & { score: number })[];
+      return ((json.result?.points ?? []).map(fromQdrant).filter(Boolean) as (Chunk & { score: number })[])
+        .filter((chunk) => assessmentAllowed(chunk.meta, filters));
     },
     async findByIds(ids, filters) {
       if (!ids.length) return [];
