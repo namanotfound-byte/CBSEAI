@@ -18,12 +18,15 @@ const PRIORITY: Record<SourceKind, number> = {
   ms: 0.98,
   diagram: 0.94,
   exemplar: 0.92,
+  exemplar_answer: 0.96,
   pyq: 0.9,
   sqp: 0.88,
   cfpq: 0.86,
   apq: 0.87,
   apq_answer: 0.98,
   item_bank: 0.89,
+  question_bank: 0.87,
+  question_bank_answer: 0.97,
   model: 0.8,
   notes: 0.75,
 };
@@ -35,18 +38,21 @@ const KIND_LABEL: Record<SourceKind, string> = {
   ms: "Marking scheme",
   diagram: "Diagram",
   exemplar: "Exemplar",
+  exemplar_answer: "Exemplar answer",
   pyq: "PYQ",
   sqp: "Sample paper",
   cfpq: "CFPQ",
   apq: "Additional practice question",
   apq_answer: "Additional practice marking scheme",
   item_bank: "CBSE item bank",
+  question_bank: "CBSE question bank",
+  question_bank_answer: "CBSE question bank answer key",
   model: "Model paper",
   notes: "Notes",
 };
 
 const CONTENT_KINDS = (Object.keys(PRIORITY) as SourceKind[]).filter(
-  (kind) => kind !== "syllabus" && kind !== "ncert_exercise" && kind !== "item_bank",
+  (kind) => !["syllabus", "ncert_exercise", "item_bank", "exemplar_answer", "question_bank_answer"].includes(kind),
 );
 
 export async function retrieve(
@@ -57,6 +63,7 @@ export async function retrieve(
   const topK = filters.topK ?? 5;
   const namedItemIdentity = query.match(/\bmaths10[a-z0-9]+\b/i)?.[0].toLowerCase();
   const itemBankQuery = Boolean(namedItemIdentity) && /\bitem[\s-]*bank\b/i.test(query);
+  const questionBankPracticeRequest = filters.route === "competency" && /\bquestion[\s-]*bank\b/i.test(query);
   const inferred = itemBankQuery
     ? { subject: "maths" as const, chapters: undefined, outOfSyllabus: false }
     : inferSyllabusScope(query, filters.subject);
@@ -64,11 +71,13 @@ export async function retrieve(
   const requestedKinds = filters.route === "competency"
     ? (itemBankQuery
         ? (["item_bank"] satisfies SourceKind[])
+        : questionBankPracticeRequest
+        ? (["question_bank", "question_bank_answer"] satisfies SourceKind[])
         : /\bncert\b.*\bexercis/i.test(query)
         ? (["ncert_exercise"] satisfies SourceKind[])
         : /\bexemplar\b/i.test(query)
           ? (["exemplar"] satisfies SourceKind[])
-          : (["cfpq", "sqp", "pyq", "apq", "apq_answer", "ms", "ncert_exercise", "exemplar", "item_bank"] satisfies SourceKind[]))
+          : (["cfpq", "sqp", "pyq", "apq", "apq_answer", "ms", "ncert_exercise", "exemplar", "exemplar_answer", "item_bank", "question_bank", "question_bank_answer"] satisfies SourceKind[]))
     : filters.kinds?.filter((kind) => kind !== "syllabus") ?? CONTENT_KINDS;
   const scopedFilters: RetrievalFilters = {
     ...filters,
@@ -124,8 +133,9 @@ export async function retrieve(
   const syllabusTopicId = filters.syllabusTopicId ?? syllabusHit.meta.syllabusTopicId;
   const contentFilters: RetrievalFilters = {
     ...scopedFilters,
-    chapters: undefined,
-    syllabusTopicId,
+    chapter: questionBankPracticeRequest ? filters.chapter : undefined,
+    chapters: questionBankPracticeRequest && !filters.chapter ? inferred.chapters : undefined,
+    syllabusTopicId: questionBankPracticeRequest ? undefined : syllabusTopicId,
     kinds: requestedKinds,
     itemIdentitySearch: itemBankQuery ? namedItemIdentity : undefined,
   };
@@ -185,7 +195,10 @@ export async function retrieve(
     .sort((a, b) => PRIORITY[b.meta.kind] - PRIORITY[a.meta.kind])
     .forEach((hit) => merged.set(hit.id, hit));
 
-  return [toSource(syllabusHit), ...[...merged.values()].map(toSource)];
+  return [
+    ...[toSource(syllabusHit)],
+    ...[...merged.values()].map(toSource),
+  ];
 }
 
 export function practicePhraseMatch(query: string, candidate: string): boolean {
@@ -234,6 +247,7 @@ export function hasApprovedCompetencyQuestion(sources: Source[]) {
         ["question_block", "question_part"].includes(source.chunkType ?? "")) ||
       (source.kind === "ncert_exercise" && source.chunkType === "ncert_question") ||
       (source.kind === "exemplar" && source.chunkType === "exemplar_question") ||
+      (source.kind === "question_bank" && source.chunkType === "question_bank_question") ||
       (source.kind === "item_bank" && source.chunkType === "item_bank_question"),
   );
 }
@@ -243,6 +257,7 @@ function isPracticeQuestionChunk(chunk: Chunk) {
     ["question_block", "question_part"].includes(chunk.meta.chunkType ?? "")) ||
     (chunk.meta.kind === "ncert_exercise" && chunk.meta.chunkType === "ncert_question") ||
     (chunk.meta.kind === "exemplar" && chunk.meta.chunkType === "exemplar_question") ||
+    (chunk.meta.kind === "question_bank" && chunk.meta.chunkType === "question_bank_question") ||
     (chunk.meta.kind === "item_bank" && chunk.meta.chunkType === "item_bank_question" && chunk.meta.practiceModeEligible === true);
 }
 

@@ -25,6 +25,7 @@ test("routes canonical query types", () => {
   assert.equal(routeQuery("Give me an NCERT Exemplar Science question about solder"), "competency");
   assert.equal(routeQuery("Give me a Science sample-paper question about soap in hard water"), "competency");
   assert.equal(routeQuery("Give me a CBSE Maths item-bank question about quadratic roots"), "competency");
+  assert.equal(routeQuery("Give me a CBSE Science question-bank question about photosynthesis"), "competency");
   assert.equal(routeQuery("Solve this sample-paper question about soap"), "pyq");
   assert.equal(routeQuery("explain photosynthesis"), "theory");
 });
@@ -316,6 +317,49 @@ test("every deployable reviewed record is valid and uniquely identified", () => 
     assert.equal(question?.meta.chapter, chapter);
     assert.equal(question?.meta.syllabusTopicId, `maths.ch${String(chapter).padStart(2, "0")}`);
   }
+});
+
+test("imports only the 18 newly approved pairs with original source kinds and statuses", async () => {
+  const rows = REVIEWED_ADDENDUM.filter((chunk) =>
+    chunk.meta.reviewBatch === "maths-item-bank-visual-review-batch6-20260928" ||
+    chunk.meta.reviewBatch === "science-exemplar-visual-review-batch19" ||
+    chunk.meta.reviewBatch === "science-cbse-question-bank-visual-review-batch1",
+  );
+  assert.equal(rows.length, 36);
+  assert.equal(new Set(rows.map((row) => row.id)).size, 36);
+  assert.deepEqual(validateChunks(rows), []);
+  assert.equal(rows.filter((row) => row.meta.kind === "item_bank").length, 2);
+  assert.equal(rows.filter((row) => row.meta.kind === "exemplar").length, 10);
+  assert.equal(rows.filter((row) => row.meta.kind === "exemplar_answer").length, 10);
+  assert.equal(rows.filter((row) => row.meta.kind === "question_bank").length, 7);
+  assert.equal(rows.filter((row) => row.meta.kind === "question_bank_answer").length, 7);
+  assert.equal(rows.filter((row) => row.meta.assessmentStatus === "practice").length, 14);
+  assert.equal(rows.filter((row) => row.meta.assessmentStatus === "formative").length, 2);
+  for (const question of rows.filter((row) => ["item_bank", "question_bank"].includes(row.meta.kind) && row.meta.answerVisibility === "question_only")) {
+    const answer = rows.find((row) => row.id === question.meta.pairedAnswerId);
+    assert.ok(answer, `${question.id} answer exists`);
+    assert.equal(answer.meta.pairedQuestionId, question.id);
+    assert.equal(answer.meta.joinPrefix, question.meta.joinPrefix);
+  }
+
+  const question = rows.find((row) => row.id === "questionbank.science.q1_3.visual_question");
+  const answer = rows.find((row) => row.id === "questionbank.science.q1_3.visual_answer");
+  assert.ok(question && answer);
+  assert.equal(isPracticeQuestion(question), true);
+  await getVectorStore().upsert([question, answer]);
+  assert.equal((await getVectorStore().findByIds([question.id, answer.id], {})).length, 0);
+  assert.equal((await getVectorStore().findByIds([question.id, answer.id], { route: "competency" })).length, 2);
+  assert.equal((await resolvePracticeAnswer(question.id, getVectorStore()))?.answer.id, answer.id);
+  const retrieved = await retrieve("Give me a CBSE Science question-bank question about photosynthesis", {
+    subject: "science", chapter: 5, route: "competency",
+  });
+  assert.equal(retrieved[0]?.kind, "syllabus");
+  assert.equal(retrieved[0]?.chapter, question.meta.chapter);
+  assert.ok(retrieved.some((source) => source.id === question.id));
+  assert.ok(retrieved.some((source) => source.id === answer.id));
+  assert.deepEqual(await retrieve("Give me a CBSE Science question-bank question about photosynthesis", {
+    subject: "science", chapter: 99, route: "competency",
+  }), []);
 });
 
 test("rejects content without an explicit syllabus mapping", () => {

@@ -9,6 +9,7 @@ export function isPracticeQuestion(chunk: Pick<Chunk, "meta">): boolean {
   return (
     (chunk.meta.kind === "ncert_exercise" && chunk.meta.chunkType === "ncert_question") ||
     (chunk.meta.kind === "exemplar" && chunk.meta.chunkType === "exemplar_question") ||
+    (chunk.meta.kind === "question_bank" && chunk.meta.chunkType === "question_bank_question") ||
     (chunk.meta.kind === "item_bank" && chunk.meta.chunkType === "item_bank_question" && chunk.meta.practiceModeEligible === true) ||
     (["sqp", "pyq", "cfpq", "apq"].includes(chunk.meta.kind) &&
       ["question_block", "question_part"].includes(chunk.meta.chunkType ?? ""))
@@ -17,7 +18,8 @@ export function isPracticeQuestion(chunk: Pick<Chunk, "meta">): boolean {
 
 export function practiceAnswerKinds(kind: SourceKind): SourceKind[] {
   if (kind === "ncert_exercise") return ["ncert_exercise"];
-  if (kind === "exemplar") return ["exemplar"];
+  if (kind === "exemplar") return ["exemplar", "exemplar_answer"];
+  if (kind === "question_bank") return ["question_bank_answer"];
   if (kind === "item_bank") return ["item_bank"];
   if (kind === "apq") return ["apq_answer"];
   return ["ms"];
@@ -65,6 +67,9 @@ export function findPracticeAnswer<T extends PairedChunk>(
     row.id !== question.id && (
       (question.meta.kind === "ncert_exercise" && row.meta.chunkType === "ncert_answer") ||
       (question.meta.kind === "exemplar" && row.meta.chunkType === "exemplar_answer") ||
+      (question.meta.kind === "exemplar" && row.meta.kind === "exemplar_answer" && row.meta.pairedQuestionId === question.id) ||
+      (question.meta.kind === "question_bank" && row.meta.kind === "question_bank_answer" &&
+        row.meta.chunkType === "question_bank_answer" && row.meta.pairedQuestionId === question.id) ||
       (question.meta.kind === "item_bank" && row.meta.kind === "item_bank" &&
         row.meta.chunkType === "item_bank_marking_scheme" && row.meta.pairedQuestionId === question.id) ||
       (question.meta.kind === "apq" && row.meta.kind === "apq_answer" &&

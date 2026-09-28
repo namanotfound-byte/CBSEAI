@@ -34,6 +34,7 @@ export type SourceKind =
   | "ncert"
   | "ncert_exercise"
   | "exemplar"
+  | "exemplar_answer"
   | "pyq"
   | "sqp"
   | "ms"
@@ -43,6 +44,8 @@ export type SourceKind =
   | "apq"
   | "apq_answer"
   | "item_bank"
+  | "question_bank"
+  | "question_bank_answer"
   | "notes";
 
 export interface Source {
@@ -181,7 +184,7 @@ export interface Chunk {
     inActiveSyllabus: boolean;
     /** Explicit human/content QA gate before production indexing. */
     reviewStatus?: "staging" | "approved";
-    assessmentStatus?: "summative" | "formative" | "excluded";
+    assessmentStatus?: "summative" | "formative" | "practice" | "excluded";
     /** Formative assessment item explicitly approved for practice retrieval. */
     practiceModeEligible?: boolean;
     pairedQuestionId?: string;

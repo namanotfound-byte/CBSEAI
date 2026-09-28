@@ -5,6 +5,7 @@ const KINDS = new Set<SourceKind>([
   "ncert",
   "ncert_exercise",
   "exemplar",
+  "exemplar_answer",
   "pyq",
   "sqp",
   "ms",
@@ -14,6 +15,8 @@ const KINDS = new Set<SourceKind>([
   "apq",
   "apq_answer",
   "item_bank",
+  "question_bank",
+  "question_bank_answer",
   "notes",
 ]);
 const SUBJECTS = new Set<SubjectId>(["science", "maths"]);
@@ -44,8 +47,8 @@ export function validateChunks(chunks: Chunk[]) {
       errors.push(`${at}: meta.inActiveSyllabus must be true or false`);
     }
     if (chunk.meta?.reviewStatus !== "approved") errors.push(`${at}: meta.reviewStatus must be approved`);
-    if (chunk.meta?.assessmentStatus !== "summative" && !isEligibleFormativeItemBank(chunk)) {
-      errors.push(`${at}: only summative material or approved formative item-bank practice can be indexed`);
+    if (chunk.meta?.assessmentStatus !== "summative" && !isEligibleFormativeItemBank(chunk) && !isEligibleQuestionBankPractice(chunk)) {
+      errors.push(`${at}: only summative material or explicitly approved practice pairs can be indexed`);
     }
     if (chunk.meta && chunk.meta.syllabusVersion !== "2026-27") {
       errors.push(`${at}: only the 2026-27 syllabus is enabled`);
@@ -78,6 +81,16 @@ export function validateChunks(chunks: Chunk[]) {
     if (chunk.meta?.kind === "exemplar" &&
         (!chunk.meta.joinPrefix || !["exemplar_question", "exemplar_answer"].includes(chunk.meta.chunkType ?? ""))) {
       errors.push(`${at}: NCERT Exemplar chunks need a joinPrefix and question/answer chunkType`);
+    }
+    if (chunk.meta?.kind === "exemplar_answer" &&
+        (!chunk.meta.joinPrefix || chunk.meta.chunkType !== "exemplar_answer" || chunk.meta.answerVisibility !== "solution_only")) {
+      errors.push(`${at}: Exemplar answer chunks need a joinPrefix and solution-only visibility`);
+    }
+    if (chunk.meta?.kind === "question_bank" && !isValidQuestionBankPairSide(chunk, true)) {
+      errors.push(`${at}: question-bank questions need a reciprocal approved practice answer`);
+    }
+    if (chunk.meta?.kind === "question_bank_answer" && !isValidQuestionBankPairSide(chunk, false)) {
+      errors.push(`${at}: question-bank answers need a reciprocal approved practice question`);
     }
     if (["pyq", "sqp", "cfpq"].includes(chunk.meta?.kind ?? "") && !chunk.meta?.joinPrefix) {
       errors.push(`${at}: question chunks need meta.joinPrefix`);
@@ -113,6 +126,21 @@ function isEligibleFormativeItemBank(chunk: Chunk) {
     chunk.meta.inActiveSyllabus === true &&
     chunk.meta.syllabusVersion === "2026-27" &&
     isValidItemBankChunk(chunk);
+}
+
+function isEligibleQuestionBankPractice(chunk: Chunk) {
+  return ["question_bank", "question_bank_answer"].includes(chunk.meta.kind) &&
+    chunk.meta.assessmentStatus === "practice" && chunk.meta.reviewStatus === "approved" &&
+    chunk.meta.inActiveSyllabus === true && chunk.meta.syllabusVersion === "2026-27" &&
+    isValidQuestionBankPairSide(chunk, chunk.meta.kind === "question_bank");
+}
+
+function isValidQuestionBankPairSide(chunk: Chunk, question: boolean) {
+  const m = chunk.meta;
+  return Boolean(m.joinPrefix && (question ? m.pairedAnswerId : m.pairedQuestionId)) &&
+    (question
+      ? m.chunkType === "question_bank_question" && m.answerVisibility === "question_only"
+      : m.chunkType === "question_bank_answer" && m.answerVisibility === "solution_only");
 }
 
 function isValidItemBankChunk(chunk: Chunk) {

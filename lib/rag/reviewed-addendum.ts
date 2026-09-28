@@ -44,6 +44,7 @@ import mathsNcertExercisesBatches19To32 from "@/data/corpus/maths-ncert-exercise
 import scienceApq2021Term1Batch1 from "@/data/corpus/science-apq2021-term1-reviewed-batch1.json";
 import scienceApq2022Batch1 from "@/data/corpus/science-apq2022-reviewed-batch1.json";
 import reviewedPendingQa20260928 from "@/data/corpus/reviewed-pending-qa-20260928.json";
+import reviewedPracticePairs20260928 from "@/data/corpus/reviewed-practice-pairs-20260928.json";
 
 // Page-checked against the authoritative ../Data source corpus.
 const FIRST_REVIEWED_ADDENDUM: Chunk[] = [
@@ -386,4 +387,5 @@ export const REVIEWED_ADDENDUM: Chunk[] = [
   ...(scienceApq2021Term1Batch1 as Chunk[]),
   ...(scienceApq2022Batch1 as Chunk[]),
   ...(reviewedPendingQa20260928 as Chunk[]),
+  ...(reviewedPracticePairs20260928 as Chunk[]),
 ];

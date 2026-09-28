@@ -147,6 +147,12 @@ function assessmentAllowed(meta: Chunk["meta"], filters: RetrievalFilters) {
   // Development seed fixtures predate assessmentStatus; deployable corpus rows
   // are required to declare it by validateChunks.
   if (meta.assessmentStatus === undefined || meta.assessmentStatus === "summative") return true;
+  if (filters.route === "competency" && meta.assessmentStatus === "practice" && meta.kind === "question_bank") {
+    return meta.chunkType === "question_bank_question" && Boolean(meta.pairedAnswerId) && meta.answerVisibility === "question_only";
+  }
+  if (filters.route === "competency" && meta.assessmentStatus === "practice" && meta.kind === "question_bank_answer") {
+    return meta.chunkType === "question_bank_answer" && Boolean(meta.pairedQuestionId) && meta.answerVisibility === "solution_only";
+  }
   if (filters.route !== "competency" || meta.assessmentStatus !== "formative" || meta.kind !== "item_bank") return false;
   return (meta.chunkType === "item_bank_question" && meta.practiceModeEligible === true && meta.answerVisibility === "question_only") ||
     (meta.chunkType === "item_bank_marking_scheme" && meta.practiceModeEligible === false && Boolean(meta.pairedQuestionId) && meta.answerVisibility === "solution_only");
@@ -268,7 +274,7 @@ export function createQdrantStore(
       { key: "meta.syllabusVersion", match: { value: filters.syllabusVersion ?? settings.syllabusVersion } },
       { key: "meta.inActiveSyllabus", match: { value: true } },
       { key: "meta.reviewStatus", match: { value: "approved" } },
-      { key: "meta.assessmentStatus", match: { any: filters.route === "competency" ? ["summative", "formative"] : ["summative"] } },
+      { key: "meta.assessmentStatus", match: { any: filters.route === "competency" ? ["summative", "formative", "practice"] : ["summative"] } },
     ];
     if (filters.syllabusTopicId) {
       clauses.push({ key: "meta.syllabusTopicId", match: { value: filters.syllabusTopicId } });
