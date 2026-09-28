@@ -29,7 +29,10 @@
       "contentSha256": "9bb300a6f323c6558e2feeff82b335cb7adcb33910390486d72d3af676c1e5f2",
       "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
       "heading": "Science 2024 Paper 31/3/1 · Q1",
-      "extractiveQuote": "Identify the product ‘X’ obtained in the following chemical reaction :\nCaCO₃  —Δ→  ‘X’ + CO₂\n(A) Quick lime\n(B) Gypsum\n(C) Lime Stone\n(D) Plaster of Paris"
+      "extractiveQuote": "Identify the product ‘X’ obtained in the following chemical reaction :\nCaCO₃  —Δ→  ‘X’ + CO₂\n(A) Quick lime\n(B) Gypsum\n(C) Lime Stone\n(D) Plaster of Paris",
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q1|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ms.science.2024.31-3-1.q01"
     }
   },
   {
@@ -63,7 +66,9 @@
       "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
       "heading": "Science Marking Scheme 2024 Paper 31/3/1 · Q1",
       "extractiveQuote": "(A) Quick lime",
-      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q1|answer"
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q1|answer",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "pyq.science.2024.31-3-1.q01"
     }
   },
   {
@@ -96,7 +101,10 @@
       "contentSha256": "9bb300a6f323c6558e2feeff82b335cb7adcb33910390486d72d3af676c1e5f2",
       "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
       "heading": "Science 2024 Paper 31/3/1 · Q2",
-      "extractiveQuote": "Select a pair of natural indicator from the following :\n(A) Litmus and methyl orange\n(B) Turmeric and Litmus\n(C) Phenolphthalein and methyl orange\n(D) Methyl orange and Turmeric"
+      "extractiveQuote": "Select a pair of natural indicator from the following :\n(A) Litmus and methyl orange\n(B) Turmeric and Litmus\n(C) Phenolphthalein and methyl orange\n(D) Methyl orange and Turmeric",
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q2|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ms.science.2024.31-3-1.q02"
     }
   },
   {
@@ -130,7 +138,9 @@
       "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
       "heading": "Science Marking Scheme 2024 Paper 31/3/1 · Q2",
       "extractiveQuote": "(B) Turmeric and Litmus",
-      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q2|answer"
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q2|answer",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "pyq.science.2024.31-3-1.q02"
     }
   },
   {
@@ -163,7 +173,10 @@
       "contentSha256": "9bb300a6f323c6558e2feeff82b335cb7adcb33910390486d72d3af676c1e5f2",
       "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
       "heading": "Science 2024 Paper 31/3/1 · Q3",
-      "extractiveQuote": "A chemical compound used in glass, soap and paper industries is\n(A) Washing Soda\n(B) Baking Soda\n(C) Bleaching Powder\n(D) Common Salt"
+      "extractiveQuote": "A chemical compound used in glass, soap and paper industries is\n(A) Washing Soda\n(B) Baking Soda\n(C) Bleaching Powder\n(D) Common Salt",
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q3|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ms.science.2024.31-3-1.q03"
     }
   },
   {
@@ -197,7 +210,9 @@
       "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
       "heading": "Science Marking Scheme 2024 Paper 31/3/1 · Q3",
       "extractiveQuote": "(A) Washing Soda",
-      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q3|answer"
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q3|answer",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "pyq.science.2024.31-3-1.q03"
     }
   }
 ]

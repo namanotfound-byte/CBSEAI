@@ -11,6 +11,8 @@ const KINDS = new Set<SourceKind>([
   "diagram",
   "model",
   "cfpq",
+  "apq",
+  "apq_answer",
   "notes",
 ]);
 const SUBJECTS = new Set<SubjectId>(["science", "maths"]);
@@ -53,8 +55,15 @@ export function validateChunks(chunks: Chunk[]) {
       errors.push(`${at}: meta.contentSha256 must be a SHA-256 hex digest`);
     }
     if (chunk.meta && !chunk.meta.language) errors.push(`${at}: meta.language is required`);
-    if (chunk.meta?.kind === "ms" && !chunk.meta.joinPrefix) {
+    if (["ms", "apq_answer"].includes(chunk.meta?.kind ?? "") && !chunk.meta.joinPrefix) {
       errors.push(`${at}: marking_scheme chunks need meta.joinPrefix`);
+    }
+    if (chunk.meta?.kind === "apq" &&
+        (!chunk.meta.joinPrefix || chunk.meta.chunkType !== "question_block")) {
+      errors.push(`${at}: APQ question chunks need a joinPrefix and question_block chunkType`);
+    }
+    if (chunk.meta?.kind === "apq_answer" && chunk.meta.chunkType !== "answer_block") {
+      errors.push(`${at}: APQ answer chunks must use answer_block chunkType`);
     }
     if (chunk.meta?.kind === "ncert_exercise" &&
         (!chunk.meta.joinPrefix || !["ncert_question", "ncert_answer"].includes(chunk.meta.chunkType ?? ""))) {

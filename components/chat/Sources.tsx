@@ -18,6 +18,8 @@ const KIND_STYLE: Record<SourceKind, { label: string; dot: string }> = {
   pyq: { label: "Past paper", dot: "#B45CFF" },
   sqp: { label: "Sample paper", dot: "#FF9500" },
   cfpq: { label: "CFPQ", dot: "#FF9500" },
+  apq: { label: "Additional practice question", dot: "#FF9500" },
+  apq_answer: { label: "Additional practice key", dot: "var(--red)" },
   model: { label: "Model paper", dot: "var(--text-faint)" },
   notes: { label: "Notes", dot: "var(--text-faint)" },
 };

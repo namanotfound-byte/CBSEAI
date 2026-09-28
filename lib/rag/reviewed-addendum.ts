@@ -34,6 +34,15 @@ import mathsNcertExercises4 from "@/data/corpus/maths-ncert-exercises-reviewed-4
 import scienceExemplar3 from "@/data/corpus/science-exemplar-reviewed-3.json";
 
 import practiceFullReviewBatch8 from "@/data/corpus/practice-full-review-batch8.json";
+import scienceNcertExerciseBatch2 from "@/data/corpus/science-ncert-exercise-reviewed-batch2.json";
+import scienceExemplarBatch4 from "@/data/corpus/science-exemplar-reviewed-batch4.json";
+import scienceApq2Batch1 from "@/data/corpus/science-apq2-reviewed-batch1.json";
+import mathsExemplarBatch1 from "@/data/corpus/maths-exemplar-reviewed-batch1.json";
+import mathsNcertExercises5 from "@/data/corpus/maths-ncert-exercises-reviewed-5.json";
+import scienceSqp2023Batch1 from "@/data/corpus/science-sqp-2023-24-reviewed-qa-batch1.json";
+import mathsNcertExercisesBatches19To32 from "@/data/corpus/maths-ncert-exercise-reviewed-batches19-32.json";
+import scienceApq2021Term1Batch1 from "@/data/corpus/science-apq2021-term1-reviewed-batch1.json";
+import scienceApq2022Batch1 from "@/data/corpus/science-apq2022-reviewed-batch1.json";
 
 // Page-checked against the authoritative ../Data source corpus.
 const FIRST_REVIEWED_ADDENDUM: Chunk[] = [
@@ -366,4 +375,13 @@ export const REVIEWED_ADDENDUM: Chunk[] = [
   ...(practiceFullReviewBatch8 as Chunk[]),
   ...(scienceExemplar3 as Chunk[]),
   ...(mathsNcertExercises4 as Chunk[]),
+  ...(scienceNcertExerciseBatch2 as Chunk[]),
+  ...(scienceExemplarBatch4 as Chunk[]),
+  ...(scienceApq2Batch1 as Chunk[]),
+  ...(mathsExemplarBatch1 as Chunk[]),
+  ...(mathsNcertExercises5 as Chunk[]),
+  ...(scienceSqp2023Batch1 as Chunk[]),
+  ...(mathsNcertExercisesBatches19To32 as Chunk[]),
+  ...(scienceApq2021Term1Batch1 as Chunk[]),
+  ...(scienceApq2022Batch1 as Chunk[]),
 ];

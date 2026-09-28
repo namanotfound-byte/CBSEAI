@@ -37,7 +37,10 @@
       "sourcePath": "NCERTs/Maths_2026.zip!/jemh104.pdf",
       "contentSha256": "9aca4b28ad57ae78a5e69ce67d19344c44b1390c5b8afd13db83b46ad54e8e9d",
       "page": 4,
-      "reviewNote": "Question checked against the rendered NCERT reprint page 41. Paired Yes/No answer checked against rendered official Answers/Hints page 252; classification independently verified by simplifying the equation."
+      "reviewNote": "Question checked against the rendered NCERT reprint page 41. Paired Yes/No answer checked against rendered official Answers/Hints page 252; classification independently verified by simplifying the equation.",
+      "joinKey": "2026-27|NCERT|Maths|Ch4|Ex4.1|Q1(i)|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ncert.maths.ch04.ex4_1.q1i.answer"
     }
   },
   {
@@ -81,7 +84,8 @@
       "joinKey": "2026-27|NCERT|Maths|Ch4|Ex4.1|Q1(i)|answer",
       "answerVisibility": "solution_only",
       "practiceModeEligible": false,
-      "reviewNote": "Exact short answer matched to the official NCERT Answers/Hints. Degree classification independently checked: Rearranging gives x² + 7 = 0, which is of the form ax² + bx + c = 0 with a ≠ 0."
+      "reviewNote": "Exact short answer matched to the official NCERT Answers/Hints. Degree classification independently checked: Rearranging gives x² + 7 = 0, which is of the form ax² + bx + c = 0 with a ≠ 0.",
+      "pairedQuestionId": "ncert.maths.ch04.ex4_1.q1i.question"
     }
   },
   {
@@ -122,7 +126,10 @@
       "sourcePath": "NCERTs/Maths_2026.zip!/jemh104.pdf",
       "contentSha256": "9aca4b28ad57ae78a5e69ce67d19344c44b1390c5b8afd13db83b46ad54e8e9d",
       "page": 4,
-      "reviewNote": "Question checked against the rendered NCERT reprint page 41. Paired Yes/No answer checked against rendered official Answers/Hints page 252; classification independently verified by simplifying the equation."
+      "reviewNote": "Question checked against the rendered NCERT reprint page 41. Paired Yes/No answer checked against rendered official Answers/Hints page 252; classification independently verified by simplifying the equation.",
+      "joinKey": "2026-27|NCERT|Maths|Ch4|Ex4.1|Q1(ii)|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ncert.maths.ch04.ex4_1.q1ii.answer"
     }
   },
   {
@@ -166,7 +173,8 @@
       "joinKey": "2026-27|NCERT|Maths|Ch4|Ex4.1|Q1(ii)|answer",
       "answerVisibility": "solution_only",
       "practiceModeEligible": false,
-      "reviewNote": "Exact short answer matched to the official NCERT Answers/Hints. Degree classification independently checked: Rearranging gives x² − 4x + 6 = 0, which is quadratic."
+      "reviewNote": "Exact short answer matched to the official NCERT Answers/Hints. Degree classification independently checked: Rearranging gives x² − 4x + 6 = 0, which is quadratic.",
+      "pairedQuestionId": "ncert.maths.ch04.ex4_1.q1ii.question"
     }
   },
   {
@@ -207,7 +215,10 @@
       "sourcePath": "NCERTs/Maths_2026.zip!/jemh104.pdf",
       "contentSha256": "9aca4b28ad57ae78a5e69ce67d19344c44b1390c5b8afd13db83b46ad54e8e9d",
       "page": 4,
-      "reviewNote": "Question checked against the rendered NCERT reprint page 41. Paired Yes/No answer checked against rendered official Answers/Hints page 252; classification independently verified by simplifying the equation."
+      "reviewNote": "Question checked against the rendered NCERT reprint page 41. Paired Yes/No answer checked against rendered official Answers/Hints page 252; classification independently verified by simplifying the equation.",
+      "joinKey": "2026-27|NCERT|Maths|Ch4|Ex4.1|Q1(iii)|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ncert.maths.ch04.ex4_1.q1iii.answer"
     }
   },
   {
@@ -251,7 +262,8 @@
       "joinKey": "2026-27|NCERT|Maths|Ch4|Ex4.1|Q1(iii)|answer",
       "answerVisibility": "solution_only",
       "practiceModeEligible": false,
-      "reviewNote": "Exact short answer matched to the official NCERT Answers/Hints. Degree classification independently checked: After simplifying, the x² terms cancel and the equation is linear."
+      "reviewNote": "Exact short answer matched to the official NCERT Answers/Hints. Degree classification independently checked: After simplifying, the x² terms cancel and the equation is linear.",
+      "pairedQuestionId": "ncert.maths.ch04.ex4_1.q1iii.question"
     }
   },
   {
@@ -292,7 +304,10 @@
       "sourcePath": "NCERTs/Maths_2026.zip!/jemh104.pdf",
       "contentSha256": "9aca4b28ad57ae78a5e69ce67d19344c44b1390c5b8afd13db83b46ad54e8e9d",
       "page": 4,
-      "reviewNote": "Question checked against the rendered NCERT reprint page 41. Paired Yes/No answer checked against rendered official Answers/Hints page 252; classification independently verified by simplifying the equation."
+      "reviewNote": "Question checked against the rendered NCERT reprint page 41. Paired Yes/No answer checked against rendered official Answers/Hints page 252; classification independently verified by simplifying the equation.",
+      "joinKey": "2026-27|NCERT|Maths|Ch4|Ex4.1|Q1(iv)|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ncert.maths.ch04.ex4_1.q1iv.answer"
     }
   },
   {
@@ -336,7 +351,8 @@
       "joinKey": "2026-27|NCERT|Maths|Ch4|Ex4.1|Q1(iv)|answer",
       "answerVisibility": "solution_only",
       "practiceModeEligible": false,
-      "reviewNote": "Exact short answer matched to the official NCERT Answers/Hints. Degree classification independently checked: After simplifying, x² − 10x − 3 = 0, which is quadratic."
+      "reviewNote": "Exact short answer matched to the official NCERT Answers/Hints. Degree classification independently checked: After simplifying, x² − 10x − 3 = 0, which is quadratic.",
+      "pairedQuestionId": "ncert.maths.ch04.ex4_1.q1iv.question"
     }
   },
   {
@@ -377,7 +393,10 @@
       "sourcePath": "NCERTs/Maths_2026.zip!/jemh104.pdf",
       "contentSha256": "9aca4b28ad57ae78a5e69ce67d19344c44b1390c5b8afd13db83b46ad54e8e9d",
       "page": 4,
-      "reviewNote": "Question checked against the rendered NCERT reprint page 41. Paired Yes/No answer checked against rendered official Answers/Hints page 252; classification independently verified by simplifying the equation."
+      "reviewNote": "Question checked against the rendered NCERT reprint page 41. Paired Yes/No answer checked against rendered official Answers/Hints page 252; classification independently verified by simplifying the equation.",
+      "joinKey": "2026-27|NCERT|Maths|Ch4|Ex4.1|Q1(v)|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ncert.maths.ch04.ex4_1.q1v.answer"
     }
   },
   {
@@ -421,7 +440,8 @@
       "joinKey": "2026-27|NCERT|Maths|Ch4|Ex4.1|Q1(v)|answer",
       "answerVisibility": "solution_only",
       "practiceModeEligible": false,
-      "reviewNote": "Exact short answer matched to the official NCERT Answers/Hints. Degree classification independently checked: After simplifying, x² − 11x + 8 = 0, which is quadratic."
+      "reviewNote": "Exact short answer matched to the official NCERT Answers/Hints. Degree classification independently checked: After simplifying, x² − 11x + 8 = 0, which is quadratic.",
+      "pairedQuestionId": "ncert.maths.ch04.ex4_1.q1v.question"
     }
   },
   {
@@ -462,7 +482,10 @@
       "sourcePath": "NCERTs/Maths_2026.zip!/jemh104.pdf",
       "contentSha256": "9aca4b28ad57ae78a5e69ce67d19344c44b1390c5b8afd13db83b46ad54e8e9d",
       "page": 4,
-      "reviewNote": "Question checked against the rendered NCERT reprint page 41. Paired Yes/No answer checked against rendered official Answers/Hints page 252; classification independently verified by simplifying the equation."
+      "reviewNote": "Question checked against the rendered NCERT reprint page 41. Paired Yes/No answer checked against rendered official Answers/Hints page 252; classification independently verified by simplifying the equation.",
+      "joinKey": "2026-27|NCERT|Maths|Ch4|Ex4.1|Q1(vi)|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ncert.maths.ch04.ex4_1.q1vi.answer"
     }
   },
   {
@@ -506,7 +529,8 @@
       "joinKey": "2026-27|NCERT|Maths|Ch4|Ex4.1|Q1(vi)|answer",
       "answerVisibility": "solution_only",
       "practiceModeEligible": false,
-      "reviewNote": "Exact short answer matched to the official NCERT Answers/Hints. Degree classification independently checked: After simplifying, 7x − 3 = 0, which is linear."
+      "reviewNote": "Exact short answer matched to the official NCERT Answers/Hints. Degree classification independently checked: After simplifying, 7x − 3 = 0, which is linear.",
+      "pairedQuestionId": "ncert.maths.ch04.ex4_1.q1vi.question"
     }
   },
   {
@@ -547,7 +571,10 @@
       "sourcePath": "NCERTs/Maths_2026.zip!/jemh104.pdf",
       "contentSha256": "9aca4b28ad57ae78a5e69ce67d19344c44b1390c5b8afd13db83b46ad54e8e9d",
       "page": 4,
-      "reviewNote": "Question checked against the rendered NCERT reprint page 41. Paired Yes/No answer checked against rendered official Answers/Hints page 252; classification independently verified by simplifying the equation."
+      "reviewNote": "Question checked against the rendered NCERT reprint page 41. Paired Yes/No answer checked against rendered official Answers/Hints page 252; classification independently verified by simplifying the equation.",
+      "joinKey": "2026-27|NCERT|Maths|Ch4|Ex4.1|Q1(vii)|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ncert.maths.ch04.ex4_1.q1vii.answer"
     }
   },
   {
@@ -591,7 +618,8 @@
       "joinKey": "2026-27|NCERT|Maths|Ch4|Ex4.1|Q1(vii)|answer",
       "answerVisibility": "solution_only",
       "practiceModeEligible": false,
-      "reviewNote": "Exact short answer matched to the official NCERT Answers/Hints. Degree classification independently checked: After simplifying, the equation has degree 3, not degree 2."
+      "reviewNote": "Exact short answer matched to the official NCERT Answers/Hints. Degree classification independently checked: After simplifying, the equation has degree 3, not degree 2.",
+      "pairedQuestionId": "ncert.maths.ch04.ex4_1.q1vii.question"
     }
   },
   {
@@ -632,7 +660,10 @@
       "sourcePath": "NCERTs/Maths_2026.zip!/jemh104.pdf",
       "contentSha256": "9aca4b28ad57ae78a5e69ce67d19344c44b1390c5b8afd13db83b46ad54e8e9d",
       "page": 4,
-      "reviewNote": "Question checked against the rendered NCERT reprint page 41. Paired Yes/No answer checked against rendered official Answers/Hints page 252; classification independently verified by simplifying the equation."
+      "reviewNote": "Question checked against the rendered NCERT reprint page 41. Paired Yes/No answer checked against rendered official Answers/Hints page 252; classification independently verified by simplifying the equation.",
+      "joinKey": "2026-27|NCERT|Maths|Ch4|Ex4.1|Q1(viii)|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ncert.maths.ch04.ex4_1.q1viii.answer"
     }
   },
   {
@@ -676,7 +707,8 @@
       "joinKey": "2026-27|NCERT|Maths|Ch4|Ex4.1|Q1(viii)|answer",
       "answerVisibility": "solution_only",
       "practiceModeEligible": false,
-      "reviewNote": "Exact short answer matched to the official NCERT Answers/Hints. Degree classification independently checked: After simplifying, 2x² − 13x + 9 = 0, which is quadratic."
+      "reviewNote": "Exact short answer matched to the official NCERT Answers/Hints. Degree classification independently checked: After simplifying, 2x² − 13x + 9 = 0, which is quadratic.",
+      "pairedQuestionId": "ncert.maths.ch04.ex4_1.q1viii.question"
     }
   }
 ]

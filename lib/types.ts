@@ -40,6 +40,8 @@ export type SourceKind =
   | "diagram"
   | "model"
   | "cfpq"
+  | "apq"
+  | "apq_answer"
   | "notes";
 
 export interface Source {

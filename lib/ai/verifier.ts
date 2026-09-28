@@ -21,7 +21,7 @@ export async function verifyAnswer(
 ): Promise<VerificationResult> {
   const ids = new Set(sources.map((s) => s.id));
   const hasMarkingScheme = sources.some(
-    (s) => s.kind === "ms" || s.chunkType === "marking_scheme",
+    (s) => s.kind === "ms" || s.kind === "apq_answer" || s.chunkType === "marking_scheme",
   );
   const citedIds = [
     ...text.matchAll(/\[\[source:([^\]]+)\]\]|\[\[diagram:([^\]]+)\]\]/g),
@@ -44,7 +44,7 @@ export async function verifyAnswer(
   } else if (hasMarkingScheme) {
     const allowedMarks = new Set(
       sources
-        .filter((source) => source.kind === "ms" || source.chunkType === "marking_scheme")
+        .filter((source) => source.kind === "ms" || source.kind === "apq_answer" || source.chunkType === "marking_scheme")
         .flatMap((source) => markValues(source.content ?? source.snippet)),
     );
     const unsupported = markValues(cleaned).some((value) => !allowedMarks.has(value));

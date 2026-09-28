@@ -1,0 +1,3102 @@
+[
+  {
+    "id": "apq.science.2022.q01",
+    "text": "1. The yellow colour of turmeric changes to red on addition of soap solution. When \nsubstance P is added to turmeric, there is no change in colour. \n \nWhich of the following is definitely true about substance P? \nA. P is an acid. \nB. P is not a salt. \nC. P is not a base. \nD. P is a neutral substance. \n1",
+    "meta": {
+      "subject": "science",
+      "chapter": 2,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch02",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q1",
+      "questionNumber": 1,
+      "heading": "Science APQ 2022–23 · Question 1",
+      "conceptTags": [
+        "science chapter 02"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        1
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "69823cb5db2021571ab86778b146f16c2af3556d43ae6cb104337f39f1c5dc48"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-01-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q1|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "5b9113c790648fe48e14e38922c4005959acddb908b4fe103637fea677abe63c",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q01.answer",
+      "page": 1,
+      "sourcePages": [
+        1
+      ],
+      "sourcePageTextSha256": "69823cb5db2021571ab86778b146f16c2af3556d43ae6cb104337f39f1c5dc48",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q01.answer",
+    "text": "Q.1 C. P is not a base. 1",
+    "meta": {
+      "subject": "science",
+      "chapter": 2,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch02",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q1",
+      "questionNumber": 1,
+      "heading": "Science APQ 2022–23 · Question 1",
+      "conceptTags": [
+        "science chapter 02"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        1
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "69823cb5db2021571ab86778b146f16c2af3556d43ae6cb104337f39f1c5dc48"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-01-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q1|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "f8372b40dc9e2b6bbe118dc1d06e1315b188e8ac8bfd4eb66c5cae97ba5e54bf",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q01",
+      "page": 1,
+      "sourcePages": [
+        1
+      ],
+      "sourcePageTextSha256": "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q02",
+    "text": "2. During the electrolytic refining of copper what happens at the anode? \n \nA. copper ions gain electrons to become neutral copper atoms \nB. neutral copper atoms gain electrons to become ions \nC. copper ions lose electrons to become neutral atoms \nD. neutral copper atoms lose electrons to become ions \n1",
+    "meta": {
+      "subject": "science",
+      "chapter": 3,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch03",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q2",
+      "questionNumber": 2,
+      "heading": "Science APQ 2022–23 · Question 2",
+      "conceptTags": [
+        "science chapter 03"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        1
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "69823cb5db2021571ab86778b146f16c2af3556d43ae6cb104337f39f1c5dc48"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-01-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q2|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "98e546b423e9722d7598c146021d555a18d01d7ca3c0965344b8231c7cd00dc4",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q02.answer",
+      "page": 1,
+      "sourcePages": [
+        1
+      ],
+      "sourcePageTextSha256": "69823cb5db2021571ab86778b146f16c2af3556d43ae6cb104337f39f1c5dc48",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q02.answer",
+    "text": "Q.2 D. neutral copper atoms lose electrons to become ions 1",
+    "meta": {
+      "subject": "science",
+      "chapter": 3,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch03",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q2",
+      "questionNumber": 2,
+      "heading": "Science APQ 2022–23 · Question 2",
+      "conceptTags": [
+        "science chapter 03"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        1
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "69823cb5db2021571ab86778b146f16c2af3556d43ae6cb104337f39f1c5dc48"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-01-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q2|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "e70f339d6baf9665cbcde0993d3d5f2f93071bc01186fde1813c6397d421242c",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q02",
+      "page": 1,
+      "sourcePages": [
+        1
+      ],
+      "sourcePageTextSha256": "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q04",
+    "text": "4. Ashok has written the following reactions to show how metals can be obtained from their \nores. \n \nP) 2 Fe2O3 + 3C --------> 4 Fe + 3 CO2 \n \nQ) Na2O + C --------> 2 Na + CO \n \nR) ZnO + C --------> Zn + CO \n \nS) CuO + C -----------> Cu + CO \n \nIdentify the INCORRECT reaction(s) among them. \nA. only P \nB. only Q \nC. only P and R \nD. only Q, R or S \n1",
+    "meta": {
+      "subject": "science",
+      "chapter": 3,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch03",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q4",
+      "questionNumber": 4,
+      "heading": "Science APQ 2022–23 · Question 4",
+      "conceptTags": [
+        "science chapter 03"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        2
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "901de6263840c805c1dfa45407a187bcd3ee29a4510fa033ef22c13e68133ef6"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-02-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q4|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "068a23f2a36fc4dfd26aaa0cab590cd758af3d030f47588879490383bf19ff50",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q04.answer",
+      "page": 2,
+      "sourcePages": [
+        2
+      ],
+      "sourcePageTextSha256": "901de6263840c805c1dfa45407a187bcd3ee29a4510fa033ef22c13e68133ef6",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q04.answer",
+    "text": "Q.4 B. only Q 1",
+    "meta": {
+      "subject": "science",
+      "chapter": 3,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch03",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q4",
+      "questionNumber": 4,
+      "heading": "Science APQ 2022–23 · Question 4",
+      "conceptTags": [
+        "science chapter 03"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        2
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "901de6263840c805c1dfa45407a187bcd3ee29a4510fa033ef22c13e68133ef6"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-02-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q4|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "70705cb6f6a42f77e3c232addb7e01b1b6a3169a4b734c278afd6c946a401bca",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q04",
+      "page": 1,
+      "sourcePages": [
+        1
+      ],
+      "sourcePageTextSha256": "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q06",
+    "text": "6. A solution of a base with pH 12.1 is given. \n \nWhich of the following can be done to decrease its pH? \nP) add distilled water to it \nQ) add a solution of a different base with pH 8.7 \nR) add few drops of an acid with an unknown pH \n \nA. only P \nB. only R \nC. only P and Q \nD. any of P, Q and R \n1",
+    "meta": {
+      "subject": "science",
+      "chapter": 2,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch02",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q6",
+      "questionNumber": 6,
+      "heading": "Science APQ 2022–23 · Question 6",
+      "conceptTags": [
+        "science chapter 02"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        3
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "46d1b68529643065187fa66ac55b3c53e31b7b6c18ded5e1df16ca66606b29e4"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-03-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q6|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "1f65c1fe0b2c2ec4a5a782cf935b90876104da037411c2060e99673689d6bce1",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q06.answer",
+      "page": 3,
+      "sourcePages": [
+        3
+      ],
+      "sourcePageTextSha256": "46d1b68529643065187fa66ac55b3c53e31b7b6c18ded5e1df16ca66606b29e4",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q06.answer",
+    "text": "Q.6 D. any of P, Q and R 1",
+    "meta": {
+      "subject": "science",
+      "chapter": 2,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch02",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q6",
+      "questionNumber": 6,
+      "heading": "Science APQ 2022–23 · Question 6",
+      "conceptTags": [
+        "science chapter 02"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        3
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "46d1b68529643065187fa66ac55b3c53e31b7b6c18ded5e1df16ca66606b29e4"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-03-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q6|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "0d4e9972926d93f542b4a4d98b65a127ebe895c510023305fa0388ca5b242015",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q06",
+      "page": 1,
+      "sourcePages": [
+        1
+      ],
+      "sourcePageTextSha256": "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q10",
+    "text": "10. A homozygous dominant guinea pig with black fur is crossed with a homozygous guinea \npig with white fur. The F1 generation is crossed with itself. \n \nWhat percentage of F2 generation is expected to show white fur coat? \n \n \n1\nA. 25% \nB. 50% \nC. 75% \nD. 100%",
+    "meta": {
+      "subject": "science",
+      "chapter": 8,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch08",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q10",
+      "questionNumber": 10,
+      "heading": "Science APQ 2022–23 · Question 10",
+      "conceptTags": [
+        "science chapter 08"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        4,
+        5
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "e96ed3c75b21844b467994ce957476679df8e3705951a1440f5eed5567343dd6",
+        "c595da82861f0ea1798186c5c8d533a795595f6ea6257c07130190c7fdfaf6bc"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-04-180dpi.png",
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-05-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q10|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "ff414650d24e0b2e8f4b70099e54b54da4d5c83441197558bf0ac5366260235f",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q10.answer",
+      "page": 4,
+      "sourcePages": [
+        4,
+        5
+      ],
+      "sourcePageTextSha256": "e96ed3c75b21844b467994ce957476679df8e3705951a1440f5eed5567343dd6",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q10.answer",
+    "text": "Q.10 A. 25% 1",
+    "meta": {
+      "subject": "science",
+      "chapter": 8,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch08",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q10",
+      "questionNumber": 10,
+      "heading": "Science APQ 2022–23 · Question 10",
+      "conceptTags": [
+        "science chapter 08"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        4,
+        5
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "e96ed3c75b21844b467994ce957476679df8e3705951a1440f5eed5567343dd6",
+        "c595da82861f0ea1798186c5c8d533a795595f6ea6257c07130190c7fdfaf6bc"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-04-180dpi.png",
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-05-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q10|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "33866d310f1719148dadc9876428585785fd7b17649a8cec76aafd5fd2b1bac8",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q10",
+      "page": 1,
+      "sourcePages": [
+        1
+      ],
+      "sourcePageTextSha256": "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q11",
+    "text": "11. Person X suffers from a condition that affects the normal functioning of the pituitary \ngland. \n \nWhich of the following is most likely a direct effect of person X's condition? \nA. insufficiency of iodine \nB. irregular heartbeat \nC. insufficient growth of the body \nD. inability to regulate blood sugar \n1",
+    "meta": {
+      "subject": "science",
+      "chapter": 6,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch06",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q11",
+      "questionNumber": 11,
+      "heading": "Science APQ 2022–23 · Question 11",
+      "conceptTags": [
+        "science chapter 06"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        5
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "c595da82861f0ea1798186c5c8d533a795595f6ea6257c07130190c7fdfaf6bc"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-05-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q11|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "17312796913fa9e5ef70a96c68262b6d9ea502bda4de70d62997ea492163852e",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q11.answer",
+      "page": 5,
+      "sourcePages": [
+        5
+      ],
+      "sourcePageTextSha256": "c595da82861f0ea1798186c5c8d533a795595f6ea6257c07130190c7fdfaf6bc",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q11.answer",
+    "text": "Q.11 C. insufficient growth of the body 1",
+    "meta": {
+      "subject": "science",
+      "chapter": 6,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch06",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q11",
+      "questionNumber": 11,
+      "heading": "Science APQ 2022–23 · Question 11",
+      "conceptTags": [
+        "science chapter 06"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        5
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "c595da82861f0ea1798186c5c8d533a795595f6ea6257c07130190c7fdfaf6bc"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-05-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q11|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "a75416eb155504ce4f21e6b115b5fa8d821f8cee8690cc159be6ce7e9f2afe6e",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q11",
+      "page": 1,
+      "sourcePages": [
+        1
+      ],
+      "sourcePageTextSha256": "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q12",
+    "text": "12. The time duration from the sowing of seeds to the harvest of crops is critical for \nagricultural purposes. \n \nBased on the information above, select a reason why farmers prefer vegetative \npropagation for growing crops. \nA. Seedless crops can also be reproduced. \nB. Offspring plants are genetically similar to parent plants. \nC. Plants grown by vegetative propagation bear fruits earlier. \nD. Vegetative propagation does not depend on external agents of pollination. \n1",
+    "meta": {
+      "subject": "science",
+      "chapter": 7,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch07",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q12",
+      "questionNumber": 12,
+      "heading": "Science APQ 2022–23 · Question 12",
+      "conceptTags": [
+        "science chapter 07"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        5
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "c595da82861f0ea1798186c5c8d533a795595f6ea6257c07130190c7fdfaf6bc"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-05-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q12|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "bc946778d6368d4d058be6dfde232c27db28e810f334203fd38b933aee370f2d",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q12.answer",
+      "page": 5,
+      "sourcePages": [
+        5
+      ],
+      "sourcePageTextSha256": "c595da82861f0ea1798186c5c8d533a795595f6ea6257c07130190c7fdfaf6bc",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q12.answer",
+    "text": "Q.12 C. Plants grown by vegetative propagation bear fruits earlier. 1",
+    "meta": {
+      "subject": "science",
+      "chapter": 7,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch07",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q12",
+      "questionNumber": 12,
+      "heading": "Science APQ 2022–23 · Question 12",
+      "conceptTags": [
+        "science chapter 07"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        5
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "c595da82861f0ea1798186c5c8d533a795595f6ea6257c07130190c7fdfaf6bc"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-05-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q12|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "0a30893854002175e697daf4e97bfdaa0742dc3a4eed4a576949c71d567f63f6",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q12",
+      "page": 1,
+      "sourcePages": [
+        1
+      ],
+      "sourcePageTextSha256": "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q14",
+    "text": "14. The frequency of AC in some countries is 60 Hz. \n \nWhat does this mean? \n \nA. The current changes direction 60 times in a second. \nB. The current changes direction 120 times in a second. \nC. The current changes direction after every 60 seconds. \nD. The current changes direction after every 120 seconds. \n1",
+    "meta": {
+      "subject": "science",
+      "chapter": 11,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch11",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q14",
+      "questionNumber": 14,
+      "heading": "Science APQ 2022–23 · Question 14",
+      "conceptTags": [
+        "science chapter 11"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        6
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "77ddbc8641d336370c6536c4122de2b31a36565d79f40c9e81ed10d287379d05"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-06-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q14|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "f1625a3dc94b7c43c2dee9176dbcea68bb73ef1858e306d10b27b46f65f3685a",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q14.answer",
+      "page": 6,
+      "sourcePages": [
+        6
+      ],
+      "sourcePageTextSha256": "77ddbc8641d336370c6536c4122de2b31a36565d79f40c9e81ed10d287379d05",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q14.answer",
+    "text": "Q.14 B. The current changes direction 120 times in a second. 1",
+    "meta": {
+      "subject": "science",
+      "chapter": 11,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch11",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q14",
+      "questionNumber": 14,
+      "heading": "Science APQ 2022–23 · Question 14",
+      "conceptTags": [
+        "science chapter 11"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        6
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "77ddbc8641d336370c6536c4122de2b31a36565d79f40c9e81ed10d287379d05"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-06-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q14|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "16eeac5c55a3b28621b07fc69f10f107f54e6934266237ecb7549362c3783bf8",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q14",
+      "page": 1,
+      "sourcePages": [
+        1
+      ],
+      "sourcePageTextSha256": "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q17",
+    "text": "17. Assertion (A): A white washed wall develops a coating of calcium carbonate after a few \ndays. \nReason (R): Calcium oxide on the wall reacts slowly with carbon dioxide in the air. \n1",
+    "meta": {
+      "subject": "science",
+      "chapter": 1,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch01",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q17",
+      "questionNumber": 17,
+      "heading": "Science APQ 2022–23 · Question 17",
+      "conceptTags": [
+        "science chapter 01"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        8
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-08-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q17|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "045221a3e64b30a643ef073eae2a080b15ad8d93ab4946c29fed1e726d5b8393",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q17.answer",
+      "page": 8,
+      "sourcePages": [
+        8
+      ],
+      "sourcePageTextSha256": "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q17.answer",
+    "text": "Q.17 C. A is true but R is false. 1",
+    "meta": {
+      "subject": "science",
+      "chapter": 1,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch01",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q17",
+      "questionNumber": 17,
+      "heading": "Science APQ 2022–23 · Question 17",
+      "conceptTags": [
+        "science chapter 01"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        8
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-08-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q17|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "8bb7be5b8e0a5fd9ec2ab62e4456000f4cd3bd268dd3ec6ddf7cfe8f5edf15f5",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q17",
+      "page": 1,
+      "sourcePages": [
+        1
+      ],
+      "sourcePageTextSha256": "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q18",
+    "text": "18. Assertion (A): Offsprings produced by sexual reproduction show variation. \nReason (R): Each offspring produced by sexual reproduction inherits all the genes from \neach parent. \n1",
+    "meta": {
+      "subject": "science",
+      "chapter": 8,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch08",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q18",
+      "questionNumber": 18,
+      "heading": "Science APQ 2022–23 · Question 18",
+      "conceptTags": [
+        "science chapter 08"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        8
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-08-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q18|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "93347e14c1ea5eb1b2f8fc05938885bfc2854eaadcd24a8c57a4394ac11c1054",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q18.answer",
+      "page": 8,
+      "sourcePages": [
+        8
+      ],
+      "sourcePageTextSha256": "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q18.answer",
+    "text": "Q.18 C. A is true, but R is false. 1",
+    "meta": {
+      "subject": "science",
+      "chapter": 8,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch08",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q18",
+      "questionNumber": 18,
+      "heading": "Science APQ 2022–23 · Question 18",
+      "conceptTags": [
+        "science chapter 08"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        8
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-08-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q18|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "d1d08fc70f71ba3e77e39b2adb14740e9bed85a789be14c232f310a4449052be",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q18",
+      "page": 1,
+      "sourcePages": [
+        1
+      ],
+      "sourcePageTextSha256": "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q19",
+    "text": "19. Assertion (A): Capillaries have walls that are just one cell thick. \nReason (R): Exchange of material between the blood and surrounding cells takes place \nacross the capillaries. \n1",
+    "meta": {
+      "subject": "science",
+      "chapter": 5,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch05",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q19",
+      "questionNumber": 19,
+      "heading": "Science APQ 2022–23 · Question 19",
+      "conceptTags": [
+        "science chapter 05"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        8
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-08-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q19|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "8b814c90aad9ac31d7c675b1bbb856495770051dc71567b25e174f0e9ccc2c1c",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q19.answer",
+      "page": 8,
+      "sourcePages": [
+        8
+      ],
+      "sourcePageTextSha256": "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q19.answer",
+    "text": "Q.19 A. Both A and R are true, and R is the correct explanation of A. 1",
+    "meta": {
+      "subject": "science",
+      "chapter": 5,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch05",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q19",
+      "questionNumber": 19,
+      "heading": "Science APQ 2022–23 · Question 19",
+      "conceptTags": [
+        "science chapter 05"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        8
+      ],
+      "answerSourcePages": [
+        1
+      ],
+      "questionSourcePageTextSha256s": [
+        "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-08-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q19|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "563c020b7926f9cb137b5f0c8bfc6fefc5daff005caa9dd0c03a30a5121c6bad",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q19",
+      "page": 1,
+      "sourcePages": [
+        1
+      ],
+      "sourcePageTextSha256": "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q20",
+    "text": "20. Assertion (A): A stationary charged particle placed in a magnetic field experiences a \nforce. \nReason (R): A stationary charged particle does not produce a magnetic field. \n1",
+    "meta": {
+      "subject": "science",
+      "chapter": 12,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch12",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q20",
+      "questionNumber": 20,
+      "heading": "Science APQ 2022–23 · Question 20",
+      "conceptTags": [
+        "science chapter 12"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        8
+      ],
+      "answerSourcePages": [
+        1,
+        2
+      ],
+      "questionSourcePageTextSha256s": [
+        "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b",
+        "7f3e81516928013f34f6ea929b0da0112c01a0d2053fb894f2bf1bf0ac314eed"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-08-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png",
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-02-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q20|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "47f5221e0355350a655c9596f3d8d527a3462230f829b6a8c9896462f6eef382",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q20.answer",
+      "page": 8,
+      "sourcePages": [
+        8
+      ],
+      "sourcePageTextSha256": "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q20.answer",
+    "text": "Q.20 D. A is false but R is true. 1",
+    "meta": {
+      "subject": "science",
+      "chapter": 12,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch12",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q20",
+      "questionNumber": 20,
+      "heading": "Science APQ 2022–23 · Question 20",
+      "conceptTags": [
+        "science chapter 12"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        8
+      ],
+      "answerSourcePages": [
+        1,
+        2
+      ],
+      "questionSourcePageTextSha256s": [
+        "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459"
+      ],
+      "answerSourcePageTextSha256s": [
+        "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b",
+        "7f3e81516928013f34f6ea929b0da0112c01a0d2053fb894f2bf1bf0ac314eed"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-08-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-01-180dpi.png",
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-02-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q20|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "59aa911c6f5bba7909f8689a69c68717ef43f38cad223559cb047d4fb2fd6863",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q20",
+      "page": 1,
+      "sourcePages": [
+        1,
+        2
+      ],
+      "sourcePageTextSha256": "10a6abdbda771247fe2fdb9bd8d81f5a8fb83159df3a778a9a6849fe8e81214b",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q21",
+    "text": "21. Diana prepared a cake by two methods. \n \nMethod i) She added baking soda to the cake mixture and let the mixture stand for one \nhour before placing it in the oven to bake. \n \nMethod ii) She added baking powder to the cake mixture and let the mixture stand for \none hour before placing it in the oven to bake. \n \nState the difference in the cake mixtures that Diana is likely to have observed before \nbaking. Explain why. \n \nOR \n \nCompare the stability of a neutral sodium atom and a positive sodium ion. Justify your \nanswer. \n2",
+    "meta": {
+      "subject": "science",
+      "chapter": 2,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch02",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q21",
+      "questionNumber": 21,
+      "heading": "Science APQ 2022–23 · Question 21",
+      "conceptTags": [
+        "science chapter 02"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        8
+      ],
+      "answerSourcePages": [
+        2
+      ],
+      "questionSourcePageTextSha256s": [
+        "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459"
+      ],
+      "answerSourcePageTextSha256s": [
+        "7f3e81516928013f34f6ea929b0da0112c01a0d2053fb894f2bf1bf0ac314eed"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-08-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-02-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q21|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "5e45365c6bd594829379c69accdd8e9c65ebce0fb1606ae15530e438b649b14a",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q21.answer",
+      "page": 8,
+      "sourcePages": [
+        8
+      ],
+      "sourcePageTextSha256": "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q21.answer",
+    "text": "Q.21 Diana is likely to see that the cake mixture (ii) has risen while cake mixture (i) \nhas not. \n1 mark for each of the following: \n \n- The sodium bicarbonate and tartaric acid in baking powder react on mixing \nwith one another, producing carbon dioxide that causes the cake mixture to rise. \n \n- Baking soda does not contain tartaric acid and hence does not produce carbon \ndioxide before baking. \n \nOR \n \n1 mark for each of the following: \n \nA positive sodium is more stable than a neutral sodium atom. \nA positive sodium ion has a complete octet of electrons in its penultimate shell. \n2",
+    "meta": {
+      "subject": "science",
+      "chapter": 2,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch02",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q21",
+      "questionNumber": 21,
+      "heading": "Science APQ 2022–23 · Question 21",
+      "conceptTags": [
+        "science chapter 02"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        8
+      ],
+      "answerSourcePages": [
+        2
+      ],
+      "questionSourcePageTextSha256s": [
+        "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459"
+      ],
+      "answerSourcePageTextSha256s": [
+        "7f3e81516928013f34f6ea929b0da0112c01a0d2053fb894f2bf1bf0ac314eed"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-08-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-02-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q21|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "06390294a78d104953cb83465c566c2d941cf8103df64e95f357702b0ea1c351",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q21",
+      "page": 2,
+      "sourcePages": [
+        2
+      ],
+      "sourcePageTextSha256": "7f3e81516928013f34f6ea929b0da0112c01a0d2053fb894f2bf1bf0ac314eed",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q22",
+    "text": "22. How do control and coordination in plants differ from that in animals? Give any FOUR \npoints of difference. \n2",
+    "meta": {
+      "subject": "science",
+      "chapter": 6,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch06",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q22",
+      "questionNumber": 22,
+      "heading": "Science APQ 2022–23 · Question 22",
+      "conceptTags": [
+        "science chapter 06"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        8
+      ],
+      "answerSourcePages": [
+        2
+      ],
+      "questionSourcePageTextSha256s": [
+        "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459"
+      ],
+      "answerSourcePageTextSha256s": [
+        "7f3e81516928013f34f6ea929b0da0112c01a0d2053fb894f2bf1bf0ac314eed"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-08-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-02-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q22|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "4fd651feb834291bc145f5a9f7ce08e37b21b1033b96c4567f64d593e3d7ff5f",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q22.answer",
+      "page": 8,
+      "sourcePages": [
+        8
+      ],
+      "sourcePageTextSha256": "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q22.answer",
+    "text": "Q.22 0.5 marks for each point of difference: \n \nControl in plants Control in animals \nPlant hormones diffuse to the place \nof action. \nAnimal hormones are carried in blood \nvessels. \nPlants depend on hormones for \ncontrol and coordination. \nAnimals depend on nerve impulses and \nhormones for control and coordination. \nHormones in plants are not secreted \nby specialised glands. \nHormones in animals are secreted by \nspecialised glands. \nMovement in plants occurs through \na change in the water content of the \naction cells. \nMovement in animals occurs through a \nchange in the shape and arrangement of \nproteins in the muscle cells. \n(Accept any other valid point of difference.) \n2",
+    "meta": {
+      "subject": "science",
+      "chapter": 6,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch06",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q22",
+      "questionNumber": 22,
+      "heading": "Science APQ 2022–23 · Question 22",
+      "conceptTags": [
+        "science chapter 06"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        8
+      ],
+      "answerSourcePages": [
+        2
+      ],
+      "questionSourcePageTextSha256s": [
+        "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459"
+      ],
+      "answerSourcePageTextSha256s": [
+        "7f3e81516928013f34f6ea929b0da0112c01a0d2053fb894f2bf1bf0ac314eed"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-08-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-02-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q22|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "30e37a6ef70351d95051250bdb3d2305c733e05db00fcb0ef44cb505f926fdf9",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q22",
+      "page": 2,
+      "sourcePages": [
+        2
+      ],
+      "sourcePageTextSha256": "7f3e81516928013f34f6ea929b0da0112c01a0d2053fb894f2bf1bf0ac314eed",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q23",
+    "text": "23. A person suffering from liver disease is advised to avoid fatty and highly acidic foods. \n \nGive a reason why each of the foods mentioned should be avoided by a person suffering \nfrom liver disease. \n2",
+    "meta": {
+      "subject": "science",
+      "chapter": 5,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch05",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q23",
+      "questionNumber": 23,
+      "heading": "Science APQ 2022–23 · Question 23",
+      "conceptTags": [
+        "science chapter 05"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        8
+      ],
+      "answerSourcePages": [
+        2
+      ],
+      "questionSourcePageTextSha256s": [
+        "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459"
+      ],
+      "answerSourcePageTextSha256s": [
+        "7f3e81516928013f34f6ea929b0da0112c01a0d2053fb894f2bf1bf0ac314eed"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-08-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-02-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q23|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "8423cfb1eaaa03a423c95dd3fe950e81c97f47bd08e396c59f5b47f19497040c",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q23.answer",
+      "page": 8,
+      "sourcePages": [
+        8
+      ],
+      "sourcePageTextSha256": "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q23.answer",
+    "text": "Q.23 1 mark for each correct description/explanation: \n \n- Since the liver produces bile which creates an alkaline medium for effective \ndigestion, in absence of bile acidic foods may cause more acidity and poor \ndigestion. \n \n- Since bile is responsible for fat digestion by converting large fat globules to \nsmaller ones for efficient digestion, in absence of which fats will not be \nproperly digested. \n \n(Accept any other valid answer.) \n2",
+    "meta": {
+      "subject": "science",
+      "chapter": 5,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch05",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q23",
+      "questionNumber": 23,
+      "heading": "Science APQ 2022–23 · Question 23",
+      "conceptTags": [
+        "science chapter 05"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        8
+      ],
+      "answerSourcePages": [
+        2
+      ],
+      "questionSourcePageTextSha256s": [
+        "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459"
+      ],
+      "answerSourcePageTextSha256s": [
+        "7f3e81516928013f34f6ea929b0da0112c01a0d2053fb894f2bf1bf0ac314eed"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-08-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-02-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q23|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "2bab532818c02197fdd01a6dd1db1dac77188f20d2c481065ccf864d6e773940",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q23",
+      "page": 2,
+      "sourcePages": [
+        2
+      ],
+      "sourcePageTextSha256": "7f3e81516928013f34f6ea929b0da0112c01a0d2053fb894f2bf1bf0ac314eed",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q24",
+    "text": "24. Oxygen, mostly, is carried by a pigment in our blood whereas carbon dioxide is \ntransported in dissolved form in our blood. \n \nGive TWO reasons that make the above statement correct. \n2",
+    "meta": {
+      "subject": "science",
+      "chapter": 5,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch05",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q24",
+      "questionNumber": 24,
+      "heading": "Science APQ 2022–23 · Question 24",
+      "conceptTags": [
+        "science chapter 05"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        8
+      ],
+      "answerSourcePages": [
+        2
+      ],
+      "questionSourcePageTextSha256s": [
+        "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459"
+      ],
+      "answerSourcePageTextSha256s": [
+        "7f3e81516928013f34f6ea929b0da0112c01a0d2053fb894f2bf1bf0ac314eed"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-08-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-02-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q24|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "da06ebbf357db113a6e7d56ac7e05630b683a6d086a95749175d6f8faf9b73e0",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q24.answer",
+      "page": 8,
+      "sourcePages": [
+        8
+      ],
+      "sourcePageTextSha256": "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q24.answer",
+    "text": "Q.24 1 mark for each correct reason: \n \n- Carbon dioxide is more soluble in water than oxygen. \n \n- Haemoglobin (the red pigment in RBC) has a very high affinity for oxygen. \n2",
+    "meta": {
+      "subject": "science",
+      "chapter": 5,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch05",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q24",
+      "questionNumber": 24,
+      "heading": "Science APQ 2022–23 · Question 24",
+      "conceptTags": [
+        "science chapter 05"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        8
+      ],
+      "answerSourcePages": [
+        2
+      ],
+      "questionSourcePageTextSha256s": [
+        "b9e9a6ad118f46d71cf614c95f69d50960298969c4bbb3b0c8d81a1a4cf4e459"
+      ],
+      "answerSourcePageTextSha256s": [
+        "7f3e81516928013f34f6ea929b0da0112c01a0d2053fb894f2bf1bf0ac314eed"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-08-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-02-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q24|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "16897da65cf8360bb7ddfe0ce4e09016b24e97726b4dbbe1e53dbe86e6f2bad2",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q24",
+      "page": 2,
+      "sourcePages": [
+        2
+      ],
+      "sourcePageTextSha256": "7f3e81516928013f34f6ea929b0da0112c01a0d2053fb894f2bf1bf0ac314eed",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q27",
+    "text": "27. Observe the two chemical equations given below. \n \nP) Ca(OH)2 + HNO3 -----> Ca(NO3)2+ H2O \n \nQ) KBr + AgNO3 -----> KNO3 + AgBr \n \n(a) Explain how a balanced equation can be identified. \n(b) Which of the two equations is/are NOT balanced? Balance the equation(s) by \nrewriting. \n3",
+    "meta": {
+      "subject": "science",
+      "chapter": 1,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch01",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q27",
+      "questionNumber": 27,
+      "heading": "Science APQ 2022–23 · Question 27",
+      "conceptTags": [
+        "science chapter 01"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        9
+      ],
+      "answerSourcePages": [
+        3
+      ],
+      "questionSourcePageTextSha256s": [
+        "553bfbf864914de7ec24d187a805f1c9ebac3c311232396cc50fd961f9b614bc"
+      ],
+      "answerSourcePageTextSha256s": [
+        "306713aa6ce762188d4f3b4331e87eb03cd083755ab32f186d98dbbd33078f4a"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-09-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-03-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q27|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "8e47b3c2bcfb9bda43553b1e6ec6d67f196112f6056d63c24288dfd49780bd5e",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q27.answer",
+      "page": 9,
+      "sourcePages": [
+        9
+      ],
+      "sourcePageTextSha256": "553bfbf864914de7ec24d187a805f1c9ebac3c311232396cc50fd961f9b614bc",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q27.answer",
+    "text": "Q.27 (a) The number of atoms of each element should be the same on the reactants' \nside and the products' side. \n(b) P [1 mark] \nBalanced equation: \n Ca(OH)2 + 2 HNO3 -----> Ca(NO3)2 + 2 H2O [1 mark] \n3",
+    "meta": {
+      "subject": "science",
+      "chapter": 1,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch01",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q27",
+      "questionNumber": 27,
+      "heading": "Science APQ 2022–23 · Question 27",
+      "conceptTags": [
+        "science chapter 01"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        9
+      ],
+      "answerSourcePages": [
+        3
+      ],
+      "questionSourcePageTextSha256s": [
+        "553bfbf864914de7ec24d187a805f1c9ebac3c311232396cc50fd961f9b614bc"
+      ],
+      "answerSourcePageTextSha256s": [
+        "306713aa6ce762188d4f3b4331e87eb03cd083755ab32f186d98dbbd33078f4a"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-09-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-03-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q27|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "e28dc0c8ab5c9b2156ff31ffd2b57e0c40926699e02b101f318e60b4a18032d1",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q27",
+      "page": 3,
+      "sourcePages": [
+        3
+      ],
+      "sourcePageTextSha256": "306713aa6ce762188d4f3b4331e87eb03cd083755ab32f186d98dbbd33078f4a",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q28",
+    "text": "28. The Thermit process is used for repairing cracks in railway tracks on site. \n \n(a) Write the equation for the reaction taking place in the process, mentioning the \nphysical states of the reactants and products. \n(b) What information in the chemical equation indicates that the reaction is exothermic? \n3",
+    "meta": {
+      "subject": "science",
+      "chapter": 3,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch03",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q28",
+      "questionNumber": 28,
+      "heading": "Science APQ 2022–23 · Question 28",
+      "conceptTags": [
+        "science chapter 03"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        9
+      ],
+      "answerSourcePages": [
+        3
+      ],
+      "questionSourcePageTextSha256s": [
+        "553bfbf864914de7ec24d187a805f1c9ebac3c311232396cc50fd961f9b614bc"
+      ],
+      "answerSourcePageTextSha256s": [
+        "306713aa6ce762188d4f3b4331e87eb03cd083755ab32f186d98dbbd33078f4a"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-09-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-03-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q28|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "ffca85166b132e30829ec1588e31098e0001c7c8090969fecb7f0398e7f97912",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q28.answer",
+      "page": 9,
+      "sourcePages": [
+        9
+      ],
+      "sourcePageTextSha256": "553bfbf864914de7ec24d187a805f1c9ebac3c311232396cc50fd961f9b614bc",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q28.answer",
+    "text": "Q.28 (a) 0.5 marks each for writing the correct formulae and physical state of the \nreactants and products: \n \n2Al (s) + Fe2O3 (s) ----> 2 Fe (l) + Al2O3 (s) [2marks] \n \n(Note: (i) balancing of the equation is not required. \n(ii) no marks to be awarded if the state or formula of the reactant/product is \nincorrect) \n(b) The iron formed is in the molten(liquid) state due to the heat generated in \nthe reaction. [1 mark] \n3",
+    "meta": {
+      "subject": "science",
+      "chapter": 3,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch03",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q28",
+      "questionNumber": 28,
+      "heading": "Science APQ 2022–23 · Question 28",
+      "conceptTags": [
+        "science chapter 03"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        9
+      ],
+      "answerSourcePages": [
+        3
+      ],
+      "questionSourcePageTextSha256s": [
+        "553bfbf864914de7ec24d187a805f1c9ebac3c311232396cc50fd961f9b614bc"
+      ],
+      "answerSourcePageTextSha256s": [
+        "306713aa6ce762188d4f3b4331e87eb03cd083755ab32f186d98dbbd33078f4a"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-09-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-03-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q28|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "6c67648bcad7355d61db84a4bff6a104c31e485c17b5b152e84b86fb43a96dc9",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q28",
+      "page": 3,
+      "sourcePages": [
+        3
+      ],
+      "sourcePageTextSha256": "306713aa6ce762188d4f3b4331e87eb03cd083755ab32f186d98dbbd33078f4a",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q29",
+    "text": "29. Given below is a table representing the characteristics of two fluids involved in the \ntransportation of substances in the human body. \n \nFluid A Fluid B \ncolourless coloured \ncontains less oxygen contains more oxygen \ncontains less protein contains more protein \n \n(a) Identify fluid A and fluid B. \n(b) With the help of a flow chart, describe the movement of fluid A from the intercellular \nspaces to the main circulatory system. \n(c) What role does fluid A play in the digestion of food in humans? \n \nOR \n \nTwo major forces help in the transport of water in a plant. Force A is the driving force in \nthe movement of water during the day, whereas force B helps the movement of water in \na plant during the night or during the day when humidity is very high. \n \n(a) Identify force A and force B. \n(b) Describe how each of these forces helps in the movement of water in a plant. \n3",
+    "meta": {
+      "subject": "science",
+      "chapter": 5,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch05",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q29",
+      "questionNumber": 29,
+      "heading": "Science APQ 2022–23 · Question 29",
+      "conceptTags": [
+        "science chapter 05"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        9,
+        10
+      ],
+      "answerSourcePages": [
+        3,
+        4
+      ],
+      "questionSourcePageTextSha256s": [
+        "553bfbf864914de7ec24d187a805f1c9ebac3c311232396cc50fd961f9b614bc",
+        "64c72b7abadbeb7ba5db685bb21b8ad20e6f6613ad2fb55b1429e6d60f577439"
+      ],
+      "answerSourcePageTextSha256s": [
+        "306713aa6ce762188d4f3b4331e87eb03cd083755ab32f186d98dbbd33078f4a",
+        "15f07ba5e3ed5b8022a42f0f6882b6c4e6b41eda1ae982067471afc59fe4d9c1"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-09-180dpi.png",
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-10-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-03-180dpi.png",
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-04-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q29|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "3779da4d1d516495af3c8b73d897ce708c95ede932d5c7097f2a46d468fd7539",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q29.answer",
+      "page": 9,
+      "sourcePages": [
+        9,
+        10
+      ],
+      "sourcePageTextSha256": "553bfbf864914de7ec24d187a805f1c9ebac3c311232396cc50fd961f9b614bc",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q29.answer",
+    "text": "Q.29 (a) 0.5 marks for each correct answer: \n \n- Fluid A - Lymph \n- Fluid B – Blood \n3\n(b) 0.5 marks for all four nodes stated correctly, 0.5 marks for the correct \ndirection of arrows: \n \nintercellular spaces --> lymphatic capillaries --> lymph vessels --> larger veins \n[1 mark] \n \n(c) Lymph carries digested and absorbed fat from the intestines back to the \nblood. [1 mark] \nOR \n(a) 0.5 marks for each correct answer: \n \n- force A: transpirational pull \n- force B: root pressure \n \n(b) 1 mark for each correct point: \n \n- Transpirational pull: evaporation of water molecules from the stomata of a \nleaf due to transpiration creates a suction that pulls water from the xylem cells \nof roots. \n \n- Root pressure: Active absorption of ions by roots from the soil causes water to \nsteadily move into the root xylem creating a column of water that is pushed \nupwards.",
+    "meta": {
+      "subject": "science",
+      "chapter": 5,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch05",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q29",
+      "questionNumber": 29,
+      "heading": "Science APQ 2022–23 · Question 29",
+      "conceptTags": [
+        "science chapter 05"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        9,
+        10
+      ],
+      "answerSourcePages": [
+        3,
+        4
+      ],
+      "questionSourcePageTextSha256s": [
+        "553bfbf864914de7ec24d187a805f1c9ebac3c311232396cc50fd961f9b614bc",
+        "64c72b7abadbeb7ba5db685bb21b8ad20e6f6613ad2fb55b1429e6d60f577439"
+      ],
+      "answerSourcePageTextSha256s": [
+        "306713aa6ce762188d4f3b4331e87eb03cd083755ab32f186d98dbbd33078f4a",
+        "15f07ba5e3ed5b8022a42f0f6882b6c4e6b41eda1ae982067471afc59fe4d9c1"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-09-180dpi.png",
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-10-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-03-180dpi.png",
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-04-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q29|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "12014a0a6379a8b88dabfb241aeb8afc14ae00b2742a7de57812666d75ceed99",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q29",
+      "page": 3,
+      "sourcePages": [
+        3,
+        4
+      ],
+      "sourcePageTextSha256": "306713aa6ce762188d4f3b4331e87eb03cd083755ab32f186d98dbbd33078f4a",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q33",
+    "text": "33. Ozone formation takes place in the stratosphere of our atmosphere. \n \n(a) Explain how the energy of the Sun helps in the formation of ozone. \n(b) Why is ozone formation at ground level considered a pollutant? \n(c) State any two health consequences of ozone layer depletion on human health. \n3",
+    "meta": {
+      "subject": "science",
+      "chapter": 13,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch13",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q33",
+      "questionNumber": 33,
+      "heading": "Science APQ 2022–23 · Question 33",
+      "conceptTags": [
+        "science chapter 13"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        11,
+        12
+      ],
+      "answerSourcePages": [
+        5
+      ],
+      "questionSourcePageTextSha256s": [
+        "14c8c0092b3c2915f0838b0487f7ebfda58fdc76b5e716317fb4a7fe727bdc16",
+        "ea84d87df1be18449f4176cf9e8be57b53115beea58b28b0bd9437ae9bee4c45"
+      ],
+      "answerSourcePageTextSha256s": [
+        "f456b6606a8144f4d407ee9e662882f7b7dfac1524dd64f8d9a3a65fd35939c1"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-11-180dpi.png",
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-12-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-05-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q33|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "173fcf9cc0885f89065551087650827b417a07a3d01d04e3ca1e2174af6eccbd",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q33.answer",
+      "page": 11,
+      "sourcePages": [
+        11,
+        12
+      ],
+      "sourcePageTextSha256": "14c8c0092b3c2915f0838b0487f7ebfda58fdc76b5e716317fb4a7fe727bdc16",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q33.answer",
+    "text": "Q.33 (a) 0.5 marks for each correct point: \n \n- High energy UV radiation from the Sun breaks apart some of the molecular \noxygen into free oxygen. \n \n- The free oxygen then combines with the remaining molecular oxygen to form \nozone. \n \n(b) Ozone is deadly to humans at lower levels of the atmosphere. [1 mark] \n \n(c) 0.5 marks each for any two consequences stated below: \n \n- skin cancer \n- cataract \n \n(Accept any other valid answer.) \n3",
+    "meta": {
+      "subject": "science",
+      "chapter": 13,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch13",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q33",
+      "questionNumber": 33,
+      "heading": "Science APQ 2022–23 · Question 33",
+      "conceptTags": [
+        "science chapter 13"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        11,
+        12
+      ],
+      "answerSourcePages": [
+        5
+      ],
+      "questionSourcePageTextSha256s": [
+        "14c8c0092b3c2915f0838b0487f7ebfda58fdc76b5e716317fb4a7fe727bdc16",
+        "ea84d87df1be18449f4176cf9e8be57b53115beea58b28b0bd9437ae9bee4c45"
+      ],
+      "answerSourcePageTextSha256s": [
+        "f456b6606a8144f4d407ee9e662882f7b7dfac1524dd64f8d9a3a65fd35939c1"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-11-180dpi.png",
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-12-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-05-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q33|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "d2ad7f4862f8f110048fccbf9eb2df7670834c159ccd44a93c791ac9e3235010",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q33",
+      "page": 5,
+      "sourcePages": [
+        5
+      ],
+      "sourcePageTextSha256": "f456b6606a8144f4d407ee9e662882f7b7dfac1524dd64f8d9a3a65fd35939c1",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q35",
+    "text": "35. (a) Variation in DNA is beneficial for the survival of species over time. Explain. \n(b) Explain an instance where reproduction would be counterproductive to the \nsustenance of species. \n(c) What is the sequence of events that take place in human reproduction when an egg is \nnot fertilised? \n \n OR \n \n(a) Describe the process of seed formation in a flowering plant. \n(b) Suggest any two reasons why child marriages are a hazard to the reproductive health \nof women. \n(c) Give any three advantages of using a mechanical barrier over other contraceptive \nmeasures to avoid pregnancy. \n5",
+    "meta": {
+      "subject": "science",
+      "chapter": 7,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch07",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q35",
+      "questionNumber": 35,
+      "heading": "Science APQ 2022–23 · Question 35",
+      "conceptTags": [
+        "science chapter 07"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        12
+      ],
+      "answerSourcePages": [
+        6,
+        7
+      ],
+      "questionSourcePageTextSha256s": [
+        "ea84d87df1be18449f4176cf9e8be57b53115beea58b28b0bd9437ae9bee4c45"
+      ],
+      "answerSourcePageTextSha256s": [
+        "40a86ecae1e29a3c872c1e9966fbfcd2779d877ccc25f6c5f0edb5ed96bd765b",
+        "1c794f683aa00f964c26145caa695838fd7dde4a31bfe5da170e12d2fe607734"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-12-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-06-180dpi.png",
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-07-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q35|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "16a8dbe5e6d8c2ffb3661dd0cde0e1ec1b0bb04ffe58f0da04ee541987560455",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q35.answer",
+      "page": 12,
+      "sourcePages": [
+        12
+      ],
+      "sourcePageTextSha256": "ea84d87df1be18449f4176cf9e8be57b53115beea58b28b0bd9437ae9bee4c45",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q35.answer",
+    "text": "Q.35 (a) 1 mark for each correct point: \n \n- Variation allows diversity in organisms. \n \n- In case of drastic alteration of niches, a population with variation is most \nlikely to have some surviving members to ensure continuity of species. \n \n(b) A higher rate of reproduction would lead to unchecked population growth \nleading to competition for resources and subsequent lower standards of living. \n[1 mark] \n \n(c) 1 mark for each correct point: \n \n- The egg survives for a day in the reproductive system. \n \n- In case the egg is not fertilised, it is shed along with the lining of the uterus \n5\nout of the vagina as blood and mucus. \n \nOR \n \n(a) 0.5 marks for each correct point: \n \n- The pollen from the stamen is transferred to the stigma. \n \n- The pollen tube germinates and penetrates the style to reach the ovary. \n \n- The male germ cell and the female germ cells combine to form the zygote. \n \n- The zygote undergoes rapid division to form the embryo inside the ovule. \n \n- The ovule develops a seed coat and turns into a seed. \n \n(b) 0.5 marks for each correct reason: \n \n- Females will not have reached full sexual maturity at the time of marriage. \n \n- There are possibilities of pregnancy in the teenage years that may cause \nadverse effects on the female's body. \n \n(Accept any other valid answer.) \n \n \n(c) 0.5 marks for each correct point: \n \n- Contraceptive pills can cause hormonal imbalances. \n \n- CopperT and IUD can cause irritation to the uterine lining if not placed \ncorrectly. \n \n- Surgical methods, if not performed properly, can lead to infections and \ncomplications. \n \n(Accept any other valid answer.)",
+    "meta": {
+      "subject": "science",
+      "chapter": 7,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch07",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q35",
+      "questionNumber": 35,
+      "heading": "Science APQ 2022–23 · Question 35",
+      "conceptTags": [
+        "science chapter 07"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        12
+      ],
+      "answerSourcePages": [
+        6,
+        7
+      ],
+      "questionSourcePageTextSha256s": [
+        "ea84d87df1be18449f4176cf9e8be57b53115beea58b28b0bd9437ae9bee4c45"
+      ],
+      "answerSourcePageTextSha256s": [
+        "40a86ecae1e29a3c872c1e9966fbfcd2779d877ccc25f6c5f0edb5ed96bd765b",
+        "1c794f683aa00f964c26145caa695838fd7dde4a31bfe5da170e12d2fe607734"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-12-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-06-180dpi.png",
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-07-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q35|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "970cf914999cce206f1320b67f36de926c80ad08b6272c517cc6040c0694f97b",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q35",
+      "page": 6,
+      "sourcePages": [
+        6,
+        7
+      ],
+      "sourcePageTextSha256": "40a86ecae1e29a3c872c1e9966fbfcd2779d877ccc25f6c5f0edb5ed96bd765b",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q37",
+    "text": "37. Pure gold is very soft and therefore not suitable for making jewellery. To make it hard, \ngold is alloyed with other metals. The purity of gold is measured in carats according to \nthe table below. Carat number is the number of parts of gold in 24 parts. \n \nCarat number Number of parts of \ngold in 24 parts \nNumber of parts of other \nmetals in 24 parts \n24 24 0 \n22 22 2 \n18 18 6 \n14 14 10 \n12 12 12 \n \n(a) What is the percentage of gold in 18 carat gold? Name any two metals that are used \nto make 22 carat gold. \n(b) Like gold, pure iron is also comparatively soft and also undergoes rusting. Name the \nsubstance that is mixed with iron. \n \n(i) to make it hard. \n(ii) to change it to stainless steel to prevent rusting. \n \nOR \n \n(b) (i) What type of mixture is an alloy? \n (ii) How does the electrical conductivity of an alloy compare with that of the pure \nmetal? \n4",
+    "meta": {
+      "subject": "science",
+      "chapter": 3,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch03",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q37",
+      "questionNumber": 37,
+      "heading": "Science APQ 2022–23 · Question 37",
+      "conceptTags": [
+        "science chapter 03"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQ.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        13
+      ],
+      "answerSourcePages": [
+        8
+      ],
+      "questionSourcePageTextSha256s": [
+        "52cfea05176e9ef1fde11d12a3cb8b6d35f2425017ad10f0ff6f4ccd8817b4e9"
+      ],
+      "answerSourcePageTextSha256s": [
+        "0051d1fe0e920757078bee952952ee6aabf4420bbfb3c559abf145b330e7604a"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-13-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-08-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq",
+      "chunkType": "question_block",
+      "joinKey": "2022-23|086|Science-APQ|Q37|question",
+      "answerVisibility": "question_only",
+      "sourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "sourceMember": "Science_APQ_QP_2022.pdf",
+      "contentSha256": "615ab7296373f01cb651b50ce4156b075b779d40520f0730a25615791108f399",
+      "sourceHash": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "sourceContentSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "pairedAnswerId": "apq.science.2022.q37.answer",
+      "page": 13,
+      "sourcePages": [
+        13
+      ],
+      "sourcePageTextSha256": "52cfea05176e9ef1fde11d12a3cb8b6d35f2425017ad10f0ff6f4ccd8817b4e9",
+      "visualReviewStatus": "all_question_and_answer_pages_visually_verified"
+    }
+  },
+  {
+    "id": "apq.science.2022.q37.answer",
+    "text": "Q.37 (a) 1 mark each for the following: \n \n- 75% \n- silver, copper \n \n( no marks if only one metal is mentioned) \n \n(b) 1 mark each for the following: \n \n(i) carbon \n(ii) nickel and chromium \n \nOR \n \n(b) 1 mark each for the following: \n \n- homogeneous \n \n- The electrical conductivity of an alloy is less than that of the pure metal. \n \n \n \n4",
+    "meta": {
+      "subject": "science",
+      "chapter": 3,
+      "sourceYear": "2022",
+      "sourceSession": "2022-23",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch03",
+      "inActiveSyllabus": false,
+      "assessmentStatus": "summative",
+      "language": "en",
+      "paperCode": "APQ-2022",
+      "reviewBatch": "science-apq-2022-visual-review-batch1",
+      "reviewEvidence": "Data/reports/science-apq-2022-visual-review-batch1.md",
+      "reviewerRole": "original question and official key visual review",
+      "sourceTransform": "visual_question_answer_split_v1",
+      "sourceHashMatch": true,
+      "sourceVisualMatch": "Question and exact-numbered official marking-scheme entry verified on the original APQ 2022 pages rendered at 180 DPI; title/session/subject code verified.",
+      "reviewStatus": "approved",
+      "joinPrefix": "2022-23|086|Science-APQ|Q37",
+      "questionNumber": 37,
+      "heading": "Science APQ 2022–23 · Question 37",
+      "conceptTags": [
+        "science chapter 03"
+      ],
+      "officialUrl": "https://cbseacademic.nic.in/web_material/SQP/ClassX_2022_23/Science-PQMS.pdf",
+      "questionSourcePath": "Additional Practice Questions/Science_APQ_QP_2022.pdf",
+      "answerSourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "questionSourceSha256": "eb1fc47afca404775a1c7ce43a76d508beb6afbef539c3eaa88543218dc1509d",
+      "answerSourceSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "questionSourcePages": [
+        13
+      ],
+      "answerSourcePages": [
+        8
+      ],
+      "questionSourcePageTextSha256s": [
+        "52cfea05176e9ef1fde11d12a3cb8b6d35f2425017ad10f0ff6f4ccd8817b4e9"
+      ],
+      "answerSourcePageTextSha256s": [
+        "0051d1fe0e920757078bee952952ee6aabf4420bbfb3c559abf145b330e7604a"
+      ],
+      "questionVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/qp-page-13-180dpi.png"
+      ],
+      "answerVisualReference": [
+        "Data/processed/science-maths-2026-27/science-apq-2022-review-pages/ms-page-08-180dpi.png"
+      ],
+      "renderDpi": 180,
+      "kind": "apq_answer",
+      "chunkType": "answer_block",
+      "joinKey": "2022-23|086|Science-APQ|Q37|answer",
+      "solutionType": "official_marking_scheme_answer",
+      "sourcePath": "Additional Practice Questions/Science_APQ_MS_2022.pdf",
+      "sourceMember": "Science_APQ_MS_2022.pdf",
+      "contentSha256": "cb96e681d01eba8435d125b896881d1cc62e8ae8860ffba86dbd8d7dd0e9290e",
+      "sourceHash": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "sourceContentSha256": "68739c70115c10fe77a5d6b1c1ade6c58a105a794ef5e2248be1d26708176756",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "apq.science.2022.q37",
+      "page": 8,
+      "sourcePages": [
+        8
+      ],
+      "sourcePageTextSha256": "0051d1fe0e920757078bee952952ee6aabf4420bbfb3c559abf145b330e7604a",
+      "visualReviewStatus": "official_key_entry_visually_verified"
+    }
+  }
+]

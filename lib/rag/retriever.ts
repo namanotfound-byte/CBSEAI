@@ -21,6 +21,8 @@ const PRIORITY: Record<SourceKind, number> = {
   pyq: 0.9,
   sqp: 0.88,
   cfpq: 0.86,
+  apq: 0.87,
+  apq_answer: 0.98,
   model: 0.8,
   notes: 0.75,
 };
@@ -35,6 +37,8 @@ const KIND_LABEL: Record<SourceKind, string> = {
   pyq: "PYQ",
   sqp: "Sample paper",
   cfpq: "CFPQ",
+  apq: "Additional practice question",
+  apq_answer: "Additional practice marking scheme",
   model: "Model paper",
   notes: "Notes",
 };
@@ -56,7 +60,7 @@ export async function retrieve(
         ? (["ncert_exercise"] satisfies SourceKind[])
         : /\bexemplar\b/i.test(query)
           ? (["exemplar"] satisfies SourceKind[])
-          : (["cfpq", "sqp", "pyq", "ms", "ncert_exercise", "exemplar"] satisfies SourceKind[]))
+          : (["cfpq", "sqp", "pyq", "apq", "apq_answer", "ms", "ncert_exercise", "exemplar"] satisfies SourceKind[]))
     : filters.kinds?.filter((kind) => kind !== "syllabus") ?? CONTENT_KINDS;
   const scopedFilters: RetrievalFilters = {
     ...filters,
@@ -185,7 +189,7 @@ export function practicePhraseMatch(query: string, candidate: string): boolean {
 export function hasApprovedCompetencyQuestion(sources: Source[]) {
   return sources.some(
     (source) =>
-      (["cfpq", "sqp", "pyq"].includes(source.kind) &&
+      (["cfpq", "sqp", "pyq", "apq"].includes(source.kind) &&
         ["question_block", "question_part"].includes(source.chunkType ?? "")) ||
       (source.kind === "ncert_exercise" && source.chunkType === "ncert_question") ||
       (source.kind === "exemplar" && source.chunkType === "exemplar_question"),
@@ -193,7 +197,7 @@ export function hasApprovedCompetencyQuestion(sources: Source[]) {
 }
 
 function isPracticeQuestionChunk(chunk: Chunk) {
-  return (["cfpq", "sqp", "pyq"].includes(chunk.meta.kind) &&
+  return (["cfpq", "sqp", "pyq", "apq"].includes(chunk.meta.kind) &&
     ["question_block", "question_part"].includes(chunk.meta.chunkType ?? "")) ||
     (chunk.meta.kind === "ncert_exercise" && chunk.meta.chunkType === "ncert_question") ||
     (chunk.meta.kind === "exemplar" && chunk.meta.chunkType === "exemplar_question");
@@ -214,7 +218,8 @@ function slot<T extends Chunk & { score: number }>(
   }
   if (route === "diagram") add(ordered.find((chunk) => chunk.meta.kind === "diagram"));
   if (route === "marking" || route === "pyq") {
-    add(ordered.find((chunk) => ["pyq", "sqp", "cfpq"].includes(chunk.meta.kind)));
+    add(ordered.find((chunk) => ["pyq", "sqp", "cfpq", "apq"].includes(chunk.meta.kind)));
+    if (route === "marking") add(ordered.find((chunk) => ["ms", "apq_answer"].includes(chunk.meta.kind)));
   }
   if (route === "competency") {
     add(ordered.find(isPracticeQuestionChunk));

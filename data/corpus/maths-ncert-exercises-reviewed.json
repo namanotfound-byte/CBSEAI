@@ -873,7 +873,7 @@
   },
   {
     "id": "ncert.maths.ch01.ex1_1.q4.answer",
-    "text": "LCM = (306×657)/9 = 22338.",
+    "text": "22338",
     "meta": {
       "kind": "ncert_exercise",
       "subject": "maths",
@@ -887,8 +887,8 @@
       "inActiveSyllabus": true,
       "assessmentStatus": "summative",
       "reviewStatus": "approved",
-      "reviewBatch": "maths-lower-cost-reviewed-exercise-batch-20260927-10",
-      "reviewEvidence": "reports/maths-ncert-exercise-review-batch10.md",
+      "reviewBatch": "maths-ncert-exercise-visual-batch1",
+      "reviewEvidence": "reports/maths-ncert-exercise-visually-approved-batch1.md",
       "extractionVersion": "page-aware-curation-v1",
       "sourceTransform": "question_and_answer_verified_or_derived",
       "sourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
@@ -899,7 +899,7 @@
         "real numbers",
         "exercise answer"
       ],
-      "reviewNote": "Answer compared with the rendered NCERT Answers/Hints appendix p1.",
+      "reviewNote": "Rendered the official NCERT Answers/Hints page; exact exercise/question marker and answer transcription visually checked.",
       "exerciseId": "ncert.maths.ch01.ex1_1",
       "joinPrefix": "2026-27|NCERT|Maths|Ch1|Ex1.1|Q4",
       "joinKey": "2026-27|NCERT|Maths|Ch1|Ex1.1|Q4|answer",
@@ -907,7 +907,9 @@
       "practiceModeEligible": false,
       "questionSourcePath": "NCERTs/Maths_2026.zip!/jemh101.pdf",
       "questionSourceSha256": "bd6466e8e7d437af89d7e640ff8381e68b57f91bf56cd4ce345ca031091d748f",
-      "questionPage": 5
+      "questionPage": 5,
+      "pairedQuestionId": "ncert.maths.ch01.ex1_1.q4",
+      "questionNumber": "4"
     }
   },
   {
@@ -1092,7 +1094,7 @@
   },
   {
     "id": "ncert.maths.ch01.ex1_1.q7.answer",
-    "text": "They meet again after LCM(18,12)=36 minutes.",
+    "text": "36 minutes",
     "meta": {
       "kind": "ncert_exercise",
       "subject": "maths",
@@ -1106,8 +1108,8 @@
       "inActiveSyllabus": true,
       "assessmentStatus": "summative",
       "reviewStatus": "approved",
-      "reviewBatch": "maths-lower-cost-reviewed-exercise-batch-20260927-10",
-      "reviewEvidence": "reports/maths-ncert-exercise-review-batch10.md",
+      "reviewBatch": "maths-ncert-exercise-visual-batch1",
+      "reviewEvidence": "reports/maths-ncert-exercise-visually-approved-batch1.md",
       "extractionVersion": "page-aware-curation-v1",
       "sourceTransform": "question_and_answer_verified_or_derived",
       "sourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
@@ -1118,7 +1120,7 @@
         "real numbers",
         "exercise answer"
       ],
-      "reviewNote": "Answer compared with the rendered NCERT Answers/Hints appendix p1.",
+      "reviewNote": "Rendered the official NCERT Answers/Hints page; exact exercise/question marker and answer transcription visually checked.",
       "exerciseId": "ncert.maths.ch01.ex1_1",
       "joinPrefix": "2026-27|NCERT|Maths|Ch1|Ex1.1|Q7",
       "joinKey": "2026-27|NCERT|Maths|Ch1|Ex1.1|Q7|answer",
@@ -1126,7 +1128,9 @@
       "practiceModeEligible": false,
       "questionSourcePath": "NCERTs/Maths_2026.zip!/jemh101.pdf",
       "questionSourceSha256": "bd6466e8e7d437af89d7e640ff8381e68b57f91bf56cd4ce345ca031091d748f",
-      "questionPage": 6
+      "questionPage": 6,
+      "pairedQuestionId": "ncert.maths.ch01.ex1_1.q7",
+      "questionNumber": "7"
     }
   },
   {

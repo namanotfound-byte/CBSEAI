@@ -10,7 +10,7 @@ export function buildSystemPrompt(
   route: QueryRoute = "theory",
 ): string {
   const chapter = chapterName(ctx.subject, ctx.chapter);
-  const hasMarkingScheme = sources.some((s) => s.kind === "ms" || s.chunkType === "marking_scheme");
+  const hasMarkingScheme = sources.some((s) => s.kind === "ms" || s.kind === "apq_answer" || s.chunkType === "marking_scheme");
   const lines: string[] = [];
 
   lines.push(

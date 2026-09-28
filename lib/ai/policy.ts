@@ -34,7 +34,7 @@ export function buildTutorPolicy(
 
   if (route === "competency" || ctx.mode === "drill") {
     rules.push(
-      `[COMPETENCY-001] Use only an approved CFPQ, sample-paper, or past-paper question_block mapped to ${scope}.`,
+      `[COMPETENCY-001] Use only an approved CFPQ, additional-practice, sample-paper, or past-paper question_block mapped to ${scope}.`,
       `[COMPETENCY-002] Do not invent or adapt a competency question when no eligible question_block is present.`,
     );
   }

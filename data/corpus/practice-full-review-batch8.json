@@ -1,7 +1,7 @@
 [
   {
     "id": "pyq.science.2024.31-3-1.q05",
-    "text": "The balanced values of a, b, c and d in the equation a Al₂O₃ + b HCl → c AlCl₃ + d H₂O are respectively:\n(A) 1, 6, 2 and 3\n(B) 1, 6, 3 and 2\n(C) 2, 6, 2 and 3\n(D) 2, 6, 3 and 2",
+    "text": "5. Consider the following chemical equation:\na Al₂O₃ + b HCl → c AlCl₃ + d H₂O\nIn order to balance this chemical equation, the values of a, b, c and d must be:\n(A) 1, 6, 2 and 3\n(B) 1, 6, 3 and 2\n(C) 2, 6, 2 and 3\n(D) 2, 6, 3 and 2",
     "meta": {
       "subject": "science",
       "chapter": 1,
@@ -29,7 +29,10 @@
       "contentSha256": "9bb300a6f323c6558e2feeff82b335cb7adcb33910390486d72d3af676c1e5f2",
       "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
       "heading": "Science 2024 Paper 31/3/1 · Q5",
-      "extractiveQuote": "The balanced values of a, b, c and d in the equation a Al₂O₃ + b HCl → c AlCl₃ + d H₂O are respectively:\n(A) 1, 6, 2 and 3\n(B) 1, 6, 3 and 2\n(C) 2, 6, 2 and 3\n(D) 2, 6, 3 and 2"
+      "extractiveQuote": "5. Consider the following chemical equation:\na Al₂O₃ + b HCl → c AlCl₃ + d H₂O\nIn order to balance this chemical equation, the values of a, b, c and d must be:\n(A) 1, 6, 2 and 3\n(B) 1, 6, 3 and 2\n(C) 2, 6, 2 and 3\n(D) 2, 6, 3 and 2",
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q5|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ms.science.2024.31-3-1.q05"
     }
   },
   {
@@ -63,7 +66,9 @@
       "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
       "heading": "Science Marking Scheme 2024 Paper 31/3/1 · Q5",
       "extractiveQuote": "(A) / 1, 6, 2 and 3",
-      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q5|answer"
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q5|answer",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "pyq.science.2024.31-3-1.q05"
     }
   },
   {
@@ -96,7 +101,10 @@
       "contentSha256": "9bb300a6f323c6558e2feeff82b335cb7adcb33910390486d72d3af676c1e5f2",
       "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
       "heading": "Science 2024 Paper 31/3/1 · Q6",
-      "extractiveQuote": "Which one of the following hydrocarbons is different from the others?\n(A) C₄H₁₀\n(B) C₇H₁₄\n(C) C₅H₁₂\n(D) C₂H₆"
+      "extractiveQuote": "Which one of the following hydrocarbons is different from the others?\n(A) C₄H₁₀\n(B) C₇H₁₄\n(C) C₅H₁₂\n(D) C₂H₆",
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q6|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ms.science.2024.31-3-1.q06"
     }
   },
   {
@@ -130,7 +138,9 @@
       "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
       "heading": "Science Marking Scheme 2024 Paper 31/3/1 · Q6",
       "extractiveQuote": "(B) / C₇H₁₄",
-      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q6|answer"
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q6|answer",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "pyq.science.2024.31-3-1.q06"
     }
   },
   {
@@ -163,7 +173,10 @@
       "contentSha256": "9bb300a6f323c6558e2feeff82b335cb7adcb33910390486d72d3af676c1e5f2",
       "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
       "heading": "Science 2024 Paper 31/3/1 · Q7",
-      "extractiveQuote": "Which one of the following reactions is different from the remaining three?\n(A) NaCl + AgNO₃ → AgCl + NaNO₃\n(B) CaO + H₂O → Ca(OH)₂\n(C) KNO₃ + H₂SO₄ → KHSO₄ + HNO₃\n(D) ZnCl₂ + H₂S → ZnS + 2HCl"
+      "extractiveQuote": "Which one of the following reactions is different from the remaining three?\n(A) NaCl + AgNO₃ → AgCl + NaNO₃\n(B) CaO + H₂O → Ca(OH)₂\n(C) KNO₃ + H₂SO₄ → KHSO₄ + HNO₃\n(D) ZnCl₂ + H₂S → ZnS + 2HCl",
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q7|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ms.science.2024.31-3-1.q07"
     }
   },
   {
@@ -197,7 +210,9 @@
       "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
       "heading": "Science Marking Scheme 2024 Paper 31/3/1 · Q7",
       "extractiveQuote": "(B) / CaO + H₂O → Ca(OH)₂",
-      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q7|answer"
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q7|answer",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "pyq.science.2024.31-3-1.q07"
     }
   },
   {
@@ -230,7 +245,10 @@
       "contentSha256": "9bb300a6f323c6558e2feeff82b335cb7adcb33910390486d72d3af676c1e5f2",
       "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
       "heading": "Science 2024 Paper 31/3/1 · Q8",
-      "extractiveQuote": "Select from the following a plant hormone which promotes cell division.\n(A) Gibberellins\n(B) Auxins\n(C) Abscissic Acid\n(D) Cytokinins"
+      "extractiveQuote": "Select from the following a plant hormone which promotes cell division.\n(A) Gibberellins\n(B) Auxins\n(C) Abscissic Acid\n(D) Cytokinins",
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q8|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ms.science.2024.31-3-1.q08"
     }
   },
   {
@@ -264,7 +282,9 @@
       "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
       "heading": "Science Marking Scheme 2024 Paper 31/3/1 · Q8",
       "extractiveQuote": "(D) / Cytokinins",
-      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q8|answer"
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q8|answer",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "pyq.science.2024.31-3-1.q08"
     }
   },
   {
@@ -297,7 +317,10 @@
       "contentSha256": "9bb300a6f323c6558e2feeff82b335cb7adcb33910390486d72d3af676c1e5f2",
       "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
       "heading": "Science 2024 Paper 31/3/1 · Q9",
-      "extractiveQuote": "Part(s) of a flower which attracts insects for pollination is (are)\n(A) petals and sepals\n(B) anther and stigma\n(C) petals only\n(D) sepals only"
+      "extractiveQuote": "Part(s) of a flower which attracts insects for pollination is (are)\n(A) petals and sepals\n(B) anther and stigma\n(C) petals only\n(D) sepals only",
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q9|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ms.science.2024.31-3-1.q09"
     }
   },
   {
@@ -331,7 +354,9 @@
       "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
       "heading": "Science Marking Scheme 2024 Paper 31/3/1 · Q9",
       "extractiveQuote": "(C) / Petals only",
-      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q9|answer"
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q9|answer",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "pyq.science.2024.31-3-1.q09"
     }
   },
   {
@@ -364,7 +389,10 @@
       "contentSha256": "9bb300a6f323c6558e2feeff82b335cb7adcb33910390486d72d3af676c1e5f2",
       "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
       "heading": "Science 2024 Paper 31/3/1 · Q10",
-      "extractiveQuote": "In an experiment to study independent inheritance of two separate traits—shape and colour of seeds—the ratio of the different combinations in F₂ progeny would be\n(A) 1 : 3\n(B) 1 : 2 : 1\n(C) 9 : 3 : 3 : 1\n(D) 9 : 1 : 1 : 3"
+      "extractiveQuote": "In an experiment to study independent inheritance of two separate traits—shape and colour of seeds—the ratio of the different combinations in F₂ progeny would be\n(A) 1 : 3\n(B) 1 : 2 : 1\n(C) 9 : 3 : 3 : 1\n(D) 9 : 1 : 1 : 3",
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q10|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ms.science.2024.31-3-1.q10"
     }
   },
   {
@@ -398,7 +426,9 @@
       "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
       "heading": "Science Marking Scheme 2024 Paper 31/3/1 · Q10",
       "extractiveQuote": "(C) / 9 : 3 : 3 : 1",
-      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q10|answer"
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q10|answer",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "pyq.science.2024.31-3-1.q10"
     }
   },
   {
@@ -431,7 +461,10 @@
       "contentSha256": "9bb300a6f323c6558e2feeff82b335cb7adcb33910390486d72d3af676c1e5f2",
       "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
       "heading": "Science 2024 Paper 31/3/1 · Q11",
-      "extractiveQuote": "Which of the following statements is (are) true about the human heart?\n(a) Right atrium receives oxygenated blood from lungs through pulmonary artery.\n(b) Left atrium transfers oxygenated blood to left ventricle which sends it to various parts of the body.\n(c) Right atrium receives deoxygenated blood from different parts of the body through vena cava.\n(d) Left atrium transfers oxygenated blood to aorta which sends it to different parts of the body.\n(A) (b) only\n(B) (a) and (d)\n(C) (b) and (c)\n(D) (b) and (d)"
+      "extractiveQuote": "Which of the following statements is (are) true about the human heart?\n(a) Right atrium receives oxygenated blood from lungs through pulmonary artery.\n(b) Left atrium transfers oxygenated blood to left ventricle which sends it to various parts of the body.\n(c) Right atrium receives deoxygenated blood from different parts of the body through vena cava.\n(d) Left atrium transfers oxygenated blood to aorta which sends it to different parts of the body.\n(A) (b) only\n(B) (a) and (d)\n(C) (b) and (c)\n(D) (b) and (d)",
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q11|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ms.science.2024.31-3-1.q11"
     }
   },
   {
@@ -465,7 +498,9 @@
       "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
       "heading": "Science Marking Scheme 2024 Paper 31/3/1 · Q11",
       "extractiveQuote": "(C) / (b) and (c)",
-      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q11|answer"
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q11|answer",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "pyq.science.2024.31-3-1.q11"
     }
   },
   {
@@ -498,7 +533,10 @@
       "contentSha256": "9bb300a6f323c6558e2feeff82b335cb7adcb33910390486d72d3af676c1e5f2",
       "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
       "heading": "Science 2024 Paper 31/3/1 · Q12",
-      "extractiveQuote": "A cross between two tall pea plants resulted in offspring having a few dwarf plants. The gene-combination of the parental plants must be\n(A) Tt and Tt\n(B) Tt and tt\n(C) TT and tt\n(D) TT and Tt"
+      "extractiveQuote": "A cross between two tall pea plants resulted in offspring having a few dwarf plants. The gene-combination of the parental plants must be\n(A) Tt and Tt\n(B) Tt and tt\n(C) TT and tt\n(D) TT and Tt",
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q12|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ms.science.2024.31-3-1.q12"
     }
   },
   {
@@ -532,7 +570,9 @@
       "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
       "heading": "Science Marking Scheme 2024 Paper 31/3/1 · Q12",
       "extractiveQuote": "(A) / Tt and Tt",
-      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q12|answer"
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q12|answer",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "pyq.science.2024.31-3-1.q12"
     }
   },
   {
@@ -565,7 +605,10 @@
       "contentSha256": "9bb300a6f323c6558e2feeff82b335cb7adcb33910390486d72d3af676c1e5f2",
       "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
       "heading": "Science 2024 Paper 31/3/1 · Q13",
-      "extractiveQuote": "The phenomena of light involved in the formation of a rainbow in the sky are\n(A) Refraction, dispersion and reflection\n(B) Refraction, dispersion and total internal reflection\n(C) Dispersion, scattering and reflection\n(D) Dispersion, refraction and internal reflection"
+      "extractiveQuote": "The phenomena of light involved in the formation of a rainbow in the sky are\n(A) Refraction, dispersion and reflection\n(B) Refraction, dispersion and total internal reflection\n(C) Dispersion, scattering and reflection\n(D) Dispersion, refraction and internal reflection",
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q13|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ms.science.2024.31-3-1.q13"
     }
   },
   {
@@ -599,7 +642,9 @@
       "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
       "heading": "Science Marking Scheme 2024 Paper 31/3/1 · Q13",
       "extractiveQuote": "(D) / Dispersion, refraction and internal reflection",
-      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q13|answer"
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q13|answer",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "pyq.science.2024.31-3-1.q13"
     }
   },
   {
@@ -632,7 +677,10 @@
       "contentSha256": "9bb300a6f323c6558e2feeff82b335cb7adcb33910390486d72d3af676c1e5f2",
       "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
       "heading": "Science 2024 Paper 31/3/1 · Q14",
-      "extractiveQuote": "In case of four wires of the same material, the resistance will be minimum if the diameter and length of the wire respectively are\n(A) D/2 and L/4\n(B) D/4 and 4L\n(C) 2D and L\n(D) 4D and 2L"
+      "extractiveQuote": "In case of four wires of the same material, the resistance will be minimum if the diameter and length of the wire respectively are\n(A) D/2 and L/4\n(B) D/4 and 4L\n(C) 2D and L\n(D) 4D and 2L",
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q14|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ms.science.2024.31-3-1.q14"
     }
   },
   {
@@ -666,7 +714,9 @@
       "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
       "heading": "Science Marking Scheme 2024 Paper 31/3/1 · Q14",
       "extractiveQuote": "(D) / 4D and 2L",
-      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q14|answer"
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q14|answer",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "pyq.science.2024.31-3-1.q14"
     }
   },
   {
@@ -699,7 +749,10 @@
       "contentSha256": "9bb300a6f323c6558e2feeff82b335cb7adcb33910390486d72d3af676c1e5f2",
       "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2024/X/SCIENCE.zip",
       "heading": "Science 2024 Paper 31/3/1 · Q15",
-      "extractiveQuote": "A food chain will be more advantageous in terms of energy if it has\n(A) 2 trophic levels\n(B) 3 trophic levels\n(C) 4 trophic levels\n(D) 5 trophic levels"
+      "extractiveQuote": "A food chain will be more advantageous in terms of energy if it has\n(A) 2 trophic levels\n(B) 3 trophic levels\n(C) 4 trophic levels\n(D) 5 trophic levels",
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q15|question",
+      "answerVisibility": "question_only",
+      "pairedAnswerId": "ms.science.2024.31-3-1.q15"
     }
   },
   {
@@ -733,7 +786,9 @@
       "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2024/X/Science.zip",
       "heading": "Science Marking Scheme 2024 Paper 31/3/1 · Q15",
       "extractiveQuote": "(A) / 2 trophic levels",
-      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q15|answer"
+      "joinKey": "2023-24|086|Science-PYQ|31/3/1|Q15|answer",
+      "answerVisibility": "solution_only",
+      "pairedQuestionId": "pyq.science.2024.31-3-1.q15"
     }
   }
 ]
