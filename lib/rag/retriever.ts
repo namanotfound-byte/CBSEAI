@@ -92,7 +92,7 @@ export async function retrieve(
   const directHits = broadHits.filter((hit) =>
     (store.name !== "memory" || hit.score >= 0.18) &&
     (filters.route === "competency"
-      ? isPracticeQuestionChunk(hit)
+      ? isPracticeQuestionChunk(hit) && matchesExplicitExerciseSubquestion(query, hit.text)
       : sourceMatchesQuestion(query, hit.text)),
   );
   const [bestDirectHit] = await rerank(query, directHits, 1);
@@ -129,7 +129,8 @@ export async function retrieve(
   const needsAnswerEvidence = !["competency", "marking", "pyq"].includes(filters.route ?? "theory");
   const relevantHits = hits.filter((hit) =>
     (store.name !== "memory" || hit.score >= 0.18) &&
-    (filters.route !== "competency" || isPracticeQuestionChunk(hit)) &&
+    (filters.route !== "competency" ||
+      (isPracticeQuestionChunk(hit) && matchesExplicitExerciseSubquestion(query, hit.text))) &&
     (!needsAnswerEvidence || sourceMatchesQuestion(query, hit.text)),
   );
   const reranked = await rerank(query, relevantHits, Math.max(8, topK * 2));
@@ -177,6 +178,11 @@ export async function retrieve(
 }
 
 export function practicePhraseMatch(query: string, candidate: string): boolean {
+  const requestedSubquestion = parseExerciseSubquestion(query);
+  if (requestedSubquestion) {
+    const candidateSubquestion = parseExerciseSubquestion(candidate);
+    return Boolean(candidateSubquestion && sameExerciseSubquestion(requestedSubquestion, candidateSubquestion));
+  }
   const focus = query.match(/\bquestion\s*:\s*(.+)$/i)?.[1] ??
     query.match(/\b(?:about|on|regarding)\s+(.+)$/i)?.[1];
   if (!focus) return false;
@@ -184,6 +190,30 @@ export function practicePhraseMatch(query: string, candidate: string): boolean {
     .replace(/[^\p{L}\p{N}\s]/gu, " ").replace(/\s+/g, " ").trim();
   const phrase = normalized(focus).replace(/^(?:a|an|the)\s+/, "");
   return phrase.length >= 12 && normalized(candidate).includes(phrase);
+}
+
+type ExerciseSubquestion = { exercise: string; question: string; part: string };
+
+function parseExerciseSubquestion(value: string): ExerciseSubquestion | null {
+  const exercise = value.match(/\b(?:exercise|ex\.?)\s*(\d+)\s*\.\s*(\d+)\b/i);
+  const question = value.match(/\b(?:question|q\.?)\s*(\d+)\s*\(\s*([ivxlcdm]+|[a-z])\s*\)/i);
+  if (!exercise || !question) return null;
+  return {
+    exercise: `${exercise[1]}.${exercise[2]}`,
+    question: question[1],
+    part: question[2].toLowerCase(),
+  };
+}
+
+function sameExerciseSubquestion(a: ExerciseSubquestion, b: ExerciseSubquestion) {
+  return a.exercise === b.exercise && a.question === b.question && a.part === b.part;
+}
+
+function matchesExplicitExerciseSubquestion(query: string, candidate: string) {
+  const requested = parseExerciseSubquestion(query);
+  if (!requested) return true;
+  const found = parseExerciseSubquestion(candidate);
+  return Boolean(found && sameExerciseSubquestion(requested, found));
 }
 
 export function hasApprovedCompetencyQuestion(sources: Source[]) {

@@ -8,6 +8,7 @@ import { sourceMatchesQuestion } from "../lib/rag/relevance";
 import { getVectorStore } from "../lib/rag/vectorstore";
 import { inferSyllabusScope } from "../lib/rag/syllabus-index";
 import { getSyllabusRestriction } from "../lib/rag/syllabus-index";
+import { findPracticeAnswer, isPracticeQuestion, practiceAnswerKinds } from "../lib/rag/practice-answer";
 import { conversationIntent, conversationReply } from "../lib/ai/conversation";
 import { REVIEWED_ADDENDUM } from "../lib/rag/reviewed-addendum";
 import type { Chunk, Source } from "../lib/types";
@@ -32,6 +33,42 @@ test("an explicitly named exercise phrase outranks nearby questions", () => {
     "4. What is a balanced chemical equation? Why should chemical equations be balanced?"), true);
   assert.equal(practicePhraseMatch(query,
     "5. Translate the following statements into chemical equations and then balance them."), false);
+});
+
+test("an explicit NCERT exercise roman subpart retrieves only that subpart", async () => {
+  const first = REVIEWED_ADDENDUM.find((chunk) => chunk.id === "ncert.maths.ch04.ex4_1.q2i");
+  const second = REVIEWED_ADDENDUM.find((chunk) => chunk.id === "ncert.maths.ch04.ex4_1.q2ii");
+  assert.ok(first && second);
+  await getVectorStore().upsert([
+    {
+      id: "test-maths-exercise-4-1-scope",
+      text: "Quadratic Equations: quadratic equations and word problems.",
+      meta: {
+        kind: "syllabus", subject: "maths", chapter: 4, sourceYear: "2026",
+        syllabusVersion: "2026-27", syllabusTopicId: "maths.ch04",
+        chunkType: "syllabus_scope", inActiveSyllabus: true,
+        reviewStatus: "approved", assessmentStatus: "summative",
+      },
+    },
+    first,
+    second,
+  ] as Chunk[]);
+
+  const query = "Give me NCERT Maths Exercise 4.1 Question 2(i) without the answer";
+  assert.equal(routeQuery(query), "competency");
+  const sources = await retrieve(query, { subject: "maths", chapter: 4, route: "competency" });
+  assert.ok(sources.some((source) => source.id === first.id));
+  assert.equal(sources.some((source) => source.id === second.id), false);
+});
+
+test("APQ follow-up resolves Q1 to its exact official answer block", () => {
+  const question = REVIEWED_ADDENDUM.find((chunk) => chunk.id === "apq.science.2021.term1.q01");
+  const answer = REVIEWED_ADDENDUM.find((chunk) => chunk.id === "apq.science.2021.term1.q01.answer");
+  assert.ok(question && answer);
+  assert.equal(isPracticeQuestion(question), true);
+  assert.deepEqual(practiceAnswerKinds(question.meta.kind), ["apq_answer"]);
+  assert.equal(findPracticeAnswer(question, [answer])?.id, answer.id);
+  assert.match(answer.text, /A — above the arrow/);
 });
 
 test("handles ordinary conversation without confusing it with academic retrieval", () => {

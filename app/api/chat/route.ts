@@ -9,6 +9,7 @@ import type { ChatEvent, ChatRequestBody } from "@/lib/types";
 import { authenticatedUser } from "@/lib/auth/supabase";
 import { conversationIntent, conversationReply } from "@/lib/ai/conversation";
 import { getSyllabusRestriction } from "@/lib/rag/syllabus-index";
+import { findPracticeAnswer, isPracticeQuestion, practiceAnswerKinds } from "@/lib/rag/practice-answer";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -82,22 +83,15 @@ export async function POST(req: Request) {
           if (questionId) {
             const store = getVectorStore();
             const [question] = await store.findByIds([questionId], {});
-            const practiceQuestion = question &&
-              ((question.meta.kind === "ncert_exercise" && question.meta.chunkType === "ncert_question") ||
-                (question.meta.kind === "exemplar" && question.meta.chunkType === "exemplar_question") ||
-                (["sqp", "pyq", "cfpq"].includes(question.meta.kind) &&
-                  ["question_block", "question_part"].includes(question.meta.chunkType ?? "")));
+            const practiceQuestion = question && isPracticeQuestion(question);
             if (practiceQuestion && question.meta.joinPrefix) {
               const paired = await store.findByJoinPrefixes([question.meta.joinPrefix], {
                 subject: question.meta.subject,
                 syllabusTopicId: question.meta.syllabusTopicId,
-                kinds: question.meta.kind === "ncert_exercise" ? ["ncert_exercise"]
-                  : question.meta.kind === "exemplar" ? ["exemplar"] : ["ms"],
+                kinds: practiceAnswerKinds(question.meta.kind),
                 topK: 24,
               });
-              const answer = paired.find((row) =>
-                row.id !== question.id &&
-                (["ncert_answer", "exemplar_answer"].includes(row.meta.chunkType ?? "") || row.meta.kind === "ms"));
+              const answer = findPracticeAnswer(question, paired);
               if (answer) {
                 send({ type: "sources", sources: [toSource({ ...question, score: 1 }), toSource({ ...answer, score: 1 })] });
                 send({ type: "token", text: `${question.meta.kind === "ncert_exercise" ? "NCERT answer" : question.meta.kind === "exemplar" ? "NCERT Exemplar answer" : "Official marking answer"}: ${answer.text} [[source:${answer.id}]]` });
