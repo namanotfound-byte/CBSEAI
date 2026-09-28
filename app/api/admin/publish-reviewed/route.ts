@@ -2,6 +2,7 @@ import { authenticatedUser } from "@/lib/auth/supabase";
 import { validateChunks } from "@/lib/rag/ingest";
 import { REVIEWED_ADDENDUM } from "@/lib/rag/reviewed-addendum";
 import { getVectorStore } from "@/lib/rag/vectorstore";
+import { findAlreadyPublishedReviewedChunks } from "@/lib/rag/reviewed-publication";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
@@ -33,7 +34,7 @@ export async function POST(request: Request) {
     if (store.name !== "qdrant") {
       return Response.json({ error: "The live Qdrant store is required" }, { status: 503 });
     }
-    const existing = await store.findByIds(batch.map((chunk) => chunk.id), {});
+    const existing = await findAlreadyPublishedReviewedChunks(store, batch.map((chunk) => chunk.id));
     const byId = new Map(existing.map((chunk) => [chunk.id, chunk]));
     const pending = batch.filter((chunk) => {
       const current = byId.get(chunk.id);

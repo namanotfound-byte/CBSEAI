@@ -8,6 +8,7 @@ import { sourceMatchesQuestion } from "../lib/rag/relevance";
 import { createQdrantStore, getVectorStore } from "../lib/rag/vectorstore";
 import { inferSyllabusScope } from "../lib/rag/syllabus-index";
 import { getSyllabusRestriction } from "../lib/rag/syllabus-index";
+import { findAlreadyPublishedReviewedChunks } from "../lib/rag/reviewed-publication";
 import { findPracticeAnswer, isOfficialAnswerFollowup, isPracticeQuestion, practiceAnswerKinds, referencedPracticeQuestionId, resolvePracticeAnswer } from "../lib/rag/practice-answer";
 import { conversationIntent, conversationReply } from "../lib/ai/conversation";
 import { REVIEWED_ADDENDUM } from "../lib/rag/reviewed-addendum";
@@ -343,6 +344,8 @@ test("approved formative item-bank pairs are valid only as practice material", a
     },
   };
   await getVectorStore().upsert([scope, question, answer] as Chunk[]);
+  assert.equal((await getVectorStore().findByIds([question.id, answer.id], {})).length, 0);
+  assert.equal((await findAlreadyPublishedReviewedChunks(getVectorStore(), [question.id, answer.id])).length, 2);
   const officialPair = await resolvePracticeAnswer(question.id, getVectorStore());
   assert.equal(officialPair?.answer.id, answer.id);
 
