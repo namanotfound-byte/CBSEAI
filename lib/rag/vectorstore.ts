@@ -246,7 +246,6 @@ export function createQdrantStore(
             ["meta.reviewStatus", "keyword"],
             ["meta.assessmentStatus", "keyword"],
             ["meta.joinPrefix", "keyword"],
-            ["meta.itemIdentitySearch", "keyword"],
           ];
           await Promise.all(indexes.map(async ([field_name, field_schema]) => {
             const response = await fetch(`${base}/collections/${collection}/index?wait=true`, {
@@ -281,7 +280,16 @@ export function createQdrantStore(
       clauses.push({ key: "meta.kind", match: { any: filters.kinds } });
     }
     if (filters.itemIdentitySearch) {
-      clauses.push({ key: "meta.itemIdentitySearch", match: { value: filters.itemIdentitySearch } });
+      const identityMatch = filters.itemIdentitySearch.match(/^maths10([a-z0-9]+)$/i);
+      const prefixes = identityMatch
+        ? [
+            `2026|CBSE-CBE-ItemBank|Maths10|Maths10${identityMatch[1].toUpperCase()}`,
+            `2026|CBSE-CBE-ItemBank|Maths10|Maths10${identityMatch[1].toUpperCase()}|Q1`,
+          ]
+        : [];
+      clauses.push(prefixes.length
+        ? { key: "meta.joinPrefix", match: { any: prefixes } }
+        : { key: "meta.joinPrefix", match: { value: "__invalid_item_bank_identity__" } });
     }
     if (prefixes?.length) clauses.push({ key: "meta.joinPrefix", match: { any: prefixes } });
     return clauses;

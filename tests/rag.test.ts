@@ -128,6 +128,39 @@ test("official-answer phrasing resolves a persisted APQ citation through Qdrant 
   }
 });
 
+test("named item-bank Qdrant filters use the existing indexed join-prefix field", async () => {
+  const originalFetch = globalThis.fetch;
+  const calls: { path: string; body?: Record<string, unknown> }[] = [];
+  globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
+    const url = new URL(String(input));
+    const body = init?.body ? JSON.parse(String(init.body)) as Record<string, unknown> : undefined;
+    calls.push({ path: url.pathname, body });
+    if (url.pathname === "/collections/test-item-bank") return Response.json({ result: { status: "green" } });
+    if (url.pathname.endsWith("/points/query")) return Response.json({ result: { points: [] } });
+    throw new Error(`Unexpected Qdrant request: ${url.pathname}`);
+  }) as typeof fetch;
+  try {
+    const store = createQdrantStore({
+      qdrantUrl: "http://qdrant.test", qdrantCollection: "test-item-bank", qdrantApiKey: "",
+      qdrantAutoCreate: false, qdrantVectorSize: 1024, syllabusVersion: "2026-27", hybridSearch: false,
+    });
+    await store.search("Give me item bank Maths10SS8", {
+      subject: "maths", route: "competency", kinds: ["item_bank"], itemIdentitySearch: "maths10ss8",
+    });
+    const queryCall = calls.find((call) => call.path.endsWith("/points/query"));
+    assert.ok(queryCall);
+    const prefetch = queryCall.body?.prefetch as { filter: { must: { key: string; match: Record<string, unknown> }[] } }[];
+    const clauses = prefetch[0].filter.must;
+    assert.ok(clauses.some((clause) => clause.key === "meta.joinPrefix" &&
+      JSON.stringify(clause.match).includes("2026|CBSE-CBE-ItemBank|Maths10|Maths10SS8") &&
+      JSON.stringify(clause.match).includes("Maths10SS8|Q1")));
+    assert.equal(clauses.some((clause) => clause.key === "meta.itemIdentitySearch"), false);
+    assert.equal(calls.some((call) => call.path.endsWith("/index")), false);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
 test("handles ordinary conversation without confusing it with academic retrieval", () => {
   assert.equal(conversationIntent("Hi!"), "greeting");
   assert.match(conversationReply("greeting", "Hi"), /Maths or Science/);
