@@ -67,6 +67,7 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
     <AppShell
       displayName={displayName}
       userId={session.user.id}
+      canSearchArchive={session.user.email?.toLowerCase() === "naman070609@gmail.com"}
       onSignOut={() => { void auth?.auth.signOut({ scope: "local" }); }}
     >
       {children}

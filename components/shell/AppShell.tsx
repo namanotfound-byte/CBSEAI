@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   BookOpen,
+  Archive,
   CalendarDays,
   Menu,
   LogOut,
@@ -21,14 +22,16 @@ import { CHATS_CHANGED, listChats, type ChatSummary } from "@/lib/chat-history";
 const NAV = [
   { href: "/", label: "Chat", icon: MessageSquare },
   { href: "/subjects", label: "Chapters", icon: BookOpen },
+  { href: "/archive-search", label: "Source archive", icon: Archive, adminOnly: true },
   { href: "/graph", label: "Weak spots", icon: Network },
   { href: "/plan", label: "Study plan", icon: CalendarDays },
 ];
 
-export function AppShell({ children, displayName, userId, onSignOut }: {
+export function AppShell({ children, displayName, userId, canSearchArchive, onSignOut }: {
   children: React.ReactNode;
   displayName: string;
   userId: string;
+  canSearchArchive: boolean;
   onSignOut: () => void;
 }) {
   const pathname = usePathname();
@@ -77,6 +80,7 @@ export function AppShell({ children, displayName, userId, onSignOut }: {
 
       <nav className="flex flex-col gap-1">
         {NAV.map((item) => {
+          if (item.adminOnly && !canSearchArchive) return null;
           const active = isActive(item.href);
           return (
             <Link
