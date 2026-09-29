@@ -63,7 +63,7 @@ export default function ArchiveSearchPage() {
       <div className="mt-4 space-y-3">
         {results.map((result, index) => <article key={`${result.sourcePath}:${result.page}:${index}`} className="rounded-xl border p-4" style={{ borderColor: "var(--rule)" }}>
           <p className="text-xs font-medium uppercase" style={{ color: "var(--text-faint)" }}>{result.subject} · Page {result.page} · {result.extractionStatus}</p>
-          <p className="mt-2 break-words text-sm font-medium">{result.sourcePath}{result.archiveMember ? `!/${result.archiveMember}` : ""}</p>
+          <p className="mt-2 break-words text-sm font-medium">{result.sourcePath.includes("!/") || !result.archiveMember ? result.sourcePath : `${result.sourcePath}!/${result.archiveMember}`}</p>
           <p className="mt-2 whitespace-pre-wrap text-sm leading-6">{result.excerpt}</p>
         </article>)}
       </div>
