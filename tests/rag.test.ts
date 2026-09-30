@@ -23,6 +23,8 @@ test("unrelated marking rows cannot create a mark split for a theory answer", ()
   assert.equal(prompt.includes("MARKS: <total"), false);
   const matchedQuestion = { id: "sqp.q1", kind: "sqp", chunkType: "question_block", joinPrefix: "paper|q1", label: "Question", snippet: "Question" } as Source;
   assert.equal(canShowMarkAllocation([matchedQuestion, nearbyScheme]), true);
+  assert.equal(buildSystemPrompt({ grade: 10, mode: "answer" }, [matchedQuestion, nearbyScheme]).includes("MARKS: <total"), false);
+  assert.equal(buildSystemPrompt({ grade: 10, mode: "answer", marks: 1 }, [matchedQuestion, nearbyScheme]).includes("MARKS: <total"), true);
 });
 
 test("routes canonical query types", () => {

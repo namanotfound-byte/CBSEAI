@@ -10,7 +10,7 @@ export function buildSystemPrompt(
   route: QueryRoute = "theory",
 ): string {
   const chapter = chapterName(ctx.subject, ctx.chapter);
-  const hasMarkingScheme = canShowMarkAllocation(sources);
+  const hasMarkingScheme = Boolean(ctx.marks) && canShowMarkAllocation(sources);
   const lines: string[] = [];
 
   lines.push(

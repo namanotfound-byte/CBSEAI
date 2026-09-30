@@ -117,7 +117,7 @@ export async function POST(req: Request) {
           if (cached) {
             if (cached.sources.length) send({ type: "sources", sources: cached.sources });
             if (cached.text) send({ type: "token", text: cached.text });
-            if (cached.steps?.length && canShowMarkAllocation(cached.sources)) {
+            if (context.marks && cached.steps?.length && canShowMarkAllocation(cached.sources)) {
               send({ type: "steps", steps: cached.steps, marks: cached.marks });
             }
             if (cached.notice) send({ type: "notice", message: cached.notice });
@@ -150,6 +150,14 @@ export async function POST(req: Request) {
             console.error("retrieval failed", err);
             retrievalFailed = true;
           }
+        }
+
+        // A nearby paper key is not evidence for a student's general theory
+        // question and should not appear as a misleading source citation.
+        if (route === "theory" && !context.marks) {
+          sources = sources.filter((source) =>
+            source.kind !== "ms" && source.chunkType !== "marking_scheme",
+          );
         }
 
         const hasSyllabusScope = sources.some(
@@ -211,7 +219,7 @@ export async function POST(req: Request) {
         send({ type: "sources", sources });
 
         // 2. Prompt.
-        const hasMarkingScheme = canShowMarkAllocation(sources);
+        const hasMarkingScheme = Boolean(context.marks) && canShowMarkAllocation(sources);
         const examStyle = context.mode === "answer" && isExamStyleRoute(route);
 
         const system = buildSystemPrompt(context, sources, route);
