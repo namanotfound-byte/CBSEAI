@@ -27,6 +27,7 @@ export function buildSystemPrompt(
     `1. Multi-mark or long answers: numbered points.`,
     `2. Core technical terms in **bold**.`,
     `3. Multi-line equations and chemical reactions in $$...$$. Short symbols may use \\(...\\) inline. Never use a single $ pair.`,
+    `4. Before replying, reread the student's exact question and your draft. Remove any sentence, example, source citation, or marking criterion that does not directly help answer that question. Keep the relevant explanation in the chosen mode; do not show this review.`,
   );
 
   const modeLine: Record<ChatContext["mode"], string> = {
