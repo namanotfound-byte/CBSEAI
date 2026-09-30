@@ -10,7 +10,7 @@ export function buildSystemPrompt(
   route: QueryRoute = "theory",
 ): string {
   const chapter = chapterName(ctx.subject, ctx.chapter);
-  const hasMarkingScheme = sources.some((s) => s.kind === "ms" || s.kind === "apq_answer" || s.chunkType === "marking_scheme");
+  const hasMarkingScheme = canShowMarkAllocation(sources);
   const lines: string[] = [];
 
   lines.push(
@@ -72,12 +72,25 @@ export function buildSystemPrompt(
     lines.push(
       ``,
       `Finish with a machine-readable line for the app margin:`,
-      `MARKS: 3 | 1 — states the law | 1 — balanced equation | 1 — correct observation`,
+      `MARKS: <total from the matched marking scheme> | <mark value> — <exact criterion from that scheme>`,
       `Keep it last and copy the split from the marking_scheme context.`,
     );
   }
 
   return lines.join("\n");
+}
+
+/** A nearby marking key cannot set marks for an unrelated theory question. */
+export function canShowMarkAllocation(sources: Source[]): boolean {
+  const questionJoins = new Set(sources.filter((source) =>
+    source.joinPrefix && ["sqp", "pyq", "cfpq", "apq", "question_bank", "item_bank"].includes(source.kind) &&
+    !["marking_scheme", "question_bank_answer", "item_bank_marking_scheme"].includes(source.chunkType ?? ""),
+  ).map((source) => source.joinPrefix));
+  return sources.some((source) =>
+    source.joinPrefix && questionJoins.has(source.joinPrefix) &&
+    (source.kind === "ms" || source.kind === "apq_answer" || source.chunkType === "marking_scheme" ||
+      source.chunkType === "question_bank_answer" || source.chunkType === "item_bank_marking_scheme"),
+  );
 }
 
 /** Renders retrieved chunks into the CONTEXT block the prompt refers to. */

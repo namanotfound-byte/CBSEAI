@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { verifyAnswer } from "../lib/ai/verifier";
+import { buildSystemPrompt, canShowMarkAllocation } from "../lib/ai/prompt";
 import { validateChunks } from "../lib/rag/ingest";
 import { routeQuery } from "../lib/rag/router";
 import { hasApprovedCompetencyQuestion, practicePhraseMatch, retrieve } from "../lib/rag/retriever";
@@ -14,6 +15,15 @@ import { preparePracticeQuestion } from "../lib/rag/practice-question";
 import { conversationIntent, conversationReply } from "../lib/ai/conversation";
 import { REVIEWED_ADDENDUM } from "../lib/rag/reviewed-addendum";
 import type { Chunk, Source } from "../lib/types";
+
+test("unrelated marking rows cannot create a mark split for a theory answer", () => {
+  const nearbyScheme = { id: "ms.nearby", kind: "ms", chunkType: "marking_scheme", joinPrefix: "paper|q1", label: "Nearby key", snippet: "1 mark" } as Source;
+  assert.equal(canShowMarkAllocation([nearbyScheme]), false);
+  const prompt = buildSystemPrompt({ grade: 10, mode: "answer" }, [nearbyScheme]);
+  assert.equal(prompt.includes("MARKS: <total"), false);
+  const matchedQuestion = { id: "sqp.q1", kind: "sqp", chunkType: "question_block", joinPrefix: "paper|q1", label: "Question", snippet: "Question" } as Source;
+  assert.equal(canShowMarkAllocation([matchedQuestion, nearbyScheme]), true);
+});
 
 test("routes canonical query types", () => {
   assert.equal(routeQuery("draw a ray diagram"), "diagram");

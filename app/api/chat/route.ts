@@ -1,5 +1,5 @@
 import { getChatProvider } from "@/lib/ai/provider";
-import { buildContextBlock, buildSystemPrompt, extractMarks } from "@/lib/ai/prompt";
+import { buildContextBlock, buildSystemPrompt, canShowMarkAllocation, extractMarks } from "@/lib/ai/prompt";
 import { verifyAnswer } from "@/lib/ai/verifier";
 import { answerCacheKey, getCachedAnswer, setCachedAnswer } from "@/lib/rag/cache";
 import { hasApprovedCompetencyQuestion, retrieve, toSource } from "@/lib/rag/retriever";
@@ -117,7 +117,9 @@ export async function POST(req: Request) {
           if (cached) {
             if (cached.sources.length) send({ type: "sources", sources: cached.sources });
             if (cached.text) send({ type: "token", text: cached.text });
-            if (cached.steps?.length) send({ type: "steps", steps: cached.steps, marks: cached.marks });
+            if (cached.steps?.length && canShowMarkAllocation(cached.sources)) {
+              send({ type: "steps", steps: cached.steps, marks: cached.marks });
+            }
             if (cached.notice) send({ type: "notice", message: cached.notice });
             send({ type: "done" });
             return;
@@ -209,9 +211,7 @@ export async function POST(req: Request) {
         send({ type: "sources", sources });
 
         // 2. Prompt.
-        const hasMarkingScheme = sources.some(
-          (s) => s.kind === "ms" || s.chunkType === "marking_scheme",
-        );
+        const hasMarkingScheme = canShowMarkAllocation(sources);
         const examStyle = context.mode === "answer" && isExamStyleRoute(route);
 
         const system = buildSystemPrompt(context, sources, route);
@@ -303,8 +303,8 @@ export async function POST(req: Request) {
           await setCachedAnswer(cacheKey, {
             text: displayedText,
             sources,
-            steps,
-            marks,
+            steps: hasMarkingScheme ? steps : undefined,
+            marks: hasMarkingScheme ? marks : undefined,
             notice:
               verified.notice ??
               (!hasMarkingScheme && examStyle
