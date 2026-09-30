@@ -1,0 +1,651 @@
+[
+  {
+    "id": "itembank.science.class10.01.science10pb1.question",
+    "text": "1 Methane gas is burnt in air.\nState whether the reaction is exothermic or endothermic.\n(1 mark)",
+    "meta": {
+      "kind": "item_bank",
+      "subject": "science",
+      "chapter": 1,
+      "sourceYear": "2021",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch01",
+      "syllabusTopicIds": [
+        "science.ch01"
+      ],
+      "inActiveSyllabus": true,
+      "assessmentStatus": "formative",
+      "language": "en",
+      "officialUrl": "https://cbseacademic.nic.in/cbe/documents/Item-Bank---Science-Class-10.pdf",
+      "sourcePath": "Item Bank/Science_2026.pdf",
+      "sourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "sourceHashMatch": true,
+      "sourceTransform": "dual_pdf_text_extract_plus_original_page_visual_review_v1",
+      "itemIdentity": "Science10PB1",
+      "questionNumber": 1,
+      "joinPrefix": "2021|CBSE-CBE-ItemBank|Science10|Science10PB1",
+      "heading": "Chemical Reactions and Equations · CBSE Class 10 Science Item Bank · Science10PB1",
+      "conceptTags": [
+        "chemical reactions and equations"
+      ],
+      "reviewStatus": "approved",
+      "reviewBatch": "science-itembank-approved-ready-batch1-20260930",
+      "reviewEvidence": "reports/science-itembank-independent-qa-20260930.md",
+      "reviewerRole": "independent-original-page-qa",
+      "sourceVisualMatch": "Independent original-page QA visually checked the question and official key on the cited PDF pages; the QA report confirms complete question boundaries, key sufficiency, active syllabus scope, and semantic novelty. Source PDF and per-page text SHA-256 hashes are retained on each chunk.",
+      "reviewNote": "Independent original-page QA visually checked the question and official key on the cited PDF pages; the QA report confirms complete question boundaries, key sufficiency, active syllabus scope, and semantic novelty. Source PDF and per-page text SHA-256 hashes are retained on each chunk.",
+      "practiceModeEligible": true,
+      "questionSourcePath": "Item Bank/Science_2026.pdf",
+      "questionSourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "questionSourcePages": [
+        56
+      ],
+      "questionSourcePage": 56,
+      "questionSourcePageTextSha256": "8a6b30e8695c3775675487ae5b9b8658b2e78f2ba470f6bd32897f4614c9137d",
+      "answerSourcePath": "Item Bank/Science_2026.pdf",
+      "answerSourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "answerSourcePages": [
+        56
+      ],
+      "answerSourcePage": 56,
+      "answerSourcePageTextSha256": "8a6b30e8695c3775675487ae5b9b8658b2e78f2ba470f6bd32897f4614c9137d",
+      "sourceExtractedPageTextSha256": {
+        "56": "8a6b30e8695c3775675487ae5b9b8658b2e78f2ba470f6bd32897f4614c9137d"
+      },
+      "independentExtractedPageTextSha256": {
+        "56": "3d3dc98b5e5fac25c92bfa16f4a5816f135918f72955eb157adb6b433a4337fb"
+      },
+      "dualExtractionSimilarity": 0.9481,
+      "questionExtractionSimilarity": 1.0,
+      "answerExtractionSimilarity": 1.0,
+      "semanticDedupAgainstAppCorpus": {
+        "exactNormalizedMatch": false,
+        "maxTfidfCosine": 0.3438,
+        "maxTokenJaccard": 0.1481,
+        "disposition": "no_close_match_found",
+        "nearestCorpusItems": [
+          {
+            "source": "CBSEAI-app/data/corpus/practice-full-review-batch3.json",
+            "id": "ms.science.2025.31-6-1.q03",
+            "exactNormalizedMatch": false,
+            "cosine": 0.3438,
+            "jaccard": 0.1429,
+            "text": "(C) / It is an endothermic reaction"
+          },
+          {
+            "source": "CBSEAI-app/data/corpus/science-ncert-exercise-question-only-reviewed.json",
+            "id": "ncert.science.ch01.exercise.q09.visual_question_only",
+            "exactNormalizedMatch": false,
+            "cosine": 0.2444,
+            "jaccard": 0.1053,
+            "text": "9. What does one mean by exothermic and endothermic reactions? Give examples."
+          },
+          {
+            "source": "CBSEAI-app/data/corpus/science-full-review-batch3.json",
+            "id": "ncert.science.ch01.p007.exothermic_reactions",
+            "exactNormalizedMatch": false,
+            "cosine": 0.2178,
+            "jaccard": 0.0952,
+            "text": "An exothermic reaction releases heat while products form; some combination reactions are exothermic."
+          }
+        ]
+      },
+      "chunkType": "item_bank_question",
+      "answerVisibility": "question_only",
+      "id": "itembank.science.class10.01.science10pb1.question",
+      "pairedAnswerId": "itembank.science.class10.01.science10pb1.answer",
+      "joinKey": "2021|CBSE-CBE-ItemBank|Science10|Science10PB1|question",
+      "page": 56,
+      "supportingPages": [
+        56
+      ],
+      "sourcePageTextSha256": "8a6b30e8695c3775675487ae5b9b8658b2e78f2ba470f6bd32897f4614c9137d",
+      "contentSha256": "4f9c5d676d9788d2f620e7e6485f480cde65ae11926daf790ff4935d20a519de",
+      "chunkTextSha256": "4f9c5d676d9788d2f620e7e6485f480cde65ae11926daf790ff4935d20a519de",
+      "extractiveQuote": "1 Methane gas is burnt in air.\nState whether the reaction is exothermic or endothermic.\n(1 mark)",
+      "extractionEvidence": "reports/science-itembank-dual-extract-20260930.md",
+      "noveltyAssessment": "Tests classification of methane combustion as exothermic; corpus has a distinct combustion-equation item, but no close prompt duplicate."
+    }
+  },
+  {
+    "id": "itembank.science.class10.01.science10pb1.answer",
+    "text": "1 Methane gas is burnt in air. State whether the reaction is exothermic or endothermic.\nIt is exothermic reaction (1)",
+    "meta": {
+      "kind": "item_bank",
+      "subject": "science",
+      "chapter": 1,
+      "sourceYear": "2021",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch01",
+      "syllabusTopicIds": [
+        "science.ch01"
+      ],
+      "inActiveSyllabus": true,
+      "assessmentStatus": "formative",
+      "language": "en",
+      "officialUrl": "https://cbseacademic.nic.in/cbe/documents/Item-Bank---Science-Class-10.pdf",
+      "sourcePath": "Item Bank/Science_2026.pdf",
+      "sourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "sourceHashMatch": true,
+      "sourceTransform": "dual_pdf_text_extract_plus_original_page_visual_review_v1",
+      "itemIdentity": "Science10PB1",
+      "questionNumber": 1,
+      "joinPrefix": "2021|CBSE-CBE-ItemBank|Science10|Science10PB1",
+      "heading": "Chemical Reactions and Equations · CBSE Class 10 Science Item Bank · Science10PB1",
+      "conceptTags": [
+        "chemical reactions and equations"
+      ],
+      "reviewStatus": "approved",
+      "reviewBatch": "science-itembank-approved-ready-batch1-20260930",
+      "reviewEvidence": "reports/science-itembank-independent-qa-20260930.md",
+      "reviewerRole": "independent-original-page-qa",
+      "sourceVisualMatch": "Independent original-page QA visually checked the question and official key on the cited PDF pages; the QA report confirms complete question boundaries, key sufficiency, active syllabus scope, and semantic novelty. Source PDF and per-page text SHA-256 hashes are retained on each chunk.",
+      "reviewNote": "Independent original-page QA visually checked the question and official key on the cited PDF pages; the QA report confirms complete question boundaries, key sufficiency, active syllabus scope, and semantic novelty. Source PDF and per-page text SHA-256 hashes are retained on each chunk.",
+      "practiceModeEligible": false,
+      "questionSourcePath": "Item Bank/Science_2026.pdf",
+      "questionSourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "questionSourcePages": [
+        56
+      ],
+      "questionSourcePage": 56,
+      "questionSourcePageTextSha256": "8a6b30e8695c3775675487ae5b9b8658b2e78f2ba470f6bd32897f4614c9137d",
+      "answerSourcePath": "Item Bank/Science_2026.pdf",
+      "answerSourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "answerSourcePages": [
+        56
+      ],
+      "answerSourcePage": 56,
+      "answerSourcePageTextSha256": "8a6b30e8695c3775675487ae5b9b8658b2e78f2ba470f6bd32897f4614c9137d",
+      "sourceExtractedPageTextSha256": {
+        "56": "8a6b30e8695c3775675487ae5b9b8658b2e78f2ba470f6bd32897f4614c9137d"
+      },
+      "independentExtractedPageTextSha256": {
+        "56": "3d3dc98b5e5fac25c92bfa16f4a5816f135918f72955eb157adb6b433a4337fb"
+      },
+      "dualExtractionSimilarity": 0.9481,
+      "questionExtractionSimilarity": 1.0,
+      "answerExtractionSimilarity": 1.0,
+      "semanticDedupAgainstAppCorpus": {
+        "exactNormalizedMatch": false,
+        "maxTfidfCosine": 0.3438,
+        "maxTokenJaccard": 0.1481,
+        "disposition": "no_close_match_found",
+        "nearestCorpusItems": [
+          {
+            "source": "CBSEAI-app/data/corpus/practice-full-review-batch3.json",
+            "id": "ms.science.2025.31-6-1.q03",
+            "exactNormalizedMatch": false,
+            "cosine": 0.3438,
+            "jaccard": 0.1429,
+            "text": "(C) / It is an endothermic reaction"
+          },
+          {
+            "source": "CBSEAI-app/data/corpus/science-ncert-exercise-question-only-reviewed.json",
+            "id": "ncert.science.ch01.exercise.q09.visual_question_only",
+            "exactNormalizedMatch": false,
+            "cosine": 0.2444,
+            "jaccard": 0.1053,
+            "text": "9. What does one mean by exothermic and endothermic reactions? Give examples."
+          },
+          {
+            "source": "CBSEAI-app/data/corpus/science-full-review-batch3.json",
+            "id": "ncert.science.ch01.p007.exothermic_reactions",
+            "exactNormalizedMatch": false,
+            "cosine": 0.2178,
+            "jaccard": 0.0952,
+            "text": "An exothermic reaction releases heat while products form; some combination reactions are exothermic."
+          }
+        ]
+      },
+      "chunkType": "item_bank_marking_scheme",
+      "solutionType": "official_answer_key_entry",
+      "answerVisibility": "solution_only",
+      "id": "itembank.science.class10.01.science10pb1.answer",
+      "pairedQuestionId": "itembank.science.class10.01.science10pb1.question",
+      "joinKey": "2021|CBSE-CBE-ItemBank|Science10|Science10PB1|answer",
+      "page": 56,
+      "supportingPages": [
+        56
+      ],
+      "sourcePageTextSha256": "8a6b30e8695c3775675487ae5b9b8658b2e78f2ba470f6bd32897f4614c9137d",
+      "contentSha256": "098c4d50d544020715fb38c97c885d045e95d82fb99edf25098af4c7c1e1cb02",
+      "chunkTextSha256": "098c4d50d544020715fb38c97c885d045e95d82fb99edf25098af4c7c1e1cb02",
+      "extractiveQuote": "1 Methane gas is burnt in air. State whether the reaction is exothermic or endothermic.\nIt is exothermic reaction (1)",
+      "extractionEvidence": "reports/science-itembank-dual-extract-20260930.md",
+      "noveltyAssessment": "Tests classification of methane combustion as exothermic; corpus has a distinct combustion-equation item, but no close prompt duplicate."
+    }
+  },
+  {
+    "id": "itembank.science.class10.01.science10r5.question",
+    "text": "1 Decomposition is a type of chemical reaction.\n1 (a) Using water as an example, state and explain what happens in electrolytic\ndecomposition.\n(4 marks)\n1 (b) Suggest why pure water does not undergo electrolytic decomposition.\n(1 marks)",
+    "meta": {
+      "kind": "item_bank",
+      "subject": "science",
+      "chapter": 1,
+      "sourceYear": "2021",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch01",
+      "syllabusTopicIds": [
+        "science.ch01"
+      ],
+      "inActiveSyllabus": true,
+      "assessmentStatus": "formative",
+      "language": "en",
+      "officialUrl": "https://cbseacademic.nic.in/cbe/documents/Item-Bank---Science-Class-10.pdf",
+      "sourcePath": "Item Bank/Science_2026.pdf",
+      "sourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "sourceHashMatch": true,
+      "sourceTransform": "dual_pdf_text_extract_plus_original_page_visual_review_v1",
+      "itemIdentity": "Science10R5",
+      "questionNumber": 1,
+      "joinPrefix": "2021|CBSE-CBE-ItemBank|Science10|Science10R5",
+      "heading": "Chemical Reactions and Equations · CBSE Class 10 Science Item Bank · Science10R5",
+      "conceptTags": [
+        "chemical reactions and equations"
+      ],
+      "reviewStatus": "approved",
+      "reviewBatch": "science-itembank-approved-ready-batch1-20260930",
+      "reviewEvidence": "reports/science-itembank-independent-qa-20260930.md",
+      "reviewerRole": "independent-original-page-qa",
+      "sourceVisualMatch": "Independent original-page QA visually checked the question and official key on the cited PDF pages; the QA report confirms complete question boundaries, key sufficiency, active syllabus scope, and semantic novelty. Source PDF and per-page text SHA-256 hashes are retained on each chunk.",
+      "reviewNote": "Independent original-page QA visually checked the question and official key on the cited PDF pages; the QA report confirms complete question boundaries, key sufficiency, active syllabus scope, and semantic novelty. Source PDF and per-page text SHA-256 hashes are retained on each chunk.",
+      "practiceModeEligible": true,
+      "questionSourcePath": "Item Bank/Science_2026.pdf",
+      "questionSourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "questionSourcePages": [
+        63
+      ],
+      "questionSourcePage": 63,
+      "questionSourcePageTextSha256": "96748fa88ab8a069d5e4fa9b1746654fd355c38a3b43ccbdd182e1ca0a358db1",
+      "answerSourcePath": "Item Bank/Science_2026.pdf",
+      "answerSourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "answerSourcePages": [
+        64
+      ],
+      "answerSourcePage": 64,
+      "answerSourcePageTextSha256": "6c84ea56b40d451748ed9b595249a0eaf7a1334252e5990d99a90167c7f74eae",
+      "sourceExtractedPageTextSha256": {
+        "63": "96748fa88ab8a069d5e4fa9b1746654fd355c38a3b43ccbdd182e1ca0a358db1",
+        "64": "6c84ea56b40d451748ed9b595249a0eaf7a1334252e5990d99a90167c7f74eae"
+      },
+      "independentExtractedPageTextSha256": {
+        "63": "48617e971b68f0419318b7023853d61aa5b6c413a15961a8f27808e236ae2054",
+        "64": "b87d29466a157d4cf7859a718474da7a22632d2e2e211be6f23d5d8c6196e994"
+      },
+      "dualExtractionSimilarity": 0.947,
+      "questionExtractionSimilarity": 1.0,
+      "answerExtractionSimilarity": 0.9517,
+      "semanticDedupAgainstAppCorpus": {
+        "exactNormalizedMatch": false,
+        "maxTfidfCosine": 0.2334,
+        "maxTokenJaccard": 0.1379,
+        "disposition": "no_close_match_found",
+        "nearestCorpusItems": [
+          {
+            "source": "CBSEAI-app/data/corpus/science-exemplar-reviewed.json",
+            "id": "exemplar.science.ch01.q027.visual_answer",
+            "exactNormalizedMatch": false,
+            "cosine": 0.2334,
+            "jaccard": 0.0952,
+            "text": "2FeSO₄(s) ⟶[Heat] Fe₂O₃(s) + SO₂(g) + SO₃(g)\nIt is a thermal decomposition reaction."
+          },
+          {
+            "source": "CBSEAI-app/data/corpus/practice-full-review-batch6.json",
+            "id": "pyq.science.2024.31-1-1.q02",
+            "exactNormalizedMatch": false,
+            "cosine": 0.2308,
+            "jaccard": 0.0645,
+            "text": "Select from the following a decomposition reaction in which source of energy for decomposition is light:\n(a) 2FeSO₄ → Fe₂O₃ + SO₂ + SO₃\n(b) 2H₂O → 2H₂ + O₂\n(c) 2AgBr → 2Ag + Br₂\n(d) CaCO₃ → CaO + CO₂"
+          },
+          {
+            "source": "CBSEAI-app/data/corpus/reviewed-pending-qa-20260928.json",
+            "id": "pyq.science.2025.31-1-2.q05",
+            "exactNormalizedMatch": false,
+            "cosine": 0.2257,
+            "jaccard": 0.1154,
+            "text": "5. Electrolysis of water is a decomposition reaction. The mass ratio (M_H : M_O) of hydrogen and oxygen gases liberated at the electrodes during electrolysis of water is :\n(A) 8 : 1\n(B) 2 : 1\n(C) 1 : 2\n(D) 1 : 8"
+          }
+        ]
+      },
+      "chunkType": "item_bank_question",
+      "answerVisibility": "question_only",
+      "id": "itembank.science.class10.01.science10r5.question",
+      "pairedAnswerId": "itembank.science.class10.01.science10r5.answer",
+      "joinKey": "2021|CBSE-CBE-ItemBank|Science10|Science10R5|question",
+      "page": 63,
+      "supportingPages": [
+        63
+      ],
+      "sourcePageTextSha256": "96748fa88ab8a069d5e4fa9b1746654fd355c38a3b43ccbdd182e1ca0a358db1",
+      "contentSha256": "bd4b612aa84e283dd6c93f8bded562472fd5842386f4c66fc02c707afdc95ddf",
+      "chunkTextSha256": "bd4b612aa84e283dd6c93f8bded562472fd5842386f4c66fc02c707afdc95ddf",
+      "extractiveQuote": "1 Decomposition is a type of chemical reaction.\n1 (a) Using water as an example, state and explain what happens in electrolytic\ndecomposition.\n(4 marks)\n1 (b) Suggest why pure water does not undergo electrolytic decomposition.\n(1 marks)",
+      "extractionEvidence": "reports/science-itembank-dual-extract-20260930.md",
+      "noveltyAssessment": "Tests the meaning of electrolytic decomposition and why pure water does not undergo it; existing electrolysis item tests gas mass ratio, a distinct task."
+    }
+  },
+  {
+    "id": "itembank.science.class10.01.science10r5.answer",
+    "text": "1 (a) Using water as an example, state and explain what happens in electrolytic\ndecomposition.\nAny four from:\nALLOW reference to ions\none reactant forms more than one (stable)\nproduct;\n(when) energy/electricity is supplied;\nhydrogen and oxygen;\nhydrogen released at cathode / oxygen\nreleased at anode.\n1 (b) Suggest why pure water does not undergo electrolytic decomposition.\nit is not ionic / no ions are present. ALLOW it is covalently bonded",
+    "meta": {
+      "kind": "item_bank",
+      "subject": "science",
+      "chapter": 1,
+      "sourceYear": "2021",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch01",
+      "syllabusTopicIds": [
+        "science.ch01"
+      ],
+      "inActiveSyllabus": true,
+      "assessmentStatus": "formative",
+      "language": "en",
+      "officialUrl": "https://cbseacademic.nic.in/cbe/documents/Item-Bank---Science-Class-10.pdf",
+      "sourcePath": "Item Bank/Science_2026.pdf",
+      "sourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "sourceHashMatch": true,
+      "sourceTransform": "dual_pdf_text_extract_plus_original_page_visual_review_v1",
+      "itemIdentity": "Science10R5",
+      "questionNumber": 1,
+      "joinPrefix": "2021|CBSE-CBE-ItemBank|Science10|Science10R5",
+      "heading": "Chemical Reactions and Equations · CBSE Class 10 Science Item Bank · Science10R5",
+      "conceptTags": [
+        "chemical reactions and equations"
+      ],
+      "reviewStatus": "approved",
+      "reviewBatch": "science-itembank-approved-ready-batch1-20260930",
+      "reviewEvidence": "reports/science-itembank-independent-qa-20260930.md",
+      "reviewerRole": "independent-original-page-qa",
+      "sourceVisualMatch": "Independent original-page QA visually checked the question and official key on the cited PDF pages; the QA report confirms complete question boundaries, key sufficiency, active syllabus scope, and semantic novelty. Source PDF and per-page text SHA-256 hashes are retained on each chunk.",
+      "reviewNote": "Independent original-page QA visually checked the question and official key on the cited PDF pages; the QA report confirms complete question boundaries, key sufficiency, active syllabus scope, and semantic novelty. Source PDF and per-page text SHA-256 hashes are retained on each chunk.",
+      "practiceModeEligible": false,
+      "questionSourcePath": "Item Bank/Science_2026.pdf",
+      "questionSourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "questionSourcePages": [
+        63
+      ],
+      "questionSourcePage": 63,
+      "questionSourcePageTextSha256": "96748fa88ab8a069d5e4fa9b1746654fd355c38a3b43ccbdd182e1ca0a358db1",
+      "answerSourcePath": "Item Bank/Science_2026.pdf",
+      "answerSourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "answerSourcePages": [
+        64
+      ],
+      "answerSourcePage": 64,
+      "answerSourcePageTextSha256": "6c84ea56b40d451748ed9b595249a0eaf7a1334252e5990d99a90167c7f74eae",
+      "sourceExtractedPageTextSha256": {
+        "63": "96748fa88ab8a069d5e4fa9b1746654fd355c38a3b43ccbdd182e1ca0a358db1",
+        "64": "6c84ea56b40d451748ed9b595249a0eaf7a1334252e5990d99a90167c7f74eae"
+      },
+      "independentExtractedPageTextSha256": {
+        "63": "48617e971b68f0419318b7023853d61aa5b6c413a15961a8f27808e236ae2054",
+        "64": "b87d29466a157d4cf7859a718474da7a22632d2e2e211be6f23d5d8c6196e994"
+      },
+      "dualExtractionSimilarity": 0.947,
+      "questionExtractionSimilarity": 1.0,
+      "answerExtractionSimilarity": 0.9517,
+      "semanticDedupAgainstAppCorpus": {
+        "exactNormalizedMatch": false,
+        "maxTfidfCosine": 0.2334,
+        "maxTokenJaccard": 0.1379,
+        "disposition": "no_close_match_found",
+        "nearestCorpusItems": [
+          {
+            "source": "CBSEAI-app/data/corpus/science-exemplar-reviewed.json",
+            "id": "exemplar.science.ch01.q027.visual_answer",
+            "exactNormalizedMatch": false,
+            "cosine": 0.2334,
+            "jaccard": 0.0952,
+            "text": "2FeSO₄(s) ⟶[Heat] Fe₂O₃(s) + SO₂(g) + SO₃(g)\nIt is a thermal decomposition reaction."
+          },
+          {
+            "source": "CBSEAI-app/data/corpus/practice-full-review-batch6.json",
+            "id": "pyq.science.2024.31-1-1.q02",
+            "exactNormalizedMatch": false,
+            "cosine": 0.2308,
+            "jaccard": 0.0645,
+            "text": "Select from the following a decomposition reaction in which source of energy for decomposition is light:\n(a) 2FeSO₄ → Fe₂O₃ + SO₂ + SO₃\n(b) 2H₂O → 2H₂ + O₂\n(c) 2AgBr → 2Ag + Br₂\n(d) CaCO₃ → CaO + CO₂"
+          },
+          {
+            "source": "CBSEAI-app/data/corpus/reviewed-pending-qa-20260928.json",
+            "id": "pyq.science.2025.31-1-2.q05",
+            "exactNormalizedMatch": false,
+            "cosine": 0.2257,
+            "jaccard": 0.1154,
+            "text": "5. Electrolysis of water is a decomposition reaction. The mass ratio (M_H : M_O) of hydrogen and oxygen gases liberated at the electrodes during electrolysis of water is :\n(A) 8 : 1\n(B) 2 : 1\n(C) 1 : 2\n(D) 1 : 8"
+          }
+        ]
+      },
+      "chunkType": "item_bank_marking_scheme",
+      "solutionType": "official_answer_key_entry",
+      "answerVisibility": "solution_only",
+      "id": "itembank.science.class10.01.science10r5.answer",
+      "pairedQuestionId": "itembank.science.class10.01.science10r5.question",
+      "joinKey": "2021|CBSE-CBE-ItemBank|Science10|Science10R5|answer",
+      "page": 64,
+      "supportingPages": [
+        64
+      ],
+      "sourcePageTextSha256": "6c84ea56b40d451748ed9b595249a0eaf7a1334252e5990d99a90167c7f74eae",
+      "contentSha256": "0177383cff9d9f3bdd6fa133ee03dfed0fa4d0153a26d4cdb1515181ca3d0852",
+      "chunkTextSha256": "0177383cff9d9f3bdd6fa133ee03dfed0fa4d0153a26d4cdb1515181ca3d0852",
+      "extractiveQuote": "1 (a) Using water as an example, state and explain what happens in electrolytic\ndecomposition.\nAny four from:\nALLOW reference to ions\none reactant forms more than one (stable)\nproduct;\n(when) energy/electricity is supplied;\nhydrogen and oxygen;\nhydrogen released at cathode / oxygen\nreleased at anode.\n1 (b) Suggest why pure water does not undergo electrolytic decomposition.\nit is not ionic / no ions are present. ALLOW it is covalently bonded",
+      "extractionEvidence": "reports/science-itembank-dual-extract-20260930.md",
+      "noveltyAssessment": "Tests the meaning of electrolytic decomposition and why pure water does not undergo it; existing electrolysis item tests gas mass ratio, a distinct task."
+    }
+  },
+  {
+    "id": "itembank.science.class10.06.science10dp2.question",
+    "text": "1 Examples of responses to hormones are listed.\n1. growth of facial hair\n2. increased blood pressure and pulse rate\n3. widened pupils\n1 (a) Which responses are caused by the hormone adrenaline?\nA. 1 and 2 only\nB. 1 and 3 only\nC. 2 and 3 only\nD. 1, 2 and 3\n(1 marks)",
+    "meta": {
+      "kind": "item_bank",
+      "subject": "science",
+      "chapter": 6,
+      "sourceYear": "2021",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch06",
+      "syllabusTopicIds": [
+        "science.ch06"
+      ],
+      "inActiveSyllabus": true,
+      "assessmentStatus": "formative",
+      "language": "en",
+      "officialUrl": "https://cbseacademic.nic.in/cbe/documents/Item-Bank---Science-Class-10.pdf",
+      "sourcePath": "Item Bank/Science_2026.pdf",
+      "sourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "sourceHashMatch": true,
+      "sourceTransform": "dual_pdf_text_extract_plus_original_page_visual_review_v1",
+      "itemIdentity": "Science10DP2",
+      "questionNumber": 1,
+      "joinPrefix": "2021|CBSE-CBE-ItemBank|Science10|Science10DP2",
+      "heading": "Control and Coordination · CBSE Class 10 Science Item Bank · Science10DP2",
+      "conceptTags": [
+        "control and coordination"
+      ],
+      "reviewStatus": "approved",
+      "reviewBatch": "science-itembank-approved-ready-batch1-20260930",
+      "reviewEvidence": "reports/science-itembank-independent-qa-20260930.md",
+      "reviewerRole": "independent-original-page-qa",
+      "sourceVisualMatch": "Independent original-page QA visually checked the question and official key on the cited PDF pages; the QA report confirms complete question boundaries, key sufficiency, active syllabus scope, and semantic novelty. Source PDF and per-page text SHA-256 hashes are retained on each chunk.",
+      "reviewNote": "Independent original-page QA visually checked the question and official key on the cited PDF pages; the QA report confirms complete question boundaries, key sufficiency, active syllabus scope, and semantic novelty. Source PDF and per-page text SHA-256 hashes are retained on each chunk.",
+      "practiceModeEligible": true,
+      "questionSourcePath": "Item Bank/Science_2026.pdf",
+      "questionSourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "questionSourcePages": [
+        166
+      ],
+      "questionSourcePage": 166,
+      "questionSourcePageTextSha256": "26334afb5dd609b423579eabcbd0338df4aa12c3a5513a6a4d9e410ab200455b",
+      "answerSourcePath": "Item Bank/Science_2026.pdf",
+      "answerSourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "answerSourcePages": [
+        166
+      ],
+      "answerSourcePage": 166,
+      "answerSourcePageTextSha256": "26334afb5dd609b423579eabcbd0338df4aa12c3a5513a6a4d9e410ab200455b",
+      "sourceExtractedPageTextSha256": {
+        "166": "26334afb5dd609b423579eabcbd0338df4aa12c3a5513a6a4d9e410ab200455b"
+      },
+      "independentExtractedPageTextSha256": {
+        "166": "767744baea48a28f123073355bac645ea35170c8a13251c3d94ab666a849ce5c"
+      },
+      "dualExtractionSimilarity": 0.9656,
+      "questionExtractionSimilarity": 1.0,
+      "answerExtractionSimilarity": 1.0,
+      "semanticDedupAgainstAppCorpus": {
+        "exactNormalizedMatch": false,
+        "maxTfidfCosine": 0.4492,
+        "maxTokenJaccard": 0.0938,
+        "disposition": "no_close_match_found",
+        "nearestCorpusItems": [
+          {
+            "source": "CBSEAI-app/data/corpus/practice-full-review-batch3.json",
+            "id": "ms.maths.standard.2025.30-4-1.q06",
+            "exactNormalizedMatch": false,
+            "cosine": 0.4492,
+            "jaccard": 0.0526,
+            "text": "(b) 6 only"
+          },
+          {
+            "source": "CBSEAI-app/data/corpus/science-apq2021-term1-reviewed-batch1.json",
+            "id": "apq.science.2021.term1.q10.answer",
+            "exactNormalizedMatch": false,
+            "cosine": 0.3484,
+            "jaccard": 0.05,
+            "text": "10. C — only Q and R"
+          },
+          {
+            "source": "CBSEAI-app/data/corpus/science-apq2021-term1-reviewed-batch1.json",
+            "id": "apq.science.2021.term1.q32.answer",
+            "exactNormalizedMatch": false,
+            "cosine": 0.2714,
+            "jaccard": 0.05,
+            "text": "32. B — only Q"
+          }
+        ]
+      },
+      "chunkType": "item_bank_question",
+      "answerVisibility": "question_only",
+      "id": "itembank.science.class10.06.science10dp2.question",
+      "pairedAnswerId": "itembank.science.class10.06.science10dp2.answer",
+      "joinKey": "2021|CBSE-CBE-ItemBank|Science10|Science10DP2|question",
+      "page": 166,
+      "supportingPages": [
+        166
+      ],
+      "sourcePageTextSha256": "26334afb5dd609b423579eabcbd0338df4aa12c3a5513a6a4d9e410ab200455b",
+      "contentSha256": "510d5945dfbb61dfde28b7560eb7c07ed6a5efb6fb55c62f11dad63462e5fd6f",
+      "chunkTextSha256": "510d5945dfbb61dfde28b7560eb7c07ed6a5efb6fb55c62f11dad63462e5fd6f",
+      "extractiveQuote": "1 Examples of responses to hormones are listed.\n1. growth of facial hair\n2. increased blood pressure and pulse rate\n3. widened pupils\n1 (a) Which responses are caused by the hormone adrenaline?\nA. 1 and 2 only\nB. 1 and 3 only\nC. 2 and 3 only\nD. 1, 2 and 3\n(1 marks)",
+      "extractionEvidence": "reports/science-itembank-dual-extract-20260930.md",
+      "noveltyAssessment": "Tests identifying adrenaline responses from a list; existing corpus has general adrenaline explanatory content but no close prompt duplicate."
+    }
+  },
+  {
+    "id": "itembank.science.class10.06.science10dp2.answer",
+    "text": "1 (a) Which responses are caused by the hormone adrenaline?\nA. 1 and 2 only\nB. 1 and 3 only\nC. 2 and 3 only\nD. 1, 2 and 3\nC",
+    "meta": {
+      "kind": "item_bank",
+      "subject": "science",
+      "chapter": 6,
+      "sourceYear": "2021",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch06",
+      "syllabusTopicIds": [
+        "science.ch06"
+      ],
+      "inActiveSyllabus": true,
+      "assessmentStatus": "formative",
+      "language": "en",
+      "officialUrl": "https://cbseacademic.nic.in/cbe/documents/Item-Bank---Science-Class-10.pdf",
+      "sourcePath": "Item Bank/Science_2026.pdf",
+      "sourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "sourceHashMatch": true,
+      "sourceTransform": "dual_pdf_text_extract_plus_original_page_visual_review_v1",
+      "itemIdentity": "Science10DP2",
+      "questionNumber": 1,
+      "joinPrefix": "2021|CBSE-CBE-ItemBank|Science10|Science10DP2",
+      "heading": "Control and Coordination · CBSE Class 10 Science Item Bank · Science10DP2",
+      "conceptTags": [
+        "control and coordination"
+      ],
+      "reviewStatus": "approved",
+      "reviewBatch": "science-itembank-approved-ready-batch1-20260930",
+      "reviewEvidence": "reports/science-itembank-independent-qa-20260930.md",
+      "reviewerRole": "independent-original-page-qa",
+      "sourceVisualMatch": "Independent original-page QA visually checked the question and official key on the cited PDF pages; the QA report confirms complete question boundaries, key sufficiency, active syllabus scope, and semantic novelty. Source PDF and per-page text SHA-256 hashes are retained on each chunk.",
+      "reviewNote": "Independent original-page QA visually checked the question and official key on the cited PDF pages; the QA report confirms complete question boundaries, key sufficiency, active syllabus scope, and semantic novelty. Source PDF and per-page text SHA-256 hashes are retained on each chunk.",
+      "practiceModeEligible": false,
+      "questionSourcePath": "Item Bank/Science_2026.pdf",
+      "questionSourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "questionSourcePages": [
+        166
+      ],
+      "questionSourcePage": 166,
+      "questionSourcePageTextSha256": "26334afb5dd609b423579eabcbd0338df4aa12c3a5513a6a4d9e410ab200455b",
+      "answerSourcePath": "Item Bank/Science_2026.pdf",
+      "answerSourceSha256": "50358d394cb4aa499432e841904bb517dc21d55e10a9882a834bd72b81b91498",
+      "answerSourcePages": [
+        166
+      ],
+      "answerSourcePage": 166,
+      "answerSourcePageTextSha256": "26334afb5dd609b423579eabcbd0338df4aa12c3a5513a6a4d9e410ab200455b",
+      "sourceExtractedPageTextSha256": {
+        "166": "26334afb5dd609b423579eabcbd0338df4aa12c3a5513a6a4d9e410ab200455b"
+      },
+      "independentExtractedPageTextSha256": {
+        "166": "767744baea48a28f123073355bac645ea35170c8a13251c3d94ab666a849ce5c"
+      },
+      "dualExtractionSimilarity": 0.9656,
+      "questionExtractionSimilarity": 1.0,
+      "answerExtractionSimilarity": 1.0,
+      "semanticDedupAgainstAppCorpus": {
+        "exactNormalizedMatch": false,
+        "maxTfidfCosine": 0.4492,
+        "maxTokenJaccard": 0.0938,
+        "disposition": "no_close_match_found",
+        "nearestCorpusItems": [
+          {
+            "source": "CBSEAI-app/data/corpus/practice-full-review-batch3.json",
+            "id": "ms.maths.standard.2025.30-4-1.q06",
+            "exactNormalizedMatch": false,
+            "cosine": 0.4492,
+            "jaccard": 0.0526,
+            "text": "(b) 6 only"
+          },
+          {
+            "source": "CBSEAI-app/data/corpus/science-apq2021-term1-reviewed-batch1.json",
+            "id": "apq.science.2021.term1.q10.answer",
+            "exactNormalizedMatch": false,
+            "cosine": 0.3484,
+            "jaccard": 0.05,
+            "text": "10. C — only Q and R"
+          },
+          {
+            "source": "CBSEAI-app/data/corpus/science-apq2021-term1-reviewed-batch1.json",
+            "id": "apq.science.2021.term1.q32.answer",
+            "exactNormalizedMatch": false,
+            "cosine": 0.2714,
+            "jaccard": 0.05,
+            "text": "32. B — only Q"
+          }
+        ]
+      },
+      "chunkType": "item_bank_marking_scheme",
+      "solutionType": "official_answer_key_entry",
+      "answerVisibility": "solution_only",
+      "id": "itembank.science.class10.06.science10dp2.answer",
+      "pairedQuestionId": "itembank.science.class10.06.science10dp2.question",
+      "joinKey": "2021|CBSE-CBE-ItemBank|Science10|Science10DP2|answer",
+      "page": 166,
+      "supportingPages": [
+        166
+      ],
+      "sourcePageTextSha256": "26334afb5dd609b423579eabcbd0338df4aa12c3a5513a6a4d9e410ab200455b",
+      "contentSha256": "63823bfb5ded31f25f939c46c98110c5d85e407731831f77918c440f0458e0a7",
+      "chunkTextSha256": "63823bfb5ded31f25f939c46c98110c5d85e407731831f77918c440f0458e0a7",
+      "extractiveQuote": "1 (a) Which responses are caused by the hormone adrenaline?\nA. 1 and 2 only\nB. 1 and 3 only\nC. 2 and 3 only\nD. 1, 2 and 3\nC",
+      "extractionEvidence": "reports/science-itembank-dual-extract-20260930.md",
+      "noveltyAssessment": "Tests identifying adrenaline responses from a list; existing corpus has general adrenaline explanatory content but no close prompt duplicate."
+    }
+  }
+]
