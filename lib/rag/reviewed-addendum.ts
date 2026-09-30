@@ -45,6 +45,7 @@ import scienceApq2021Term1Batch1 from "@/data/corpus/science-apq2021-term1-revie
 import scienceApq2022Batch1 from "@/data/corpus/science-apq2022-reviewed-batch1.json";
 import reviewedPendingQa20260928 from "@/data/corpus/reviewed-pending-qa-20260928.json";
 import reviewedPracticePairs20260928 from "@/data/corpus/reviewed-practice-pairs-20260928.json";
+import theoryReviewed20260929 from "@/data/corpus/theory-reviewed-2026-27.json";
 
 // Page-checked against the authoritative ../Data source corpus.
 const FIRST_REVIEWED_ADDENDUM: Chunk[] = [
@@ -388,4 +389,5 @@ export const REVIEWED_ADDENDUM: Chunk[] = [
   ...(scienceApq2022Batch1 as Chunk[]),
   ...(reviewedPendingQa20260928 as Chunk[]),
   ...(reviewedPracticePairs20260928 as Chunk[]),
+  ...(theoryReviewed20260929 as Chunk[]),
 ];

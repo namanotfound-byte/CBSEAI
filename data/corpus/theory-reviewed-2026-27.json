@@ -1,0 +1,242 @@
+[
+  {
+    "id": "ncert.maths.ch06.p025.theory_0053fa74bedf684f5deb",
+    "text": "If in two triangles, two angles of one triangle are respectively equal to the two angles of\nthe other triangle, then the two triangles are similar (AA similarity criterion).",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 6,
+      "page": 25,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch06",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "language": "en",
+      "chunkType": "ncert_theory_fact",
+      "heading": "Triangles · PDF p. 25",
+      "contentSha256": "7acea99511b2ab90c5f7afe54002bd4c75f1bbede054a1bca8d2184ba4daee5b",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh106.pdf",
+      "extractionVersion": "archive_pdf_dual_extractor_visual_qa_v1",
+      "sourceTransform": "verbatim_source_text_after_individual_visual_review",
+      "reviewBatch": "theory-source-topic-crosswalk-2026-27",
+      "reviewEvidence": "Data/reports/theory-block-individual-visual-review-20260929.jsonl; Data/reports/theory-topic-crosswalk-20260929.json",
+      "conceptTags": [
+        "Triangles"
+      ],
+      "extractiveQuote": "If in two triangles, two angles of one triangle are respectively equal to the two angles of\nthe other triangle, then the two triangles are similar (AA similarity criterion)."
+    }
+  },
+  {
+    "id": "ncert.maths.ch09.p001.theory_4924b40e09b3ff379a1e",
+    "text": "Thus, the line of sight is the line drawn from the eye of an observer to the point\nin the object viewed by the observer .",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 9,
+      "page": 1,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch09",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "language": "en",
+      "chunkType": "ncert_theory_fact",
+      "heading": "Some Applications of Trigonometry · PDF p. 1",
+      "contentSha256": "fe855f921fecd6d32e2f24f6b80ab4d8ccebf5f67eacf79190952153e1ebede5",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh109.pdf",
+      "extractionVersion": "archive_pdf_dual_extractor_visual_qa_v1",
+      "sourceTransform": "verbatim_source_text_after_individual_visual_review",
+      "reviewBatch": "theory-source-topic-crosswalk-2026-27",
+      "reviewEvidence": "Data/reports/theory-block-individual-visual-review-20260929.jsonl; Data/reports/theory-topic-crosswalk-20260929.json",
+      "conceptTags": [
+        "Some Applications of Trigonometry"
+      ],
+      "extractiveQuote": "Thus, the line of sight is the line drawn from the eye of an observer to the point\nin the object viewed by the observer ."
+    }
+  },
+  {
+    "id": "ncert.maths.ch10.p010.theory_e983dca0331a70234fc8",
+    "text": "The tangent to a circle is perpendicular to the radius through the point of contact.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 10,
+      "page": 10,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch10",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "language": "en",
+      "chunkType": "ncert_theory_fact",
+      "heading": "Circles · PDF p. 10",
+      "contentSha256": "4ff2b3f19c7757a9ee42c0b1f388e973ac4d9095b0060f29dd1dc5fe9ad021ad",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh110.pdf",
+      "extractionVersion": "archive_pdf_dual_extractor_visual_qa_v1",
+      "sourceTransform": "verbatim_source_text_after_individual_visual_review",
+      "reviewBatch": "theory-source-topic-crosswalk-2026-27",
+      "reviewEvidence": "Data/reports/theory-block-individual-visual-review-20260929.jsonl; Data/reports/theory-topic-crosswalk-20260929.json",
+      "conceptTags": [
+        "Circles"
+      ],
+      "extractiveQuote": "The tangent to a circle is perpendicular to the radius through the point of contact."
+    }
+  },
+  {
+    "id": "ncert.maths.ch14.p002.theory_5a4a2bafa5edc54333df",
+    "text": "This definition of probability was given by Pierre Simon Laplace in 1795.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "maths",
+      "chapter": 14,
+      "page": 2,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "language": "en",
+      "chunkType": "ncert_theory_fact",
+      "heading": "Probability · PDF p. 2",
+      "contentSha256": "05cdccea3d6e6613bcf1a6ceee0830b9850b3272d945e271659b35c0d168b8f8",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh114.pdf",
+      "extractionVersion": "archive_pdf_dual_extractor_visual_qa_v1",
+      "sourceTransform": "verbatim_source_text_after_individual_visual_review",
+      "reviewBatch": "theory-source-topic-crosswalk-2026-27",
+      "reviewEvidence": "Data/reports/theory-block-individual-visual-review-20260929.jsonl; Data/reports/theory-topic-crosswalk-20260929.json",
+      "conceptTags": [
+        "Probability"
+      ],
+      "extractiveQuote": "This definition of probability was given by Pierre Simon Laplace in 1795."
+    }
+  },
+  {
+    "id": "ncert.science.ch05.p016.theory_2c698e405f8606327cd1",
+    "text": "Through the pores present in the walls of\ncapillaries some amount of plasma, proteins and blood cells escape into\nintercellular spaces in the tissues to form the tissue fluid or lymph.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "science",
+      "chapter": 5,
+      "page": 16,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch05",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jesc1=0-13",
+      "language": "en",
+      "chunkType": "ncert_theory_fact",
+      "heading": "Life Processes · PDF p. 16",
+      "contentSha256": "e83e3e2b8049b2dec080cc87e67b4b7849fe600929dfd8b84a3b4d1bc8c36786",
+      "sourcePath": "NCERTs/Science_2026.zip!/jesc105.pdf",
+      "extractionVersion": "archive_pdf_dual_extractor_visual_qa_v1",
+      "sourceTransform": "verbatim_source_text_after_individual_visual_review",
+      "reviewBatch": "theory-source-topic-crosswalk-2026-27",
+      "reviewEvidence": "Data/reports/theory-block-individual-visual-review-20260929.jsonl; Data/reports/theory-topic-crosswalk-20260929.json",
+      "conceptTags": [
+        "Life Processes"
+      ],
+      "extractiveQuote": "Through the pores present in the walls of\ncapillaries some amount of plasma, proteins and blood cells escape into\nintercellular spaces in the tissues to form the tissue fluid or lymph."
+    }
+  },
+  {
+    "id": "ncert.science.ch10.p009.theory_121bfd0f65c7c74e4f0b",
+    "text": "The path of a beam of light passing through a true solution is not visible.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "science",
+      "chapter": 10,
+      "page": 9,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch10",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jesc1=0-13",
+      "language": "en",
+      "chunkType": "ncert_theory_fact",
+      "heading": "The Human Eye and the Colourful World · PDF p. 9",
+      "contentSha256": "04940aa95e6fab738765dd702d6f02a0bab9f7d6ec38c221bccb3c7a1f0ab761",
+      "sourcePath": "NCERTs/Science_2026.zip!/jesc110.pdf",
+      "extractionVersion": "archive_pdf_dual_extractor_visual_qa_v1",
+      "sourceTransform": "verbatim_source_text_after_individual_visual_review",
+      "reviewBatch": "theory-source-topic-crosswalk-2026-27",
+      "reviewEvidence": "Data/reports/theory-block-individual-visual-review-20260929.jsonl; Data/reports/theory-topic-crosswalk-20260929.json",
+      "conceptTags": [
+        "The Human Eye and the Colourful World"
+      ],
+      "extractiveQuote": "The path of a beam of light passing through a true solution is not visible."
+    }
+  },
+  {
+    "id": "ncert.science.ch11.p009.theory_78f1d24cc862134e8a9e",
+    "text": "Both the resistance and\nresistivity of a material vary with temperature.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "science",
+      "chapter": 11,
+      "page": 9,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch11",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jesc1=0-13",
+      "language": "en",
+      "chunkType": "ncert_theory_fact",
+      "heading": "Electricity · PDF p. 9",
+      "contentSha256": "691664125e9c13f71e1581415f24ee9180a1896102a45a18442321fcd868ba22",
+      "sourcePath": "NCERTs/Science_2026.zip!/jesc111.pdf",
+      "extractionVersion": "archive_pdf_dual_extractor_visual_qa_v1",
+      "sourceTransform": "verbatim_source_text_after_individual_visual_review",
+      "reviewBatch": "theory-source-topic-crosswalk-2026-27",
+      "reviewEvidence": "Data/reports/theory-block-individual-visual-review-20260929.jsonl; Data/reports/theory-topic-crosswalk-20260929.json",
+      "conceptTags": [
+        "Electricity"
+      ],
+      "extractiveQuote": "Both the resistance and\nresistivity of a material vary with temperature."
+    }
+  },
+  {
+    "id": "ncert.science.ch11.p021.theory_a24e7a4f6622ff7a0413",
+    "text": "You have studied in your earlier Class that the rate of doing work is\npower.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "science",
+      "chapter": 11,
+      "page": 21,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch11",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jesc1=0-13",
+      "language": "en",
+      "chunkType": "ncert_theory_fact",
+      "heading": "Electricity · PDF p. 21",
+      "contentSha256": "4a7b98fa8850501730d6a4fc2f3e9336dbb5a52159626fc59f988d15b33441e2",
+      "sourcePath": "NCERTs/Science_2026.zip!/jesc111.pdf",
+      "extractionVersion": "archive_pdf_dual_extractor_visual_qa_v1",
+      "sourceTransform": "verbatim_source_text_after_individual_visual_review",
+      "reviewBatch": "theory-source-topic-crosswalk-2026-27",
+      "reviewEvidence": "Data/reports/theory-block-individual-visual-review-20260929.jsonl; Data/reports/theory-topic-crosswalk-20260929.json",
+      "conceptTags": [
+        "Electricity"
+      ],
+      "extractiveQuote": "You have studied in your earlier Class that the rate of doing work is\npower."
+    }
+  }
+]
