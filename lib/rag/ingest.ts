@@ -47,7 +47,7 @@ export function validateChunks(chunks: Chunk[]) {
       errors.push(`${at}: meta.inActiveSyllabus must be true or false`);
     }
     if (chunk.meta?.reviewStatus !== "approved") errors.push(`${at}: meta.reviewStatus must be approved`);
-    if (chunk.meta?.assessmentStatus !== "summative" && !isEligibleFormativeItemBank(chunk) && !isEligibleQuestionBankPractice(chunk)) {
+    if (chunk.meta?.assessmentStatus !== "summative" && !isEligibleFormativeItemBank(chunk) && !isEligibleQuestionBankPractice(chunk) && !isEligibleCfpqOptionPairSide(chunk)) {
       errors.push(`${at}: only summative material or explicitly approved practice pairs can be indexed`);
     }
     if (chunk.meta && chunk.meta.syllabusVersion !== "2026-27") {
@@ -133,6 +133,22 @@ function isEligibleQuestionBankPractice(chunk: Chunk) {
     chunk.meta.assessmentStatus === "practice" && chunk.meta.reviewStatus === "approved" &&
     chunk.meta.inActiveSyllabus === true && chunk.meta.syllabusVersion === "2026-27" &&
     isValidQuestionBankPairSide(chunk, chunk.meta.kind === "question_bank");
+}
+
+function isEligibleCfpqOptionPairSide(chunk: Chunk) {
+  const m = chunk.meta;
+  if (m.kind === "cfpq") {
+    return m.assessmentStatus === "formative" && m.reviewStatus === "approved" &&
+      m.inActiveSyllabus === true && m.syllabusVersion === "2026-27" &&
+      m.chunkType === "question_block" && m.practiceModeEligible === true &&
+      m.answerVisibility === "question_only" && Boolean(m.pairedAnswerId && m.joinPrefix);
+  }
+  return m.kind === "ms" && m.assessmentStatus === "formative" &&
+    m.reviewStatus === "approved" && m.inActiveSyllabus === true &&
+    m.syllabusVersion === "2026-27" && m.chunkType === "cfpq_answer_option_index" &&
+    m.practiceModeEligible === false && m.answerVisibility === "answer_followup_only" &&
+    Boolean(m.pairedQuestionId && m.joinPrefix) && Number.isInteger(m.optionIndex) &&
+    Number(m.optionIndex) >= 1 && Number(m.optionIndex) <= 4;
 }
 
 function isValidQuestionBankPairSide(chunk: Chunk, question: boolean) {

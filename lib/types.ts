@@ -189,7 +189,8 @@ export interface Chunk {
     practiceModeEligible?: boolean;
     pairedQuestionId?: string;
     pairedAnswerId?: string;
-    answerVisibility?: "question_only" | "solution_only" | "both";
+    answerVisibility?: "question_only" | "solution_only" | "answer_followup_only" | "both";
+    optionIndex?: number;
     itemIdentity?: string;
     itemIdentitySearch?: string;
     sourcePath?: string;
@@ -213,6 +214,8 @@ export interface RetrievalFilters {
   route?: QueryRoute;
   /** Exact normalized identity for a named CBSE competency item. */
   itemIdentitySearch?: string;
+  /** Permit official CFPQ option-index chunks only for an explicit answer follow-up. */
+  includeOfficialAnswerOptions?: boolean;
 }
 
 export type QueryRoute =

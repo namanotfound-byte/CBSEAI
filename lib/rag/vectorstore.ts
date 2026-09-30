@@ -153,6 +153,14 @@ function assessmentAllowed(meta: Chunk["meta"], filters: RetrievalFilters) {
   if (filters.route === "competency" && meta.assessmentStatus === "practice" && meta.kind === "question_bank_answer") {
     return meta.chunkType === "question_bank_answer" && Boolean(meta.pairedQuestionId) && meta.answerVisibility === "solution_only";
   }
+  if (meta.assessmentStatus === "formative" && meta.kind === "cfpq") {
+    return filters.route === "competency" && meta.chunkType === "question_block" &&
+      meta.practiceModeEligible === true && meta.answerVisibility === "question_only" && Boolean(meta.pairedAnswerId);
+  }
+  if (meta.assessmentStatus === "formative" && meta.kind === "ms" && meta.chunkType === "cfpq_answer_option_index") {
+    return filters.route === "competency" && filters.includeOfficialAnswerOptions === true &&
+      meta.answerVisibility === "answer_followup_only" && Boolean(meta.pairedQuestionId);
+  }
   if (filters.route !== "competency" || meta.assessmentStatus !== "formative" || meta.kind !== "item_bank") return false;
   return (meta.chunkType === "item_bank_question" && meta.practiceModeEligible === true && meta.answerVisibility === "question_only") ||
     (meta.chunkType === "item_bank_marking_scheme" && meta.practiceModeEligible === false && Boolean(meta.pairedQuestionId) && meta.answerVisibility === "solution_only");
