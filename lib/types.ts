@@ -194,6 +194,13 @@ export interface Chunk {
     itemIdentity?: string;
     itemIdentitySearch?: string;
     sourcePath?: string;
+    /** Hashes and review identifiers retained for source-pinned NCERT prose. */
+    sourcePdfSha256?: string;
+    sourceBlockSha256?: string;
+    sourcePageTextSha256?: string;
+    visualRenderSha256?: string;
+    candidateId?: string;
+    topicMappingRationale?: string;
     extractionVersion?: string;
     reviewBatch?: string;
     reviewEvidence?: string;

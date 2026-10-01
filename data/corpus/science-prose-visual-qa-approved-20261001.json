@@ -1,0 +1,76 @@
+[
+  {
+    "id": "ncert.science.ch11.p003.potential_difference",
+    "text": "For flow of charges in a conducting metallic wire, the gravity, of course, has no role to play; the electrons move only if there is a difference of electric pressure – called the potential difference – along the conductor. This difference of potential may be produced by a battery, consisting of one or more electric cells. The chemical action within a cell generates the potential difference across the terminals of the cell, even when no current is drawn from it. When the cell is connected to a conducting circuit element, the potential difference sets the charges in motion in the conductor and produces an electric current. In order to maintain the current in a given electric circuit, the cell has to expend its chemical energy stored in it.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "science",
+      "chapter": 11,
+      "page": 3,
+      "printedPage": 173,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch11",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jesc1=0-13",
+      "language": "en",
+      "chunkType": "ncert_theory_fact",
+      "heading": "Electricity · printed textbook p. 173 (PDF p. 3)",
+      "contentSha256": "563a03a28131a7b0c0e20d2c3407cd4582da2af0db50266221f18f414977fa84",
+      "sourcePath": "NCERTs/Science_2026.zip!/jesc111.pdf",
+      "extractionVersion": "archive_pdf_dual_extractor_visual_qa_v1",
+      "sourceTransform": "verbatim_source_text_after_independent_visual_qa",
+      "reviewBatch": "archive-fast-batch-text-prose-visual-qa-20261001",
+      "reviewEvidence": "Data/processed/science-maths-2026-27/archive-fast-batch-text-prose-visual-qa-report.md; Data/processed/science-maths-2026-27/archive-fast-batch-text-prose-visual-qa-approved-ready.jsonl",
+      "conceptTags": [
+        "Electricity"
+      ],
+      "extractiveQuote": "For flow of charges in a conducting metallic wire, the gravity, of course, has no role to play; the electrons move only if there is a difference of electric pressure – called the potential difference – along the conductor. This difference of potential may be produced by a battery, consisting of one or more electric cells. The chemical action within a cell generates the potential difference across the terminals of the cell, even when no current is drawn from it. When the cell is connected to a conducting circuit element, the potential difference sets the charges in motion in the conductor and produces an electric current. In order to maintain the current in a given electric circuit, the cell has to expend its chemical energy stored in it.",
+      "candidateId": "afb.36bf9e0ecc9320428abb",
+      "sourcePdfSha256": "640a680a24070d4add6d580d03d5377768ee5a6b4f89f9bfb66b350d457ab52f",
+      "sourceBlockSha256": "563a03a28131a7b0c0e20d2c3407cd4582da2af0db50266221f18f414977fa84",
+      "sourcePageTextSha256": "6a6943db2d30f0d26922d1921b3a73ebc7f1ce7862d37fca7387505f4f30f0b6",
+      "visualRenderSha256": "21b1104ad10b511b0a469afc616fc8f4ea98ed4df3fb4276e27500028781fd4a",
+      "topicMappingRationale": "Distinct explanation of potential difference as electric pressure and how a cell sustains current; active syllabus scope includes potential difference and current."
+    }
+  },
+  {
+    "id": "ncert.science.ch10.p002.near_far_point_cataract",
+    "text": "The minimum distance, at which objects can be seen most distinctly without strain, is called the least distance of distinct vision. It is also called the near point of the eye. For a young adult with normal vision, the near point is about 25 cm. The farthest point upto which the eye can see objects clearly is called the far point of the eye. It is infinity for a normal eye. You may note here a normal eye can see objects clearly that are between 25 cm and infinity. Sometimes, the crystalline lens of people at old age becomes milky and cloudy. This condition is called cataract. This causes partial or complete loss of vision. It is possible to restore vision through a cataract surgery.",
+    "meta": {
+      "kind": "ncert",
+      "subject": "science",
+      "chapter": 10,
+      "page": 2,
+      "printedPage": 162,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch10",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jesc1=0-13",
+      "language": "en",
+      "chunkType": "ncert_theory_fact",
+      "heading": "The Human Eye and the Colourful World · printed textbook p. 162 (PDF p. 2)",
+      "contentSha256": "3093d77f44102917a2ad2baae667fe89ad6e7c43ddbf14adc3d1b4d45c4d5c15",
+      "sourcePath": "NCERTs/Science_2026.zip!/jesc110.pdf",
+      "extractionVersion": "archive_pdf_dual_extractor_visual_qa_v1",
+      "sourceTransform": "verbatim_source_text_after_independent_visual_qa",
+      "reviewBatch": "archive-fast-batch-text-prose-visual-qa-20261001",
+      "reviewEvidence": "Data/processed/science-maths-2026-27/archive-fast-batch-text-prose-visual-qa-report.md; Data/processed/science-maths-2026-27/archive-fast-batch-text-prose-visual-qa-approved-ready.jsonl",
+      "conceptTags": [
+        "The Human Eye and the Colourful World"
+      ],
+      "extractiveQuote": "The minimum distance, at which objects can be seen most distinctly without strain, is called the least distance of distinct vision. It is also called the near point of the eye. For a young adult with normal vision, the near point is about 25 cm. The farthest point upto which the eye can see objects clearly is called the far point of the eye. It is infinity for a normal eye. You may note here a normal eye can see objects clearly that are between 25 cm and infinity. Sometimes, the crystalline lens of people at old age becomes milky and cloudy. This condition is called cataract. This causes partial or complete loss of vision. It is possible to restore vision through a cataract surgery.",
+      "candidateId": "afb.ac565ea5b736051664a5",
+      "sourcePdfSha256": "c8ed49fa55eedeb9ee5d5fbfa6d02061adb94075e94a32ca9bd16f4caf67c423",
+      "sourceBlockSha256": "3093d77f44102917a2ad2baae667fe89ad6e7c43ddbf14adc3d1b4d45c4d5c15",
+      "sourcePageTextSha256": "e8bf16a8d6eee41b224ecc2c1521275f41d93e7071008a376e388988c7c6cafe",
+      "visualRenderSha256": "ed02a28b5b95ede749fed94966958f74883ebfa758e9cc0b2fb91e70ab9b1f6a",
+      "topicMappingRationale": "The near-point sentence partly overlaps an existing normal-eye fact; far point and cataract explanation are distinct additions within active human-eye scope."
+    }
+  }
+]
