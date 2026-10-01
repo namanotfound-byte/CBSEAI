@@ -48,6 +48,7 @@ import reviewedPracticePairs20260928 from "@/data/corpus/reviewed-practice-pairs
 import theoryReviewed20260929 from "@/data/corpus/theory-reviewed-2026-27.json";
 import scienceItemBankReviewedBatch1 from "@/data/corpus/science-itembank-reviewed-batch1.json";
 import cfpqMathsV2Reviewed20260930 from "@/data/corpus/cfpq-mathsv2-reviewed-20260930.json";
+import sciencePyq2026Set1Reviewed from "@/data/corpus/science-pyq-2026-31-7-1-reviewed-qa-20261001.json";
 
 // Page-checked against the authoritative ../Data source corpus.
 const FIRST_REVIEWED_ADDENDUM: Chunk[] = [
@@ -394,4 +395,5 @@ export const REVIEWED_ADDENDUM: Chunk[] = [
   ...(theoryReviewed20260929 as Chunk[]),
   ...(scienceItemBankReviewedBatch1 as Chunk[]),
   ...(cfpqMathsV2Reviewed20260930 as Chunk[]),
+  ...(sciencePyq2026Set1Reviewed as Chunk[]),
 ];

@@ -214,7 +214,7 @@ export interface RetrievalFilters {
   route?: QueryRoute;
   /** Exact normalized identity for a named CBSE competency item. */
   itemIdentitySearch?: string;
-  /** Permit official CFPQ option-index chunks only for an explicit answer follow-up. */
+  /** Permit paired official answer chunks only for an explicit answer follow-up. */
   includeOfficialAnswerOptions?: boolean;
 }
 

@@ -53,7 +53,7 @@ export async function resolvePracticeAnswer(
     syllabusTopicId: question.meta.syllabusTopicId,
     kinds: practiceAnswerKinds(question.meta.kind),
     route: "competency",
-    includeOfficialAnswerOptions: question.meta.kind === "cfpq",
+    includeOfficialAnswerOptions: ["cfpq", "pyq"].includes(question.meta.kind),
     topK: 24,
   });
   const answer = findPracticeAnswer(question, paired);

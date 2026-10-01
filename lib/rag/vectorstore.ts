@@ -144,6 +144,11 @@ function createMemoryStore(): VectorStore {
 }
 
 function assessmentAllowed(meta: Chunk["meta"], filters: RetrievalFilters) {
+  // Keep paired official answers out of ordinary practice retrieval. The answer
+  // resolver opts in only after an explicit answer follow-up.
+  if (meta.answerVisibility === "answer_followup_only") {
+    return filters.route === "competency" && filters.includeOfficialAnswerOptions === true && Boolean(meta.pairedQuestionId);
+  }
   // Development seed fixtures predate assessmentStatus; deployable corpus rows
   // are required to declare it by validateChunks.
   if (meta.assessmentStatus === undefined || meta.assessmentStatus === "summative") return true;
@@ -156,10 +161,6 @@ function assessmentAllowed(meta: Chunk["meta"], filters: RetrievalFilters) {
   if (meta.assessmentStatus === "formative" && meta.kind === "cfpq") {
     return filters.route === "competency" && meta.chunkType === "question_block" &&
       meta.practiceModeEligible === true && meta.answerVisibility === "question_only" && Boolean(meta.pairedAnswerId);
-  }
-  if (meta.assessmentStatus === "formative" && meta.kind === "ms" && meta.chunkType === "cfpq_answer_option_index") {
-    return filters.route === "competency" && filters.includeOfficialAnswerOptions === true &&
-      meta.answerVisibility === "answer_followup_only" && Boolean(meta.pairedQuestionId);
   }
   if (filters.route !== "competency" || meta.assessmentStatus !== "formative" || meta.kind !== "item_bank") return false;
   return (meta.chunkType === "item_bank_question" && meta.practiceModeEligible === true && meta.answerVisibility === "question_only") ||
