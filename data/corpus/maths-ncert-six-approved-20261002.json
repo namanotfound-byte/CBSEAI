@@ -1,0 +1,728 @@
+[
+  {
+    "id": "ncert.maths.ch06.ex6_3.q15",
+    "text": "Exercise 6.3, Question 15: A vertical pole of length 6 m casts a shadow 4 m long on the ground and at the same time a tower casts a shadow 28 m long. Find the height of the tower.",
+    "meta": {
+      "kind": "ncert_exercise",
+      "subject": "maths",
+      "chapter": 6,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch06",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-ncert-six-independent-qa-20261002",
+      "reviewEvidence": "reports/maths-ncert-six-independent-qa-20261002.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "question_and_answer_visually_verified",
+      "language": "en",
+      "exerciseId": "ncert.maths.ch06.ex6_3",
+      "questionNumber": "15",
+      "joinPrefix": "2026-27|NCERT|Maths|Ch6|Ex6.3|Q15",
+      "conceptTags": [
+        "similar triangles",
+        "shadow length",
+        "height application"
+      ],
+      "chunkType": "ncert_question",
+      "heading": "Triangles — Exercise 6.3",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh106.pdf",
+      "contentSha256": "028a1243ccd005e952fca0f9c498be86cd526b74deb0bc6cd5147e15eef12f58",
+      "page": 25,
+      "sourcePageTextSha256": "30aa77cf0134adb12f06b41beeac07e50e1eb53aee83182dcb105ce60a35befb",
+      "supportingPages": [
+        25
+      ],
+      "sourcePageTextSha256s": [
+        "30aa77cf0134adb12f06b41beeac07e50e1eb53aee83182dcb105ce60a35befb"
+      ],
+      "pairedAnswerId": "ncert.maths.ch06.ex6_3.q15.answer",
+      "joinKey": "2026-27|NCERT|Maths|Ch6|Ex6.3|Q15|question",
+      "answerVisibility": "question_only",
+      "practiceModeEligible": true,
+      "answerSourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "answerSourceSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "answerPage": 6,
+      "questionSourcePath": "NCERTs/Maths_2026.zip!/jemh106.pdf",
+      "questionSourceSha256": "028a1243ccd005e952fca0f9c498be86cd526b74deb0bc6cd5147e15eef12f58",
+      "questionSourcePages": [
+        25
+      ],
+      "questionSourcePageTextSha256s": [
+        "30aa77cf0134adb12f06b41beeac07e50e1eb53aee83182dcb105ce60a35befb"
+      ],
+      "reviewNote": "Question visually verified on jemh106.pdf PDF p.25; separately paired answer is hidden during question presentation.",
+      "extractiveQuote": "A vertical pole of length 6 m casts a shadow 4 m long on the ground and at the same time a tower casts a shadow 28 m long. Find the height of the tower.",
+      "chunkTextSha256": "5bfc156c9fa17096bbc3ed522b8df12d97f962fcdbfe96264baff00ddaa84477"
+    }
+  },
+  {
+    "id": "ncert.maths.ch06.ex6_3.q15.answer",
+    "text": "42 m",
+    "meta": {
+      "kind": "ncert_exercise",
+      "subject": "maths",
+      "chapter": 6,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch06",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-ncert-six-independent-qa-20261002",
+      "reviewEvidence": "reports/maths-ncert-six-independent-qa-20261002.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "question_and_answer_visually_verified",
+      "language": "en",
+      "exerciseId": "ncert.maths.ch06.ex6_3",
+      "questionNumber": "15",
+      "joinPrefix": "2026-27|NCERT|Maths|Ch6|Ex6.3|Q15",
+      "conceptTags": [
+        "similar triangles",
+        "shadow length",
+        "height application"
+      ],
+      "chunkType": "ncert_answer",
+      "heading": "Triangles — Exercise 6.3",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "contentSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "page": 6,
+      "sourcePageTextSha256": "8e41935209af4d69716ab57fc269756ce6c464da5d10a9fad74a8b373bf28e5e",
+      "supportingPages": [
+        6
+      ],
+      "sourcePageTextSha256s": [
+        "8e41935209af4d69716ab57fc269756ce6c464da5d10a9fad74a8b373bf28e5e"
+      ],
+      "pairedQuestionId": "ncert.maths.ch06.ex6_3.q15",
+      "joinKey": "2026-27|NCERT|Maths|Ch6|Ex6.3|Q15|answer",
+      "answerVisibility": "solution_only",
+      "practiceModeEligible": false,
+      "questionSourcePath": "NCERTs/Maths_2026.zip!/jemh106.pdf",
+      "questionSourceSha256": "028a1243ccd005e952fca0f9c498be86cd526b74deb0bc6cd5147e15eef12f58",
+      "questionPage": 25,
+      "questionSourcePages": [
+        25
+      ],
+      "answerSourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "answerSourceSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "answerSourcePages": [
+        6
+      ],
+      "answerSourcePageTextSha256s": [
+        "8e41935209af4d69716ab57fc269756ce6c464da5d10a9fad74a8b373bf28e5e"
+      ],
+      "reviewNote": "Official answer visually verified on jemh1an.pdf PDF p.6; shown only as a separate answer record.",
+      "extractiveQuote": "42 m",
+      "chunkTextSha256": "e6bc51b37897b8bd8ecd1b169b45cea2ca0690570ec59728f966d9f4951da6b2"
+    }
+  },
+  {
+    "id": "ncert.maths.ch07.ex7_1.q10",
+    "text": "Exercise 7.1, Question 10: Find a relation between x and y such that the point (x, y) is equidistant from the points (3, 6) and (-3, 4).",
+    "meta": {
+      "kind": "ncert_exercise",
+      "subject": "maths",
+      "chapter": 7,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch07",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-ncert-six-independent-qa-20261002",
+      "reviewEvidence": "reports/maths-ncert-six-independent-qa-20261002.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "question_and_answer_visually_verified",
+      "language": "en",
+      "exerciseId": "ncert.maths.ch07.ex7_1",
+      "questionNumber": "10",
+      "joinPrefix": "2026-27|NCERT|Maths|Ch7|Ex7.1|Q10",
+      "conceptTags": [
+        "distance formula",
+        "equidistant points",
+        "linear relation"
+      ],
+      "chunkType": "ncert_question",
+      "heading": "Coordinate Geometry — Exercise 7.1",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh107.pdf",
+      "contentSha256": "ca7a4c2071221ddad13eca8c3bf2deba6be2f21b2a47b07f10443131bad53f04",
+      "page": 8,
+      "sourcePageTextSha256": "45ec0fc35d496e2df77a71392c88ab2a6e365039cf3eb4fc0a5281f50c64a17d",
+      "supportingPages": [
+        8
+      ],
+      "sourcePageTextSha256s": [
+        "45ec0fc35d496e2df77a71392c88ab2a6e365039cf3eb4fc0a5281f50c64a17d"
+      ],
+      "pairedAnswerId": "ncert.maths.ch07.ex7_1.q10.answer",
+      "joinKey": "2026-27|NCERT|Maths|Ch7|Ex7.1|Q10|question",
+      "answerVisibility": "question_only",
+      "practiceModeEligible": true,
+      "answerSourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "answerSourceSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "answerPage": 7,
+      "questionSourcePath": "NCERTs/Maths_2026.zip!/jemh107.pdf",
+      "questionSourceSha256": "ca7a4c2071221ddad13eca8c3bf2deba6be2f21b2a47b07f10443131bad53f04",
+      "questionSourcePages": [
+        8
+      ],
+      "questionSourcePageTextSha256s": [
+        "45ec0fc35d496e2df77a71392c88ab2a6e365039cf3eb4fc0a5281f50c64a17d"
+      ],
+      "reviewNote": "Question visually verified on jemh107.pdf PDF p.8; separately paired answer is hidden during question presentation.",
+      "extractiveQuote": "Find a relation between x and y such that the point (x, y) is equidistant from the points (3, 6) and (-3, 4).",
+      "chunkTextSha256": "f8561b08f0465a856216476e9d782243b94fbd6137a30a21cd0d36f172840879"
+    }
+  },
+  {
+    "id": "ncert.maths.ch07.ex7_1.q10.answer",
+    "text": "3x + y - 5 = 0",
+    "meta": {
+      "kind": "ncert_exercise",
+      "subject": "maths",
+      "chapter": 7,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch07",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-ncert-six-independent-qa-20261002",
+      "reviewEvidence": "reports/maths-ncert-six-independent-qa-20261002.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "question_and_answer_visually_verified",
+      "language": "en",
+      "exerciseId": "ncert.maths.ch07.ex7_1",
+      "questionNumber": "10",
+      "joinPrefix": "2026-27|NCERT|Maths|Ch7|Ex7.1|Q10",
+      "conceptTags": [
+        "distance formula",
+        "equidistant points",
+        "linear relation"
+      ],
+      "chunkType": "ncert_answer",
+      "heading": "Coordinate Geometry — Exercise 7.1",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "contentSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "page": 7,
+      "sourcePageTextSha256": "d9cd746b5777ac3a6c933568788d3a7578c0c7f7edd7f471b2f83a1f31aca865",
+      "supportingPages": [
+        7
+      ],
+      "sourcePageTextSha256s": [
+        "d9cd746b5777ac3a6c933568788d3a7578c0c7f7edd7f471b2f83a1f31aca865"
+      ],
+      "pairedQuestionId": "ncert.maths.ch07.ex7_1.q10",
+      "joinKey": "2026-27|NCERT|Maths|Ch7|Ex7.1|Q10|answer",
+      "answerVisibility": "solution_only",
+      "practiceModeEligible": false,
+      "questionSourcePath": "NCERTs/Maths_2026.zip!/jemh107.pdf",
+      "questionSourceSha256": "ca7a4c2071221ddad13eca8c3bf2deba6be2f21b2a47b07f10443131bad53f04",
+      "questionPage": 8,
+      "questionSourcePages": [
+        8
+      ],
+      "answerSourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "answerSourceSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "answerSourcePages": [
+        7
+      ],
+      "answerSourcePageTextSha256s": [
+        "d9cd746b5777ac3a6c933568788d3a7578c0c7f7edd7f471b2f83a1f31aca865"
+      ],
+      "reviewNote": "Official answer visually verified on jemh1an.pdf PDF p.7; shown only as a separate answer record.",
+      "extractiveQuote": "3x + y - 5 = 0",
+      "chunkTextSha256": "3e87c054b5cddc28ff4e5c7afec8149ce930b0537634960d1e7b6c7d6a648243"
+    }
+  },
+  {
+    "id": "ncert.maths.ch10.ex10_2.q6",
+    "text": "Exercise 10.2, Question 6: The length of a tangent from a point A at distance 5 cm from the centre of the circle is 4 cm. Find the radius of the circle.",
+    "meta": {
+      "kind": "ncert_exercise",
+      "subject": "maths",
+      "chapter": 10,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch10",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-ncert-six-independent-qa-20261002",
+      "reviewEvidence": "reports/maths-ncert-six-independent-qa-20261002.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "question_and_answer_visually_verified",
+      "language": "en",
+      "exerciseId": "ncert.maths.ch10.ex10_2",
+      "questionNumber": "6",
+      "joinPrefix": "2026-27|NCERT|Maths|Ch10|Ex10.2|Q6",
+      "conceptTags": [
+        "tangent to a circle",
+        "radius",
+        "Pythagorean theorem"
+      ],
+      "chunkType": "ncert_question",
+      "heading": "Circles — Exercise 10.2",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh110.pdf",
+      "contentSha256": "aef0ee7e58d4ec4dc043e943843da7981b4b782483b7b8b8bcdd08657bad1ae3",
+      "page": 9,
+      "sourcePageTextSha256": "345f14c793a47e1a56589ee881341fa155431aa2c98da933e986369a1c402e2a",
+      "supportingPages": [
+        9
+      ],
+      "sourcePageTextSha256s": [
+        "345f14c793a47e1a56589ee881341fa155431aa2c98da933e986369a1c402e2a"
+      ],
+      "pairedAnswerId": "ncert.maths.ch10.ex10_2.q6.answer",
+      "joinKey": "2026-27|NCERT|Maths|Ch10|Ex10.2|Q6|question",
+      "answerVisibility": "question_only",
+      "practiceModeEligible": true,
+      "answerSourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "answerSourceSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "answerPage": 8,
+      "questionSourcePath": "NCERTs/Maths_2026.zip!/jemh110.pdf",
+      "questionSourceSha256": "aef0ee7e58d4ec4dc043e943843da7981b4b782483b7b8b8bcdd08657bad1ae3",
+      "questionSourcePages": [
+        9
+      ],
+      "questionSourcePageTextSha256s": [
+        "345f14c793a47e1a56589ee881341fa155431aa2c98da933e986369a1c402e2a"
+      ],
+      "reviewNote": "Question visually verified on jemh110.pdf PDF p.9; separately paired answer is hidden during question presentation.",
+      "extractiveQuote": "The length of a tangent from a point A at distance 5 cm from the centre of the circle is 4 cm. Find the radius of the circle.",
+      "chunkTextSha256": "73d516f467498241745b3cd90638d78ed4c8712d23d0bb5a74905b66a117d52e"
+    }
+  },
+  {
+    "id": "ncert.maths.ch10.ex10_2.q6.answer",
+    "text": "3 cm",
+    "meta": {
+      "kind": "ncert_exercise",
+      "subject": "maths",
+      "chapter": 10,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch10",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-ncert-six-independent-qa-20261002",
+      "reviewEvidence": "reports/maths-ncert-six-independent-qa-20261002.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "question_and_answer_visually_verified",
+      "language": "en",
+      "exerciseId": "ncert.maths.ch10.ex10_2",
+      "questionNumber": "6",
+      "joinPrefix": "2026-27|NCERT|Maths|Ch10|Ex10.2|Q6",
+      "conceptTags": [
+        "tangent to a circle",
+        "radius",
+        "Pythagorean theorem"
+      ],
+      "chunkType": "ncert_answer",
+      "heading": "Circles — Exercise 10.2",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "contentSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "page": 8,
+      "sourcePageTextSha256": "0631ecf4dd36b702dbdc3aa5e1d379b42beb4adf33664197234d0959c9971757",
+      "supportingPages": [
+        8
+      ],
+      "sourcePageTextSha256s": [
+        "0631ecf4dd36b702dbdc3aa5e1d379b42beb4adf33664197234d0959c9971757"
+      ],
+      "pairedQuestionId": "ncert.maths.ch10.ex10_2.q6",
+      "joinKey": "2026-27|NCERT|Maths|Ch10|Ex10.2|Q6|answer",
+      "answerVisibility": "solution_only",
+      "practiceModeEligible": false,
+      "questionSourcePath": "NCERTs/Maths_2026.zip!/jemh110.pdf",
+      "questionSourceSha256": "aef0ee7e58d4ec4dc043e943843da7981b4b782483b7b8b8bcdd08657bad1ae3",
+      "questionPage": 9,
+      "questionSourcePages": [
+        9
+      ],
+      "answerSourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "answerSourceSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "answerSourcePages": [
+        8
+      ],
+      "answerSourcePageTextSha256s": [
+        "0631ecf4dd36b702dbdc3aa5e1d379b42beb4adf33664197234d0959c9971757"
+      ],
+      "reviewNote": "Official answer visually verified on jemh1an.pdf PDF p.8; shown only as a separate answer record.",
+      "extractiveQuote": "3 cm",
+      "chunkTextSha256": "91c89a845804107343b4e6758f0d994e23ccdd2e5ce8d2b6990c79c565a93f9c"
+    }
+  },
+  {
+    "id": "ncert.maths.ch10.ex10_2.q7",
+    "text": "Exercise 10.2, Question 7: Two concentric circles are of radii 5 cm and 3 cm. Find the length of the chord of the larger circle which touches the smaller circle.",
+    "meta": {
+      "kind": "ncert_exercise",
+      "subject": "maths",
+      "chapter": 10,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch10",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-ncert-six-independent-qa-20261002",
+      "reviewEvidence": "reports/maths-ncert-six-independent-qa-20261002.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "question_and_answer_visually_verified",
+      "language": "en",
+      "exerciseId": "ncert.maths.ch10.ex10_2",
+      "questionNumber": "7",
+      "joinPrefix": "2026-27|NCERT|Maths|Ch10|Ex10.2|Q7",
+      "conceptTags": [
+        "concentric circles",
+        "chord",
+        "tangent"
+      ],
+      "chunkType": "ncert_question",
+      "heading": "Circles — Exercise 10.2",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh110.pdf",
+      "contentSha256": "aef0ee7e58d4ec4dc043e943843da7981b4b782483b7b8b8bcdd08657bad1ae3",
+      "page": 9,
+      "sourcePageTextSha256": "345f14c793a47e1a56589ee881341fa155431aa2c98da933e986369a1c402e2a",
+      "supportingPages": [
+        9
+      ],
+      "sourcePageTextSha256s": [
+        "345f14c793a47e1a56589ee881341fa155431aa2c98da933e986369a1c402e2a"
+      ],
+      "pairedAnswerId": "ncert.maths.ch10.ex10_2.q7.answer",
+      "joinKey": "2026-27|NCERT|Maths|Ch10|Ex10.2|Q7|question",
+      "answerVisibility": "question_only",
+      "practiceModeEligible": true,
+      "answerSourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "answerSourceSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "answerPage": 8,
+      "questionSourcePath": "NCERTs/Maths_2026.zip!/jemh110.pdf",
+      "questionSourceSha256": "aef0ee7e58d4ec4dc043e943843da7981b4b782483b7b8b8bcdd08657bad1ae3",
+      "questionSourcePages": [
+        9
+      ],
+      "questionSourcePageTextSha256s": [
+        "345f14c793a47e1a56589ee881341fa155431aa2c98da933e986369a1c402e2a"
+      ],
+      "reviewNote": "Question visually verified on jemh110.pdf PDF p.9; separately paired answer is hidden during question presentation.",
+      "extractiveQuote": "Two concentric circles are of radii 5 cm and 3 cm. Find the length of the chord of the larger circle which touches the smaller circle.",
+      "chunkTextSha256": "1aa31149550f3a79fa807859e2968801f8d51712b97f36f9c0e457bac7da53f5"
+    }
+  },
+  {
+    "id": "ncert.maths.ch10.ex10_2.q7.answer",
+    "text": "8 cm",
+    "meta": {
+      "kind": "ncert_exercise",
+      "subject": "maths",
+      "chapter": 10,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch10",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-ncert-six-independent-qa-20261002",
+      "reviewEvidence": "reports/maths-ncert-six-independent-qa-20261002.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "question_and_answer_visually_verified",
+      "language": "en",
+      "exerciseId": "ncert.maths.ch10.ex10_2",
+      "questionNumber": "7",
+      "joinPrefix": "2026-27|NCERT|Maths|Ch10|Ex10.2|Q7",
+      "conceptTags": [
+        "concentric circles",
+        "chord",
+        "tangent"
+      ],
+      "chunkType": "ncert_answer",
+      "heading": "Circles — Exercise 10.2",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "contentSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "page": 8,
+      "sourcePageTextSha256": "0631ecf4dd36b702dbdc3aa5e1d379b42beb4adf33664197234d0959c9971757",
+      "supportingPages": [
+        8
+      ],
+      "sourcePageTextSha256s": [
+        "0631ecf4dd36b702dbdc3aa5e1d379b42beb4adf33664197234d0959c9971757"
+      ],
+      "pairedQuestionId": "ncert.maths.ch10.ex10_2.q7",
+      "joinKey": "2026-27|NCERT|Maths|Ch10|Ex10.2|Q7|answer",
+      "answerVisibility": "solution_only",
+      "practiceModeEligible": false,
+      "questionSourcePath": "NCERTs/Maths_2026.zip!/jemh110.pdf",
+      "questionSourceSha256": "aef0ee7e58d4ec4dc043e943843da7981b4b782483b7b8b8bcdd08657bad1ae3",
+      "questionPage": 9,
+      "questionSourcePages": [
+        9
+      ],
+      "answerSourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "answerSourceSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "answerSourcePages": [
+        8
+      ],
+      "answerSourcePageTextSha256s": [
+        "0631ecf4dd36b702dbdc3aa5e1d379b42beb4adf33664197234d0959c9971757"
+      ],
+      "reviewNote": "Official answer visually verified on jemh1an.pdf PDF p.8; shown only as a separate answer record.",
+      "extractiveQuote": "8 cm",
+      "chunkTextSha256": "991a5d7a5468dfe898cc58911bccd8cd0f1f9ebba8e9860ab143a57851e415b8"
+    }
+  },
+  {
+    "id": "ncert.maths.ch12.ex12_1.q8",
+    "text": "Exercise 12.1, Question 8: From a solid cylinder whose height is 2.4 cm and diameter 1.4 cm, a conical cavity of the same height and same diameter is hollowed out. Find the total surface area of the remaining solid to the nearest cm².",
+    "meta": {
+      "kind": "ncert_exercise",
+      "subject": "maths",
+      "chapter": 12,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch12",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-ncert-six-independent-qa-20261002",
+      "reviewEvidence": "reports/maths-ncert-six-independent-qa-20261002.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "question_and_answer_visually_verified",
+      "language": "en",
+      "exerciseId": "ncert.maths.ch12.ex12_1",
+      "questionNumber": "8",
+      "joinPrefix": "2026-27|NCERT|Maths|Ch12|Ex12.1|Q8",
+      "conceptTags": [
+        "cylinder",
+        "cone",
+        "total surface area"
+      ],
+      "chunkType": "ncert_question",
+      "heading": "Surface Areas and Volumes — Exercise 12.1",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh112.pdf",
+      "contentSha256": "5108400be07a99d6df322df607b90d51ba841f8a060276d05f9e75accc2b8be9",
+      "page": 7,
+      "sourcePageTextSha256": "580a06268ff76e1f4b43867b2fb25d766dfb8c36d30b6477dc9c18f4d5232462",
+      "supportingPages": [
+        7
+      ],
+      "sourcePageTextSha256s": [
+        "580a06268ff76e1f4b43867b2fb25d766dfb8c36d30b6477dc9c18f4d5232462"
+      ],
+      "pairedAnswerId": "ncert.maths.ch12.ex12_1.q8.answer",
+      "joinKey": "2026-27|NCERT|Maths|Ch12|Ex12.1|Q8|question",
+      "answerVisibility": "question_only",
+      "practiceModeEligible": true,
+      "answerSourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "answerSourceSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "answerPage": 9,
+      "questionSourcePath": "NCERTs/Maths_2026.zip!/jemh112.pdf",
+      "questionSourceSha256": "5108400be07a99d6df322df607b90d51ba841f8a060276d05f9e75accc2b8be9",
+      "questionSourcePages": [
+        7
+      ],
+      "questionSourcePageTextSha256s": [
+        "580a06268ff76e1f4b43867b2fb25d766dfb8c36d30b6477dc9c18f4d5232462"
+      ],
+      "reviewNote": "Question visually verified on jemh112.pdf PDF p.7; separately paired answer is hidden during question presentation.",
+      "extractiveQuote": "From a solid cylinder whose height is 2.4 cm and diameter 1.4 cm, a conical cavity of the same height and same diameter is hollowed out. Find the total surface area of the remaining solid to the nearest cm².",
+      "chunkTextSha256": "700c2466576ba2d2954555ae8f971158cb955f0ffb9e5908c816795d7ac629ce"
+    }
+  },
+  {
+    "id": "ncert.maths.ch12.ex12_1.q8.answer",
+    "text": "18 cm²",
+    "meta": {
+      "kind": "ncert_exercise",
+      "subject": "maths",
+      "chapter": 12,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch12",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-ncert-six-independent-qa-20261002",
+      "reviewEvidence": "reports/maths-ncert-six-independent-qa-20261002.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "question_and_answer_visually_verified",
+      "language": "en",
+      "exerciseId": "ncert.maths.ch12.ex12_1",
+      "questionNumber": "8",
+      "joinPrefix": "2026-27|NCERT|Maths|Ch12|Ex12.1|Q8",
+      "conceptTags": [
+        "cylinder",
+        "cone",
+        "total surface area"
+      ],
+      "chunkType": "ncert_answer",
+      "heading": "Surface Areas and Volumes — Exercise 12.1",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "contentSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "page": 9,
+      "sourcePageTextSha256": "32986ca41289522ae3d053952f3cd4110f42f723f127e5641c83000d61982e09",
+      "supportingPages": [
+        9
+      ],
+      "sourcePageTextSha256s": [
+        "32986ca41289522ae3d053952f3cd4110f42f723f127e5641c83000d61982e09"
+      ],
+      "pairedQuestionId": "ncert.maths.ch12.ex12_1.q8",
+      "joinKey": "2026-27|NCERT|Maths|Ch12|Ex12.1|Q8|answer",
+      "answerVisibility": "solution_only",
+      "practiceModeEligible": false,
+      "questionSourcePath": "NCERTs/Maths_2026.zip!/jemh112.pdf",
+      "questionSourceSha256": "5108400be07a99d6df322df607b90d51ba841f8a060276d05f9e75accc2b8be9",
+      "questionPage": 7,
+      "questionSourcePages": [
+        7
+      ],
+      "answerSourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "answerSourceSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "answerSourcePages": [
+        9
+      ],
+      "answerSourcePageTextSha256s": [
+        "32986ca41289522ae3d053952f3cd4110f42f723f127e5641c83000d61982e09"
+      ],
+      "reviewNote": "Official answer visually verified on jemh1an.pdf PDF p.9; shown only as a separate answer record.",
+      "extractiveQuote": "18 cm²",
+      "chunkTextSha256": "e71411112b1e56a3c60344d580f401edf9973966eae05a9524d405c16f2ee258"
+    }
+  },
+  {
+    "id": "ncert.maths.ch12.ex12_2.q6",
+    "text": "Exercise 12.2, Question 6: A solid iron pole consists of a cylinder of height 220 cm and base diameter 24 cm, which is surmounted by another cylinder of height 60 cm and radius 8 cm. Find the mass of the pole, given that 1 cm³ of iron has approximately 8 g mass. (Use π = 3.14)",
+    "meta": {
+      "kind": "ncert_exercise",
+      "subject": "maths",
+      "chapter": 12,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch12",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-ncert-six-independent-qa-20261002",
+      "reviewEvidence": "reports/maths-ncert-six-independent-qa-20261002.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "question_and_answer_visually_verified",
+      "language": "en",
+      "exerciseId": "ncert.maths.ch12.ex12_2",
+      "questionNumber": "6",
+      "joinPrefix": "2026-27|NCERT|Maths|Ch12|Ex12.2|Q6",
+      "conceptTags": [
+        "cylinder",
+        "volume",
+        "density"
+      ],
+      "chunkType": "ncert_question",
+      "heading": "Surface Areas and Volumes — Exercise 12.2",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh112.pdf",
+      "contentSha256": "5108400be07a99d6df322df607b90d51ba841f8a060276d05f9e75accc2b8be9",
+      "page": 10,
+      "sourcePageTextSha256": "baaeef269e9ef2d384d1d36f0c49fde759cd269b64338e0705626b656a289bcd",
+      "supportingPages": [
+        10
+      ],
+      "sourcePageTextSha256s": [
+        "baaeef269e9ef2d384d1d36f0c49fde759cd269b64338e0705626b656a289bcd"
+      ],
+      "pairedAnswerId": "ncert.maths.ch12.ex12_2.q6.answer",
+      "joinKey": "2026-27|NCERT|Maths|Ch12|Ex12.2|Q6|question",
+      "answerVisibility": "question_only",
+      "practiceModeEligible": true,
+      "answerSourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "answerSourceSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "answerPage": 9,
+      "questionSourcePath": "NCERTs/Maths_2026.zip!/jemh112.pdf",
+      "questionSourceSha256": "5108400be07a99d6df322df607b90d51ba841f8a060276d05f9e75accc2b8be9",
+      "questionSourcePages": [
+        10
+      ],
+      "questionSourcePageTextSha256s": [
+        "baaeef269e9ef2d384d1d36f0c49fde759cd269b64338e0705626b656a289bcd"
+      ],
+      "reviewNote": "Question visually verified on jemh112.pdf PDF p.10; separately paired answer is hidden during question presentation.",
+      "extractiveQuote": "A solid iron pole consists of a cylinder of height 220 cm and base diameter 24 cm, which is surmounted by another cylinder of height 60 cm and radius 8 cm. Find the mass of the pole, given that 1 cm³ of iron has approximately 8 g mass. (Use π = 3.14)",
+      "chunkTextSha256": "16931f4f215de1cdff4d165359551c8bf9273b2e5a318ee5f8333ec3ba8a50d0"
+    }
+  },
+  {
+    "id": "ncert.maths.ch12.ex12_2.q6.answer",
+    "text": "892.26 kg",
+    "meta": {
+      "kind": "ncert_exercise",
+      "subject": "maths",
+      "chapter": 12,
+      "sourceYear": "2026",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "maths.ch12",
+      "officialUrl": "https://ncert.nic.in/textbook.php?jemh1=0-14",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "reviewBatch": "maths-ncert-six-independent-qa-20261002",
+      "reviewEvidence": "reports/maths-ncert-six-independent-qa-20261002.md",
+      "extractionVersion": "page-aware-curation-v1",
+      "sourceTransform": "question_and_answer_visually_verified",
+      "language": "en",
+      "exerciseId": "ncert.maths.ch12.ex12_2",
+      "questionNumber": "6",
+      "joinPrefix": "2026-27|NCERT|Maths|Ch12|Ex12.2|Q6",
+      "conceptTags": [
+        "cylinder",
+        "volume",
+        "density"
+      ],
+      "chunkType": "ncert_answer",
+      "heading": "Surface Areas and Volumes — Exercise 12.2",
+      "sourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "contentSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "page": 9,
+      "sourcePageTextSha256": "32986ca41289522ae3d053952f3cd4110f42f723f127e5641c83000d61982e09",
+      "supportingPages": [
+        9
+      ],
+      "sourcePageTextSha256s": [
+        "32986ca41289522ae3d053952f3cd4110f42f723f127e5641c83000d61982e09"
+      ],
+      "pairedQuestionId": "ncert.maths.ch12.ex12_2.q6",
+      "joinKey": "2026-27|NCERT|Maths|Ch12|Ex12.2|Q6|answer",
+      "answerVisibility": "solution_only",
+      "practiceModeEligible": false,
+      "questionSourcePath": "NCERTs/Maths_2026.zip!/jemh112.pdf",
+      "questionSourceSha256": "5108400be07a99d6df322df607b90d51ba841f8a060276d05f9e75accc2b8be9",
+      "questionPage": 10,
+      "questionSourcePages": [
+        10
+      ],
+      "answerSourcePath": "NCERTs/Maths_2026.zip!/jemh1an.pdf",
+      "answerSourceSha256": "02dadcf156d050b2dfa97de75be35ca4b5649f88d8f096c7bf45941337e81968",
+      "answerSourcePages": [
+        9
+      ],
+      "answerSourcePageTextSha256s": [
+        "32986ca41289522ae3d053952f3cd4110f42f723f127e5641c83000d61982e09"
+      ],
+      "reviewNote": "Official answer visually verified on jemh1an.pdf PDF p.9; shown only as a separate answer record.",
+      "extractiveQuote": "892.26 kg",
+      "chunkTextSha256": "946ee6644e4dfda16c15f2345494eacbf6c706f3184ad85cb6756b14ff1aa1d3"
+    }
+  }
+]

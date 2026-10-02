@@ -52,6 +52,7 @@ import sciencePyq2026Set1Reviewed from "@/data/corpus/science-pyq-2026-31-7-1-re
 import sciencePyq2026Set1Q10To39Reviewed from "@/data/corpus/science-pyq-2026-31-7-1-q10-39-reviewed-qa-20261001.json";
 import scienceProseVisualQa20261001 from "@/data/corpus/science-prose-visual-qa-approved-20261001.json";
 import sciencePyq2025Set3111Batch2 from "@/data/corpus/science-pyq-2025-31-1-1-reviewed-qa-batch2.json";
+import mathsNcertSixApproved20261002 from "@/data/corpus/maths-ncert-six-approved-20261002.json";
 
 // Page-checked against the authoritative ../Data source corpus.
 const FIRST_REVIEWED_ADDENDUM: Chunk[] = [
@@ -402,4 +403,5 @@ export const REVIEWED_ADDENDUM: Chunk[] = [
   ...(sciencePyq2026Set1Q10To39Reviewed as Chunk[]),
   ...(scienceProseVisualQa20261001 as Chunk[]),
   ...(sciencePyq2025Set3111Batch2 as Chunk[]),
+  ...(mathsNcertSixApproved20261002 as Chunk[]),
 ];
