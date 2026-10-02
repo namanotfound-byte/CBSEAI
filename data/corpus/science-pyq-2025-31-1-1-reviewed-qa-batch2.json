@@ -1,0 +1,679 @@
+[
+  {
+    "id": "pyq.science.2025.31-1-1.q14",
+    "text": "14. An old person is suffering from an eye defect caused by weakening of\nciliary muscles and diminishing flexibility of the eye lens. If the defect of\nvision is ‘a’ which can be corrected by lens ‘b’, then ‘a’ and ‘b’ respectively\nare :\n(A) hypermetropia and convex lens\n(B) presbyopia and bifocal lens\n(C) myopia and concave lens\n(D) myopia and bifocal lens",
+    "meta": {
+      "subject": "science",
+      "chapter": 10,
+      "sourceYear": "2025",
+      "sourceSession": "2024-25",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch10",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "paperCode": "31/1/1",
+      "reviewBatch": "science-pyq-2025-31-1-1-reviewed-qa-batch2",
+      "reviewEvidence": "reports/science-2025-31-1-1-no-close-four-independent-qa-20261002.md",
+      "reviewerRole": "independent_original_page_visual_review",
+      "sourceTransform": "visually_verified_question_official_answer_split_v1",
+      "joinPrefix": "2024-25|086|Science-PYQ|31/1/1|Q14",
+      "conceptTags": [
+        "The Human Eye and the Colourful World",
+        "presbyopia",
+        "bifocal lens"
+      ],
+      "sourceSetVerified": true,
+      "sourcePageDpi": 180,
+      "independentQa": {
+        "decision": "approved",
+        "evidence": {
+          "visualReviewPages": "QP PDF pp. 11; official MS PDF p. 3",
+          "qaLedgerPageTextSha256": {
+            "qp:11": "432ab06f859124a0f7049b4728433c27fd8ac29d596b5f9e1b543a8175fbd9dd",
+            "ms:3": "71c53f8ff182f8bc42f9b7aa51ec283931f9d05b400235bdad3299eef071dc68"
+          }
+        }
+      },
+      "syllabusMapping": {
+        "mappingStatus": "active_exact_verified",
+        "syllabusTopicId": "science.ch10",
+        "topic": "The Human Eye and the Colourful World"
+      },
+      "kind": "pyq",
+      "chunkType": "question_block",
+      "page": 11,
+      "supportingPages": [
+        11
+      ],
+      "sourcePath": "PYQs/2025/QP/086_Science.zip",
+      "sourceMember": "086_Science/31-1-1_Science.pdf",
+      "sourceSha256": "d753039479520adcf8ca690b7a52208a444fc7160667e12452dc867bec025801",
+      "contentSha256": "d753039479520adcf8ca690b7a52208a444fc7160667e12452dc867bec025801",
+      "questionSourcePath": "PYQs/2025/QP/086_Science.zip",
+      "questionSourceSha256": "d753039479520adcf8ca690b7a52208a444fc7160667e12452dc867bec025801",
+      "questionSourcePage": 11,
+      "questionSourcePages": [
+        11
+      ],
+      "questionSourcePageTextSha256": "c2fd935be5abba5b3429883e1b819d7751ee19d5bb1d27c5ad4c01afd85d7d0b",
+      "questionSourcePageTextSha256s": [
+        "c2fd935be5abba5b3429883e1b819d7751ee19d5bb1d27c5ad4c01afd85d7d0b"
+      ],
+      "questionSourcePageImagePath": "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/qp-page-11-180dpi.png",
+      "questionSourcePageImagePaths": [
+        "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/qp-page-11-180dpi.png"
+      ],
+      "questionSourcePageImageSha256": "525f617037b8f7c331b311e5578c5e80f06e9558b3229dfbc459862950d5aafd",
+      "questionSourcePageImageSha256s": [
+        "525f617037b8f7c331b311e5578c5e80f06e9558b3229dfbc459862950d5aafd"
+      ],
+      "sourcePageTextSha256": "c2fd935be5abba5b3429883e1b819d7751ee19d5bb1d27c5ad4c01afd85d7d0b",
+      "sourcePageImageSha256": "525f617037b8f7c331b311e5578c5e80f06e9558b3229dfbc459862950d5aafd",
+      "sourcePageImagePath": "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/qp-page-11-180dpi.png",
+      "chunkTextSha256": "bdb3e00653157829e99613feffc023bf1cd3ed4fff110fcba637bba4e4d00210",
+      "answerVisibility": "question_only",
+      "practiceModeEligible": true,
+      "pairedAnswerId": "ms.science.2025.31-1-1.q14",
+      "joinKey": "2024-25|086|Science-PYQ|31/1/1|Q14|question",
+      "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2025/X/086_Science.zip",
+      "heading": "Science 2025 · Paper 31/1/1 · Q14",
+      "extractiveQuote": "14. An old person is suffering from an eye defect caused by weakening of\nciliary muscles and diminishing flexibility of the eye lens. If the defect of\nvision is ‘a’ which can be corrected by lens ‘b’, then ‘a’ and ‘b’ respectively\nare :\n(A) hypermetropia and convex lens\n(B) presbyopia and bifocal lens\n(C) myopia and concave lens\n(D) myopia and bifocal lens",
+      "questionNumber": 14
+    }
+  },
+  {
+    "id": "ms.science.2025.31-1-1.q14",
+    "text": "(B) Presbyopia and bifocal lens",
+    "meta": {
+      "subject": "science",
+      "chapter": 10,
+      "sourceYear": "2025",
+      "sourceSession": "2024-25",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch10",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "paperCode": "31/1/1",
+      "reviewBatch": "science-pyq-2025-31-1-1-reviewed-qa-batch2",
+      "reviewEvidence": "reports/science-2025-31-1-1-no-close-four-independent-qa-20261002.md",
+      "reviewerRole": "independent_original_page_visual_review",
+      "sourceTransform": "visually_verified_question_official_answer_split_v1",
+      "joinPrefix": "2024-25|086|Science-PYQ|31/1/1|Q14",
+      "conceptTags": [
+        "The Human Eye and the Colourful World",
+        "presbyopia",
+        "bifocal lens"
+      ],
+      "sourceSetVerified": true,
+      "sourcePageDpi": 180,
+      "independentQa": {
+        "decision": "approved",
+        "evidence": {
+          "visualReviewPages": "QP PDF pp. 11; official MS PDF p. 3",
+          "qaLedgerPageTextSha256": {
+            "qp:11": "432ab06f859124a0f7049b4728433c27fd8ac29d596b5f9e1b543a8175fbd9dd",
+            "ms:3": "71c53f8ff182f8bc42f9b7aa51ec283931f9d05b400235bdad3299eef071dc68"
+          }
+        }
+      },
+      "syllabusMapping": {
+        "mappingStatus": "active_exact_verified",
+        "syllabusTopicId": "science.ch10",
+        "topic": "The Human Eye and the Colourful World"
+      },
+      "kind": "ms",
+      "chunkType": "marking_scheme",
+      "page": 3,
+      "supportingPages": [
+        3
+      ],
+      "sourcePath": "PYQs/2025/MS/Science.zip",
+      "sourceMember": "Science/086 Science (English Medium)/X_086_31-1-1 to 3 Science_MS.pdf",
+      "sourceSha256": "6aaf56c0f86194a6e9e1933817c72e8473883a9f0735aa6f8be960abc0f5f47a",
+      "contentSha256": "6aaf56c0f86194a6e9e1933817c72e8473883a9f0735aa6f8be960abc0f5f47a",
+      "answerSourcePath": "PYQs/2025/MS/Science.zip",
+      "answerSourceSha256": "6aaf56c0f86194a6e9e1933817c72e8473883a9f0735aa6f8be960abc0f5f47a",
+      "answerSourcePage": 3,
+      "answerSourcePages": [
+        3
+      ],
+      "answerSourcePageTextSha256": "e2dbca52617b4ba013ed850f092e269e6c41b1296deaaad5e69aaabb835770af",
+      "answerSourcePageTextSha256s": [
+        "e2dbca52617b4ba013ed850f092e269e6c41b1296deaaad5e69aaabb835770af"
+      ],
+      "answerSourcePageImagePath": "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/ms-page-03-180dpi.png",
+      "answerSourcePageImagePaths": [
+        "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/ms-page-03-180dpi.png"
+      ],
+      "answerSourcePageImageSha256": "d43d922e4aae51ec7f582d50cbf730241299c6bc85c5d804e021c3deea8e260b",
+      "answerSourcePageImageSha256s": [
+        "d43d922e4aae51ec7f582d50cbf730241299c6bc85c5d804e021c3deea8e260b"
+      ],
+      "sourcePageTextSha256": "e2dbca52617b4ba013ed850f092e269e6c41b1296deaaad5e69aaabb835770af",
+      "sourcePageImageSha256": "d43d922e4aae51ec7f582d50cbf730241299c6bc85c5d804e021c3deea8e260b",
+      "sourcePageImagePath": "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/ms-page-03-180dpi.png",
+      "chunkTextSha256": "26f0ea65e30382a48f001e956becbd826153576a0d4d357b52752fac1e166b2a",
+      "answerVisibility": "answer_followup_only",
+      "practiceModeEligible": false,
+      "pairedQuestionId": "pyq.science.2025.31-1-1.q14",
+      "joinKey": "2024-25|086|Science-PYQ|31/1/1|Q14|answer",
+      "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2025/X/Science.zip",
+      "heading": "Science Marking Scheme 2025 · Paper 31/1/1 · Q14",
+      "extractiveQuote": "(B) Presbyopia and bifocal lens",
+      "questionNumber": 14
+    }
+  },
+  {
+    "id": "pyq.science.2025.31-1-1.q16",
+    "text": "16. The percentage of solar energy which is not converted into food energy by\nthe leaves of green plants in a terrestrial ecosystem is about :\n(A) 1% (B) 10%\n(C) 90% (D) 99%",
+    "meta": {
+      "subject": "science",
+      "chapter": 13,
+      "sourceYear": "2025",
+      "sourceSession": "2024-25",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch13",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "paperCode": "31/1/1",
+      "reviewBatch": "science-pyq-2025-31-1-1-reviewed-qa-batch2",
+      "reviewEvidence": "reports/science-2025-31-1-1-no-close-four-independent-qa-20261002.md",
+      "reviewerRole": "independent_original_page_visual_review",
+      "sourceTransform": "visually_verified_question_official_answer_split_v1",
+      "joinPrefix": "2024-25|086|Science-PYQ|31/1/1|Q16",
+      "conceptTags": [
+        "Our Environment",
+        "energy transfer in ecosystems"
+      ],
+      "sourceSetVerified": true,
+      "sourcePageDpi": 180,
+      "independentQa": {
+        "decision": "approved",
+        "evidence": {
+          "visualReviewPages": "QP PDF pp. 11; official MS PDF p. 3",
+          "qaLedgerPageTextSha256": {
+            "qp:11": "432ab06f859124a0f7049b4728433c27fd8ac29d596b5f9e1b543a8175fbd9dd",
+            "ms:3": "71c53f8ff182f8bc42f9b7aa51ec283931f9d05b400235bdad3299eef071dc68"
+          }
+        }
+      },
+      "syllabusMapping": {
+        "mappingStatus": "active_exact_verified",
+        "syllabusTopicId": "science.ch13",
+        "topic": "Our Environment"
+      },
+      "kind": "pyq",
+      "chunkType": "question_block",
+      "page": 11,
+      "supportingPages": [
+        11
+      ],
+      "sourcePath": "PYQs/2025/QP/086_Science.zip",
+      "sourceMember": "086_Science/31-1-1_Science.pdf",
+      "sourceSha256": "d753039479520adcf8ca690b7a52208a444fc7160667e12452dc867bec025801",
+      "contentSha256": "d753039479520adcf8ca690b7a52208a444fc7160667e12452dc867bec025801",
+      "questionSourcePath": "PYQs/2025/QP/086_Science.zip",
+      "questionSourceSha256": "d753039479520adcf8ca690b7a52208a444fc7160667e12452dc867bec025801",
+      "questionSourcePage": 11,
+      "questionSourcePages": [
+        11
+      ],
+      "questionSourcePageTextSha256": "c2fd935be5abba5b3429883e1b819d7751ee19d5bb1d27c5ad4c01afd85d7d0b",
+      "questionSourcePageTextSha256s": [
+        "c2fd935be5abba5b3429883e1b819d7751ee19d5bb1d27c5ad4c01afd85d7d0b"
+      ],
+      "questionSourcePageImagePath": "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/qp-page-11-180dpi.png",
+      "questionSourcePageImagePaths": [
+        "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/qp-page-11-180dpi.png"
+      ],
+      "questionSourcePageImageSha256": "525f617037b8f7c331b311e5578c5e80f06e9558b3229dfbc459862950d5aafd",
+      "questionSourcePageImageSha256s": [
+        "525f617037b8f7c331b311e5578c5e80f06e9558b3229dfbc459862950d5aafd"
+      ],
+      "sourcePageTextSha256": "c2fd935be5abba5b3429883e1b819d7751ee19d5bb1d27c5ad4c01afd85d7d0b",
+      "sourcePageImageSha256": "525f617037b8f7c331b311e5578c5e80f06e9558b3229dfbc459862950d5aafd",
+      "sourcePageImagePath": "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/qp-page-11-180dpi.png",
+      "chunkTextSha256": "729c93d1a5b41183d4b16a9542fe81ab20f109f2be66db918c8bda97852f8c78",
+      "answerVisibility": "question_only",
+      "practiceModeEligible": true,
+      "pairedAnswerId": "ms.science.2025.31-1-1.q16",
+      "joinKey": "2024-25|086|Science-PYQ|31/1/1|Q16|question",
+      "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2025/X/086_Science.zip",
+      "heading": "Science 2025 · Paper 31/1/1 · Q16",
+      "extractiveQuote": "16. The percentage of solar energy which is not converted into food energy by\nthe leaves of green plants in a terrestrial ecosystem is about :\n(A) 1% (B) 10%\n(C) 90% (D) 99%",
+      "questionNumber": 16
+    }
+  },
+  {
+    "id": "ms.science.2025.31-1-1.q16",
+    "text": "(D) 99%",
+    "meta": {
+      "subject": "science",
+      "chapter": 13,
+      "sourceYear": "2025",
+      "sourceSession": "2024-25",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch13",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "paperCode": "31/1/1",
+      "reviewBatch": "science-pyq-2025-31-1-1-reviewed-qa-batch2",
+      "reviewEvidence": "reports/science-2025-31-1-1-no-close-four-independent-qa-20261002.md",
+      "reviewerRole": "independent_original_page_visual_review",
+      "sourceTransform": "visually_verified_question_official_answer_split_v1",
+      "joinPrefix": "2024-25|086|Science-PYQ|31/1/1|Q16",
+      "conceptTags": [
+        "Our Environment",
+        "energy transfer in ecosystems"
+      ],
+      "sourceSetVerified": true,
+      "sourcePageDpi": 180,
+      "independentQa": {
+        "decision": "approved",
+        "evidence": {
+          "visualReviewPages": "QP PDF pp. 11; official MS PDF p. 3",
+          "qaLedgerPageTextSha256": {
+            "qp:11": "432ab06f859124a0f7049b4728433c27fd8ac29d596b5f9e1b543a8175fbd9dd",
+            "ms:3": "71c53f8ff182f8bc42f9b7aa51ec283931f9d05b400235bdad3299eef071dc68"
+          }
+        }
+      },
+      "syllabusMapping": {
+        "mappingStatus": "active_exact_verified",
+        "syllabusTopicId": "science.ch13",
+        "topic": "Our Environment"
+      },
+      "kind": "ms",
+      "chunkType": "marking_scheme",
+      "page": 3,
+      "supportingPages": [
+        3
+      ],
+      "sourcePath": "PYQs/2025/MS/Science.zip",
+      "sourceMember": "Science/086 Science (English Medium)/X_086_31-1-1 to 3 Science_MS.pdf",
+      "sourceSha256": "6aaf56c0f86194a6e9e1933817c72e8473883a9f0735aa6f8be960abc0f5f47a",
+      "contentSha256": "6aaf56c0f86194a6e9e1933817c72e8473883a9f0735aa6f8be960abc0f5f47a",
+      "answerSourcePath": "PYQs/2025/MS/Science.zip",
+      "answerSourceSha256": "6aaf56c0f86194a6e9e1933817c72e8473883a9f0735aa6f8be960abc0f5f47a",
+      "answerSourcePage": 3,
+      "answerSourcePages": [
+        3
+      ],
+      "answerSourcePageTextSha256": "e2dbca52617b4ba013ed850f092e269e6c41b1296deaaad5e69aaabb835770af",
+      "answerSourcePageTextSha256s": [
+        "e2dbca52617b4ba013ed850f092e269e6c41b1296deaaad5e69aaabb835770af"
+      ],
+      "answerSourcePageImagePath": "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/ms-page-03-180dpi.png",
+      "answerSourcePageImagePaths": [
+        "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/ms-page-03-180dpi.png"
+      ],
+      "answerSourcePageImageSha256": "d43d922e4aae51ec7f582d50cbf730241299c6bc85c5d804e021c3deea8e260b",
+      "answerSourcePageImageSha256s": [
+        "d43d922e4aae51ec7f582d50cbf730241299c6bc85c5d804e021c3deea8e260b"
+      ],
+      "sourcePageTextSha256": "e2dbca52617b4ba013ed850f092e269e6c41b1296deaaad5e69aaabb835770af",
+      "sourcePageImageSha256": "d43d922e4aae51ec7f582d50cbf730241299c6bc85c5d804e021c3deea8e260b",
+      "sourcePageImagePath": "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/ms-page-03-180dpi.png",
+      "chunkTextSha256": "2caf8f21f30dda94e45626f759e36037954e6fe432307d6c172aacf41dd9421d",
+      "answerVisibility": "answer_followup_only",
+      "practiceModeEligible": false,
+      "pairedQuestionId": "pyq.science.2025.31-1-1.q16",
+      "joinKey": "2024-25|086|Science-PYQ|31/1/1|Q16|answer",
+      "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2025/X/Science.zip",
+      "heading": "Science Marking Scheme 2025 · Paper 31/1/1 · Q16",
+      "extractiveQuote": "(D) 99%",
+      "questionNumber": 16
+    }
+  },
+  {
+    "id": "pyq.science.2025.31-1-1.q20",
+    "text": "For Questions 17 to 20, select the correct answer from these Assertion–Reason codes:\n(A) Both Assertion (A) and Reason (R) are true, and Reason (R) is the correct explanation of Assertion (A).\n(B) Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).\n(C) Assertion (A) is true, but Reason (R) is false.\n(D) Assertion (A) is false, but Reason (R) is true.\n\n20. Assertion (A) : The amount of ozone in the atmosphere began to drop\nsharply in the 1980s.\nReason (R) : The oxygen atoms combine with molecular oxygen to form\nozone.",
+    "meta": {
+      "subject": "science",
+      "chapter": 13,
+      "sourceYear": "2025",
+      "sourceSession": "2024-25",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch13",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "paperCode": "31/1/1",
+      "reviewBatch": "science-pyq-2025-31-1-1-reviewed-qa-batch2",
+      "reviewEvidence": "reports/science-2025-31-1-1-no-close-four-independent-qa-20261002.md",
+      "reviewerRole": "independent_original_page_visual_review",
+      "sourceTransform": "visually_verified_question_official_answer_split_v1",
+      "joinPrefix": "2024-25|086|Science-PYQ|31/1/1|Q20",
+      "conceptTags": [
+        "Our Environment",
+        "ozone depletion",
+        "environmental problems"
+      ],
+      "sourceSetVerified": true,
+      "sourcePageDpi": 180,
+      "independentQa": {
+        "decision": "approved",
+        "evidence": {
+          "visualReviewPages": "QP PDF pp. 11, 13; official MS PDF p. 3",
+          "qaLedgerPageTextSha256": {
+            "qp:11": "432ab06f859124a0f7049b4728433c27fd8ac29d596b5f9e1b543a8175fbd9dd",
+            "qp:13": "36bf3559816686c2c3848b5f672ad60293832e3a9f257166f1113269d53a07ee",
+            "ms:3": "71c53f8ff182f8bc42f9b7aa51ec283931f9d05b400235bdad3299eef071dc68"
+          }
+        }
+      },
+      "syllabusMapping": {
+        "mappingStatus": "active_exact_verified",
+        "syllabusTopicId": "science.ch13",
+        "topic": "Our Environment"
+      },
+      "kind": "pyq",
+      "chunkType": "question_block",
+      "page": 13,
+      "supportingPages": [
+        11,
+        13
+      ],
+      "sourcePath": "PYQs/2025/QP/086_Science.zip",
+      "sourceMember": "086_Science/31-1-1_Science.pdf",
+      "sourceSha256": "d753039479520adcf8ca690b7a52208a444fc7160667e12452dc867bec025801",
+      "contentSha256": "d753039479520adcf8ca690b7a52208a444fc7160667e12452dc867bec025801",
+      "questionSourcePath": "PYQs/2025/QP/086_Science.zip",
+      "questionSourceSha256": "d753039479520adcf8ca690b7a52208a444fc7160667e12452dc867bec025801",
+      "questionSourcePage": 13,
+      "questionSourcePages": [
+        11,
+        13
+      ],
+      "questionSourcePageTextSha256": "ba6a24ca8f4b378bde6d1b7e70bcbc8503f889d81ea0e9b70e0d38af2667a5d7",
+      "questionSourcePageTextSha256s": [
+        "c2fd935be5abba5b3429883e1b819d7751ee19d5bb1d27c5ad4c01afd85d7d0b",
+        "ba6a24ca8f4b378bde6d1b7e70bcbc8503f889d81ea0e9b70e0d38af2667a5d7"
+      ],
+      "questionSourcePageImagePath": "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/qp-page-13-180dpi.png",
+      "questionSourcePageImagePaths": [
+        "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/qp-page-11-180dpi.png",
+        "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/qp-page-13-180dpi.png"
+      ],
+      "questionSourcePageImageSha256": "6162c639e01d35aa7690590326bc4d123783825c85e7bd27cda5991bad547571",
+      "questionSourcePageImageSha256s": [
+        "525f617037b8f7c331b311e5578c5e80f06e9558b3229dfbc459862950d5aafd",
+        "6162c639e01d35aa7690590326bc4d123783825c85e7bd27cda5991bad547571"
+      ],
+      "sourcePageTextSha256": "ba6a24ca8f4b378bde6d1b7e70bcbc8503f889d81ea0e9b70e0d38af2667a5d7",
+      "sourcePageImageSha256": "6162c639e01d35aa7690590326bc4d123783825c85e7bd27cda5991bad547571",
+      "sourcePageImagePath": "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/qp-page-13-180dpi.png",
+      "chunkTextSha256": "97308a75f5560e6e770673cb1b25abbc4ce71f5f617fab580d05860cb1d3ef72",
+      "answerVisibility": "question_only",
+      "practiceModeEligible": true,
+      "pairedAnswerId": "ms.science.2025.31-1-1.q20",
+      "joinKey": "2024-25|086|Science-PYQ|31/1/1|Q20|question",
+      "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2025/X/086_Science.zip",
+      "heading": "Science 2025 · Paper 31/1/1 · Q20",
+      "extractiveQuote": "For Questions 17 to 20, select the correct answer from these Assertion–Reason codes:\n(A) Both Assertion (A) and Reason (R) are true, and Reason (R) is the correct explanation of Assertion (A).\n(B) Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).\n(C) Assertion (A) is true, but Reason (R) is false.\n(D) Assertion (A) is false, but Reason (R) is true.\n\n20. Assertion (A) : The amount of ozone in the atmosphere began to drop\nsharply in the 1980s.\nReason (R) : The oxygen atoms combine with molecular oxygen to form\nozone.",
+      "questionNumber": 20
+    }
+  },
+  {
+    "id": "ms.science.2025.31-1-1.q20",
+    "text": "(B) Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).",
+    "meta": {
+      "subject": "science",
+      "chapter": 13,
+      "sourceYear": "2025",
+      "sourceSession": "2024-25",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch13",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "paperCode": "31/1/1",
+      "reviewBatch": "science-pyq-2025-31-1-1-reviewed-qa-batch2",
+      "reviewEvidence": "reports/science-2025-31-1-1-no-close-four-independent-qa-20261002.md",
+      "reviewerRole": "independent_original_page_visual_review",
+      "sourceTransform": "visually_verified_question_official_answer_split_v1",
+      "joinPrefix": "2024-25|086|Science-PYQ|31/1/1|Q20",
+      "conceptTags": [
+        "Our Environment",
+        "ozone depletion",
+        "environmental problems"
+      ],
+      "sourceSetVerified": true,
+      "sourcePageDpi": 180,
+      "independentQa": {
+        "decision": "approved",
+        "evidence": {
+          "visualReviewPages": "QP PDF pp. 11, 13; official MS PDF p. 3",
+          "qaLedgerPageTextSha256": {
+            "qp:11": "432ab06f859124a0f7049b4728433c27fd8ac29d596b5f9e1b543a8175fbd9dd",
+            "qp:13": "36bf3559816686c2c3848b5f672ad60293832e3a9f257166f1113269d53a07ee",
+            "ms:3": "71c53f8ff182f8bc42f9b7aa51ec283931f9d05b400235bdad3299eef071dc68"
+          }
+        }
+      },
+      "syllabusMapping": {
+        "mappingStatus": "active_exact_verified",
+        "syllabusTopicId": "science.ch13",
+        "topic": "Our Environment"
+      },
+      "kind": "ms",
+      "chunkType": "marking_scheme",
+      "page": 3,
+      "supportingPages": [
+        3
+      ],
+      "sourcePath": "PYQs/2025/MS/Science.zip",
+      "sourceMember": "Science/086 Science (English Medium)/X_086_31-1-1 to 3 Science_MS.pdf",
+      "sourceSha256": "6aaf56c0f86194a6e9e1933817c72e8473883a9f0735aa6f8be960abc0f5f47a",
+      "contentSha256": "6aaf56c0f86194a6e9e1933817c72e8473883a9f0735aa6f8be960abc0f5f47a",
+      "answerSourcePath": "PYQs/2025/MS/Science.zip",
+      "answerSourceSha256": "6aaf56c0f86194a6e9e1933817c72e8473883a9f0735aa6f8be960abc0f5f47a",
+      "answerSourcePage": 3,
+      "answerSourcePages": [
+        3
+      ],
+      "answerSourcePageTextSha256": "e2dbca52617b4ba013ed850f092e269e6c41b1296deaaad5e69aaabb835770af",
+      "answerSourcePageTextSha256s": [
+        "e2dbca52617b4ba013ed850f092e269e6c41b1296deaaad5e69aaabb835770af"
+      ],
+      "answerSourcePageImagePath": "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/ms-page-03-180dpi.png",
+      "answerSourcePageImagePaths": [
+        "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/ms-page-03-180dpi.png"
+      ],
+      "answerSourcePageImageSha256": "d43d922e4aae51ec7f582d50cbf730241299c6bc85c5d804e021c3deea8e260b",
+      "answerSourcePageImageSha256s": [
+        "d43d922e4aae51ec7f582d50cbf730241299c6bc85c5d804e021c3deea8e260b"
+      ],
+      "sourcePageTextSha256": "e2dbca52617b4ba013ed850f092e269e6c41b1296deaaad5e69aaabb835770af",
+      "sourcePageImageSha256": "d43d922e4aae51ec7f582d50cbf730241299c6bc85c5d804e021c3deea8e260b",
+      "sourcePageImagePath": "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/ms-page-03-180dpi.png",
+      "chunkTextSha256": "851ae7b4f0676ca0fa9b17d90ce6eac0c57df34fc4d1553f672314e8ddab391f",
+      "answerVisibility": "answer_followup_only",
+      "practiceModeEligible": false,
+      "pairedQuestionId": "pyq.science.2025.31-1-1.q20",
+      "joinKey": "2024-25|086|Science-PYQ|31/1/1|Q20|answer",
+      "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2025/X/Science.zip",
+      "heading": "Science Marking Scheme 2025 · Paper 31/1/1 · Q20",
+      "extractiveQuote": "(B) Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).",
+      "questionNumber": 20
+    }
+  },
+  {
+    "id": "pyq.science.2025.31-1-1.q26",
+    "text": "26. ‘‘Excessive use of chemicals and pesticides in agriculture adversely effect\nthe environment.’’ Justify this statement. 2",
+    "meta": {
+      "subject": "science",
+      "chapter": 13,
+      "sourceYear": "2025",
+      "sourceSession": "2024-25",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch13",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "paperCode": "31/1/1",
+      "reviewBatch": "science-pyq-2025-31-1-1-reviewed-qa-batch2",
+      "reviewEvidence": "reports/science-2025-31-1-1-no-close-four-independent-qa-20261002.md",
+      "reviewerRole": "independent_original_page_visual_review",
+      "sourceTransform": "visually_verified_question_official_answer_split_v1",
+      "joinPrefix": "2024-25|086|Science-PYQ|31/1/1|Q26",
+      "conceptTags": [
+        "Our Environment",
+        "biological magnification",
+        "pesticides"
+      ],
+      "sourceSetVerified": true,
+      "sourcePageDpi": 180,
+      "independentQa": {
+        "decision": "approved",
+        "evidence": {
+          "visualReviewPages": "QP PDF pp. 15; official MS PDF p. 5",
+          "qaLedgerPageTextSha256": {
+            "qp:15": "e8de6b5735961b3c53caadc66c9217ae795d66a5c9a42f9a5ccf1c48fc032815",
+            "ms:5": "86b656215e66de970cd9466d28cc18ac8eb0d22c437e1a1f05df46645b317359"
+          }
+        }
+      },
+      "syllabusMapping": {
+        "mappingStatus": "active_exact_verified",
+        "syllabusTopicId": "science.ch13",
+        "topic": "Our Environment"
+      },
+      "kind": "pyq",
+      "chunkType": "question_block",
+      "page": 15,
+      "supportingPages": [
+        15
+      ],
+      "sourcePath": "PYQs/2025/QP/086_Science.zip",
+      "sourceMember": "086_Science/31-1-1_Science.pdf",
+      "sourceSha256": "d753039479520adcf8ca690b7a52208a444fc7160667e12452dc867bec025801",
+      "contentSha256": "d753039479520adcf8ca690b7a52208a444fc7160667e12452dc867bec025801",
+      "questionSourcePath": "PYQs/2025/QP/086_Science.zip",
+      "questionSourceSha256": "d753039479520adcf8ca690b7a52208a444fc7160667e12452dc867bec025801",
+      "questionSourcePage": 15,
+      "questionSourcePages": [
+        15
+      ],
+      "questionSourcePageTextSha256": "c48ac8cbf79eb400056d7cefc0421d5bb92e1528028af87bf2962307646e4dbd",
+      "questionSourcePageTextSha256s": [
+        "c48ac8cbf79eb400056d7cefc0421d5bb92e1528028af87bf2962307646e4dbd"
+      ],
+      "questionSourcePageImagePath": "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/qp-page-15-180dpi.png",
+      "questionSourcePageImagePaths": [
+        "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/qp-page-15-180dpi.png"
+      ],
+      "questionSourcePageImageSha256": "f0b299d29919451cd3cd0f5a2f2a52789280e64d4234a01733fdd4de4fee6dec",
+      "questionSourcePageImageSha256s": [
+        "f0b299d29919451cd3cd0f5a2f2a52789280e64d4234a01733fdd4de4fee6dec"
+      ],
+      "sourcePageTextSha256": "c48ac8cbf79eb400056d7cefc0421d5bb92e1528028af87bf2962307646e4dbd",
+      "sourcePageImageSha256": "f0b299d29919451cd3cd0f5a2f2a52789280e64d4234a01733fdd4de4fee6dec",
+      "sourcePageImagePath": "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/qp-page-15-180dpi.png",
+      "chunkTextSha256": "77252407df62c6c07ea5c9c9d6199498b2849ca0373a8b8f2e7804bddfa399ca",
+      "answerVisibility": "question_only",
+      "practiceModeEligible": true,
+      "pairedAnswerId": "ms.science.2025.31-1-1.q26",
+      "joinKey": "2024-25|086|Science-PYQ|31/1/1|Q26|question",
+      "officialUrl": "https://www.cbse.gov.in/cbsenew/question-paper/2025/X/086_Science.zip",
+      "heading": "Science 2025 · Paper 31/1/1 · Q26",
+      "extractiveQuote": "26. ‘‘Excessive use of chemicals and pesticides in agriculture adversely effect\nthe environment.’’ Justify this statement. 2",
+      "questionNumber": 26
+    }
+  },
+  {
+    "id": "ms.science.2025.31-1-1.q26",
+    "text": "Chemicals/pesticides used by farmers get washed down into the soil or water bodies and affect biotic and abiotic components of the ecosystem. These chemicals are mostly non-biodegradable and get accumulated progressively at each trophic level (Biological magnification). Thus, the health of the organisms of all trophic levels is affected.",
+    "meta": {
+      "subject": "science",
+      "chapter": 13,
+      "sourceYear": "2025",
+      "sourceSession": "2024-25",
+      "syllabusVersion": "2026-27",
+      "syllabusTopicId": "science.ch13",
+      "inActiveSyllabus": true,
+      "assessmentStatus": "summative",
+      "reviewStatus": "approved",
+      "language": "en",
+      "paperCode": "31/1/1",
+      "reviewBatch": "science-pyq-2025-31-1-1-reviewed-qa-batch2",
+      "reviewEvidence": "reports/science-2025-31-1-1-no-close-four-independent-qa-20261002.md",
+      "reviewerRole": "independent_original_page_visual_review",
+      "sourceTransform": "visually_verified_question_official_answer_split_v1",
+      "joinPrefix": "2024-25|086|Science-PYQ|31/1/1|Q26",
+      "conceptTags": [
+        "Our Environment",
+        "biological magnification",
+        "pesticides"
+      ],
+      "sourceSetVerified": true,
+      "sourcePageDpi": 180,
+      "independentQa": {
+        "decision": "approved",
+        "evidence": {
+          "visualReviewPages": "QP PDF pp. 15; official MS PDF p. 5",
+          "qaLedgerPageTextSha256": {
+            "qp:15": "e8de6b5735961b3c53caadc66c9217ae795d66a5c9a42f9a5ccf1c48fc032815",
+            "ms:5": "86b656215e66de970cd9466d28cc18ac8eb0d22c437e1a1f05df46645b317359"
+          }
+        }
+      },
+      "syllabusMapping": {
+        "mappingStatus": "active_exact_verified",
+        "syllabusTopicId": "science.ch13",
+        "topic": "Our Environment"
+      },
+      "kind": "ms",
+      "chunkType": "marking_scheme",
+      "page": 5,
+      "supportingPages": [
+        5
+      ],
+      "sourcePath": "PYQs/2025/MS/Science.zip",
+      "sourceMember": "Science/086 Science (English Medium)/X_086_31-1-1 to 3 Science_MS.pdf",
+      "sourceSha256": "6aaf56c0f86194a6e9e1933817c72e8473883a9f0735aa6f8be960abc0f5f47a",
+      "contentSha256": "6aaf56c0f86194a6e9e1933817c72e8473883a9f0735aa6f8be960abc0f5f47a",
+      "answerSourcePath": "PYQs/2025/MS/Science.zip",
+      "answerSourceSha256": "6aaf56c0f86194a6e9e1933817c72e8473883a9f0735aa6f8be960abc0f5f47a",
+      "answerSourcePage": 5,
+      "answerSourcePages": [
+        5
+      ],
+      "answerSourcePageTextSha256": "b4a0a5ba7a704f649ab9e8404c77bdf3a8acd395b0a7af03d9b20c8f6cdeb591",
+      "answerSourcePageTextSha256s": [
+        "b4a0a5ba7a704f649ab9e8404c77bdf3a8acd395b0a7af03d9b20c8f6cdeb591"
+      ],
+      "answerSourcePageImagePath": "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/ms-page-05-180dpi.png",
+      "answerSourcePageImagePaths": [
+        "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/ms-page-05-180dpi.png"
+      ],
+      "answerSourcePageImageSha256": "e1a0873660ccea7607bac6882c326c00920b18404051019fdf31ac7743ef9c11",
+      "answerSourcePageImageSha256s": [
+        "e1a0873660ccea7607bac6882c326c00920b18404051019fdf31ac7743ef9c11"
+      ],
+      "sourcePageTextSha256": "b4a0a5ba7a704f649ab9e8404c77bdf3a8acd395b0a7af03d9b20c8f6cdeb591",
+      "sourcePageImageSha256": "e1a0873660ccea7607bac6882c326c00920b18404051019fdf31ac7743ef9c11",
+      "sourcePageImagePath": "Data/processed/science-maths-2026-27/science-2025-31-1-1-reviewed-qa-pages/ms-page-05-180dpi.png",
+      "chunkTextSha256": "116f55462dfda2c30302d90ba26932de9902e06ff3966e7cb8c237535b47643c",
+      "answerVisibility": "answer_followup_only",
+      "practiceModeEligible": false,
+      "pairedQuestionId": "pyq.science.2025.31-1-1.q26",
+      "joinKey": "2024-25|086|Science-PYQ|31/1/1|Q26|answer",
+      "officialUrl": "https://www.cbse.gov.in/cbsenew/Marking-Scheme/2025/X/Science.zip",
+      "heading": "Science Marking Scheme 2025 · Paper 31/1/1 · Q26",
+      "extractiveQuote": "Chemicals/pesticides used by farmers get washed down into the soil or water bodies and affect biotic and abiotic components of the ecosystem. These chemicals are mostly non-biodegradable and get accumulated progressively at each trophic level (Biological magnification). Thus, the health of the organisms of all trophic levels is affected.",
+      "questionNumber": 26
+    }
+  }
+]
